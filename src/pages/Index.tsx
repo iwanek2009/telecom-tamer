@@ -3,6 +3,7 @@ import { ServiceCard } from '../components/ServiceCard';
 import { Diamond, Handshake, ShieldCheck } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import NetworksComparison from '../components/NetworksComparison';
+import BestSellingPhones from '../components/BestSellingPhones';
 
 const Index = () => {
   const scrollToServices = () => {
@@ -121,133 +122,9 @@ const Index = () => {
       </section>
 
       {/* Best Selling Phones Section */}
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16">Best selling mobile phones</h2>
-          
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 max-w-6xl mx-auto">
-            <div className="flex flex-col items-center space-y-4 bg-white p-4 sm:p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-in">
-              <div className="relative w-full">
-                <span className="absolute top-0 left-0 bg-[#fef9c3] text-black text-sm px-3 py-1 rounded-full">
-                  Top selling
-                </span>
-                <img 
-                  src="/lovable-uploads/936f3604-4a27-40ca-be2f-ab1d07159f23.png" 
-                  alt="iPhone 16" 
-                  className="w-32 sm:w-48 h-auto mx-auto"
-                />
-              </div>
-              <div className="text-center w-full">
-                <p className="text-sm font-medium text-gray-600">Apple</p>
-                <h3 className="text-xl font-bold mb-2">iPhone 16</h3>
-                <div className="flex justify-center gap-2 mb-3">
-                  <span className="w-3 h-3 rounded-full bg-black"></span>
-                  <span className="w-3 h-3 rounded-full bg-pink-500"></span>
-                  <span className="w-3 h-3 rounded-full bg-blue-500"></span>
-                  <span className="w-3 h-3 rounded-full bg-green-500"></span>
-                </div>
-                <div className="space-y-2 mb-4">
-                  <p className="text-sm text-gray-600">No upfront cost from</p>
-                  <p className="font-bold">£29.00 per month</p>
-                </div>
-                <Button 
-                  variant="default"
-                  className="bg-black hover:bg-gray-800 w-full"
-                >
-                  See all deals
-                </Button>
-              </div>
-            </div>
+      <BestSellingPhones />
 
-            <div className="flex flex-col items-center space-y-4 bg-white p-4 sm:p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-in">
-              <img 
-                src="/lovable-uploads/936f3604-4a27-40ca-be2f-ab1d07159f23.png" 
-                alt="iPhone 15" 
-                className="w-32 sm:w-48 h-auto mx-auto"
-              />
-              <div className="text-center w-full">
-                <p className="text-sm font-medium text-gray-600">Apple</p>
-                <h3 className="text-xl font-bold mb-2">iPhone 15</h3>
-                <div className="flex justify-center gap-2 mb-3">
-                  <span className="w-3 h-3 rounded-full bg-black"></span>
-                  <span className="w-3 h-3 rounded-full bg-blue-500"></span>
-                  <span className="w-3 h-3 rounded-full bg-pink-500"></span>
-                  <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
-                  <span className="w-3 h-3 rounded-full bg-green-500"></span>
-                </div>
-                <div className="space-y-2 mb-4">
-                  <p className="text-sm text-gray-600">No upfront cost from</p>
-                  <p className="font-bold">£26.00 per month</p>
-                </div>
-                <Button 
-                  variant="default"
-                  className="bg-black hover:bg-gray-800 w-full"
-                >
-                  See all deals
-                </Button>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-center space-y-4 bg-white p-4 sm:p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-in">
-              <img 
-                src="/lovable-uploads/936f3604-4a27-40ca-be2f-ab1d07159f23.png" 
-                alt="iPhone 16 Pro" 
-                className="w-32 sm:w-48 h-auto mx-auto"
-              />
-              <div className="text-center w-full">
-                <p className="text-sm font-medium text-gray-600">Apple</p>
-                <h3 className="text-xl font-bold mb-2">iPhone 16 Pro</h3>
-                <div className="flex justify-center gap-2 mb-3">
-                  <span className="w-3 h-3 rounded-full bg-black"></span>
-                  <span className="w-3 h-3 rounded-full bg-gray-300"></span>
-                  <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
-                </div>
-                <div className="space-y-2 mb-4">
-                  <p className="text-sm text-gray-600">No upfront cost from</p>
-                  <p className="font-bold">£57.49 per month</p>
-                </div>
-                <Button 
-                  variant="default"
-                  className="bg-black hover:bg-gray-800 w-full"
-                >
-                  See all deals
-                </Button>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-center space-y-4 bg-white p-4 sm:p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-in">
-              <img 
-                src="/lovable-uploads/936f3604-4a27-40ca-be2f-ab1d07159f23.png" 
-                alt="iPhone 13" 
-                className="w-32 sm:w-48 h-auto mx-auto"
-              />
-              <div className="text-center w-full">
-                <p className="text-sm font-medium text-gray-600">Apple</p>
-                <h3 className="text-xl font-bold mb-2">iPhone 13</h3>
-                <div className="flex justify-center gap-2 mb-3">
-                  <span className="w-3 h-3 rounded-full bg-black"></span>
-                  <span className="w-3 h-3 rounded-full bg-blue-500"></span>
-                  <span className="w-3 h-3 rounded-full bg-pink-500"></span>
-                  <span className="w-3 h-3 rounded-full bg-green-500"></span>
-                  <span className="w-3 h-3 rounded-full bg-red-500"></span>
-                </div>
-                <div className="space-y-2 mb-4">
-                  <p className="text-sm text-gray-600">No upfront cost from</p>
-                  <p className="font-bold">£20.00 per month</p>
-                </div>
-                <Button 
-                  variant="default"
-                  className="bg-black hover:bg-gray-800 w-full"
-                >
-                  See all deals
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Networks Comparison Section - Moved to bottom */}
+      {/* Networks Comparison Section */}
       <NetworksComparison />
     </div>
   );
