@@ -13,7 +13,7 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="container mx-auto px-[50px] pt-12 md:pt-20">
+      <section className="container mx-auto px-[50px]">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
