@@ -29,8 +29,8 @@ const Broadband = () => {
       <Header />
       
       {/* Hero Section */}
-      <div className="bg-[#FFDEE2]">
-        <div className="container mx-auto px-4 py-12 md:py-16">
+      <div className="bg-[#3FC1C9]">
+        <div className="container mx-auto px-4 pt-12 md:pt-16">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Left Column */}
             <div className="space-y-6">
