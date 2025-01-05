@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 const BestSellingPhones = () => {
   const phones = [
     {
-      label: "Top selling",
       name: "iPhone 16",
       image: "/lovable-uploads/65638d8f-da22-45c9-966a-142a2b76fed9.png",
       price: "29.00"
@@ -33,19 +32,14 @@ const BestSellingPhones = () => {
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 max-w-6xl mx-auto">
           {phones.map((phone, index) => (
             <div key={index} className="flex flex-col items-center space-y-4 bg-white p-4 sm:p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-in">
-              <div className="relative w-full">
-                {phone.label && (
-                  <span className="absolute top-0 left-0 bg-[#fef9c3] text-black text-sm px-3 py-1 rounded-full">
-                    {phone.label}
-                  </span>
-                )}
+              <div className="relative w-full flex-grow">
                 <img 
                   src={phone.image} 
                   alt={phone.name} 
                   className="w-32 sm:w-48 h-auto mx-auto"
                 />
               </div>
-              <div className="text-center w-full">
+              <div className="text-center w-full mt-auto">
                 <p className="text-sm font-medium text-gray-600">Apple</p>
                 <h3 className="text-xl font-bold mb-2">{phone.name}</h3>
                 <div className="flex justify-center gap-2 mb-3">
