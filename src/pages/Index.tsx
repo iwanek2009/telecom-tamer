@@ -15,7 +15,7 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="container mx-auto px-[50px]">
+      <section className="container mx-auto px-[50px] py-[30px] md:py-0">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in">
             <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold tracking-tight leading-tight">
