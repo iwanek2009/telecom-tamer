@@ -27,14 +27,21 @@ const Broadband = () => {
       <Header />
       
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary to-primary/80 text-white">
+      <div className="bg-gradient-to-r from-cyan-400 to-cyan-500 text-white">
         <div className="container mx-auto px-4 py-16 md:py-24">
           <div className="max-w-3xl mx-auto text-center space-y-6 animate-fade-in">
+            <div className="flex justify-center mb-6">
+              <img 
+                src="/lovable-uploads/a9ce3e31-61fb-405d-8fde-a3f3bcc07744.png" 
+                alt="Broadband Icon" 
+                className="w-16 h-16"
+              />
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-              Compare broadband deals
+              Best broadband
             </h1>
-            <p className="text-xl md:text-2xl text-gray-100">
-              Find cheaper broadband in your area - save up to £163 per year
+            <p className="text-xl md:text-2xl text-white/90">
+              Compare our best broadband deals for January 2025.
             </p>
           </div>
         </div>
@@ -50,11 +57,11 @@ const Broadband = () => {
               placeholder="Enter your postcode"
               value={postcode}
               onChange={(e) => setPostcode(e.target.value)}
-              className="flex-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="flex-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400"
             />
-            <button className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90 transition-colors flex items-center gap-2">
+            <button className="bg-cyan-400 text-white px-4 py-2 rounded-md hover:bg-cyan-500 transition-colors flex items-center gap-2">
               <Search size={20} />
-              Check
+              Compare broadband
             </button>
           </div>
         </div>
@@ -65,7 +72,7 @@ const Broadband = () => {
             <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-fade-in">
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-xl font-semibold">{deal.provider}</h3>
-                <span className="text-2xl font-bold text-secondary">£{deal.price}/mo</span>
+                <span className="text-2xl font-bold text-cyan-500">£{deal.price}/mo</span>
               </div>
               <div className="mb-4">
                 <span className="text-lg font-medium">{deal.speed}</span>
@@ -76,7 +83,7 @@ const Broadband = () => {
                   <p key={i}>✓ {feature}</p>
                 ))}
               </div>
-              <button className="w-full mt-4 bg-primary text-white py-2 rounded-md hover:bg-primary/90 transition-colors">
+              <button className="w-full mt-4 bg-cyan-400 text-white py-2 rounded-md hover:bg-cyan-500 transition-colors">
                 View Deal
               </button>
             </div>
