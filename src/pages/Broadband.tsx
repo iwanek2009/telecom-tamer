@@ -25,11 +25,24 @@ const Broadband = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
+      
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-primary to-primary/80 text-white">
+        <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="max-w-3xl mx-auto text-center space-y-6 animate-fade-in">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              Compare broadband deals
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-100">
+              Find cheaper broadband in your area - save up to £163 per year
+            </p>
+          </div>
+        </div>
+      </div>
+
       <main className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Compare Broadband Deals</h1>
-        
         {/* Postcode Checker */}
-        <div className="bg-white p-6 rounded-lg shadow-sm mb-8 max-w-2xl mx-auto animate-fade-in">
+        <div className="bg-white p-6 rounded-lg shadow-sm mb-8 max-w-2xl mx-auto -mt-10 relative z-10 animate-fade-in">
           <h2 className="text-xl font-semibold mb-4">Check Available Deals</h2>
           <div className="flex gap-2">
             <input
