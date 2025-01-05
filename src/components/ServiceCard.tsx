@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 interface ServiceCardProps {
   title: string;
   description: string;
-  icon: ReactNode;
+  icon: string;
   link: string;
   buttonText: string;
   buttonColor: string;
@@ -14,8 +14,8 @@ export const ServiceCard = ({ title, description, icon, link, buttonText, button
   return (
     <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-in">
       <div className="flex flex-col items-center text-center space-y-4">
-        <div className="text-gray-800 mb-2">
-          {icon}
+        <div className="mb-2">
+          <img src={icon} alt={title} className="w-[60px] h-[60px]" />
         </div>
         <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
         <p className="text-gray-600 mb-6">{description}</p>

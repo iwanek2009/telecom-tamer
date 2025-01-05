@@ -1,6 +1,6 @@
 import { Header } from '../components/Header';
 import { ServiceCard } from '../components/ServiceCard';
-import { Smartphone, Wifi, CreditCard, Diamond, Handshake, ShieldCheck } from 'lucide-react';
+import { Diamond, Handshake, ShieldCheck } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
@@ -56,7 +56,7 @@ const Index = () => {
             <ServiceCard
               title="Best broadband"
               description="Compare our best broadband deals for January 2025."
-              icon={<Wifi className="w-8 h-8" />}
+              icon="/lovable-uploads/7a050d18-df7e-4165-a0c7-4db83b4caef2.png"
               link="/broadband"
               buttonText="Compare broadband"
               buttonColor="bg-cyan-400"
@@ -64,7 +64,7 @@ const Index = () => {
             <ServiceCard
               title="Mobile phones"
               description="Compare latest mobile phone deals and offers"
-              icon={<Smartphone className="w-8 h-8" />}
+              icon="/lovable-uploads/1e0bafbd-7c40-465e-b337-accaade89faf.png"
               link="/mobile"
               buttonText="See deals"
               buttonColor="bg-pink-500"
@@ -72,7 +72,7 @@ const Index = () => {
             <ServiceCard
               title="Sim only"
               description="Find and compare great deals on your SIM only contract"
-              icon={<CreditCard className="w-8 h-8" />}
+              icon="/lovable-uploads/d554bfa8-a844-4d1a-ac9f-a1862dc0e431.png"
               link="/sim"
               buttonText="Compare SIM deals"
               buttonColor="bg-blue-700"
