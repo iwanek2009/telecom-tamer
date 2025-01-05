@@ -56,7 +56,9 @@ const Broadband = () => {
                   </CollapsibleTrigger>
                   <CollapsibleContent className="px-4 pb-4">
                     <p className="text-gray-700 text-sm mb-2">
-                      Compare different providers and check available speeds at your address before deciding.
+                      It's essential to compare different providers and check what speeds are actually available at your address before making a decision.
+                      Next, look at the total cost of your package, including any setup fees, equipment charges and whether prices will increase during your contract.
+                      For more help, read our guide on how to save money on your broadband deal.
                     </p>
                     <a href="#" className="text-pink-600 hover:text-pink-700 text-sm font-medium inline-flex items-center gap-1">
                       Read our guide
