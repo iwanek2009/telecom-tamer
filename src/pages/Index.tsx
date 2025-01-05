@@ -1,6 +1,6 @@
 import { Header } from '../components/Header';
 import { ServiceCard } from '../components/ServiceCard';
-import { Smartphone, Wifi, Sim } from 'lucide-react';
+import { Smartphone, Wifi, CreditCard } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
@@ -68,7 +68,7 @@ const Index = () => {
             <ServiceCard
               title="Sim only"
               description="Find and compare great deals on your SIM only contract"
-              icon={<Sim className="w-8 h-8" />}
+              icon={<CreditCard className="w-8 h-8" />}
               link="/sim"
               buttonText="Compare SIM deals"
               buttonColor="bg-blue-700"
