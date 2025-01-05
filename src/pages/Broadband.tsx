@@ -35,10 +35,13 @@ const Broadband = () => {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Left Column */}
             <div className="space-y-8">
-              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl space-y-4">
+              <div>
                 <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
                   Compare broadband deals
                 </h1>
+                <p className="text-xl text-gray-700 mt-4 mb-8">
+                  Find cheaper broadband in your area - save up to £163 per year
+                </p>
                 
                 {/* Postcode Search */}
                 <div className="bg-white p-4 rounded-lg shadow-sm">
