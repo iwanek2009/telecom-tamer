@@ -78,7 +78,9 @@ const Broadband = () => {
                   </CollapsibleTrigger>
                   <CollapsibleContent className="px-4 pb-4">
                     <p className="text-gray-700 text-sm mb-2">
-                      Your ideal speed depends on household usage and activities like streaming or gaming.
+                      Your ideal broadband speed depends on how many people use the internet in your home and what you use it for, like streaming or gaming.
+                      Next, consider peak usage times in your household and whether you need consistently fast speeds for working from home or other activities.
+                      For more help, read our guide on choosing the right broadband speed.
                     </p>
                     <a href="#" className="text-pink-600 hover:text-pink-700 text-sm font-medium inline-flex items-center gap-1">
                       Read our guide
