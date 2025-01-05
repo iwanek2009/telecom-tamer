@@ -120,13 +120,13 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16">Best selling mobile phones</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 max-w-6xl mx-auto">
             {[1, 2, 3, 4].map((index) => (
-              <div key={index} className="flex flex-col items-center space-y-4 bg-white p-6 rounded-xl animate-fade-in">
+              <div key={index} className="flex flex-col items-center space-y-4 bg-white p-4 sm:p-6 rounded-xl animate-fade-in">
                 <img 
                   src="/lovable-uploads/936f3604-4a27-40ca-be2f-ab1d07159f23.png" 
                   alt="iPhone 15" 
-                  className="w-48 h-auto"
+                  className="w-32 sm:w-48 h-auto"
                 />
                 <div className="text-center">
                   <p className="text-lg font-semibold">Apple</p>
