@@ -4,12 +4,16 @@ import { Smartphone, Wifi, CreditCard, Diamond, Handshake, ShieldCheck } from 'l
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
+  const scrollToServices = () => {
+    document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
       
       {/* Hero Section */}
-      <section className="container mx-auto px-[50px] py-12 md:py-20">
+      <section className="container mx-auto px-[50px] pt-12 md:pt-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
@@ -22,7 +26,7 @@ const Index = () => {
             </p>
             <Button 
               className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 text-base rounded-lg"
-              onClick={() => window.location.href = '/mobile'}
+              onClick={scrollToServices}
             >
               Get started
             </Button>
@@ -39,7 +43,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="bg-gray-50 py-20">
+      <section id="services-section" className="bg-gray-50 py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl font-bold mb-4">Compare deals, switch and save</h2>
