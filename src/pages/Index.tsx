@@ -18,7 +18,7 @@ const Index = () => {
       <section className="container mx-auto px-[50px]">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight">
+            <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold tracking-tight leading-tight">
               Smart choices,
               <br />
               better <span className="text-pink-500">savings.</span>
