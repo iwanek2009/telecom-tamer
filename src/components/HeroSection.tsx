@@ -10,15 +10,43 @@ export const HeroSection = ({ onGetStarted }: { onGetStarted: () => void }) => {
             <br />
             better <span className="text-pink-500">savings.</span>
           </h1>
-          <p className="text-lg text-gray-600">
-            Find your perfect deal - compare all networks today
-          </p>
-          <Button 
-            className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 text-base rounded-lg"
-            onClick={onGetStarted}
-          >
-            Get started
-          </Button>
+          <div className="space-y-4">
+            <p className="text-lg text-gray-600">
+              Find your perfect deal - compare all networks today
+            </p>
+            <ul className="space-y-2">
+              <li className="flex items-center text-gray-700">
+                <svg className="w-5 h-5 mr-2 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Save up to £163 per year on your bills
+              </li>
+              <li className="flex items-center text-gray-700">
+                <svg className="w-5 h-5 mr-2 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Compare deals from all major UK networks
+              </li>
+              <li className="flex items-center text-gray-700">
+                <svg className="w-5 h-5 mr-2 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Trusted by over 100,000 customers
+              </li>
+            </ul>
+          </div>
+          <div className="space-y-4">
+            <Button 
+              className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 text-base rounded-lg"
+              onClick={onGetStarted}
+            >
+              Compare deals now
+            </Button>
+            <div className="flex items-center space-x-2 text-gray-700">
+              <span className="text-yellow-500">★★★★★</span>
+              <span className="text-sm">Rated 4.8 by 10,000+ customers</span>
+            </div>
+          </div>
         </div>
         
         <div className="hidden md:block">
