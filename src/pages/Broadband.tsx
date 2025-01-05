@@ -1,9 +1,12 @@
 import { Header } from '../components/Header';
 import { useState } from 'react';
-import { Search, ArrowRight } from 'lucide-react';
+import { Search, ArrowRight, ChevronDown } from 'lucide-react';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 const Broadband = () => {
   const [postcode, setPostcode] = useState('');
+  const [isValueOpen, setIsValueOpen] = useState(true);
+  const [isSpeedOpen, setIsSpeedOpen] = useState(true);
   
   const mockDeals = [
     {
@@ -60,33 +63,51 @@ const Broadband = () => {
 
               {/* Tips Sections */}
               <div className="space-y-6">
-                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl">
-                  <h2 className="text-xl font-bold mb-3 text-gray-900">How to get the best value broadband?</h2>
-                  <p className="text-gray-700 mb-3">
-                    It's essential to compare different providers and check what speeds are actually available at your address before making a decision.
-                  </p>
-                  <p className="text-gray-700 mb-3">
-                    Next, look at the total cost of your package, including any setup fees, equipment charges and whether prices will increase during your contract.
-                  </p>
-                  <a href="#" className="text-pink-600 hover:text-pink-700 font-medium inline-flex items-center gap-2">
-                    Read our guide on how to save money on your broadband deal
-                    <ArrowRight size={16} />
-                  </a>
-                </div>
+                <Collapsible
+                  open={isValueOpen}
+                  onOpenChange={setIsValueOpen}
+                  className="bg-white/80 backdrop-blur-sm rounded-xl overflow-hidden"
+                >
+                  <CollapsibleTrigger className="w-full p-6 flex items-center justify-between text-left">
+                    <h2 className="text-xl font-bold text-gray-900">How to get the best value broadband?</h2>
+                    <ChevronDown className={`h-5 w-5 transition-transform ${isValueOpen ? 'transform rotate-180' : ''}`} />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="px-6 pb-6">
+                    <p className="text-gray-700 mb-3">
+                      It's essential to compare different providers and check what speeds are actually available at your address before making a decision.
+                    </p>
+                    <p className="text-gray-700 mb-3">
+                      Next, look at the total cost of your package, including any setup fees, equipment charges and whether prices will increase during your contract.
+                    </p>
+                    <a href="#" className="text-pink-600 hover:text-pink-700 font-medium inline-flex items-center gap-2">
+                      Read our guide on how to save money on your broadband deal
+                      <ArrowRight size={16} />
+                    </a>
+                  </CollapsibleContent>
+                </Collapsible>
 
-                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl">
-                  <h2 className="text-xl font-bold mb-3 text-gray-900">What speed do you really need?</h2>
-                  <p className="text-gray-700 mb-3">
-                    Your ideal broadband speed depends on how many people use the internet in your home and what you use it for, like streaming or gaming.
-                  </p>
-                  <p className="text-gray-700 mb-3">
-                    Next, consider peak usage times in your household and whether you need consistently fast speeds for working from home or other activities.
-                  </p>
-                  <a href="#" className="text-pink-600 hover:text-pink-700 font-medium inline-flex items-center gap-2">
-                    Read our guide on choosing the right broadband speed
-                    <ArrowRight size={16} />
-                  </a>
-                </div>
+                <Collapsible
+                  open={isSpeedOpen}
+                  onOpenChange={setIsSpeedOpen}
+                  className="bg-white/80 backdrop-blur-sm rounded-xl overflow-hidden"
+                >
+                  <CollapsibleTrigger className="w-full p-6 flex items-center justify-between text-left">
+                    <h2 className="text-xl font-bold text-gray-900">What speed do you really need?</h2>
+                    <ChevronDown className={`h-5 w-5 transition-transform ${isSpeedOpen ? 'transform rotate-180' : ''}`} />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="px-6 pb-6">
+                    <p className="text-gray-700 mb-3">
+                      Your ideal broadband speed depends on how many people use the internet in your home and what you use it for, like streaming or gaming.
+                    </p>
+                    <p className="text-gray-700 mb-3">
+                      Next, consider peak usage times in your household and whether you need consistently fast speeds for working from home or other activities.
+                    </p>
+                    <a href="#" className="text-pink-600 hover:text-pink-700 font-medium inline-flex items-center gap-2">
+                      Read our guide on choosing the right broadband speed
+                      <ArrowRight size={16} />
+                    </a>
+                  </CollapsibleContent>
+                </Collapsible>
               </div>
             </div>
 
