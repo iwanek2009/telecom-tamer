@@ -11,7 +11,7 @@ export const HeroSection = ({ onGetStarted }: { onGetStarted: () => void }) => {
             better <span className="text-pink-500">savings.</span>
           </h1>
           <div className="space-y-4">
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 font-bold">
               Find your perfect deal - compare all networks today
             </p>
             <ul className="space-y-2">
