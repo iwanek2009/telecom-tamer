@@ -82,9 +82,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Networks Comparison Section */}
-      <NetworksComparison />
-
       {/* Why Compare Section */}
       <section className="bg-[#1a1f2e] text-white py-20">
         <div className="container mx-auto px-6">
@@ -249,6 +246,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Networks Comparison Section - Moved to bottom */}
+      <NetworksComparison />
     </div>
   );
 };
