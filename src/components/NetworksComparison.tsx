@@ -11,33 +11,42 @@ const NetworksComparison = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-4 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <div className="flex items-center justify-center p-6 bg-white rounded-lg hover:shadow-lg transition-shadow">
-            <img src="/lovable-uploads/1df43293-e821-4ff4-b82c-d81a1d949fb4.png" alt="Virgin Media" className="h-12 w-auto object-contain" />
+            <img src="/lovable-uploads/d079fdbc-025f-4a43-9a42-e7681d8a2c62.png" alt="Hyperoptic" className="h-12 w-auto object-contain" />
           </div>
           <div className="flex items-center justify-center p-6 bg-white rounded-lg hover:shadow-lg transition-shadow">
-            <img src="/lovable-uploads/0f11a629-d705-472e-ba5c-716a0e72ade3.png" alt="Hyperoptic" className="h-12 w-auto object-contain" />
+            <img src="/lovable-uploads/1dcaeb4d-1e79-4b91-9e9f-39261fbd90c0.png" alt="Sky" className="h-12 w-auto object-contain" />
           </div>
           <div className="flex items-center justify-center p-6 bg-white rounded-lg hover:shadow-lg transition-shadow">
-            <img src="/lovable-uploads/56a8e839-7ef6-4d05-82f0-824ec8bf2ad2.png" alt="EE" className="h-12 w-auto object-contain" />
+            <img src="/lovable-uploads/aa95f15c-6723-42a1-8794-1c6e64156ce0.png" alt="Rebel" className="h-12 w-auto object-contain" />
           </div>
           <div className="flex items-center justify-center p-6 bg-white rounded-lg hover:shadow-lg transition-shadow">
-            <img src="/lovable-uploads/83803cc0-dcb1-4241-9ce6-6afef29e2844.png" alt="BeFibre" className="h-12 w-auto object-contain" />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-4 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          <div className="flex items-center justify-center p-6 bg-white rounded-lg hover:shadow-lg transition-shadow">
-            <img src="/lovable-uploads/e724af92-415d-41db-a33b-47e4678d1b7f.png" alt="Rebel" className="h-12 w-auto object-contain" />
+            <img src="/lovable-uploads/5a2bc4d5-30d7-4819-9fbd-eb5d2efd19ab.png" alt="Now Broadband" className="h-12 w-auto object-contain" />
           </div>
           <div className="flex items-center justify-center p-6 bg-white rounded-lg hover:shadow-lg transition-shadow">
-            <img src="/lovable-uploads/dfd76b78-bedb-4918-bead-88ce4ab74ed4.png" alt="Sky" className="h-12 w-auto object-contain" />
+            <img src="/lovable-uploads/76bf993a-c843-42b8-a65d-514ad0f341cb.png" alt="Gigaclear" className="h-12 w-auto object-contain" />
           </div>
           <div className="flex items-center justify-center p-6 bg-white rounded-lg hover:shadow-lg transition-shadow">
-            <img src="/lovable-uploads/459ba14c-4121-4810-ac17-348d1cea81d7.png" alt="BT" className="h-12 w-auto object-contain" />
+            <img src="/lovable-uploads/344a7cb5-6f5b-457c-8775-fd5c12f5b15d.png" alt="TalkTalk" className="h-12 w-auto object-contain" />
           </div>
           <div className="flex items-center justify-center p-6 bg-white rounded-lg hover:shadow-lg transition-shadow">
-            <img src="/lovable-uploads/439da46b-b50f-449e-b131-2b851962c927.png" alt="Vodafone" className="h-12 w-auto object-contain" />
+            <img src="/lovable-uploads/057e2cd5-e604-43a2-a1d0-e8180251b861.png" alt="Virgin Media" className="h-12 w-auto object-contain" />
+          </div>
+          <div className="flex items-center justify-center p-6 bg-white rounded-lg hover:shadow-lg transition-shadow">
+            <img src="/lovable-uploads/f47024ea-50f0-4583-89a7-f5cbc9e3beb9.png" alt="Plusnet" className="h-12 w-auto object-contain" />
+          </div>
+          <div className="flex items-center justify-center p-6 bg-white rounded-lg hover:shadow-lg transition-shadow">
+            <img src="/lovable-uploads/2ef67520-0a85-45f7-a7ea-4416ba8d3274.png" alt="BeFibre" className="h-12 w-auto object-contain" />
+          </div>
+          <div className="flex items-center justify-center p-6 bg-white rounded-lg hover:shadow-lg transition-shadow">
+            <img src="/lovable-uploads/200c65f5-15b7-44c8-ad2a-3fe27a295479.png" alt="Vodafone" className="h-12 w-auto object-contain" />
+          </div>
+          <div className="flex items-center justify-center p-6 bg-white rounded-lg hover:shadow-lg transition-shadow">
+            <img src="/lovable-uploads/8cdb5259-34a9-414d-920f-12f3bd845040.png" alt="BT" className="h-12 w-auto object-contain" />
+          </div>
+          <div className="flex items-center justify-center p-6 bg-white rounded-lg hover:shadow-lg transition-shadow">
+            <img src="/lovable-uploads/94d871e0-8b61-4deb-b037-12abf91f4ecf.png" alt="EE" className="h-12 w-auto object-contain" />
           </div>
         </div>
       </div>
