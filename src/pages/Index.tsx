@@ -1,9 +1,9 @@
 import { Header } from '../components/Header';
 import { ServiceCard } from '../components/ServiceCard';
 import { Diamond, Handshake, ShieldCheck } from 'lucide-react';
-import { Button } from "@/components/ui/button";
 import NetworksComparison from '../components/NetworksComparison';
 import BestSellingPhones from '../components/BestSellingPhones';
+import { HeroSection } from '../components/HeroSection';
 
 const Index = () => {
   const scrollToServices = () => {
@@ -14,35 +14,7 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Header />
       
-      {/* Hero Section */}
-      <section className="container mx-auto px-[50px] py-[30px] md:py-0">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8 animate-fade-in">
-            <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold tracking-tight leading-tight">
-              Smart choices,
-              <br />
-              better <span className="text-pink-500">savings.</span>
-            </h1>
-            <p className="text-lg text-gray-600">
-              Find your perfect deal - compare all networks today
-            </p>
-            <Button 
-              className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 text-base rounded-lg"
-              onClick={scrollToServices}
-            >
-              Get started
-            </Button>
-          </div>
-          
-          <div className="hidden md:block">
-            <img 
-              src="/lovable-uploads/f290a477-bb52-4371-a6e7-a84c27b974a7.png"
-              alt="Person using smartphone" 
-              className="w-full h-auto object-contain rounded-lg"
-            />
-          </div>
-        </div>
-      </section>
+      <HeroSection onGetStarted={scrollToServices} />
 
       {/* Services Section */}
       <section id="services-section" className="bg-gray-50 py-20">
@@ -128,8 +100,6 @@ const Index = () => {
       <NetworksComparison />
 
       {/* Footer Section */}
-
-      {/* Footer Section */}
       <footer className="bg-[#1A1F2C] text-gray-300 py-16">
         <div className="container mx-auto px-6">
           <div className="flex flex-col items-center mb-12">
@@ -199,10 +169,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
-
     </div>
   );
 };
 
 export default Index;
-
