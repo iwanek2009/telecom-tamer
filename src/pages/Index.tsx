@@ -114,6 +114,43 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Best Selling Phones Section */}
+      <section className="bg-white py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-16">Best selling mobile phones</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {[1, 2, 3, 4].map((index) => (
+              <div key={index} className="flex flex-col items-center space-y-4 bg-white p-6 rounded-xl animate-fade-in">
+                <img 
+                  src="/lovable-uploads/936f3604-4a27-40ca-be2f-ab1d07159f23.png" 
+                  alt="iPhone 15" 
+                  className="w-48 h-auto"
+                />
+                <div className="text-center">
+                  <p className="text-lg font-semibold">Apple</p>
+                  <h3 className="text-xl font-bold mb-2">iPhone 15</h3>
+                  <div className="flex justify-center gap-2 mb-3">
+                    <span className="w-3 h-3 rounded-full bg-pink-500"></span>
+                    <span className="w-3 h-3 rounded-full bg-blue-500"></span>
+                    <span className="w-3 h-3 rounded-full bg-black"></span>
+                    <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
+                    <span className="w-3 h-3 rounded-full bg-green-500"></span>
+                  </div>
+                  <p className="text-gray-600 mb-4">No upfront cost</p>
+                  <Button 
+                    variant="default"
+                    className="bg-blue-500 hover:bg-blue-600 w-full"
+                  >
+                    See all deals
+                  </Button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
