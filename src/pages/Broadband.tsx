@@ -1,12 +1,11 @@
 import { Header } from '../components/Header';
 import { useState } from 'react';
-import { Search, ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 const Broadband = () => {
-  const [postcode, setPostcode] = useState('');
-  const [isValueOpen, setIsValueOpen] = useState(true);
-  const [isSpeedOpen, setIsSpeedOpen] = useState(true);
+  const [isValueOpen, setIsValueOpen] = useState(false);
+  const [isSpeedOpen, setIsSpeedOpen] = useState(false);
   
   const mockDeals = [
     {
@@ -31,40 +30,37 @@ const Broadband = () => {
       
       {/* Hero Section */}
       <div className="bg-[#FFDEE2]">
-        <div className="container mx-auto px-4 py-16 md:py-24">
-          <div className="grid md:grid-cols-2 gap-12">
+        <div className="container mx-auto px-4 py-12 md:py-16">
+          <div className="grid md:grid-cols-2 gap-8">
             {/* Left Column */}
-            <div className="space-y-8">
+            <div className="space-y-6">
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
                   Compare broadband deals
                 </h1>
-                <p className="text-xl text-gray-700 mt-4 mb-8">
+                <p className="text-xl text-gray-700 mt-4 mb-6">
                   Find cheaper broadband in your area - save up to £163 per year
                 </p>
               </div>
 
               {/* Tips Sections */}
-              <div className="space-y-6">
+              <div className="space-y-3">
                 <Collapsible
                   open={isValueOpen}
                   onOpenChange={setIsValueOpen}
-                  className="bg-white/80 backdrop-blur-sm rounded-xl overflow-hidden"
+                  className="bg-white/80 backdrop-blur-sm rounded-lg overflow-hidden"
                 >
-                  <CollapsibleTrigger className="w-full p-6 flex items-center justify-between text-left">
-                    <h2 className="text-xl font-bold text-gray-900">How to get the best value broadband?</h2>
-                    <ChevronDown className={`h-5 w-5 transition-transform ${isValueOpen ? 'transform rotate-180' : ''}`} />
+                  <CollapsibleTrigger className="w-full p-4 flex items-center justify-between text-left">
+                    <h2 className="text-lg font-semibold text-gray-900">How to get the best value broadband?</h2>
+                    <ChevronDown className={`h-4 w-4 transition-transform ${isValueOpen ? 'transform rotate-180' : ''}`} />
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="px-6 pb-6">
-                    <p className="text-gray-700 mb-3">
-                      It's essential to compare different providers and check what speeds are actually available at your address before making a decision.
+                  <CollapsibleContent className="px-4 pb-4">
+                    <p className="text-gray-700 text-sm mb-2">
+                      Compare different providers and check available speeds at your address before deciding.
                     </p>
-                    <p className="text-gray-700 mb-3">
-                      Next, look at the total cost of your package, including any setup fees, equipment charges and whether prices will increase during your contract.
-                    </p>
-                    <a href="#" className="text-pink-600 hover:text-pink-700 font-medium inline-flex items-center gap-2">
-                      Read our guide on how to save money on your broadband deal
-                      <ArrowRight size={16} />
+                    <a href="#" className="text-pink-600 hover:text-pink-700 text-sm font-medium inline-flex items-center gap-1">
+                      Read our guide
+                      <ArrowRight size={14} />
                     </a>
                   </CollapsibleContent>
                 </Collapsible>
@@ -72,22 +68,19 @@ const Broadband = () => {
                 <Collapsible
                   open={isSpeedOpen}
                   onOpenChange={setIsSpeedOpen}
-                  className="bg-white/80 backdrop-blur-sm rounded-xl overflow-hidden"
+                  className="bg-white/80 backdrop-blur-sm rounded-lg overflow-hidden"
                 >
-                  <CollapsibleTrigger className="w-full p-6 flex items-center justify-between text-left">
-                    <h2 className="text-xl font-bold text-gray-900">What speed do you really need?</h2>
-                    <ChevronDown className={`h-5 w-5 transition-transform ${isSpeedOpen ? 'transform rotate-180' : ''}`} />
+                  <CollapsibleTrigger className="w-full p-4 flex items-center justify-between text-left">
+                    <h2 className="text-lg font-semibold text-gray-900">What speed do you really need?</h2>
+                    <ChevronDown className={`h-4 w-4 transition-transform ${isSpeedOpen ? 'transform rotate-180' : ''}`} />
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="px-6 pb-6">
-                    <p className="text-gray-700 mb-3">
-                      Your ideal broadband speed depends on how many people use the internet in your home and what you use it for, like streaming or gaming.
+                  <CollapsibleContent className="px-4 pb-4">
+                    <p className="text-gray-700 text-sm mb-2">
+                      Your ideal speed depends on household usage and activities like streaming or gaming.
                     </p>
-                    <p className="text-gray-700 mb-3">
-                      Next, consider peak usage times in your household and whether you need consistently fast speeds for working from home or other activities.
-                    </p>
-                    <a href="#" className="text-pink-600 hover:text-pink-700 font-medium inline-flex items-center gap-2">
-                      Read our guide on choosing the right broadband speed
-                      <ArrowRight size={16} />
+                    <a href="#" className="text-pink-600 hover:text-pink-700 text-sm font-medium inline-flex items-center gap-1">
+                      Read our guide
+                      <ArrowRight size={14} />
                     </a>
                   </CollapsibleContent>
                 </Collapsible>
@@ -97,7 +90,7 @@ const Broadband = () => {
             {/* Right Column - Image */}
             <div className="hidden md:flex items-center justify-center">
               <img 
-                src="/lovable-uploads/54030dcc-c9dd-418b-8177-f68b449a6108.png"
+                src="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
                 alt="Person using tablet" 
                 className="w-full h-auto object-contain rounded-2xl"
               />
