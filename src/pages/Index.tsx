@@ -128,8 +128,18 @@ const Index = () => {
       <NetworksComparison />
 
       {/* Footer Section */}
+
+      {/* Footer Section */}
       <footer className="bg-[#1A1F2C] text-gray-300 py-16">
         <div className="container mx-auto px-6">
+          <div className="flex flex-col items-center mb-12">
+            <img 
+              src="/lovable-uploads/d27943bf-1331-495e-8ff8-7f5573c370ad.png" 
+              alt="Smartfony Logo" 
+              className="h-12 mb-6"
+            />
+            <p className="text-lg text-gray-400">Find your perfect deal - compare all networks today</p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <h3 className="text-white font-bold text-lg mb-4">About Us</h3>
@@ -189,8 +199,10 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
     </div>
   );
 };
 
 export default Index;
+
