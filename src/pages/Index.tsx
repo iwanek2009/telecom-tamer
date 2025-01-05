@@ -2,6 +2,7 @@ import { Header } from '../components/Header';
 import { ServiceCard } from '../components/ServiceCard';
 import { Diamond, Handshake, ShieldCheck } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import NetworksComparison from '../components/NetworksComparison';
 
 const Index = () => {
   const scrollToServices = () => {
@@ -80,6 +81,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Networks Comparison Section */}
+      <NetworksComparison />
 
       {/* Why Compare Section */}
       <section className="bg-[#1a1f2e] text-white py-20">
