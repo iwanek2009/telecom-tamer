@@ -9,7 +9,7 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="container mx-auto px-6 py-20 md:py-32">
+      <section className="container mx-auto px-[50px] py-12 md:py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
@@ -30,9 +30,9 @@ const Index = () => {
           
           <div className="hidden md:block">
             <img 
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-              alt="Woman using laptop" 
-              className="w-full h-auto object-cover rounded-lg shadow-xl"
+              src="/lovable-uploads/f290a477-bb52-4371-a6e7-a84c27b974a7.png"
+              alt="Person using smartphone" 
+              className="w-full h-auto object-contain rounded-lg"
             />
           </div>
         </div>
