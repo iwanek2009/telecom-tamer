@@ -56,7 +56,7 @@ const Index = () => {
             <ServiceCard
               title="Best broadband"
               description="Compare our best broadband deals for January 2025."
-              icon={<Wifi className="w-8 h-8" />}
+              icon={<img src="/lovable-uploads/7e6e0456-dbde-4712-bc83-462378ce1199.png" alt="Broadband" className="w-8 h-8" />}
               link="/broadband"
               buttonText="Compare broadband"
               buttonColor="bg-cyan-400"
@@ -64,7 +64,7 @@ const Index = () => {
             <ServiceCard
               title="Mobile phones"
               description="Compare latest mobile phone deals and offers"
-              icon={<Smartphone className="w-8 h-8" />}
+              icon={<img src="/lovable-uploads/f13676e8-1e43-4a73-8589-3343ae32b09a.png" alt="Mobile Phone" className="w-8 h-8" />}
               link="/mobile"
               buttonText="See deals"
               buttonColor="bg-pink-500"
@@ -72,7 +72,7 @@ const Index = () => {
             <ServiceCard
               title="Sim only"
               description="Find and compare great deals on your SIM only contract"
-              icon={<CreditCard className="w-8 h-8" />}
+              icon={<img src="/lovable-uploads/e0d2c41d-0618-4ec8-aeb2-d41c62e3620b.png" alt="SIM Card" className="w-8 h-8" />}
               link="/sim"
               buttonText="Compare SIM deals"
               buttonColor="bg-blue-700"
