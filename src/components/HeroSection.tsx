@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 
 export const HeroSection = ({ onGetStarted }: { onGetStarted: () => void }) => {
   return (
-    <section className="container mx-auto px-[50px] py-[30px] md:py-0 bg-[#3FC1C9]">
-      <div className="grid md:grid-cols-2 gap-12 items-center">
+    <section className="w-full px-[50px] py-[30px] md:py-0 bg-[#3FC1C9]">
+      <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
         <div className="space-y-8 animate-fade-in">
           <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold tracking-tight leading-tight">
             Smart choices,
