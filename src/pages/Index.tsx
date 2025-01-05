@@ -1,6 +1,6 @@
 import { Header } from '../components/Header';
 import { ServiceCard } from '../components/ServiceCard';
-import { Smartphone, Wifi, CreditCard, Diamond, HandShake, ShieldCheck } from 'lucide-react';
+import { Smartphone, Wifi, CreditCard, Diamond, Handshake, ShieldCheck } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
@@ -58,7 +58,7 @@ const Index = () => {
             </div>
             
             <div className="bg-white p-8 rounded-2xl text-center animate-fade-in">
-              <HandShake className="w-12 h-12 mx-auto mb-4 text-gray-800" />
+              <Handshake className="w-12 h-12 mx-auto mb-4 text-gray-800" />
               <h3 className="text-gray-900 text-xl font-bold mb-3">Trusted Advice</h3>
               <p className="text-gray-600">
                 As an independent service, we focus only on finding you the right deal.
