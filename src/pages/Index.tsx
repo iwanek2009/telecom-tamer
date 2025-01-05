@@ -4,6 +4,7 @@ import { Diamond, Handshake, ShieldCheck } from 'lucide-react';
 import NetworksComparison from '../components/NetworksComparison';
 import BestSellingPhones from '../components/BestSellingPhones';
 import { HeroSection } from '../components/HeroSection';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const scrollToServices = () => {
@@ -114,7 +115,7 @@ const Index = () => {
             <div className="space-y-4">
               <h3 className="text-white font-bold text-lg mb-4">About Us</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="hover:text-white transition-colors">About Smartfony</a></li>
+                <li><Link to="/about" className="hover:text-white transition-colors">About Smartfony</Link></li>
                 <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">News</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Partners</a></li>
@@ -162,6 +163,7 @@ const Index = () => {
                 </a>
               </div>
             </div>
+
           </div>
           
           <div className="border-t border-gray-700 mt-12 pt-8 text-center">
