@@ -42,26 +42,6 @@ const Broadband = () => {
                 <p className="text-xl text-gray-700 mt-4 mb-8">
                   Find cheaper broadband in your area - save up to £163 per year
                 </p>
-                
-                {/* Postcode Search */}
-                <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <div className="flex gap-2">
-                    <input
-                      type="text"
-                      placeholder="Enter your postcode"
-                      value={postcode}
-                      onChange={(e) => setPostcode(e.target.value)}
-                      className="flex-1 p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
-                    />
-                    <button className="bg-black text-white px-6 py-3 rounded-md hover:bg-black/90 transition-colors flex items-center gap-2">
-                      Find deals
-                      <ArrowRight size={20} />
-                    </button>
-                  </div>
-                  <p className="text-sm text-gray-500 mt-2">
-                    Privacy notice: We'll only use your postcode to find deals in your area
-                  </p>
-                </div>
               </div>
 
               {/* Tips Sections */}
@@ -127,7 +107,6 @@ const Broadband = () => {
       </div>
 
       <main className="container mx-auto px-4 py-8">
-        {/* Deals */}
         <div className="grid md:grid-cols-2 gap-6">
           {mockDeals.map((deal, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-fade-in">
