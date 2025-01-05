@@ -6,18 +6,26 @@ interface ServiceCardProps {
   description: string;
   icon: ReactNode;
   link: string;
+  buttonText: string;
+  buttonColor: string;
 }
 
-export const ServiceCard = ({ title, description, icon, link }: ServiceCardProps) => {
+export const ServiceCard = ({ title, description, icon, link, buttonText, buttonColor }: ServiceCardProps) => {
   return (
-    <Link to={link}>
-      <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 cursor-pointer animate-fade-in">
-        <div className="flex flex-col items-center text-center space-y-4">
-          <div className="text-primary text-4xl">{icon}</div>
-          <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
-          <p className="text-gray-600">{description}</p>
+    <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-in">
+      <div className="flex flex-col items-center text-center space-y-4">
+        <div className="text-gray-800 mb-2">
+          {icon}
         </div>
+        <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
+        <p className="text-gray-600 mb-6">{description}</p>
+        <Link 
+          to={link}
+          className={`${buttonColor} text-white px-6 py-3 rounded-lg hover:opacity-90 transition-opacity w-full text-center`}
+        >
+          {buttonText}
+        </Link>
       </div>
-    </Link>
+    </div>
   );
 };

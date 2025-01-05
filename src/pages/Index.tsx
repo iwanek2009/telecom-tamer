@@ -1,6 +1,6 @@
 import { Header } from '../components/Header';
 import { ServiceCard } from '../components/ServiceCard';
-import { Smartphone, Wifi } from 'lucide-react';
+import { Smartphone, Wifi, Sim } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
@@ -39,20 +39,41 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="container mx-auto px-4 py-12 bg-gray-50">
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <ServiceCard
-            title="Mobile Plans"
-            description="Compare mobile phone contracts and SIM-only deals from leading providers"
-            icon={<Smartphone />}
-            link="/mobile"
-          />
-          <ServiceCard
-            title="Broadband"
-            description="Find the best broadband packages available in your area"
-            icon={<Wifi />}
-            link="/broadband"
-          />
+      <section className="bg-gray-50 py-20">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl font-bold mb-4">Compare deals, switch and save</h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Find the perfect mobile contract at telecom-tamer.co.uk. We compare deals from all major UK providers to help you save time and money.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <ServiceCard
+              title="Best broadband"
+              description="Compare our best broadband deals for January 2025."
+              icon={<Wifi className="w-8 h-8" />}
+              link="/broadband"
+              buttonText="Compare broadband"
+              buttonColor="bg-cyan-400"
+            />
+            <ServiceCard
+              title="Mobile phones"
+              description="Compare latest mobile phone deals and offers"
+              icon={<Smartphone className="w-8 h-8" />}
+              link="/mobile"
+              buttonText="See deals"
+              buttonColor="bg-pink-500"
+            />
+            <ServiceCard
+              title="Sim only"
+              description="Find and compare great deals on your SIM only contract"
+              icon={<Sim className="w-8 h-8" />}
+              link="/sim"
+              buttonText="Compare SIM deals"
+              buttonColor="bg-blue-700"
+            />
+          </div>
         </div>
       </section>
     </div>
