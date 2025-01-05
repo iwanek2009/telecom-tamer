@@ -30,7 +30,7 @@ const Broadband = () => {
       
       {/* Hero Section */}
       <div className="bg-[#3FC1C9]">
-        <div className="container mx-auto px-4 pt-12 md:pt-16">
+        <div className="container mx-auto px-4 pt-12 pb-8 md:pt-16 md:pb-0">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Left Column */}
             <div className="space-y-6">
