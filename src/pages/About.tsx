@@ -10,8 +10,8 @@ const About = () => {
         <div className="container mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">Who We Are</h1>
           <div className="max-w-3xl mx-auto text-lg leading-relaxed space-y-6">
-            <p>Smartfony.co.uk was established in 2020 by Wojciech Iwanowski with a clear vision - to make mobile and broadband comparisons simple and transparent for UK consumers. What started as a small project with just two team members has grown into a trusted comparison platform. Despite our growth, we maintain our core values of simplicity, transparency, and personal approach to customer service.</p>
-            <p>Led by Wojciech's expertise in telecommunications, our team focuses on helping customers navigate the complex world of mobile phone contracts and broadband deals. We believe in providing clear, unbiased information that helps you make informed decisions without the technical jargon.</p>
+            <p>Smartfony.co.uk was established in 2020 by our founding team with a clear vision - to make mobile and broadband comparisons simple and transparent for UK consumers. What started as a small project with just two team members has grown into a trusted comparison platform. Despite our growth, we maintain our core values of simplicity, transparency, and personal approach to customer service.</p>
+            <p>Led by our expertise in telecommunications, our team focuses on helping customers navigate the complex world of mobile phone contracts and broadband deals. We believe in providing clear, unbiased information that helps you make informed decisions without the technical jargon.</p>
             <p>Our services are completely free to use, with no hidden costs. We display all charges upfront, including any additional fees, so you can be confident in the prices you see.</p>
           </div>
         </div>
