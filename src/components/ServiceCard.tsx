@@ -1,6 +1,3 @@
-import { ReactNode } from 'react';
-import { Link } from 'react-router-dom';
-
 interface ServiceCardProps {
   title: string;
   description: string;
@@ -12,19 +9,17 @@ interface ServiceCardProps {
 
 export const ServiceCard = ({ title, description, icon, link, buttonText, buttonColor }: ServiceCardProps) => {
   return (
-    <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-in">
-      <div className="flex flex-col items-center text-center space-y-4">
-        <div className="mb-2">
-          <img src={icon} alt={title} className="w-[60px] h-[60px]" />
-        </div>
-        <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
+    <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+      <div className="flex flex-col items-center text-center">
+        <img src={icon} alt={title} className="w-16 h-16 mb-6" />
+        <h3 className="text-xl font-bold mb-4">{title}</h3>
         <p className="text-gray-600 mb-6">{description}</p>
-        <Link 
-          to={link}
-          className={`${buttonColor} text-white px-6 py-3 rounded-lg hover:opacity-90 transition-opacity w-full text-center`}
+        <a
+          href={link}
+          className={`${buttonColor} text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity`}
         >
           {buttonText}
-        </Link>
+        </a>
       </div>
     </div>
   );
