@@ -35,9 +35,9 @@ const BroadbandComparisonSteps = () => {
                 <Filter className="w-8 h-8 text-[#9b87f5]" />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-[#221F26] mb-4">Choose a personalised deal</h3>
+            <h3 className="text-xl font-bold text-[#221F26] mb-4">Choose the perfect package</h3>
             <p className="text-[#7E69AB]">
-              Filter your results by speed, provider, contract length and more to find a deal that suits you best.
+              Sort and filter results by what matters to you - speed, price, provider, or contract length.
             </p>
           </div>
 
