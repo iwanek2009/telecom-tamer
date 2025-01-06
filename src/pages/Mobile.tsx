@@ -1,6 +1,7 @@
 import { Header } from '../components/Header';
 import { useState } from 'react';
 import { Slider } from "@/components/ui/slider";
+import { Button } from "@/components/ui/button";
 
 const Mobile = () => {
   const [priceRange, setPriceRange] = useState([0, 100]);
@@ -27,6 +28,31 @@ const Mobile = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
+      
+      {/* Hero Section */}
+      <div className="w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="max-w-3xl mx-auto text-center space-y-6 animate-fade-in">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              Find your perfect phone deal
+            </h1>
+            <p className="text-lg md:text-xl text-blue-100 leading-relaxed">
+              Ready to save on your next phone contract? We'll help you discover the best monthly plans and latest handsets at prices you'll love.
+            </p>
+            <p className="text-lg md:text-xl text-blue-100 leading-relaxed">
+              Already have a phone you love? Check out our money-saving SIM only deals.
+            </p>
+            <div className="pt-4">
+              <Button 
+                className="bg-white text-blue-800 hover:bg-blue-50 px-8 py-6 text-lg font-semibold rounded-full"
+              >
+                Compare Deals Now
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-8">Compare Mobile Deals</h1>
         
