@@ -86,14 +86,6 @@ const Mobile = () => {
                   </CollapsibleContent>
                 </Collapsible>
               </div>
-
-              <div className="pt-4">
-                <Button 
-                  className="bg-white text-[#FC5185] hover:bg-pink-50 px-8 py-6 text-lg font-semibold rounded-full"
-                >
-                  Compare Deals Now
-                </Button>
-              </div>
             </div>
 
             <div className="hidden md:block">
