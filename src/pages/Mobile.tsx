@@ -140,7 +140,7 @@ const Mobile = () => {
             </div>
           ))}
         </div>
-      </main>
+      </div>
     </div>
   );
 };
