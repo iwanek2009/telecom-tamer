@@ -8,6 +8,7 @@ import BroadbandUnderstanding from '../components/BroadbandUnderstanding';
 import BroadbandFilters from '../components/BroadbandFilters';
 import BroadbandOffers from '../components/BroadbandOffers';
 import BroadbandSpeed from '../components/BroadbandSpeed';
+import { Footer } from '../components/Footer';
 
 const Broadband = () => {
   const [isValueOpen, setIsValueOpen] = useState(false);
@@ -103,6 +104,7 @@ const Broadband = () => {
       <BroadbandGuide />
       <BroadbandUnderstanding />
       <BroadbandSpeed />
+      <Footer />
     </div>
   );
 };
