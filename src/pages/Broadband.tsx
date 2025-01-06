@@ -2,9 +2,10 @@ import { Header } from '../components/Header';
 import { useState } from 'react';
 import { ArrowRight, ChevronDown, Info, Wifi } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Checkbox } from "@/components/ui/checkbox"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Checkbox } from "@/components/ui/checkbox";
 import BroadbandComparisonSteps from '../components/BroadbandComparisonSteps';
+import BroadbandGuide from '../components/BroadbandGuide';
 
 const Broadband = () => {
   const [isValueOpen, setIsValueOpen] = useState(false);
@@ -233,6 +234,7 @@ const Broadband = () => {
       </main>
 
       <BroadbandComparisonSteps />
+      <BroadbandGuide />
     </div>
   );
 };
