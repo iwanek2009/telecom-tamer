@@ -75,32 +75,27 @@ const MobileEssentialSteps = () => {
             {steps.map((step, index) => (
               <div 
                 key={index}
-                className="group bg-white/95 backdrop-blur-md rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-white/20"
+                className="bg-white/90 backdrop-blur-sm rounded-2xl p-6"
               >
-                <div className="relative">
-                  <span className="absolute -top-4 -left-4 w-8 h-8 flex items-center justify-center bg-[#FC5185] text-white rounded-full font-semibold">
-                    {index + 1}
-                  </span>
-                  <h3 className="text-xl font-semibold mb-4 text-black group-hover:text-[#FC5185] transition-colors">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-700 mb-4 leading-relaxed">
-                    {step.description}
+                <h3 className="text-xl font-semibold mb-4 text-black">
+                  {step.title}
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  {step.description}
+                </p>
+                <ul className="space-y-2">
+                  {step.points.map((point, pointIndex) => (
+                    <li key={pointIndex} className="flex items-start">
+                      <span className="text-black mr-2">•</span>
+                      <span className="text-gray-700">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+                {step.note && (
+                  <p className="mt-4 text-sm text-black italic">
+                    {step.note}
                   </p>
-                  <ul className="space-y-3">
-                    {step.points.map((point, pointIndex) => (
-                      <li key={pointIndex} className="flex items-start space-x-2">
-                        <span className="text-[#FC5185] mt-1">•</span>
-                        <span className="text-gray-700 leading-relaxed">{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  {step.note && (
-                    <p className="mt-6 text-sm text-gray-600 italic bg-gray-50 p-3 rounded-lg border border-gray-100">
-                      {step.note}
-                    </p>
-                  )}
-                </div>
+                )}
               </div>
             ))}
           </div>
@@ -110,7 +105,7 @@ const MobileEssentialSteps = () => {
               Remember: The cheapest monthly price isn't always the best deal - look at the total package and what you're getting for your money.
             </p>
             <Button 
-              className="bg-[#FC5185] hover:bg-[#FC5185]/90 text-white font-semibold px-8 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+              className="bg-black hover:bg-black/90 text-white"
               onClick={scrollToFilters}
             >
               Compare Deals Now
