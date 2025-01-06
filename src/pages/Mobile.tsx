@@ -44,9 +44,6 @@ const Mobile = () => {
               <p className="text-lg md:text-xl text-black leading-relaxed">
                 Ready to save on your next phone contract? We'll help you discover the best monthly plans and latest handsets at prices you'll love.
               </p>
-              <p className="text-lg md:text-xl text-black leading-relaxed">
-                Already have a phone you love? Check out our money-saving SIM only deals.
-              </p>
               
               {/* Toggle Sections in Hero */}
               <div className="space-y-4 pt-8">
