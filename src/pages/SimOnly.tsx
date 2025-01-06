@@ -89,7 +89,7 @@ const SimOnly = () => {
               <img 
                 src="/lovable-uploads/ddd47760-f9ef-4924-9967-59af638f75dd.png"
                 alt="Person using tablet device" 
-                className="w-full h-auto object-contain rounded-lg"
+                className="w-full h-auto object-contain rounded-lg -mb-20"
               />
             </div>
           </div>
