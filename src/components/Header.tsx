@@ -23,6 +23,9 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6">
+            <Link to="/" className="text-gray-600 hover:text-primary transition-colors">
+              Home
+            </Link>
             <Link to="/mobile" className="text-gray-600 hover:text-primary transition-colors">
               Mobile
             </Link>
@@ -44,6 +47,13 @@ export const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-50 animate-fade-in">
             <div className="py-4 px-4 space-y-4">
+              <Link 
+                to="/" 
+                className="block text-gray-600 hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </Link>
               <Link 
                 to="/mobile" 
                 className="block text-gray-600 hover:text-primary transition-colors"
