@@ -100,7 +100,7 @@ const Mobile = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Filters */}
-          <div className="md:col-span-1">
+          <div className="md:col-span-1" id="filters-section">
             <MobileFilters />
           </div>
 

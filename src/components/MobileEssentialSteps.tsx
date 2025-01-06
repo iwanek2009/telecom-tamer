@@ -53,6 +53,13 @@ const MobileEssentialSteps = () => {
     }
   ];
 
+  const scrollToFilters = () => {
+    const filtersSection = document.querySelector('#filters-section');
+    if (filtersSection) {
+      filtersSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="bg-gradient-to-br from-[#FC5185]/40 via-[#FC5185]/30 to-[#FC5185]/20 py-16">
       <div className="container mx-auto px-4">
@@ -99,6 +106,7 @@ const MobileEssentialSteps = () => {
             </p>
             <Button 
               className="bg-black hover:bg-black/90 text-white"
+              onClick={scrollToFilters}
             >
               Compare Deals Now
             </Button>
