@@ -4,6 +4,7 @@ import { SimHeroSection } from '@/components/sim/SimHeroSection';
 import { SimPlansSection } from '@/components/sim/SimPlansSection';
 import { SimBenefitsSection } from '@/components/sim/SimBenefitsSection';
 import { SimWhySection } from '@/components/sim/SimWhySection';
+import { SimGuideSection } from '@/components/sim/SimGuideSection';
 
 const SimOnly = () => {
   return (
@@ -13,6 +14,7 @@ const SimOnly = () => {
       <SimPlansSection />
       <SimBenefitsSection />
       <SimWhySection />
+      <SimGuideSection />
       <Footer />
     </div>
   );
