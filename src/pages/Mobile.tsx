@@ -4,6 +4,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { ChevronDown } from "lucide-react";
 import MobileFilters from '@/components/MobileFilters';
 import MobileEssentialSteps from '@/components/MobileEssentialSteps';
+import ContractComparison from '@/components/ContractComparison';
 import { Button } from "@/components/ui/button";
 
 const Mobile = () => {
@@ -146,6 +147,7 @@ const Mobile = () => {
       </div>
 
       <MobileEssentialSteps />
+      <ContractComparison />
     </div>
   );
 };
