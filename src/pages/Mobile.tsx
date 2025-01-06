@@ -1,5 +1,5 @@
 import { Header } from '../components/Header';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronDown } from "lucide-react";
 import MobileFilters from '@/components/MobileFilters';
@@ -12,6 +12,15 @@ import { Button } from "@/components/ui/button";
 const Mobile = () => {
   const [isFirstOpen, setIsFirstOpen] = useState(false);
   const [isSecondOpen, setIsSecondOpen] = useState(false);
+
+  useEffect(() => {
+    // Update document title and meta description when component mounts
+    document.title = "Compare Phone Contracts | Find Best Mobile Phone Deals";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Compare the latest phone contracts from all major UK networks. Find deals on iPhone, Samsung & more. Save up to 40% on your monthly plan with our comparison tool.');
+    }
+  }, []);
   
   const mockDeals = [
     {
