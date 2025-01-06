@@ -48,9 +48,9 @@ const BroadbandComparisonSteps = () => {
                 <CreditCard className="w-8 h-8 text-[#9b87f5]" />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-[#221F26] mb-4">Complete your switch</h3>
+            <h3 className="text-xl font-bold text-[#221F26] mb-4">Switch with confidence</h3>
             <p className="text-[#7E69AB]">
-              Sign up to your new deal on your chosen broadband provider's site. Make sure to check your contract information is correct.
+              Complete your order through the provider's website. Don't worry - you'll have 14 days to change your mind, free of charge.
             </p>
           </div>
         </div>
