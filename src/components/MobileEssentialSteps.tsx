@@ -54,7 +54,7 @@ const MobileEssentialSteps = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-br from-[#FC5185] via-[#FC5185]/80 to-[#FC5185]/60 py-16">
+    <section className="bg-gradient-to-br from-[#FC5185]/40 via-[#FC5185]/30 to-[#FC5185]/20 py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-8">
