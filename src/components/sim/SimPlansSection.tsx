@@ -52,9 +52,9 @@ export const SimPlansSection = () => {
             <SimFilters />
           </div>
           <div className="md:col-span-3">
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="flex flex-col md:flex-row gap-8">
               {plans.map((plan, index) => (
-                <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+                <Card key={index} className="flex-1 p-6 hover:shadow-lg transition-shadow">
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                     <div className="text-4xl font-bold text-[#FC5185] mb-2">
