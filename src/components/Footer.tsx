@@ -17,7 +17,6 @@ export const Footer = () => {
             <h3 className="text-white font-bold text-lg mb-4">About Us</h3>
             <ul className="space-y-2">
               <li><Link to="/about" className="hover:text-white transition-colors">About Smartfony</Link></li>
-              <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
               <li><a href="#" className="hover:text-white transition-colors">News</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Partners</a></li>
             </ul>
@@ -28,7 +27,6 @@ export const Footer = () => {
             <ul className="space-y-2">
               <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
               <li><a href="#" className="hover:text-white transition-colors">FAQs</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Live Chat</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
             </ul>
           </div>
@@ -39,7 +37,6 @@ export const Footer = () => {
               <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Cookie Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Accessibility</a></li>
             </ul>
           </div>
 
