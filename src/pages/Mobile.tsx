@@ -2,9 +2,13 @@ import { Header } from '../components/Header';
 import { useState } from 'react';
 import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { ChevronDown } from "lucide-react";
 
 const Mobile = () => {
   const [priceRange, setPriceRange] = useState([0, 100]);
+  const [isFirstOpen, setIsFirstOpen] = useState(false);
+  const [isSecondOpen, setIsSecondOpen] = useState(false);
   
   const mockDeals = [
     {
@@ -53,7 +57,47 @@ const Mobile = () => {
         </div>
       </div>
 
-      <main className="container mx-auto px-4 py-8">
+      {/* Toggle Sections */}
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-3xl mx-auto space-y-4">
+          <Collapsible
+            open={isFirstOpen}
+            onOpenChange={setIsFirstOpen}
+            className="border rounded-lg p-4 bg-white"
+          >
+            <CollapsibleTrigger className="flex justify-between items-center w-full">
+              <h2 className="text-xl font-semibold text-black">How to choose the best mobile phone deal</h2>
+              <ChevronDown className={`h-6 w-6 transition-transform ${isFirstOpen ? 'transform rotate-180' : ''}`} />
+            </CollapsibleTrigger>
+            <CollapsibleContent className="pt-4">
+              <div className="space-y-4 text-black">
+                <p>Firstly, consider your usage so you don't pay for more data than you need and avoid charges for exceeding your allowance.</p>
+                <p>Next, consider the handset you want. Deals for older and mid-range phones tend to be more affordable than those for the latest models.</p>
+                <p>For more information, read our 'How to choose a mobile phone contract' guide</p>
+              </div>
+            </CollapsibleContent>
+          </Collapsible>
+
+          <Collapsible
+            open={isSecondOpen}
+            onOpenChange={setIsSecondOpen}
+            className="border rounded-lg p-4 bg-white"
+          >
+            <CollapsibleTrigger className="flex justify-between items-center w-full">
+              <h2 className="text-xl font-semibold text-black">Should I choose a pay monthly or SIM only deal?</h2>
+              <ChevronDown className={`h-6 w-6 transition-transform ${isSecondOpen ? 'transform rotate-180' : ''}`} />
+            </CollapsibleTrigger>
+            <CollapsibleContent className="pt-4">
+              <div className="space-y-4 text-black">
+                <p>Choosing the right mobile plan for you depends on what best suits your preferences and needs.</p>
+                <p>A fixed contract provides stability and potential device savings, especially if you want unlimited data. SIM only plans offer greater flexibility and affordability.</p>
+                <p>For more information, read our 'SIM only vs pay monthly' guide</p>
+              </div>
+            </CollapsibleContent>
+          </Collapsible>
+        </div>
+
+        {/* Filters and Deals */}
         <h1 className="text-3xl font-bold text-gray-900 mb-8">Compare Mobile Deals</h1>
         
         {/* Filters */}
