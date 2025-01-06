@@ -44,7 +44,7 @@ export const HeroSection = ({ onGetStarted }: { onGetStarted: () => void }) => {
             </Button>
             <div className="flex items-center space-x-2 text-gray-700">
               <span className="text-yellow-500">★★★★★</span>
-              <span className="text-sm">Rated 4.8 by 10,000+ customers</span>
+              <span className="text-sm">Rated 4.8 by customers</span>
             </div>
           </div>
         </div>
