@@ -5,9 +5,9 @@ export const HeroSection = ({ onGetStarted }: { onGetStarted: () => void }) => {
     <section className="w-full px-[50px] py-[30px] md:py-0" style={{ background: 'linear-gradient(135deg, #40E0D0 0%, #98F5E1 100%)' }}>
       <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
         <div className="space-y-8 animate-fade-in">
-          <h1 className="text-5xl sm:text-4xl md:text-6xl font-bold tracking-tight leading-tight">
+          <h1 className="text-[42px] sm:text-4xl md:text-6xl font-bold tracking-tight leading-tight">
             Smart choices,
-            <br />
+            <br className="block" />
             better <span className="text-pink-500">savings.</span>
           </h1>
           <div className="space-y-4">
