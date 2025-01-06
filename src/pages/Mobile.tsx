@@ -36,7 +36,7 @@ const Mobile = () => {
       {/* Hero Section */}
       <div className="w-full bg-gradient-to-r from-[#FC5185] to-[#FC5185]/80">
         <div className="container mx-auto px-4 py-16">
-          <div className="grid md:grid-cols-1 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="max-w-3xl space-y-6 animate-fade-in">
               <h1 className="text-4xl md:text-5xl font-bold leading-tight text-black">
                 Find your perfect phone deal
@@ -85,11 +85,11 @@ const Mobile = () => {
               </div>
             </div>
 
-            <div className="flex justify-center">
+            <div className="hidden md:block">
               <img 
                 src="/lovable-uploads/ccdcec41-6a48-416a-8133-3f80432b9aad.png"
                 alt="Person using smartphone" 
-                className="w-full h-auto object-contain rounded-lg animate-fade-in max-w-xl"
+                className="w-full h-auto object-contain rounded-lg animate-fade-in"
               />
             </div>
           </div>
