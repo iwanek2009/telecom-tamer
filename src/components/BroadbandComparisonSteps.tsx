@@ -6,10 +6,10 @@ const BroadbandComparisonSteps = () => {
     <section className="bg-gradient-to-b from-[#FFDEE2] to-[#F1F0FB] py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#221F26] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
             How to compare broadband deals
           </h2>
-          <p className="text-[#7E69AB] text-lg">
+          <p className="text-black text-lg">
             You always have a <span className="font-semibold">14-day 'cooling off' period</span>, during which you can cancel your request to switch broadband provider – free of charge.
           </p>
         </div>
@@ -22,8 +22,8 @@ const BroadbandComparisonSteps = () => {
                 <Building2 className="w-8 h-8 text-[#9b87f5]" />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-[#221F26] mb-4">Find available deals</h3>
-            <p className="text-[#7E69AB]">
+            <h3 className="text-xl font-bold text-black mb-4">Find available deals</h3>
+            <p className="text-black">
               Simply enter your postcode to see what broadband packages are available in your area.
             </p>
           </div>
@@ -35,8 +35,8 @@ const BroadbandComparisonSteps = () => {
                 <Filter className="w-8 h-8 text-[#9b87f5]" />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-[#221F26] mb-4">Choose the perfect package</h3>
-            <p className="text-[#7E69AB]">
+            <h3 className="text-xl font-bold text-black mb-4">Choose the perfect package</h3>
+            <p className="text-black">
               Sort and filter results by what matters to you - speed, price, provider, or contract length.
             </p>
           </div>
@@ -48,8 +48,8 @@ const BroadbandComparisonSteps = () => {
                 <CreditCard className="w-8 h-8 text-[#9b87f5]" />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-[#221F26] mb-4">Switch with confidence</h3>
-            <p className="text-[#7E69AB]">
+            <h3 className="text-xl font-bold text-black mb-4">Switch with confidence</h3>
+            <p className="text-black">
               Complete your order through the provider's website. Don't worry - you'll have 14 days to change your mind, free of charge.
             </p>
           </div>
