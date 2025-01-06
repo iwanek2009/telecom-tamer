@@ -32,6 +32,9 @@ export const Header = () => {
             <Link to="/broadband" className="text-gray-600 hover:text-primary transition-colors">
               Broadband
             </Link>
+            <Link to="/sim" className="text-gray-600 hover:text-primary transition-colors">
+              Sim Only
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -67,6 +70,13 @@ export const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Broadband
+              </Link>
+              <Link 
+                to="/sim" 
+                className="block text-gray-600 hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Sim Only
               </Link>
             </div>
           </div>
