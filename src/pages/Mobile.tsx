@@ -5,6 +5,8 @@ import { ChevronDown } from "lucide-react";
 import MobileFilters from '@/components/MobileFilters';
 import MobileEssentialSteps from '@/components/MobileEssentialSteps';
 import ContractComparison from '@/components/ContractComparison';
+import NumberPortability from '@/components/NumberPortability';
+import ContractGuide from '@/components/ContractGuide';
 import { Button } from "@/components/ui/button";
 
 const Mobile = () => {
@@ -148,6 +150,8 @@ const Mobile = () => {
 
       <MobileEssentialSteps />
       <ContractComparison />
+      <NumberPortability />
+      <ContractGuide />
     </div>
   );
 };
