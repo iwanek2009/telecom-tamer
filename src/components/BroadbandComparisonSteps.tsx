@@ -22,9 +22,9 @@ const BroadbandComparisonSteps = () => {
                 <Building2 className="w-8 h-8 text-[#9b87f5]" />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-[#221F26] mb-4">Enter your details</h3>
+            <h3 className="text-xl font-bold text-[#221F26] mb-4">Find available deals</h3>
             <p className="text-[#7E69AB]">
-              Add your address into our postcode checker above and browse a wide range of deals available to your home.
+              Simply enter your postcode to see what broadband packages are available in your area.
             </p>
           </div>
 
