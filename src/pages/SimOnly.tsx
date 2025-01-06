@@ -52,8 +52,9 @@ const SimOnly = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#FC5185] to-[#FC5185]/80 py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-center">
+            <div className="text-center md:text-left">
+            <h1 className="text-4xl md:text-5xl font-bold text-black mb-6">
               Find Your Perfect SIM Only Deal
             </h1>
             <p className="text-lg md:text-xl text-black mb-8">
@@ -82,6 +83,13 @@ const SimOnly = () => {
                   <p>For more information, read our 'Network switching guide'</p>
                 </CollapsibleContent>
               </Collapsible>
+            </div>
+            <div className="hidden md:block">
+              <img 
+                src="/lovable-uploads/fc6d95f3-f210-405c-9141-2c1d912caaca.png"
+                alt="Person using tablet device" 
+                className="w-full h-auto object-contain rounded-lg"
+              />
             </div>
           </div>
         </div>
