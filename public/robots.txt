@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Allow: /mobile
+Allow: /broadband
+Allow: /about
+
+Sitemap: https://smartfony.co.uk/sitemap.xml
+
+# Crawl-delay: 10
+
+# Block access to specific files and directories
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?*
+Disallow: /api/
