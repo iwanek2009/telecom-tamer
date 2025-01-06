@@ -17,7 +17,6 @@ const Index = () => {
       
       <HeroSection onGetStarted={scrollToServices} />
 
-      {/* Services Section */}
       <section id="services-section" className="bg-gray-50 py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
@@ -116,7 +115,6 @@ const Index = () => {
               <h3 className="text-white font-bold text-lg mb-4">About Us</h3>
               <ul className="space-y-2">
                 <li><Link to="/about" className="hover:text-white transition-colors">About Smartfony</Link></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">News</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Partners</a></li>
               </ul>
@@ -163,7 +161,6 @@ const Index = () => {
                 </a>
               </div>
             </div>
-
           </div>
           
           <div className="border-t border-gray-700 mt-12 pt-8 text-center">
