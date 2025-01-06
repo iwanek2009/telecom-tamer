@@ -62,7 +62,7 @@ const SimOnly = () => {
               </p>
               
               <div className="space-y-4 mt-8">
-                <Collapsible className="w-full bg-white/30 backdrop-blur-sm rounded-lg p-4">
+                <Collapsible className="w-full bg-white backdrop-blur-sm rounded-lg p-4">
                   <CollapsibleTrigger className="flex justify-between items-center w-full text-left text-black font-semibold">
                     How to choose the best SIM only deal
                   </CollapsibleTrigger>
@@ -73,7 +73,7 @@ const SimOnly = () => {
                   </CollapsibleContent>
                 </Collapsible>
 
-                <Collapsible className="w-full bg-white/30 backdrop-blur-sm rounded-lg p-4">
+                <Collapsible className="w-full bg-white backdrop-blur-sm rounded-lg p-4">
                   <CollapsibleTrigger className="flex justify-between items-center w-full text-left text-black font-semibold">
                     What happens when I switch networks?
                   </CollapsibleTrigger>
