@@ -96,6 +96,60 @@ const Mobile = () => {
         </div>
       </div>
 
+      {/* Filter Section */}
+      <div className="container mx-auto px-4 py-8">
+        <div className="bg-white rounded-lg shadow-sm p-6">
+          <h2 className="text-xl font-semibold mb-6">Filter your search</h2>
+          <div className="grid md:grid-cols-4 gap-6">
+            {/* Contract Type */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Contract Type</label>
+              <select className="w-full border-gray-200 rounded-md">
+                <option>All contracts</option>
+                <option>Pay Monthly</option>
+                <option>SIM Only</option>
+              </select>
+            </div>
+            
+            {/* Data Allowance */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Data Allowance</label>
+              <select className="w-full border-gray-200 rounded-md">
+                <option>Any data</option>
+                <option>1GB - 5GB</option>
+                <option>5GB - 10GB</option>
+                <option>10GB+</option>
+                <option>Unlimited</option>
+              </select>
+            </div>
+            
+            {/* Network */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Network</label>
+              <select className="w-full border-gray-200 rounded-md">
+                <option>All networks</option>
+                <option>EE</option>
+                <option>O2</option>
+                <option>Vodafone</option>
+                <option>Three</option>
+              </select>
+            </div>
+            
+            {/* Monthly Cost */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Monthly Cost</label>
+              <select className="w-full border-gray-200 rounded-md">
+                <option>Any price</option>
+                <option>Up to £20</option>
+                <option>£20 - £30</option>
+                <option>£30 - £40</option>
+                <option>£40+</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Filters and Deals */}
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold text-black mb-8">Compare Mobile Deals</h1>
