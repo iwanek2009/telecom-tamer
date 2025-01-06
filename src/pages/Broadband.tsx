@@ -1,29 +1,14 @@
 import { Header } from '../components/Header';
 import { useState } from 'react';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown, Info, Wifi } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Checkbox } from "@/components/ui/checkbox"
 
 const Broadband = () => {
   const [isValueOpen, setIsValueOpen] = useState(false);
   const [isSpeedOpen, setIsSpeedOpen] = useState(false);
   
-  const mockDeals = [
-    {
-      provider: "FastNet",
-      speed: "100 Mbps",
-      price: 30,
-      contract: "18 months",
-      features: ["Unlimited Data", "Free Router", "No Setup Fee"],
-    },
-    {
-      provider: "SpeedFiber",
-      speed: "200 Mbps",
-      price: 35,
-      contract: "24 months",
-      features: ["Unlimited Data", "Free Router", "TV Package Included"],
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
@@ -104,27 +89,145 @@ const Broadband = () => {
       </div>
 
       <main className="container mx-auto px-4 py-8">
-        <div className="grid md:grid-cols-2 gap-6">
-          {mockDeals.map((deal, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-fade-in">
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-semibold">{deal.provider}</h3>
-                <span className="text-2xl font-bold text-secondary">£{deal.price}/mo</span>
+        <div className="grid md:grid-cols-12 gap-8">
+          {/* Filter Section */}
+          <div className="md:col-span-3 space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h2 className="font-semibold mb-4">Filter by</h2>
+              
+              {/* Package Filter */}
+              <div className="space-y-4 mb-6">
+                <h3 className="font-medium">Package</h3>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <Checkbox id="broadband" />
+                    <label htmlFor="broadband" className="text-sm">Broadband (41)</label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Checkbox id="broadband-tv" />
+                    <label htmlFor="broadband-tv" className="text-sm">Broadband + TV (26)</label>
+                  </div>
+                </div>
               </div>
-              <div className="mb-4">
-                <span className="text-lg font-medium">{deal.speed}</span>
-                <p className="text-gray-600">{deal.contract} contract</p>
+
+              {/* Speed Filter */}
+              <div className="space-y-4 mb-6">
+                <h3 className="font-medium">Download speeds</h3>
+                <RadioGroup defaultValue="10">
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="10" id="10mbps" />
+                    <label htmlFor="10mbps" className="text-sm">10 Mbps + (67)</label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="30" id="30mbps" />
+                    <label htmlFor="30mbps" className="text-sm">30 Mbps + (66)</label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="100" id="100mbps" />
+                    <label htmlFor="100mbps" className="text-sm">100 Mbps + (32)</label>
+                  </div>
+                </RadioGroup>
               </div>
-              <div className="space-y-2 text-gray-600">
-                {deal.features.map((feature, i) => (
-                  <p key={i}>✓ {feature}</p>
-                ))}
+
+              {/* Provider Filter */}
+              <div className="space-y-4">
+                <h3 className="font-medium">Provider</h3>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <Checkbox id="virgin" />
+                    <label htmlFor="virgin" className="text-sm">Virgin Media (32)</label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Checkbox id="bt" />
+                    <label htmlFor="bt" className="text-sm">BT (16)</label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Checkbox id="sky" />
+                    <label htmlFor="sky" className="text-sm">Sky (5)</label>
+                  </div>
+                </div>
               </div>
-              <button className="w-full mt-4 bg-primary text-white py-2 rounded-md hover:bg-primary/90 transition-colors">
-                View Deal
-              </button>
             </div>
-          ))}
+          </div>
+
+          {/* Offers Section */}
+          <div className="md:col-span-9 space-y-4">
+            {/* Offer Card 1 */}
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <div className="flex items-start justify-between">
+                <div className="flex items-center space-x-4">
+                  <img src="/lovable-uploads/439da46b-b50f-449e-b131-2b851962c927.png" alt="Virgin Media" className="w-12 h-12 object-contain" />
+                  <div>
+                    <h3 className="font-semibold">Virgin Media M125 Ultrafast Fibre</h3>
+                    <div className="flex items-center mt-1">
+                      <Wifi className="w-4 h-4 mr-1" />
+                      <span className="text-sm text-gray-600">Average UK speed*</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <div className="text-2xl font-bold">£23.50<span className="text-sm font-normal"> a month</span></div>
+                  <p className="text-sm text-gray-600">no setup cost</p>
+                </div>
+              </div>
+              
+              <div className="mt-4 flex justify-between items-center">
+                <div>
+                  <div className="text-3xl font-bold">132<span className="text-xl"> Mbps</span></div>
+                  <p className="text-sm text-gray-600">18 month contract</p>
+                </div>
+                <div className="space-y-2">
+                  <button className="w-32 bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800">Get deal</button>
+                  <button className="w-32 text-sm text-gray-600 flex items-center justify-center gap-1">
+                    More info
+                    <Info className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+
+              <div className="mt-4 bg-yellow-100 px-3 py-2 rounded-md inline-block">
+                <p className="text-sm font-medium">£50 bill credit</p>
+              </div>
+            </div>
+
+            {/* Offer Card 2 */}
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <div className="flex items-start justify-between">
+                <div className="flex items-center space-x-4">
+                  <img src="/lovable-uploads/200c65f5-15b7-44c8-ad2a-3fe27a295479.png" alt="Vodafone" className="w-12 h-12 object-contain" />
+                  <div>
+                    <h3 className="font-semibold">Vodafone Fibre 2</h3>
+                    <div className="flex items-center mt-1">
+                      <Wifi className="w-4 h-4 mr-1" />
+                      <span className="text-sm text-gray-600">Average UK speed*</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <div className="text-2xl font-bold">£24.00<span className="text-sm font-normal"> a month</span></div>
+                  <p className="text-sm text-gray-600">no setup cost</p>
+                </div>
+              </div>
+              
+              <div className="mt-4 flex justify-between items-center">
+                <div>
+                  <div className="text-3xl font-bold">67<span className="text-xl"> Mbps</span></div>
+                  <p className="text-sm text-gray-600">24 month contract</p>
+                </div>
+                <div className="space-y-2">
+                  <button className="w-32 bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800">Get deal</button>
+                  <button className="w-32 text-sm text-gray-600 flex items-center justify-center gap-1">
+                    More info
+                    <Info className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+
+              <div className="mt-4 bg-yellow-100 px-3 py-2 rounded-md inline-block">
+                <p className="text-sm font-medium">£80 voucher</p>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     </div>
