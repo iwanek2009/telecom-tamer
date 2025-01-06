@@ -3,20 +3,20 @@ import { Building2, Filter, CreditCard } from 'lucide-react';
 
 const BroadbandComparisonSteps = () => {
   return (
-    <section className="bg-gradient-to-b from-[#FFDEE2] to-[#F1F0FB] py-16">
+    <section className="bg-gradient-to-br from-[#FC5185] via-[#FC5185]/80 to-[#FC5185]/60 py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
             How to compare broadband deals
           </h2>
           <p className="text-black text-lg">
-            You always have a <span className="font-semibold">14-day 'cooling off' period</span>, during which you can cancel your request to switch broadband provider – free of charge.
+            Every new broadband contract includes a 14-day money-back guarantee, giving you the freedom to cancel and return to your previous provider at no cost
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {/* Step 1 */}
-          <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow text-center">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow text-center">
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 bg-[#9b87f5] bg-opacity-10 rounded-full flex items-center justify-center">
                 <Building2 className="w-8 h-8 text-[#9b87f5]" />
@@ -29,7 +29,7 @@ const BroadbandComparisonSteps = () => {
           </div>
 
           {/* Step 2 */}
-          <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow text-center">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow text-center">
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 bg-[#9b87f5] bg-opacity-10 rounded-full flex items-center justify-center">
                 <Filter className="w-8 h-8 text-[#9b87f5]" />
@@ -42,7 +42,7 @@ const BroadbandComparisonSteps = () => {
           </div>
 
           {/* Step 3 */}
-          <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow text-center">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow text-center">
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 bg-[#9b87f5] bg-opacity-10 rounded-full flex items-center justify-center">
                 <CreditCard className="w-8 h-8 text-[#9b87f5]" />
