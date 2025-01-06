@@ -4,9 +4,9 @@ import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronDown } from "lucide-react";
+import MobileFilters from '@/components/MobileFilters';
 
 const Mobile = () => {
-  const [priceRange, setPriceRange] = useState([0, 100]);
   const [isFirstOpen, setIsFirstOpen] = useState(false);
   const [isSecondOpen, setIsSecondOpen] = useState(false);
   
@@ -96,105 +96,52 @@ const Mobile = () => {
         </div>
       </div>
 
-      {/* Filter Section */}
+      {/* Main Content */}
       <div className="container mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow-sm p-6">
-          <h2 className="text-xl font-semibold mb-6">Filter your search</h2>
-          <div className="grid md:grid-cols-4 gap-6">
-            {/* Contract Type */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Contract Type</label>
-              <select className="w-full border-gray-200 rounded-md">
-                <option>All contracts</option>
-                <option>Pay Monthly</option>
-                <option>SIM Only</option>
-              </select>
-            </div>
-            
-            {/* Data Allowance */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Data Allowance</label>
-              <select className="w-full border-gray-200 rounded-md">
-                <option>Any data</option>
-                <option>1GB - 5GB</option>
-                <option>5GB - 10GB</option>
-                <option>10GB+</option>
-                <option>Unlimited</option>
-              </select>
-            </div>
-            
-            {/* Network */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Network</label>
-              <select className="w-full border-gray-200 rounded-md">
-                <option>All networks</option>
-                <option>EE</option>
-                <option>O2</option>
-                <option>Vodafone</option>
-                <option>Three</option>
-              </select>
-            </div>
-            
-            {/* Monthly Cost */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Monthly Cost</label>
-              <select className="w-full border-gray-200 rounded-md">
-                <option>Any price</option>
-                <option>Up to £20</option>
-                <option>£20 - £30</option>
-                <option>£30 - £40</option>
-                <option>£40+</option>
-              </select>
+        <div className="grid md:grid-cols-4 gap-8">
+          {/* Filters */}
+          <div className="md:col-span-1">
+            <MobileFilters />
+          </div>
+
+          {/* Deals */}
+          <div className="md:col-span-3">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="text-xl font-semibold">89,866 deals available</h2>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-gray-600">sort by</span>
+                  <select className="border rounded-md p-2">
+                    <option>Most Popular</option>
+                    <option>Lowest Price</option>
+                    <option>Highest Price</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                {mockDeals.map((deal, index) => (
+                  <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-fade-in">
+                    <div className="flex justify-between items-start mb-4">
+                      <h3 className="text-xl font-semibold text-black">{deal.provider}</h3>
+                      <span className="text-2xl font-bold text-black">£{deal.price}/mo</span>
+                    </div>
+                    <div className="space-y-2 text-black">
+                      <p>✓ {deal.data} Data</p>
+                      <p>✓ {deal.minutes} Minutes</p>
+                      <p>✓ {deal.network}</p>
+                      <p>✓ {deal.contract} contract</p>
+                    </div>
+                    <Button 
+                      className="w-full mt-4 bg-[#FC5185] text-white hover:bg-[#FC5185]/90"
+                    >
+                      View Deal
+                    </Button>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Filters and Deals */}
-      <div className="container mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold text-black mb-8">Compare Mobile Deals</h1>
-        
-        {/* Filters */}
-        <div className="bg-white p-6 rounded-lg shadow-sm mb-8 animate-fade-in">
-          <h2 className="text-xl font-semibold text-black mb-4">Filters</h2>
-          <div className="space-y-6">
-            <div>
-              <label className="block text-sm font-medium text-black mb-2">
-                Price Range (£{priceRange[0]} - £{priceRange[1]})
-              </label>
-              <Slider
-                defaultValue={[0, 100]}
-                max={100}
-                step={1}
-                value={priceRange}
-                onValueChange={setPriceRange}
-                className="w-full"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Deals */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {mockDeals.map((deal, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-fade-in">
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-semibold text-black">{deal.provider}</h3>
-                <span className="text-2xl font-bold text-black">£{deal.price}/mo</span>
-              </div>
-              <div className="space-y-2 text-black">
-                <p>✓ {deal.data} Data</p>
-                <p>✓ {deal.minutes} Minutes</p>
-                <p>✓ {deal.network}</p>
-                <p>✓ {deal.contract} contract</p>
-              </div>
-              <Button 
-                className="w-full mt-4 bg-[#FC5185] text-white hover:bg-[#FC5185]/90"
-              >
-                View Deal
-              </Button>
-            </div>
-          ))}
         </div>
       </div>
     </div>
