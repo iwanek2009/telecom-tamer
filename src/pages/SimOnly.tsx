@@ -87,7 +87,7 @@ const SimOnly = () => {
             </div>
             <div className="hidden md:block">
               <img 
-                src="/lovable-uploads/fc6d95f3-f210-405c-9141-2c1d912caaca.png"
+                src="/lovable-uploads/ddd47760-f9ef-4924-9967-59af638f75dd.png"
                 alt="Person using tablet device" 
                 className="w-full h-auto object-contain rounded-lg"
               />
