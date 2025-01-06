@@ -71,7 +71,7 @@ const Mobile = () => {
                   className="bg-white/90 rounded-lg p-4"
                 >
                   <CollapsibleTrigger className="flex justify-between items-center w-full">
-                    <h2 className="text-xl font-semibold text-black">Should I choose a pay monthly or SIM only deal?</h2>
+                    <h2 className="text-lg font-semibold text-black">Should I choose a pay monthly or SIM only deal?</h2>
                     <ChevronDown className={`h-6 w-6 transition-transform ${isSecondOpen ? 'transform rotate-180' : ''}`} />
                   </CollapsibleTrigger>
                   <CollapsibleContent className="pt-4">
