@@ -1,6 +1,12 @@
 import { Button } from "@/components/ui/button";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
 
 export const HeroSection = ({ onGetStarted }: { onGetStarted: () => void }) => {
+  const [isFirstOpen, setIsFirstOpen] = useState(false);
+  const [isSecondOpen, setIsSecondOpen] = useState(false);
+
   return (
     <section className="w-full px-[50px] py-[30px] md:py-0" style={{ background: 'linear-gradient(135deg, #40E0D0 0%, #98F5E1 100%)' }}>
       <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
@@ -35,6 +41,37 @@ export const HeroSection = ({ onGetStarted }: { onGetStarted: () => void }) => {
               </li>
             </ul>
           </div>
+          
+          <div className="space-y-4">
+            <Collapsible open={isFirstOpen} onOpenChange={setIsFirstOpen} className="bg-white/80 rounded-lg p-4">
+              <CollapsibleTrigger className="flex items-center justify-between w-full">
+                <h3 className="text-lg font-semibold text-gray-800">How to choose the best SIM only deal</h3>
+                {isFirstOpen ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+              </CollapsibleTrigger>
+              <CollapsibleContent className="pt-4 text-gray-600">
+                <p className="mb-2">Check your monthly data usage first - the average UK user needs only 9.9GB. Choose a smaller bundle if you mainly use Wi-Fi to save money.</p>
+                <p className="mb-2">Next, consider contract length options. 30-day plans offer flexibility, while 12-24 month contracts often have better rates.</p>
+                <p className="text-pink-500 hover:text-pink-600">
+                  <a href="/guide">For more information, read our 'How to choose a SIM only deal' guide</a>
+                </p>
+              </CollapsibleContent>
+            </Collapsible>
+
+            <Collapsible open={isSecondOpen} onOpenChange={setIsSecondOpen} className="bg-white/80 rounded-lg p-4">
+              <CollapsibleTrigger className="flex items-center justify-between w-full">
+                <h3 className="text-lg font-semibold text-gray-800">What happens when I switch networks?</h3>
+                {isSecondOpen ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+              </CollapsibleTrigger>
+              <CollapsibleContent className="pt-4 text-gray-600">
+                <p className="mb-2">The switching process is now simpler than ever. Just text to get your PAC code and your new provider will handle everything else.</p>
+                <p className="mb-2">Next, you'll receive your new SIM card and can start using it right away - the whole process takes just minutes.</p>
+                <p className="text-pink-500 hover:text-pink-600">
+                  <a href="/network-guide">For more information, read our 'Network switching guide'</a>
+                </p>
+              </CollapsibleContent>
+            </Collapsible>
+          </div>
+
           <div className="space-y-4">
             <Button 
               className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 text-base rounded-lg"
