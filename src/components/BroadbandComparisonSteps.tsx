@@ -18,8 +18,8 @@ const BroadbandComparisonSteps = () => {
           {/* Step 1 */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow text-center">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-[#9b87f5] bg-opacity-10 rounded-full flex items-center justify-center">
-                <Building2 className="w-8 h-8 text-[#9b87f5]" />
+              <div className="w-16 h-16 bg-black/5 rounded-full flex items-center justify-center">
+                <Building2 className="w-8 h-8 text-black" />
               </div>
             </div>
             <h3 className="text-xl font-bold text-black mb-4">Find available deals</h3>
@@ -31,8 +31,8 @@ const BroadbandComparisonSteps = () => {
           {/* Step 2 */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow text-center">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-[#9b87f5] bg-opacity-10 rounded-full flex items-center justify-center">
-                <Filter className="w-8 h-8 text-[#9b87f5]" />
+              <div className="w-16 h-16 bg-black/5 rounded-full flex items-center justify-center">
+                <Filter className="w-8 h-8 text-black" />
               </div>
             </div>
             <h3 className="text-xl font-bold text-black mb-4">Choose the perfect package</h3>
@@ -44,8 +44,8 @@ const BroadbandComparisonSteps = () => {
           {/* Step 3 */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow text-center">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-[#9b87f5] bg-opacity-10 rounded-full flex items-center justify-center">
-                <CreditCard className="w-8 h-8 text-[#9b87f5]" />
+              <div className="w-16 h-16 bg-black/5 rounded-full flex items-center justify-center">
+                <CreditCard className="w-8 h-8 text-black" />
               </div>
             </div>
             <h3 className="text-xl font-bold text-black mb-4">Switch with confidence</h3>
