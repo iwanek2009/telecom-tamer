@@ -98,14 +98,15 @@ const Mobile = () => {
       </div>
 
       {/* Filters and Deals */}
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Compare Mobile Deals</h1>
+      <div className="container mx-auto px-4 py-12">
+        <h1 className="text-3xl font-bold text-black mb-8">Compare Mobile Deals</h1>
         
         {/* Filters */}
         <div className="bg-white p-6 rounded-lg shadow-sm mb-8 animate-fade-in">
-          <h2 className="text-xl font-semibold mb-4">Filters</h2>
+          <h2 className="text-xl font-semibold text-black mb-4">Filters</h2>
           <div className="space-y-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-black mb-2">
                 Price Range (£{priceRange[0]} - £{priceRange[1]})
               </label>
               <Slider
@@ -125,18 +126,20 @@ const Mobile = () => {
           {mockDeals.map((deal, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-fade-in">
               <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-semibold">{deal.provider}</h3>
-                <span className="text-2xl font-bold text-secondary">£{deal.price}/mo</span>
+                <h3 className="text-xl font-semibold text-black">{deal.provider}</h3>
+                <span className="text-2xl font-bold text-black">£{deal.price}/mo</span>
               </div>
-              <div className="space-y-2 text-gray-600">
+              <div className="space-y-2 text-black">
                 <p>✓ {deal.data} Data</p>
                 <p>✓ {deal.minutes} Minutes</p>
                 <p>✓ {deal.network}</p>
                 <p>✓ {deal.contract} contract</p>
               </div>
-              <button className="w-full mt-4 bg-primary text-white py-2 rounded-md hover:bg-primary/90 transition-colors">
+              <Button 
+                className="w-full mt-4 bg-[#FC5185] text-white hover:bg-[#FC5185]/90"
+              >
                 View Deal
-              </button>
+              </Button>
             </div>
           ))}
         </div>
