@@ -125,7 +125,6 @@ const Index = () => {
               <ul className="space-y-2">
                 <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">FAQs</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Live Chat</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
               </ul>
             </div>
