@@ -7,6 +7,7 @@ import BroadbandGuide from '../components/BroadbandGuide';
 import BroadbandUnderstanding from '../components/BroadbandUnderstanding';
 import BroadbandFilters from '../components/BroadbandFilters';
 import BroadbandOffers from '../components/BroadbandOffers';
+import BroadbandSpeed from '../components/BroadbandSpeed';
 
 const Broadband = () => {
   const [isValueOpen, setIsValueOpen] = useState(false);
@@ -101,6 +102,7 @@ const Broadband = () => {
       <BroadbandComparisonSteps />
       <BroadbandGuide />
       <BroadbandUnderstanding />
+      <BroadbandSpeed />
     </div>
   );
 };
