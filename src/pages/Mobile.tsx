@@ -8,6 +8,7 @@ import ContractComparison from '@/components/ContractComparison';
 import NumberPortability from '@/components/NumberPortability';
 import ContractGuide from '@/components/ContractGuide';
 import { Button } from "@/components/ui/button";
+import { Footer } from '@/components/Footer';
 
 const Mobile = () => {
   const [isFirstOpen, setIsFirstOpen] = useState(false);
@@ -161,6 +162,7 @@ const Mobile = () => {
       <ContractComparison />
       <NumberPortability />
       <ContractGuide />
+      <Footer />
     </div>
   );
 };
