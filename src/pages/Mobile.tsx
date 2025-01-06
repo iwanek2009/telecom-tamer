@@ -46,7 +46,7 @@ const Mobile = () => {
               </p>
               
               {/* Toggle Sections in Hero */}
-              <div className="space-y-4 pt-8">
+              <div className="space-y-4">
                 <Collapsible
                   open={isFirstOpen}
                   onOpenChange={setIsFirstOpen}
@@ -85,7 +85,7 @@ const Mobile = () => {
               </div>
             </div>
 
-            <div className="hidden md:block">
+            <div className="hidden md:block md:mt-auto">
               <img 
                 src="/lovable-uploads/ccdcec41-6a48-416a-8133-3f80432b9aad.png"
                 alt="Person using smartphone" 
