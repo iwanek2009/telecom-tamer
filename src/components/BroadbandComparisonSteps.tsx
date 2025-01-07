@@ -7,15 +7,15 @@ const BroadbandComparisonSteps = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-            Your perfect broadband deal is just a few clicks away
+            Twoja idealna oferta internetu jest na wyciągnięcie ręki
           </h2>
           <p className="text-lg text-gray-600">
-            Let us guide you with our simple three-step process:
+            Przeprowadzimy Cię przez prosty proces składający się z trzech kroków:
           </p>
         </div>
 
+        {/* Step 1 */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Step 1 */}
           <div className="bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#3FC1C9]/20 text-center">
             <div className="flex justify-center mb-6">
               <Search className="w-8 h-8 text-gray-900" />
