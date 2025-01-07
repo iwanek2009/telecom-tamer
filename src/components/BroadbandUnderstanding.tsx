@@ -44,10 +44,10 @@ const BroadbandUnderstanding = () => {
                 <h4 className="text-xl font-semibold text-black">Part-Fibre Broadband</h4>
               </div>
               <ul className="space-y-2 text-gray-700">
-                <li>• Available to 98% of UK homes</li>
-                <li>• Offers speeds of 30-70Mbps</li>
-                <li>• Most common type in the UK</li>
-                <li>• Also known as "fibre to the cabinet"</li>
+                <li>• Dostępny dla 98% domów w UK</li>
+                <li>• Oferuje prędkości 30-70Mbps</li>
+                <li>• Najpopularniejszy typ w UK</li>
+                <li>• Znany również jako "fibre to the cabinet"</li>
               </ul>
             </div>
 
