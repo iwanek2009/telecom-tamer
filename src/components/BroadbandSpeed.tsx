@@ -24,32 +24,30 @@ const BroadbandSpeed = () => {
 
           {/* Understanding Usage Patterns */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Understanding Usage Patterns</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Zrozumienie wzorców użytkowania</h3>
             <p className="text-gray-700 mb-4">
-              A family home or shared house typically needs more speed as multiple devices connect simultaneously. 
-              You'll need higher speeds if your household:
+              Dom rodzinny lub mieszkanie współdzielone zazwyczaj potrzebuje większej prędkości, ponieważ wiele urządzeń łączy się jednocześnie. Będziesz potrzebować wyższych prędkości, jeśli w Twoim domu:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <div className="flex items-center gap-2 text-gray-700">
                 <Video className="w-5 h-5" />
-                <span>Streams 4K content</span>
+                <span>Oglądacie treści w 4K</span>
               </div>
               <div className="flex items-center gap-2 text-gray-700">
                 <Home className="w-5 h-5" />
-                <span>Works from home</span>
+                <span>Pracujecie zdalnie</span>
               </div>
               <div className="flex items-center gap-2 text-gray-700">
                 <Gamepad2 className="w-5 h-5" />
-                <span>Plays online games</span>
+                <span>Gracie w gry online</span>
               </div>
               <div className="flex items-center gap-2 text-gray-700">
                 <Video className="w-5 h-5" />
-                <span>Uses video calls regularly</span>
+                <span>Regularnie korzystacie z rozmów wideo</span>
               </div>
             </div>
           </div>
 
-          {/* Speed Guidelines */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Speed Guidelines</h3>
             <ul className="space-y-3 text-gray-700">
