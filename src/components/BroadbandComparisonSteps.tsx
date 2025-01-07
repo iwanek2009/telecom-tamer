@@ -14,37 +14,34 @@ const BroadbandComparisonSteps = () => {
           </p>
         </div>
 
-        {/* Step 1 */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#3FC1C9]/20 text-center">
             <div className="flex justify-center mb-6">
               <Search className="w-8 h-8 text-gray-900" />
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Find available deals</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Znajdź dostępne oferty</h3>
             <p className="text-gray-600">
-              Simply enter your postcode to see what broadband packages are available in your area.
+              Po prostu wpisz swój kod pocztowy, aby zobaczyć, jakie pakiety internetu są dostępne w Twojej okolicy.
             </p>
           </div>
 
-          {/* Step 2 */}
           <div className="bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#3FC1C9]/20 text-center">
             <div className="flex justify-center mb-6">
               <Filter className="w-8 h-8 text-gray-900" />
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Choose the perfect package</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Wybierz idealny pakiet</h3>
             <p className="text-gray-600">
-              Sort and filter results by what matters to you - speed, price, provider, or contract length.
+              Sortuj i filtruj wyniki według tego, co jest dla Ciebie ważne - prędkość, cena, dostawca lub długość umowy.
             </p>
           </div>
 
-          {/* Step 3 */}
           <div className="bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#3FC1C9]/20 text-center">
             <div className="flex justify-center mb-6">
               <CreditCard className="w-8 h-8 text-gray-900" />
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Switch with confidence</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Zmieniaj z pewnością</h3>
             <p className="text-gray-600">
-              Complete your order through the provider's website. Don't worry - you'll have 14 days to change your mind, free of charge.
+              Dokończ zamówienie przez stronę dostawcy. Nie martw się - będziesz mieć 14 dni na zmianę zdania, bez żadnych opłat.
             </p>
           </div>
         </div>
