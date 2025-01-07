@@ -7,7 +7,7 @@ const BroadbandUnderstanding = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-8">
-            Understanding Broadband: Your Home Internet Guide
+            Internet stacjonarny w UK : Przewodnik po internecie domowym
           </h2>
           
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
