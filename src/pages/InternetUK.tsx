@@ -26,10 +26,10 @@ const InternetUK = () => {
             <div className="space-y-6">
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
-                  Internet in the UK
+                  Wyszukiwarka internetu stacjonarnego w UK
                 </h1>
                 <p className="text-xl text-gray-700 mt-4 mb-6">
-                  Find cheaper internet deals in your area - save up to £163 per year
+                  Znajdź tańsze oferty internetu w Twojej okolicy - zaoszczędź do 163 funtów rocznie
                 </p>
               </div>
 
