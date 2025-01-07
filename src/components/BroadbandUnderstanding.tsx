@@ -58,10 +58,10 @@ const BroadbandUnderstanding = () => {
                 <h4 className="text-xl font-semibold text-black">Full Fibre Broadband</h4>
               </div>
               <ul className="space-y-2 text-gray-700">
-                <li>• Available to 69% of UK homes</li>
-                <li>• Ultrafast speeds from 100Mbps to 1Gbps</li>
-                <li>• Direct fibre connection to your home</li>
-                <li>• Also called "fibre to the premises"</li>
+                <li>• Dostępny dla 69% domów w UK</li>
+                <li>• Ultraszybkie prędkości od 100Mbps do 1Gbps</li>
+                <li>• Bezpośrednie połączenie światłowodowe do domu</li>
+                <li>• Nazywany też "fibre to the premises"</li>
               </ul>
             </div>
 
