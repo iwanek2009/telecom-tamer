@@ -34,7 +34,7 @@ const BroadbandUnderstanding = () => {
             </div>
           </div>
 
-          <h3 className="text-2xl font-bold text-black mb-6">Types of Broadband Available:</h3>
+          <h3 className="text-2xl font-bold text-black mb-6">Dostępne rodzaje internetu stacjonarnego w UK:</h3>
           
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {/* Part-Fibre Broadband */}
