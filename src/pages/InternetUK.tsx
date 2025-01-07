@@ -41,17 +41,15 @@ const InternetUK = () => {
                   className="bg-white/80 backdrop-blur-sm rounded-lg overflow-hidden"
                 >
                   <CollapsibleTrigger className="w-full p-4 flex items-center justify-between text-left">
-                    <h2 className="text-lg font-semibold text-gray-900">How to get the best value internet?</h2>
+                    <h2 className="text-lg font-semibold text-gray-900">Jak uzyskać internet w najlepszej cenie?</h2>
                     <ChevronDown className={`h-4 w-4 transition-transform ${isValueOpen ? 'transform rotate-180' : ''}`} />
                   </CollapsibleTrigger>
                   <CollapsibleContent className="px-4 pb-4">
                     <p className="text-gray-700 text-sm mb-2">
-                      It's essential to compare different providers and check what speeds are actually available at your address before making a decision.
-                      Next, look at the total cost of your package, including any setup fees, equipment charges and whether prices will increase during your contract.
-                      For more help, read our guide on how to save money on your internet deal.
+                      Konieczne jest porównanie różnych dostawców i sprawdzenie, jakie prędkości są faktycznie dostępne pod Twoim adresem. Następnie sprawdź całkowity koszt pakietu, w tym opłaty za instalację, sprzęt oraz czy ceny wzrosną w trakcie trwania umowy. Aby uzyskać więcej informacji, przeczytaj nasz poradnik o tym, jak oszczędzać na rachunku za internet.
                     </p>
                     <a href="#choose-provider" className="text-pink-600 hover:text-pink-700 text-sm font-medium inline-flex items-center gap-1">
-                      Read our guide
+                      Przeczytaj nasz poradnik
                       <ArrowRight size={14} />
                     </a>
                   </CollapsibleContent>
@@ -63,17 +61,15 @@ const InternetUK = () => {
                   className="bg-white/80 backdrop-blur-sm rounded-lg overflow-hidden"
                 >
                   <CollapsibleTrigger className="w-full p-4 flex items-center justify-between text-left">
-                    <h2 className="text-lg font-semibold text-gray-900">What speed do you really need?</h2>
+                    <h2 className="text-lg font-semibold text-gray-900">Jakiej prędkości internetu naprawdę potrzebujesz?</h2>
                     <ChevronDown className={`h-4 w-4 transition-transform ${isSpeedOpen ? 'transform rotate-180' : ''}`} />
                   </CollapsibleTrigger>
                   <CollapsibleContent className="px-4 pb-4">
                     <p className="text-gray-700 text-sm mb-2">
-                      Your ideal internet speed depends on how many people use the internet in your home and what you use it for, like streaming or gaming.
-                      Next, consider peak usage times in your household and whether you need consistently fast speeds for working from home or other activities.
-                      For more help, read our guide on choosing the right internet speed.
+                      Idealna prędkość internetu zależy od tego, ile osób korzysta z internetu w Twoim domu i do czego go używasz, np. do streamingu czy gier. Następnie weź pod uwagę godziny szczytu wykorzystania internetu w Twoim gospodarstwie domowym oraz czy potrzebujesz stale wysokich prędkości do pracy zdalnej lub innych aktywności. Aby uzyskać więcej informacji, przeczytaj nasz poradnik o wyborze odpowiedniej prędkości internetu.
                     </p>
                     <a href="#choose-speed" className="text-pink-600 hover:text-pink-700 text-sm font-medium inline-flex items-center gap-1">
-                      Read our guide
+                      Przeczytaj nasz poradnik
                       <ArrowRight size={14} />
                     </a>
                   </CollapsibleContent>
