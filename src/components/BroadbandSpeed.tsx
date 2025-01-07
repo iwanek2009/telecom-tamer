@@ -12,13 +12,13 @@ const BroadbandSpeed = () => {
 
           {/* Find Your Perfect Speed */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Find Your Perfect Speed</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Znajdź idealną prędkość</h3>
             <p className="text-gray-700 mb-4">
-              Your ideal broadband speed depends on two key factors:
+              Twoja idealna prędkość internetu zależy od dwóch kluczowych czynników:
             </p>
             <ul className="list-disc list-inside text-gray-700 mb-6 ml-4">
-              <li>Number of connected devices in your home</li>
-              <li>Your household's internet usage habits</li>
+              <li>Liczby podłączonych urządzeń w domu</li>
+              <li>Zwyczajów korzystania z internetu w Twoim gospodarstwie domowym</li>
             </ul>
           </div>
 
