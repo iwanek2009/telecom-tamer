@@ -72,10 +72,10 @@ const BroadbandUnderstanding = () => {
                 <h4 className="text-xl font-semibold text-black">Virgin Media Cable</h4>
               </div>
               <ul className="space-y-2 text-gray-700">
-                <li>• Coverage in 60% of UK homes</li>
-                <li>• Speeds up to 1Gbps</li>
-                <li>• Independent fibre network</li>
-                <li>• Mainly available in urban areas</li>
+                <li>• Zasięg w 60% domów w UK</li>
+                <li>• Prędkości do 1Gbps</li>
+                <li>• Niezależna sieć światłowodowa</li>
+                <li>• Głównie dostępny w obszarach miejskich</li>
               </ul>
             </div>
           </div>
