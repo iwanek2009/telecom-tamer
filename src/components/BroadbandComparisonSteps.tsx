@@ -6,50 +6,47 @@ const BroadbandComparisonSteps = () => {
     <section className="bg-white py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-            How to compare broadband deals
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Your perfect broadband deal is just a few clicks away
           </h2>
-          <p className="text-black text-lg">
-            Every new broadband contract includes a 14-day money-back guarantee, giving you the freedom to cancel and return to your previous provider at no cost
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Step 1 */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow text-center">
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-black/5 rounded-full flex items-center justify-center">
-                <Building2 className="w-8 h-8 text-black" />
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm">
+                <Building2 className="w-8 h-8 text-blue-600" />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-black mb-4">Find available deals</h3>
-            <p className="text-black">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Find available deals</h3>
+            <p className="text-gray-600">
               Simply enter your postcode to see what broadband packages are available in your area.
             </p>
           </div>
 
           {/* Step 2 */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow text-center">
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-black/5 rounded-full flex items-center justify-center">
-                <Filter className="w-8 h-8 text-black" />
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm">
+                <Filter className="w-8 h-8 text-blue-600" />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-black mb-4">Choose the perfect package</h3>
-            <p className="text-black">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Choose the perfect package</h3>
+            <p className="text-gray-600">
               Sort and filter results by what matters to you - speed, price, provider, or contract length.
             </p>
           </div>
 
           {/* Step 3 */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow text-center">
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-black/5 rounded-full flex items-center justify-center">
-                <CreditCard className="w-8 h-8 text-black" />
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm">
+                <CreditCard className="w-8 h-8 text-blue-600" />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-black mb-4">Switch with confidence</h3>
-            <p className="text-black">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Switch with confidence</h3>
+            <p className="text-gray-600">
               Complete your order through the provider's website. Don't worry - you'll have 14 days to change your mind, free of charge.
             </p>
           </div>
