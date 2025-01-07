@@ -49,19 +49,19 @@ const BroadbandSpeed = () => {
           </div>
 
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Speed Guidelines</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Wskazówki dotyczące prędkości</h3>
             <ul className="space-y-3 text-gray-700">
               <li className="flex items-center gap-2">
                 <Wifi className="w-5 h-5" />
-                <span>Average UK speed: 69Mbps (suitable for 3-4 users)</span>
+                <span>Średnia prędkość w UK: 69Mbps (odpowiednia dla 3-4 użytkowników)</span>
               </li>
               <li className="flex items-center gap-2">
                 <Activity className="w-5 h-5" />
-                <span>Heavy usage households: 100Mbps+ recommended</span>
+                <span>Gospodarstwa domowe o intensywnym użytkowaniu: zalecane 100Mbps+</span>
               </li>
               <li className="flex items-center gap-2">
                 <Router className="w-5 h-5" />
-                <span>Single user/basic browsing: 30-50Mbps sufficient</span>
+                <span>Pojedynczy użytkownik/podstawowe przeglądanie: wystarczy 30-50Mbps</span>
               </li>
             </ul>
           </div>
