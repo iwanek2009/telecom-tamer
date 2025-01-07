@@ -3,7 +3,7 @@ import { Wifi, Home, Gamepad2, Video, Activity, Router } from 'lucide-react';
 
 const BroadbandSpeed = () => {
   return (
-    <section className="bg-gradient-to-br from-blue-50 to-blue-100 py-16">
+    <section className="bg-gradient-to-br from-blue-50 to-blue-100 py-16 scroll-mt-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 id="choose-speed" className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">

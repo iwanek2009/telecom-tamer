@@ -3,7 +3,7 @@ import { Info, CheckCircle2 } from 'lucide-react';
 
 const BroadbandGuide = () => {
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-16 scroll-mt-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 id="choose-provider" className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
