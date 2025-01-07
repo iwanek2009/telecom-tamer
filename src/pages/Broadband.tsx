@@ -93,6 +93,9 @@ const Broadband = () => {
         </div>
       </div>
 
+      {/* Moved BroadbandComparisonSteps right after the hero section */}
+      <BroadbandComparisonSteps />
+
       <main className="container mx-auto px-4 py-8">
         <div className="grid md:grid-cols-12 gap-8">
           <BroadbandFilters />
@@ -100,7 +103,6 @@ const Broadband = () => {
         </div>
       </main>
 
-      <BroadbandComparisonSteps />
       <BroadbandGuide />
       <BroadbandUnderstanding />
       <BroadbandSpeed />
