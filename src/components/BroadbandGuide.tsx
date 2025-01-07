@@ -6,7 +6,7 @@ const BroadbandGuide = () => {
     <section className="bg-white py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+          <h2 id="choose-provider" className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
             How to Choose the Right Broadband Provider
           </h2>
           

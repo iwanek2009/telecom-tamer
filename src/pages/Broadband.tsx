@@ -50,7 +50,7 @@ const Broadband = () => {
                       Next, look at the total cost of your package, including any setup fees, equipment charges and whether prices will increase during your contract.
                       For more help, read our guide on how to save money on your broadband deal.
                     </p>
-                    <a href="#" className="text-pink-600 hover:text-pink-700 text-sm font-medium inline-flex items-center gap-1">
+                    <a href="#choose-provider" className="text-pink-600 hover:text-pink-700 text-sm font-medium inline-flex items-center gap-1">
                       Read our guide
                       <ArrowRight size={14} />
                     </a>
