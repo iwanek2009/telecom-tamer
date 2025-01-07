@@ -72,7 +72,7 @@ const Broadband = () => {
                       Next, consider peak usage times in your household and whether you need consistently fast speeds for working from home or other activities.
                       For more help, read our guide on choosing the right broadband speed.
                     </p>
-                    <a href="#" className="text-pink-600 hover:text-pink-700 text-sm font-medium inline-flex items-center gap-1">
+                    <a href="#choose-speed" className="text-pink-600 hover:text-pink-700 text-sm font-medium inline-flex items-center gap-1">
                       Read our guide
                       <ArrowRight size={14} />
                     </a>
