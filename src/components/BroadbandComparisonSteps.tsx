@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, Filter, CreditCard } from 'lucide-react';
+import { Search, Filter, CreditCard } from 'lucide-react';
 
 const BroadbandComparisonSteps = () => {
   return (
@@ -16,7 +16,7 @@ const BroadbandComparisonSteps = () => {
           <div className="bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#3FC1C9]/20">
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm">
-                <Building2 className="w-8 h-8 text-[#3FC1C9]" />
+                <Search className="w-8 h-8 text-[#3FC1C9]" />
               </div>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-4">Find available deals</h3>
