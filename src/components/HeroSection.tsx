@@ -1,10 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
-import { useState, useEffect } from "react";
 
 export const HeroSection = ({ onGetStarted }: { onGetStarted: () => void }) => {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
   return (
     <section className="w-full px-[50px] py-[30px] md:py-0" style={{ background: 'linear-gradient(135deg, #40E0D0 0%, #98F5E1 100%)' }}>
       <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
@@ -53,18 +49,11 @@ export const HeroSection = ({ onGetStarted }: { onGetStarted: () => void }) => {
           </div>
         </div>
         
-        <div className="hidden md:block relative">
-          {!imageLoaded && (
-            <Skeleton className="w-full aspect-[3/4] rounded-lg" />
-          )}
+        <div className="hidden md:block">
           <img 
             src="/lovable-uploads/f290a477-bb52-4371-a6e7-a84c27b974a7.png"
             alt="Person using smartphone" 
-            className={`w-full h-auto object-contain rounded-lg transition-opacity duration-300 ${
-              imageLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
-            loading="lazy"
-            onLoad={() => setImageLoaded(true)}
+            className="w-full h-auto object-contain rounded-lg"
           />
         </div>
       </div>

@@ -8,7 +8,6 @@ import BroadbandUnderstanding from '../components/BroadbandUnderstanding';
 import BroadbandFilters from '../components/BroadbandFilters';
 import BroadbandOffers from '../components/BroadbandOffers';
 import BroadbandSpeed from '../components/BroadbandSpeed';
-import BroadbandSteps from '../components/BroadbandSteps';
 import { Footer } from '../components/Footer';
 
 const Broadband = () => {
@@ -93,8 +92,6 @@ const Broadband = () => {
           </div>
         </div>
       </div>
-
-      <BroadbandSteps />
 
       <main className="container mx-auto px-4 py-8">
         <div className="grid md:grid-cols-12 gap-8">
