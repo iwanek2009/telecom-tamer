@@ -38,9 +38,6 @@ const BroadbandSteps = () => {
                     {step.icon}
                   </div>
                 </div>
-                <div className="absolute -top-4 left-4 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">
-                  {index + 1}
-                </div>
                 <h3 className="text-xl font-semibold mb-3 text-center text-gray-900">{step.title}</h3>
                 <p className="text-gray-600 text-center leading-relaxed">{step.description}</p>
               </CardContent>
