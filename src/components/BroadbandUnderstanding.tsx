@@ -11,20 +11,20 @@ const BroadbandUnderstanding = () => {
           </h2>
           
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-black mb-4">What is Broadband?</h3>
+            <h3 className="text-2xl font-bold text-black mb-4">Co to jest internet stacjonarny?</h3>
             <p className="text-gray-700 mb-6">
-              Broadband is your gateway to the internet at home, connecting you to a world of online services through cables that run from providers' networks to your property. Using either a traditional phone line or modern fibre-optic connection, broadband links to your Wi-Fi router, which then distributes wireless internet throughout your home.
+              Internet stacjonarny to stałe połączenie internetowe w Twoim domu, które zapewnia dostęp do usług online poprzez infrastrukturę sieciową dostawcy. W zależności od technologii, może być dostarczany przez tradycyjną linię telefoniczną lub nowoczesne łącze światłowodowe. Sygnał trafia do routera Wi-Fi, który rozdziela internet bezprzewodowo w całym domu.
             </p>
             
-            <h4 className="text-lg font-semibold text-black mb-4">With broadband, you can:</h4>
+            <h4 className="text-lg font-semibold text-black mb-4">Z internetem stacjonarnym możesz:</h4>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
               {[
-                { text: 'Stream movies and TV shows', icon: Monitor },
-                { text: 'Work from home', icon: Wifi },
-                { text: 'Play online games', icon: Gamepad2 },
-                { text: 'Use social media', icon: MessageCircle },
-                { text: 'Shop online', icon: ShoppingCart },
-                { text: 'Video call friends and family', icon: Video }
+                { text: 'Oglądać filmy i programy TV', icon: Monitor },
+                { text: 'Pracować z domu', icon: Wifi },
+                { text: 'Grać w gry online', icon: Gamepad2 },
+                { text: 'Korzystać z mediów społecznościowych', icon: MessageCircle },
+                { text: 'Robić zakupy online', icon: ShoppingCart },
+                { text: 'Prowadzić rozmowy wideo z rodziną i przyjaciółmi', icon: Video }
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-2 text-gray-700">
                   <item.icon className="w-5 h-5 text-black" />
