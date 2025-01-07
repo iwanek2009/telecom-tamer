@@ -7,23 +7,23 @@ const BroadbandGuide = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 id="choose-provider" className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-            How to Choose the Right Broadband Provider
+            Jak wybrać odpowiedniego dostawcę internetu w UK
           </h2>
           
           <p className="text-gray-600 mb-6">
-            When comparing broadband providers, it's important to check their performance in key areas. 
-            Your ideal provider should match your specific needs across several factors, including:
+            Porównując dostawców internetu, ważne jest sprawdzenie ich wyników w kluczowych obszarach. 
+            Idealny dostawca powinien odpowiadać Twoim konkretnym potrzebom w kilku aspektach, w tym:
           </p>
 
           <ul className="grid md:grid-cols-2 gap-4 mb-8">
             {[
-              'Internet speed and consistency',
-              'Overall value for money',
-              'Service reliability and uptime',
-              'Quality of customer support',
-              'TV package options if needed',
-              'Equipment quality and features',
-              'Price stability during contract'
+              'Prędkość i stabilność internetu',
+              'Ogólna opłacalność',
+              'Niezawodność usługi i czas działania',
+              'Jakość obsługi klienta',
+              'Opcje pakietów TV, jeśli są potrzebne',
+              'Jakość i funkcje sprzętu',
+              'Stabilność cen w trakcie umowy'
             ].map((item, index) => (
               <li key={index} className="flex items-center gap-2 text-gray-700">
                 <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0" />
@@ -33,31 +33,32 @@ const BroadbandGuide = () => {
           </ul>
 
           <p className="text-gray-600 mb-8">
-            The best approach is to prioritize which features matter most to you, then compare providers based on those specific needs. 
-            Consider checking independent reviews and awards to assess provider performance.
+            Najlepszym podejściem jest ustalenie priorytetów, które funkcje są dla Ciebie najważniejsze, 
+            a następnie porównanie dostawców na podstawie tych konkretnych potrzeb. 
+            Warto sprawdzić niezależne recenzje i nagrody, aby ocenić wydajność dostawcy.
           </p>
 
           <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
             <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
               <Info className="w-5 h-5 text-amber-500" />
-              Important Considerations:
+              Ważne kwestie do rozważenia:
             </h3>
             <ul className="space-y-2 text-gray-700">
-              <li>• Most providers implement annual price increases during your contract</li>
-              <li>• Some providers offer fixed-price contracts but may have limited coverage areas</li>
-              <li>• The ideal time to switch is when your current contract expires</li>
-              <li>• Switching mid-contract usually incurs early termination fees</li>
+              <li>• Większość dostawców wprowadza roczne podwyżki cen w trakcie trwania umowy</li>
+              <li>• Niektórzy dostawcy oferują umowy ze stałą ceną, ale mogą mieć ograniczony obszar zasięgu</li>
+              <li>• Idealnym momentem na zmianę jest zakończenie obecnej umowy</li>
+              <li>• Zmiana w trakcie umowy zazwyczaj wiąże się z opłatami za wcześniejsze zakończenie</li>
             </ul>
           </div>
 
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">The Switching Process:</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Proces zmiany:</h3>
             <ol className="space-y-2 text-gray-700">
-              <li>1. Select your preferred broadband package</li>
-              <li>2. Provide your details and confirm your chosen deal</li>
-              <li>3. Review all contract charges and terms</li>
-              <li>4. Choose your preferred installation date</li>
-              <li>5. Receive confirmation and activation details</li>
+              <li>1. Wybierz preferowany pakiet internetowy</li>
+              <li>2. Podaj swoje dane i potwierdź wybraną ofertę</li>
+              <li>3. Przejrzyj wszystkie opłaty i warunki umowy</li>
+              <li>4. Wybierz preferowaną datę instalacji</li>
+              <li>5. Otrzymaj potwierdzenie i szczegóły aktywacji</li>
             </ol>
           </div>
         </div>
