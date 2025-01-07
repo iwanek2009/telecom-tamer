@@ -41,13 +41,13 @@ const BroadbandUnderstanding = () => {
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Cable className="w-6 h-6 text-black" />
-                <h4 className="text-xl font-semibold text-black">Internet częściowo światłowodowy "Part-Fibre Broadband"</h4>
+                <h4 className="text-xl font-semibold text-black">Part-Fibre Broadband</h4>
               </div>
               <ul className="space-y-2 text-gray-700">
-                <li>• Dostępny dla 98% domów w UK</li>
-                <li>• Oferuje prędkości 30-70Mbps</li>
-                <li>• Najpopularniejszy typ w UK</li>
-                <li>• Znany również jako "fibre to the cabinet"</li>
+                <li>• Available to 98% of UK homes</li>
+                <li>• Offers speeds of 30-70Mbps</li>
+                <li>• Most common type in the UK</li>
+                <li>• Also known as "fibre to the cabinet"</li>
               </ul>
             </div>
 
