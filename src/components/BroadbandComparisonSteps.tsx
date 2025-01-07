@@ -6,9 +6,12 @@ const BroadbandComparisonSteps = () => {
     <section className="bg-white py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
             Your perfect broadband deal is just a few clicks away
           </h2>
+          <p className="text-lg text-gray-600">
+            Let us guide you with our simple three-step process:
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
