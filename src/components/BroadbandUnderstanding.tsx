@@ -83,12 +83,12 @@ const BroadbandUnderstanding = () => {
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6">
             <div className="flex items-center gap-2 mb-4">
               <Satellite className="w-6 h-6 text-black" />
-              <h4 className="text-xl font-semibold text-black">Alternative Options:</h4>
+              <h4 className="text-xl font-semibold text-black">Alternatywne opcje:</h4>
             </div>
             <ul className="space-y-2 text-gray-700">
-              <li>• <strong>4G/5G Home Broadband:</strong> Perfect backup or main connection where fibre isn't available</li>
-              <li>• <strong>Standard ADSL:</strong> Basic 10Mbps speeds through traditional phone lines</li>
-              <li>• <strong>Satellite Broadband:</strong> Available anywhere with a clear view of the sky, ideal for remote locations</li>
+              <li>• <strong>Internet domowy 4G/5G:</strong> Doskonały backup lub główne połączenie tam, gdzie światłowód nie jest dostępny</li>
+              <li>• <strong>Standardowy ADSL:</strong> Podstawowe prędkości 10Mbps przez tradycyjne linie telefoniczne</li>
+              <li>• <strong>Internet satelitarny:</strong> Dostępny wszędzie z czystym widokiem na niebo, idealny dla odległych lokalizacji</li>
             </ul>
           </div>
         </div>
