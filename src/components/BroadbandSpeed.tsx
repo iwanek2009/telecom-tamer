@@ -68,16 +68,16 @@ const BroadbandSpeed = () => {
 
           {/* Check Your Current Speed */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Check Your Current Speed</h3>
-            <p className="text-gray-700 mb-4">To measure your current broadband performance:</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Sprawdź swoją obecną prędkość</h3>
+            <p className="text-gray-700 mb-4">Aby zmierzyć wydajność swojego obecnego łącza:</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-4">
-              <li>Run a speed test while at home</li>
-              <li>Connect directly to your Wi-Fi router</li>
-              <li>Test at different times of day</li>
-              <li>Compare with available deals in your area</li>
+              <li>Wykonaj test prędkości będąc w domu</li>
+              <li>Połącz się bezpośrednio z routerem Wi-Fi</li>
+              <li>Testuj o różnych porach dnia</li>
+              <li>Porównaj z dostępnymi ofertami w Twojej okolicy</li>
             </ol>
             <p className="text-sm text-gray-600 mt-4 italic">
-              Note: Speed tests provide a snapshot - your actual speed may vary throughout the day.
+              Uwaga: Testy prędkości pokazują wartość chwilową - rzeczywista prędkość może się zmieniać w ciągu dnia.
             </p>
           </div>
 
