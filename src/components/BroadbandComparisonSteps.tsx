@@ -3,7 +3,7 @@ import { Building2, Filter, CreditCard } from 'lucide-react';
 
 const BroadbandComparisonSteps = () => {
   return (
-    <section className="bg-gradient-to-br from-[#40E0D0] via-[#40E0D0]/80 to-[#98F5E1] py-16">
+    <section className="bg-white py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
