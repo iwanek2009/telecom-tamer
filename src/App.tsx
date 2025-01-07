@@ -8,6 +8,7 @@ import Mobile from "./pages/Mobile";
 import Broadband from "./pages/Broadband";
 import About from "./pages/About";
 import SimOnly from "./pages/SimOnly";
+import InternetUK from "./pages/InternetUK";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/broadband" element={<Broadband />} />
           <Route path="/about" element={<About />} />
           <Route path="/sim" element={<SimOnly />} />
+          <Route path="/internet-uk" element={<InternetUK />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
