@@ -93,7 +93,6 @@ const Broadband = () => {
         </div>
       </div>
 
-      {/* Moved BroadbandComparisonSteps right after the hero section */}
       <BroadbandComparisonSteps />
 
       <main className="container mx-auto px-4 py-8">
