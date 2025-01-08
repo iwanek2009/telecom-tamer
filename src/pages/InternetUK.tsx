@@ -95,6 +95,52 @@ const InternetUK = () => {
         </div>
       </div>
 
+      {/* Steps Section */}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+              Jak znaleźć najlepszy internet?
+            </h2>
+            <p className="text-lg text-gray-600">
+              Przeprowadzimy Cię przez prosty proces w trzech krokach:
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#3FC1C9]/20 text-center">
+              <div className="flex justify-center mb-6">
+                <ArrowRight className="w-8 h-8 text-gray-900" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Sprawdź dostępność</h3>
+              <p className="text-gray-600">
+                Wprowadź swój kod pocztowy, aby zobaczyć dostępne pakiety internetu w Twojej okolicy.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#3FC1C9]/20 text-center">
+              <div className="flex justify-center mb-6">
+                <ArrowRight className="w-8 h-8 text-gray-900" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Wybierz pakiet</h3>
+              <p className="text-gray-600">
+                Porównaj oferty według prędkości, ceny, dostawcy lub długości umowy.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#3FC1C9]/20 text-center">
+              <div className="flex justify-center mb-6">
+                <ArrowRight className="w-8 h-8 text-gray-900" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Zamów online</h3>
+              <p className="text-gray-600">
+                Złóż zamówienie przez stronę dostawcy. Masz 14 dni na zmianę decyzji bez dodatkowych opłat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <main className="container mx-auto px-4 py-8">
         <div className="grid md:grid-cols-12 gap-8">
           <BroadbandFilters />
