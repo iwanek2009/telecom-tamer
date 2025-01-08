@@ -16,7 +16,7 @@ export const ServiceCard = ({ title, description, icon, link, buttonText, button
   };
 
   return (
-    <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-in">
+    <div className="bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-[#3FC1C9]/20 animate-fade-in">
       <div className="flex flex-col items-center text-center space-y-4">
         <div className="mb-2">
           <img src={icon} alt={title} className="w-[60px] h-[60px]" />
