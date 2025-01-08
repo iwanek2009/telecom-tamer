@@ -10,7 +10,6 @@ const BroadbandSpeed = () => {
             Choosing the Right Broadband Speed
           </h2>
 
-          {/* Find Your Perfect Speed */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Find Your Perfect Speed</h3>
             <p className="text-gray-700 mb-4">
@@ -22,7 +21,6 @@ const BroadbandSpeed = () => {
             </ul>
           </div>
 
-          {/* Understanding Usage Patterns */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Understanding Usage Patterns</h3>
             <p className="text-gray-700 mb-4">
@@ -66,7 +64,6 @@ const BroadbandSpeed = () => {
             </ul>
           </div>
 
-          {/* Check Your Current Speed */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Check Your Current Speed</h3>
             <p className="text-gray-700 mb-4">To measure your current connection's performance:</p>
@@ -83,17 +80,17 @@ const BroadbandSpeed = () => {
 
           {/* Available Speeds */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Available Speeds in Your Area</h3>
-            <p className="text-gray-700 mb-4">The fastest internet options depend on your location:</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Dostępne prędkości w Twojej okolicy</h3>
+            <p className="text-gray-700 mb-4">Najszybsze opcje internetu zależą od Twojej lokalizacji:</p>
             <ul className="space-y-3 text-gray-700">
-              <li>• Full fibre: Available to 65% of homes, offering the fastest and most reliable speeds</li>
-              <li>• Virgin Media network: Ultra-fast speeds in selected areas</li>
-              <li>• Part fibre: Widely available but speeds depend on distance</li>
-              <li>• Standard broadband: Available almost everywhere but slower</li>
+              <li>• Pełny światłowód: Dostępny dla 65% domów, oferuje najszybsze i najbardziej niezawodne prędkości</li>
+              <li>• Sieć Virgin Media: Ultraszybkie prędkości w wybranych obszarach</li>
+              <li>• Częściowy światłowód: Szeroko dostępny, ale prędkości zależą od odległości</li>
+              <li>• Standardowy internet: Dostępny prawie wszędzie, ale wolniejszy</li>
             </ul>
             <p className="text-gray-700 mt-4">
-              <strong>Remember:</strong> While ultra-fast options like full fibre offer the highest speeds, 
-              part-fibre connections are still suitable for most household needs.
+              <strong>Pamiętaj:</strong> Chociaż ultraszybkie opcje jak pełny światłowód oferują najwyższe prędkości, 
+              połączenia częściowo światłowodowe nadal są odpowiednie dla potrzeb większości gospodarstw domowych.
             </p>
           </div>
         </div>
