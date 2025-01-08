@@ -1,13 +1,10 @@
 import { Header } from '../components/Header';
 import { useState } from 'react';
-import { ArrowRight, ChevronDown, Info } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import BroadbandComparisonSteps from '../components/BroadbandComparisonSteps';
-import BroadbandGuide from '../components/BroadbandGuide';
 import BroadbandUnderstanding from '../components/BroadbandUnderstanding';
 import BroadbandFilters from '../components/BroadbandFilters';
 import BroadbandOffers from '../components/BroadbandOffers';
-import BroadbandSpeed from '../components/BroadbandSpeed';
 import { Footer } from '../components/Footer';
 import { Helmet } from 'react-helmet';
 
@@ -75,7 +72,7 @@ const InternetUK = () => {
                   </CollapsibleTrigger>
                   <CollapsibleContent className="px-4 pb-4">
                     <p className="text-gray-700 text-sm mb-2">
-                      Idealna prędkość internetu zależy od tego, ile osób korzysta z internetu w Twoim domu i do czego go używasz, np. do streamingu czy gier. Następnie weź pod uwagę godziny szczytu wykorzystania internetu w Twoim gospodarstwie domowym oraz czy potrzebujesz stale wysokich prędkości do pracy zdalnej lub innych aktywności. Aby uzyskać więcej informacji, przeczytaj nasz poradnik o wyborze odpowiedniej prędkości internetu.
+                      Idealna prędkość internetu zależy od tego, ile osób korzysta z internetu w Twoim domu i do czego go używasz, np. do streamingu czy gier. Następnie weź pod uwagę godziny szczytu wykorzystania internetu w Twoim gospodarstwie domowym oraz czy potrzebujesz stale wysokich prędkości do pracy zdalnej lub innych aktywności.
                     </p>
                     <a href="#choose-speed" className="text-pink-600 hover:text-pink-700 text-sm font-medium inline-flex items-center gap-1">
                       Przeczytaj nasz poradnik
@@ -98,8 +95,6 @@ const InternetUK = () => {
         </div>
       </div>
 
-      <BroadbandComparisonSteps />
-
       <main className="container mx-auto px-4 py-8">
         <div className="grid md:grid-cols-12 gap-8">
           <BroadbandFilters />
@@ -107,9 +102,7 @@ const InternetUK = () => {
         </div>
       </main>
 
-      <BroadbandGuide />
       <BroadbandUnderstanding />
-      <BroadbandSpeed />
       <Footer />
     </div>
   );
