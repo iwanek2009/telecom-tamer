@@ -23,16 +23,16 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6">
-            <Link to="/" className="text-gray-600 hover:text-primary transition-colors">
+            <Link to="/" className="text-gray-600 hover:text-primary px-3 py-2 rounded-md transition-all duration-200 hover:bg-[#eafafb]">
               Home
             </Link>
-            <Link to="/mobile" className="text-gray-600 hover:text-primary transition-colors">
+            <Link to="/mobile" className="text-gray-600 hover:text-primary px-3 py-2 rounded-md transition-all duration-200 hover:bg-[#eafafb]">
               Mobile
             </Link>
-            <Link to="/broadband" className="text-gray-600 hover:text-primary transition-colors">
+            <Link to="/broadband" className="text-gray-600 hover:text-primary px-3 py-2 rounded-md transition-all duration-200 hover:bg-[#eafafb]">
               Broadband
             </Link>
-            <Link to="/sim" className="text-gray-600 hover:text-primary transition-colors">
+            <Link to="/sim" className="text-gray-600 hover:text-primary px-3 py-2 rounded-md transition-all duration-200 hover:bg-[#eafafb]">
               Sim Only
             </Link>
           </div>
@@ -52,28 +52,28 @@ export const Header = () => {
             <div className="py-4 px-4 space-y-4">
               <Link 
                 to="/" 
-                className="block text-gray-600 hover:text-primary transition-colors"
+                className="block text-gray-600 hover:text-primary hover:bg-[#eafafb] px-3 py-2 rounded-md transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link 
                 to="/mobile" 
-                className="block text-gray-600 hover:text-primary transition-colors"
+                className="block text-gray-600 hover:text-primary hover:bg-[#eafafb] px-3 py-2 rounded-md transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Mobile
               </Link>
               <Link 
                 to="/broadband" 
-                className="block text-gray-600 hover:text-primary transition-colors"
+                className="block text-gray-600 hover:text-primary hover:bg-[#eafafb] px-3 py-2 rounded-md transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Broadband
               </Link>
               <Link 
                 to="/sim" 
-                className="block text-gray-600 hover:text-primary transition-colors"
+                className="block text-gray-600 hover:text-primary hover:bg-[#eafafb] px-3 py-2 rounded-md transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Sim Only
