@@ -17,7 +17,7 @@ export const Header = () => {
             <img 
               src="/lovable-uploads/d27943bf-1331-495e-8ff8-7f5573c370ad.png" 
               alt="Smartfony Logo" 
-              className="h-8 md:h-10"
+              className="h-10 md:h-12"
             />
           </Link>
 
