@@ -9,6 +9,7 @@ import BroadbandFilters from '../components/BroadbandFilters';
 import BroadbandOffers from '../components/BroadbandOffers';
 import BroadbandSpeed from '../components/BroadbandSpeed';
 import { Footer } from '../components/Footer';
+import { Helmet } from 'react-helmet';
 
 const Broadband = () => {
   const [isValueOpen, setIsValueOpen] = useState(false);
@@ -16,6 +17,14 @@ const Broadband = () => {
   
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Compare UK Broadband Deals | All Providers | Switch Today</title>
+        <meta 
+          name="description" 
+          content="Compare broadband deals from all major UK providers. Find the perfect package with our easy comparison tool. Check availability and switch with confidence"
+        />
+      </Helmet>
+      
       <Header />
       
       {/* Hero Section */}
