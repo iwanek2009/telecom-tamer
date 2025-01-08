@@ -1,5 +1,5 @@
 import { Header } from '../components/Header';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { ArrowRight, ChevronDown, Info } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import BroadbandComparisonSteps from '../components/BroadbandComparisonSteps';
@@ -13,14 +13,6 @@ import { Footer } from '../components/Footer';
 const Broadband = () => {
   const [isValueOpen, setIsValueOpen] = useState(false);
   const [isSpeedOpen, setIsSpeedOpen] = useState(false);
-
-  useEffect(() => {
-    document.title = "Compare Broadband Deals | Find Best Deals & Switch Today";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Compare broadband deals from all major UK providers, check local availability and switch easily. Find the best packages in your area');
-    }
-  }, []);
   
   return (
     <div className="min-h-screen bg-gray-50">
