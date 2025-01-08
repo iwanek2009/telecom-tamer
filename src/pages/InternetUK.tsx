@@ -9,6 +9,7 @@ import BroadbandFilters from '../components/BroadbandFilters';
 import BroadbandOffers from '../components/BroadbandOffers';
 import BroadbandSpeed from '../components/BroadbandSpeed';
 import { Footer } from '../components/Footer';
+import { Helmet } from 'react-helmet';
 
 const InternetUK = () => {
   const [isValueOpen, setIsValueOpen] = useState(false);
@@ -16,6 +17,14 @@ const InternetUK = () => {
   
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Internet w UK | Wyszukiwarka ofert internetu stacjonarnego</title>
+        <meta 
+          name="description" 
+          content="Wyszukiwarka internetu stacjonarnego w UK | Porównujemy oferty wszystkich dostawców w twojej okolicy | Podaj swój kod pocztowy i sprawdź !"
+        />
+      </Helmet>
+      
       <Header />
       
       {/* Hero Section */}
