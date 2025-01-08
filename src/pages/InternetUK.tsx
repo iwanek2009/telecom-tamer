@@ -1,8 +1,8 @@
 import { Header } from '../components/Header';
 import { useState } from 'react';
-import { ArrowRight, ChevronDown, Info } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import BroadbandComparisonSteps from '../components/BroadbandComparisonSteps';
+import BroadbandComparisonStepsPolish from '../components/polish/BroadbandComparisonStepsPolish';
 import BroadbandGuide from '../components/BroadbandGuide';
 import BroadbandUnderstanding from '../components/BroadbandUnderstanding';
 import BroadbandFilters from '../components/BroadbandFilters';
@@ -89,7 +89,7 @@ const InternetUK = () => {
         </div>
       </div>
 
-      <BroadbandComparisonSteps />
+      <BroadbandComparisonStepsPolish />
 
       <main className="container mx-auto px-4 py-8">
         <div className="grid md:grid-cols-12 gap-8">

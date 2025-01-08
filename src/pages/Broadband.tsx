@@ -1,6 +1,6 @@
 import { Header } from '../components/Header';
 import { useState } from 'react';
-import { ArrowRight, ChevronDown, Info } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import BroadbandComparisonSteps from '../components/BroadbandComparisonSteps';
 import BroadbandGuide from '../components/BroadbandGuide';
@@ -93,7 +93,6 @@ const Broadband = () => {
         </div>
       </div>
 
-      {/* Moved BroadbandComparisonSteps right after the hero section */}
       <BroadbandComparisonSteps />
 
       <main className="container mx-auto px-4 py-8">
