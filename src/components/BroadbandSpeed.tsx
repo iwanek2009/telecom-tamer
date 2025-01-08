@@ -10,6 +10,7 @@ const BroadbandSpeed = () => {
             Choosing the Right Broadband Speed
           </h2>
 
+          {/* Find Your Perfect Speed */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Find Your Perfect Speed</h3>
             <p className="text-gray-700 mb-4">
@@ -21,6 +22,7 @@ const BroadbandSpeed = () => {
             </ul>
           </div>
 
+          {/* Understanding Usage Patterns */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Understanding Usage Patterns</h3>
             <p className="text-gray-700 mb-4">
@@ -64,6 +66,7 @@ const BroadbandSpeed = () => {
             </ul>
           </div>
 
+          {/* Check Your Current Speed */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Check Your Current Speed</h3>
             <p className="text-gray-700 mb-4">To measure your current connection's performance:</p>
