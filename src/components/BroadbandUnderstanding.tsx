@@ -7,24 +7,24 @@ const BroadbandUnderstanding = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-8">
-            Internet stacjonarny w UK : Przewodnik po internecie domowym
+            Understanding UK Broadband: A Guide to Home Internet
           </h2>
           
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-black mb-4">Co to jest internet stacjonarny?</h3>
+            <h3 className="text-2xl font-bold text-black mb-4">What is broadband internet?</h3>
             <p className="text-gray-700 mb-6">
-              Internet stacjonarny to stałe połączenie internetowe w Twoim domu, które zapewnia dostęp do usług online poprzez infrastrukturę sieciową dostawcy. W zależności od technologii, może być dostarczany przez tradycyjną linię telefoniczną lub nowoczesne łącze światłowodowe. Sygnał trafia do routera Wi-Fi, który rozdziela internet bezprzewodowo w całym domu.
+              Broadband internet is a permanent internet connection in your home that provides access to online services through a provider's network infrastructure. Depending on the technology, it can be delivered through traditional telephone lines or modern fiber optic connections. The signal reaches your Wi-Fi router, which distributes internet wirelessly throughout your home.
             </p>
             
-            <h4 className="text-lg font-semibold text-black mb-4">Z internetem stacjonarnym możesz:</h4>
+            <h4 className="text-lg font-semibold text-black mb-4">With broadband internet you can:</h4>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
               {[
-                { text: 'Oglądać filmy i programy TV', icon: Monitor },
-                { text: 'Pracować z domu', icon: Wifi },
-                { text: 'Grać w gry online', icon: Gamepad2 },
-                { text: 'Korzystać z mediów społecznościowych', icon: MessageCircle },
-                { text: 'Robić zakupy online', icon: ShoppingCart },
-                { text: 'Prowadzić rozmowy wideo z rodziną i przyjaciółmi', icon: Video }
+                { text: 'Watch movies and TV shows', icon: Monitor },
+                { text: 'Work from home', icon: Wifi },
+                { text: 'Play online games', icon: Gamepad2 },
+                { text: 'Use social media', icon: MessageCircle },
+                { text: 'Shop online', icon: ShoppingCart },
+                { text: 'Video chat with family and friends', icon: Video }
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-2 text-gray-700">
                   <item.icon className="w-5 h-5 text-black" />
@@ -34,7 +34,7 @@ const BroadbandUnderstanding = () => {
             </div>
           </div>
 
-          <h3 className="text-2xl font-bold text-black mb-6">Dostępne rodzaje internetu stacjonarnego w UK:</h3>
+          <h3 className="text-2xl font-bold text-black mb-6">Available types of broadband in the UK:</h3>
           
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {/* Part-Fibre Broadband */}
@@ -44,10 +44,10 @@ const BroadbandUnderstanding = () => {
                 <h4 className="text-xl font-semibold text-black">Part-Fibre Broadband</h4>
               </div>
               <ul className="space-y-2 text-gray-700">
-                <li>• Dostępny dla 98% domów w UK</li>
-                <li>• Oferuje prędkości 30-70Mbps</li>
-                <li>• Najpopularniejszy typ w UK</li>
-                <li>• Znany również jako "fibre to the cabinet"</li>
+                <li>• Available to 98% of UK homes</li>
+                <li>• Offers speeds of 30-70Mbps</li>
+                <li>• Most common type in the UK</li>
+                <li>• Also known as "fibre to the cabinet"</li>
               </ul>
             </div>
 
@@ -58,10 +58,10 @@ const BroadbandUnderstanding = () => {
                 <h4 className="text-xl font-semibold text-black">Full Fibre Broadband</h4>
               </div>
               <ul className="space-y-2 text-gray-700">
-                <li>• Dostępny dla 69% domów w UK</li>
-                <li>• Ultraszybkie prędkości od 100Mbps do 1Gbps</li>
-                <li>• Bezpośrednie połączenie światłowodowe do domu</li>
-                <li>• Nazywany też "fibre to the premises"</li>
+                <li>• Available to 69% of UK homes</li>
+                <li>• Ultra-fast speeds from 100Mbps to 1Gbps</li>
+                <li>• Direct fibre connection to your home</li>
+                <li>• Known as "fibre to the premises"</li>
               </ul>
             </div>
 
@@ -72,10 +72,10 @@ const BroadbandUnderstanding = () => {
                 <h4 className="text-xl font-semibold text-black">Virgin Media Cable</h4>
               </div>
               <ul className="space-y-2 text-gray-700">
-                <li>• Zasięg w 60% domów w UK</li>
-                <li>• Prędkości do 1Gbps</li>
-                <li>• Niezależna sieć światłowodowa</li>
-                <li>• Głównie dostępny w obszarach miejskich</li>
+                <li>• Coverage in 60% of UK homes</li>
+                <li>• Speeds up to 1Gbps</li>
+                <li>• Independent fibre network</li>
+                <li>• Mainly available in urban areas</li>
               </ul>
             </div>
           </div>
@@ -83,12 +83,12 @@ const BroadbandUnderstanding = () => {
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6">
             <div className="flex items-center gap-2 mb-4">
               <Satellite className="w-6 h-6 text-black" />
-              <h4 className="text-xl font-semibold text-black">Alternatywne opcje:</h4>
+              <h4 className="text-xl font-semibold text-black">Alternative options:</h4>
             </div>
             <ul className="space-y-2 text-gray-700">
-              <li>• <strong>Internet domowy 4G/5G:</strong> Doskonały backup lub główne połączenie tam, gdzie światłowód nie jest dostępny</li>
-              <li>• <strong>Standardowy ADSL:</strong> Podstawowe prędkości 10Mbps przez tradycyjne linie telefoniczne</li>
-              <li>• <strong>Internet satelitarny:</strong> Dostępny wszędzie z czystym widokiem na niebo, idealny dla odległych lokalizacji</li>
+              <li>• <strong>4G/5G home internet:</strong> Great backup or main connection where fibre isn't available</li>
+              <li>• <strong>Standard ADSL:</strong> Basic 10Mbps speeds through traditional phone lines</li>
+              <li>• <strong>Satellite internet:</strong> Available anywhere with clear sky view, ideal for remote locations</li>
             </ul>
           </div>
         </div>
