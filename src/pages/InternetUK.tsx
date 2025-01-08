@@ -20,26 +20,16 @@ const InternetUK = () => {
     <div className="min-h-screen bg-gray-50">
       <Header />
       <main>
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-[#40E0D0] via-[#40E0D0]/80 to-[#98F5E1] py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-black mb-6">
-                Znajdź najlepszą ofertę internetu w swojej okolicy
-              </h1>
-              <div className="bg-white rounded-lg p-6 shadow-lg">
-                <input
-                  type="text"
-                  placeholder="Wpisz swój kod pocztowy"
-                  className="w-full md:w-2/3 px-4 py-3 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#40E0D0]"
-                />
-                <button className="mt-4 md:mt-0 md:ml-4 px-8 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
-                  Sprawdź dostępność
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
+        <div className="container mx-auto px-6 py-20">
+          <h1 className="text-4xl font-bold mb-6">Wyszukiwarka ofert internetu stacjonarnego</h1>
+          <p className="text-lg mb-4">Porównaj oferty wszystkich dostawców w twojej okolicy.</p>
+          <input
+            type="text"
+            placeholder="Wpisz swój kod pocztowy"
+            className="border rounded-md p-2 w-full md:w-1/2"
+          />
+          <button className="mt-4 bg-blue-500 text-white rounded-md p-2">Szukaj</button>
+        </div>
 
         <BroadbandComparisonSteps />
 
