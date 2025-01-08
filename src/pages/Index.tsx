@@ -5,6 +5,7 @@ import NetworksComparison from '../components/NetworksComparison';
 import BestSellingPhones from '../components/BestSellingPhones';
 import { HeroSection } from '../components/HeroSection';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Index = () => {
   const scrollToServices = () => {
@@ -13,6 +14,14 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Mobile Phones & Broadband Comparison | Find Best Deals</title>
+        <meta 
+          name="description" 
+          content="Compare mobile phones, SIM only and broadband deals from all major UK providers. Find the perfect package with our easy comparison tools. Switch and save."
+        />
+      </Helmet>
+      
       <Header />
       
       <HeroSection onGetStarted={scrollToServices} />
