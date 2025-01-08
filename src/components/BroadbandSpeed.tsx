@@ -7,93 +7,93 @@ const BroadbandSpeed = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 id="choose-speed" className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-            Choosing the right broadband speed
+            Wybór odpowiedniej prędkości internetu stacjonarnego
           </h2>
 
           {/* Find Your Perfect Speed */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Find your perfect speed</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Znajdź idealną prędkość</h3>
             <p className="text-gray-700 mb-4">
-              Your ideal broadband speed depends on two key factors:
+              Twoja idealna prędkość internetu zależy od dwóch kluczowych czynników:
             </p>
             <ul className="list-disc list-inside text-gray-700 mb-6 ml-4">
-              <li>The number of connected devices in your home</li>
-              <li>Your household's internet usage habits</li>
+              <li>Liczby podłączonych urządzeń w domu</li>
+              <li>Zwyczajów korzystania z internetu w Twoim gospodarstwie domowym</li>
             </ul>
           </div>
 
           {/* Understanding Usage Patterns */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Understanding usage patterns</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Zrozumienie wzorców użytkowania</h3>
             <p className="text-gray-700 mb-4">
-              A family home or shared house typically needs faster speeds as multiple devices connect simultaneously. You'll need higher speeds if your household:
+              Dom rodzinny lub mieszkanie współdzielone zazwyczaj potrzebuje większej prędkości, ponieważ wiele urządzeń łączy się jednocześnie. Będziesz potrzebować wyższych prędkości, jeśli w Twoim domu:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <div className="flex items-center gap-2 text-gray-700">
                 <Video className="w-5 h-5" />
-                <span>Streams 4K content</span>
+                <span>Oglądacie treści w 4K</span>
               </div>
               <div className="flex items-center gap-2 text-gray-700">
                 <Home className="w-5 h-5" />
-                <span>Works from home</span>
+                <span>Pracujecie zdalnie</span>
               </div>
               <div className="flex items-center gap-2 text-gray-700">
                 <Gamepad2 className="w-5 h-5" />
-                <span>Plays online games</span>
+                <span>Gracie w gry online</span>
               </div>
               <div className="flex items-center gap-2 text-gray-700">
                 <Video className="w-5 h-5" />
-                <span>Uses video calls regularly</span>
+                <span>Regularnie korzystacie z rozmów wideo</span>
               </div>
             </div>
           </div>
 
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Speed tips</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Wskazówki dotyczące prędkości</h3>
             <ul className="space-y-3 text-gray-700">
               <li className="flex items-center gap-2">
                 <Wifi className="w-5 h-5" />
-                <span>UK average speed: 69Mbps (suitable for 3-4 users)</span>
+                <span>Średnia prędkość w UK: 69Mbps (odpowiednia dla 3-4 użytkowników)</span>
               </li>
               <li className="flex items-center gap-2">
                 <Activity className="w-5 h-5" />
-                <span>Heavy usage households: 100Mbps+ recommended</span>
+                <span>Gospodarstwa domowe o intensywnym użytkowaniu: zalecane 100Mbps+</span>
               </li>
               <li className="flex items-center gap-2">
                 <Router className="w-5 h-5" />
-                <span>Single user/basic browsing: 30-50Mbps sufficient</span>
+                <span>Pojedynczy użytkownik/podstawowe przeglądanie: wystarczy 30-50Mbps</span>
               </li>
             </ul>
           </div>
 
           {/* Check Your Current Speed */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Check your current speed</h3>
-            <p className="text-gray-700 mb-4">To measure your current connection's performance:</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Sprawdź swoją obecną prędkość</h3>
+            <p className="text-gray-700 mb-4">Aby zmierzyć wydajność swojego obecnego łącza:</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-4">
-              <li>Run a speed test while at home</li>
-              <li>Connect directly to your Wi-Fi router</li>
-              <li>Test at different times of day</li>
-              <li>Compare with available deals in your area</li>
+              <li>Wykonaj test prędkości będąc w domu</li>
+              <li>Połącz się bezpośrednio z routerem Wi-Fi</li>
+              <li>Testuj o różnych porach dnia</li>
+              <li>Porównaj z dostępnymi ofertami w Twojej okolicy</li>
             </ol>
             <p className="text-sm text-gray-600 mt-4 italic">
-              Note: Speed tests show a snapshot - actual speeds may vary throughout the day.
+              Uwaga: Testy prędkości pokazują wartość chwilową - rzeczywista prędkość może się zmieniać w ciągu dnia.
             </p>
           </div>
 
           {/* Available Speeds */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Available speeds in your area</h3>
-            <p className="text-gray-700 mb-4">The fastest internet options depend on your location:</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Dostępne prędkości w Twojej okolicy</h3>
+            <p className="text-gray-700 mb-4">Najszybsze opcje internetu zależą od Twojej lokalizacji:</p>
             <ul className="space-y-3 text-gray-700">
-              <li>• Full fibre: Available to 65% of homes, offering the fastest and most reliable speeds</li>
-              <li>• Virgin Media: Ultra-fast speeds in selected areas</li>
-              <li>• Part fibre: Widely available but speeds depend on distance</li>
-              <li>• Standard broadband: Available almost everywhere but slower</li>
+              <li>• Pełny światłowód: Dostępny dla 65% domów, oferuje najszybsze i najbardziej niezawodne prędkości</li>
+              <li>• Sieć Virgin Media: Ultraszybkie prędkości w wybranych obszarach</li>
+              <li>• Częściowy światłowód: Szeroko dostępny, ale prędkości zależą od odległości</li>
+              <li>• Standardowy internet: Dostępny prawie wszędzie, ale wolniejszy</li>
             </ul>
             <p className="text-gray-700 mt-4">
-              <strong>Remember:</strong> While ultra-fast options like full fibre offer the highest speeds, 
-              part-fibre connections are still suitable for most household needs.
+              <strong>Pamiętaj:</strong> Chociaż ultraszybkie opcje jak pełny światłowód oferują najwyższe prędkości, 
+              połączenia częściowo światłowodowe nadal są odpowiednie dla potrzeb większości gospodarstw domowych.
             </p>
           </div>
         </div>
