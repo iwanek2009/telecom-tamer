@@ -23,6 +23,14 @@ const CheapBroadbandDeals = () => {
       content: "Most households need 30-60Mbps for everyday use. Higher speeds aren't always necessary - focus on finding the right balance of speed and cost.",
       linkText: "Check speed guide",
       linkHref: "#speed-guide"
+    },
+    {
+      title: "Why choose cheap broadband?",
+      content: "Budget broadband packages offer great value for cost-conscious customers. You can get reliable speeds for everyday use, avoid unnecessary extras, and save money without compromising on basic internet performance.",
+    },
+    {
+      title: "Are cheap broadband deals reliable?",
+      content: "Yes! Cheap broadband uses the same infrastructure as expensive packages. While you might get fewer extras, the basic internet service is just as reliable as higher-priced options.",
     }
   ];
 
