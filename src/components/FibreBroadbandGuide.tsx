@@ -74,7 +74,7 @@ const FibreBroadbandGuide = () => {
                   <ul className="space-y-3">
                     {[
                       'Check availability using your postcode',
-                      'Evaluate your household's speed requirements',
+                      'Evaluate your household\'s speed requirements',
                       'Consider contract lengths and setup costs',
                       'Review included equipment and features'
                     ].map((item, index) => (
