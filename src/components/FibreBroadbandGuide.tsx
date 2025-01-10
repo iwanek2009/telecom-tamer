@@ -7,7 +7,7 @@ const FibreBroadbandGuide = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Best Fibre Broadband Deals: Your Complete 2024 Buying Guide
+            Best Fibre Broadband Deals: Your Complete 2025 Buying Guide
           </h2>
           <p className="text-gray-700 mb-12">
             Looking for the best fibre broadband deals in the UK? Our comprehensive guide breaks down everything you need to know about current fibre broadband deals and how to select the perfect package for your home.
