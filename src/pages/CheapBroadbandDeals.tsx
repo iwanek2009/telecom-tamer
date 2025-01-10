@@ -30,6 +30,20 @@ const CheapBroadbandDeals = () => {
           name="description" 
           content="Compare and find the cheapest broadband deals in your area. Use our price comparison tool to save money on your internet package. Check availability now."
         />
+        <meta property="og:title" content="Compare Cheap Broadband Deals | Find Lowest Prices UK" />
+        <meta 
+          property="og:description" 
+          content="Compare and find the cheapest broadband deals in your area. Use our price comparison tool to save money on your internet package. Check availability now."
+        />
+        <meta property="og:image" content="/lovable-uploads/c7785e78-b350-438c-bf2e-5074a81038bb.png" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Compare Cheap Broadband Deals | Find Lowest Prices UK" />
+        <meta 
+          name="twitter:description" 
+          content="Compare and find the cheapest broadband deals in your area. Use our price comparison tool to save money on your internet package. Check availability now."
+        />
+        <meta name="twitter:image" content="/lovable-uploads/c7785e78-b350-438c-bf2e-5074a81038bb.png" />
       </Helmet>
 
       <BStyleHero
