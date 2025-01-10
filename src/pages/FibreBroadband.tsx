@@ -39,20 +39,6 @@ const FibreBroadband = () => {
           name="description" 
           content="Compare the best fibre broadband deals starting from just £25/month. Enjoy ultra-fast speeds and reliable connection for your home. Check availability today."
         />
-        <meta property="og:title" content="Compare Fibre Broadband Deals | Find Best Deals & Switch Today" />
-        <meta 
-          property="og:description" 
-          content="Compare fibre broadband deals from all major UK providers. Find the best packages with speeds from 30Mbps to 1Gbps. Check availability in your area today!"
-        />
-        <meta property="og:image" content="/lovable-uploads/654d8ebc-5e82-4b01-b8df-3da7eef358ee.png" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Compare Fibre Broadband Deals | Find Best Deals & Switch Today" />
-        <meta 
-          name="twitter:description" 
-          content="Compare fibre broadband deals from all major UK providers. Find the best packages with speeds from 30Mbps to 1Gbps. Check availability in your area today!"
-        />
-        <meta name="twitter:image" content="/lovable-uploads/654d8ebc-5e82-4b01-b8df-3da7eef358ee.png" />
       </Helmet>
 
       <BStyleHero

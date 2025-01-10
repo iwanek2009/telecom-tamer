@@ -2,7 +2,6 @@ import { Header } from '../components/Header';
 import { useState, useEffect } from 'react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronDown } from "lucide-react";
-import { Helmet } from 'react-helmet';
 import MobileFilters from '@/components/MobileFilters';
 import MobileEssentialSteps from '@/components/MobileEssentialSteps';
 import ContractComparison from '@/components/ContractComparison';
@@ -10,6 +9,7 @@ import NumberPortability from '@/components/NumberPortability';
 import ContractGuide from '@/components/ContractGuide';
 import { Button } from "@/components/ui/button";
 import { Footer } from '@/components/Footer';
+import { Helmet } from 'react-helmet';
 
 const Mobile = () => {
   const [isFirstOpen, setIsFirstOpen] = useState(false);
@@ -46,21 +46,14 @@ const Mobile = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Compare Mobile Phone Deals | Find Best Phone Contracts UK</title>
-        <meta name="description" content="Compare the latest mobile phone deals from all major UK networks. Find the best contracts on iPhone, Samsung & more. Save up to 40% on your monthly plan!" />
-        
-        {/* Open Graph tags */}
-        <meta property="og:title" content="Compare Mobile Phone Deals | Find Best Phone Contracts UK" />
-        <meta property="og:description" content="Compare the latest mobile phone deals from all major UK networks. Find the best contracts on iPhone, Samsung & more. Save up to 40% on your monthly plan!" />
-        <meta property="og:image" content="/lovable-uploads/eeabbe2e-bf41-4600-918b-290c24aa67c9.png" />
-        <meta property="og:type" content="website" />
-        
-        {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Compare Mobile Phone Deals | Find Best Phone Contracts UK" />
-        <meta name="twitter:description" content="Compare the latest mobile phone deals from all major UK networks. Find the best contracts on iPhone, Samsung & more. Save up to 40% on your monthly plan!" />
-        <meta name="twitter:image" content="/lovable-uploads/eeabbe2e-bf41-4600-918b-290c24aa67c9.png" />
+        <title>Compare Phone Contracts | Find Best Mobile Phone Deals</title>
+        <meta 
+          name="description" 
+          content="Compare the latest phone contracts from all major UK networks. Find deals on iPhone, Samsung & more. Save up to 40% on your monthly plan with our comparison tool."
+        />
       </Helmet>
+      
+      <Header />
       
       {/* Hero Section */}
       <div className="w-full bg-gradient-to-r from-[#FC5185] to-[#FC5185]/80">

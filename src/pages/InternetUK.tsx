@@ -2,7 +2,6 @@ import { Header } from '../components/Header';
 import { useState } from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Helmet } from 'react-helmet';
 import BroadbandComparisonStepsPolish from '../components/polish/BroadbandComparisonStepsPolish';
 import BroadbandGuide from '../components/BroadbandGuide';
 import BroadbandUnderstanding from '../components/BroadbandUnderstanding';
@@ -17,23 +16,6 @@ const InternetUK = () => {
   
   return (
     <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Internet w UK | Porównaj oferty internetu w Wielkiej Brytanii</title>
-        <meta name="description" content="Znajdź tańsze oferty internetu w Twojej okolicy - zaoszczędź do £163 rocznie! Porównaj dostawców i wybierz najlepszy pakiet." />
-        
-        {/* Open Graph tags */}
-        <meta property="og:title" content="Internet w UK | Porównaj oferty internetu w Wielkiej Brytanii" />
-        <meta property="og:description" content="Znajdź tańsze oferty internetu w Twojej okolicy - zaoszczędź do £163 rocznie! Porównaj dostawców i wybierz najlepszy pakiet." />
-        <meta property="og:image" content="/lovable-uploads/9b09d654-8ad6-4b78-8874-9ed5b84f73bd.png" />
-        <meta property="og:type" content="website" />
-        
-        {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Internet w UK | Porównaj oferty internetu w Wielkiej Brytanii" />
-        <meta name="twitter:description" content="Znajdź tańsze oferty internetu w Twojej okolicy - zaoszczędź do £163 rocznie! Porównaj dostawców i wybierz najlepszy pakiet." />
-        <meta name="twitter:image" content="/lovable-uploads/9b09d654-8ad6-4b78-8874-9ed5b84f73bd.png" />
-      </Helmet>
-
       <Header />
       
       {/* Hero Section */}
