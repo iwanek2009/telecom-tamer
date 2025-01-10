@@ -1,11 +1,11 @@
 import React from 'react';
 import { BStyleTemplate } from '@/components/templates/BStyleTemplate';
-import { BroadbandComparisonSteps } from '@/components/BroadbandComparisonSteps';
-import { BroadbandFilters } from '@/components/BroadbandFilters';
-import { BroadbandGuide } from '@/components/BroadbandGuide';
-import { BroadbandOffers } from '@/components/BroadbandOffers';
-import { BroadbandSpeed } from '@/components/BroadbandSpeed';
-import { BroadbandUnderstanding } from '@/components/BroadbandUnderstanding';
+import BroadbandComparisonSteps from '@/components/BroadbandComparisonSteps';
+import BroadbandFilters from '@/components/BroadbandFilters';
+import BroadbandGuide from '@/components/BroadbandGuide';
+import BroadbandOffers from '@/components/BroadbandOffers';
+import BroadbandSpeed from '@/components/BroadbandSpeed';
+import BroadbandUnderstanding from '@/components/BroadbandUnderstanding';
 import { Helmet } from 'react-helmet';
 
 const Broadband = () => {
@@ -34,9 +34,13 @@ const Broadband = () => {
       </Helmet>
 
       <BroadbandComparisonSteps />
-      <BroadbandFilters />
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid md:grid-cols-12 gap-8">
+          <BroadbandFilters />
+          <BroadbandOffers />
+        </div>
+      </div>
       <BroadbandGuide />
-      <BroadbandOffers />
       <BroadbandSpeed />
       <BroadbandUnderstanding />
     </BStyleTemplate>
