@@ -7,6 +7,7 @@ import { PoundSterling, Wifi, Clock, Shield, Zap, Award } from 'lucide-react';
 import BroadbandFilters from '@/components/BroadbandFilters';
 import BroadbandOffers from '@/components/BroadbandOffers';
 import BudgetBroadbandGuide from '@/components/BudgetBroadbandGuide';
+import { ValueBroadbandGuide } from '@/components/ValueBroadbandGuide';
 import { Helmet } from 'react-helmet';
 
 const CheapBroadbandDeals = () => {
@@ -89,6 +90,7 @@ const CheapBroadbandDeals = () => {
       </BStyleContent>
 
       <BudgetBroadbandGuide />
+      <ValueBroadbandGuide />
     </BStyleTemplate>
   );
 };
