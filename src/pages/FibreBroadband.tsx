@@ -4,6 +4,7 @@ import { BStyleHero } from '@/components/templates/BStyleHero';
 import { BStyleContent } from '@/components/templates/BStyleContent';
 import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
 import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
+import FibreBroadbandGuide from '@/components/FibreBroadbandGuide';
 import { Helmet } from 'react-helmet';
 
 const FibreBroadband = () => {
@@ -83,6 +84,8 @@ const FibreBroadband = () => {
           />
         </BStyleFeatureGrid>
       </BStyleContent>
+
+      <FibreBroadbandGuide />
     </BStyleTemplate>
   );
 };
