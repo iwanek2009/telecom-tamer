@@ -24,10 +24,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/mobile" element={<Mobile />} />
           <Route path="/broadband" element={<Broadband />} />
+          <Route path="/broadband/fibre-broadband" element={<FibreBroadband />} />
           <Route path="/about" element={<About />} />
           <Route path="/sim" element={<SimOnly />} />
           <Route path="/internet-uk" element={<InternetUK />} />
-          <Route path="/fibre-broadband" element={<FibreBroadband />} />
           <Route path="/broadband/cheap-broadband-deals" element={<CheapBroadbandDeals />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
