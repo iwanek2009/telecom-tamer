@@ -117,15 +117,9 @@ const Mobile = () => {
         </div>
       </div>
 
-      {/* Stickee Comparison Widget */}
+      {/* Stickee Widget */}
       <div className="container mx-auto px-4 py-8">
-        <div 
-          className="stickee-comparison-widget"
-          data-sector="mobiles"
-          data-partner="smartfony"
-          data-type="mini-5"
-          data-width="500"
-        />
+        <div data-stickee-widget-id="smartfony-90">Loading...</div>
       </div>
 
       <MobileEssentialSteps />
