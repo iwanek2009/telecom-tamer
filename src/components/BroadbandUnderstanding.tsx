@@ -3,6 +3,10 @@ import { Wifi, Monitor, Gamepad2, MessageCircle, ShoppingCart, Video, Cable, Rou
 import { Link } from 'react-router-dom';
 
 const BroadbandUnderstanding = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <section className="bg-gradient-to-br from-[#40E0D0] via-[#40E0D0]/80 to-[#98F5E1] py-16">
       <div className="container mx-auto px-4">
@@ -56,7 +60,11 @@ const BroadbandUnderstanding = () => {
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Router className="w-6 h-6 text-black" />
-                <Link to="/broadband/fibre-broadband" className="hover:text-primary transition-colors">
+                <Link 
+                  to="/broadband/fibre-broadband" 
+                  className="hover:text-primary transition-colors"
+                  onClick={scrollToTop}
+                >
                   <h4 className="text-xl font-semibold text-black">Full Fibre Broadband</h4>
                 </Link>
               </div>
