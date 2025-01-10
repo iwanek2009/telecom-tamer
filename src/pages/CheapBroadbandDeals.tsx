@@ -3,7 +3,7 @@ import { BStyleHero } from '@/components/templates/BStyleHero';
 import { BStyleContent } from '@/components/templates/BStyleContent';
 import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
 import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
-import { PoundSterling, Wifi, Clock, Shield, Zap, Award } from 'lucide-react';
+import { PoundSterling, Wifi, Clock } from 'lucide-react';
 import BroadbandFilters from '@/components/BroadbandFilters';
 import BroadbandOffers from '@/components/BroadbandOffers';
 import BudgetBroadbandGuide from '@/components/BudgetBroadbandGuide';
@@ -59,21 +59,6 @@ const CheapBroadbandDeals = () => {
             icon={Clock}
             title="Flexible Contracts"
             description="Choose from 12, 18, or 24-month contracts to suit your needs"
-          />
-          <BStyleFeatureCard
-            icon={Shield}
-            title="Price Protection"
-            description="Many deals include price guarantees for the contract duration"
-          />
-          <BStyleFeatureCard
-            icon={Zap}
-            title="Quick Setup"
-            description="Fast and hassle-free installation process"
-          />
-          <BStyleFeatureCard
-            icon={Award}
-            title="Quality Service"
-            description="All providers vetted for reliable customer support"
           />
         </BStyleFeatureGrid>
 
