@@ -1,3 +1,4 @@
+import React from 'react';
 import { Wifi, Router, Zap, Timer, Download, Upload } from 'lucide-react';
 import { BStyleTemplate } from '@/components/templates/BStyleTemplate';
 import { BStyleHero } from '@/components/templates/BStyleHero';
@@ -5,6 +6,7 @@ import { BStyleContent } from '@/components/templates/BStyleContent';
 import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
 import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
 import FibreBroadbandGuide from '@/components/FibreBroadbandGuide';
+import FibreBroadbandAvailability from '@/components/FibreBroadbandAvailability';
 import { Helmet } from 'react-helmet';
 
 const FibreBroadband = () => {
@@ -70,7 +72,7 @@ const FibreBroadband = () => {
           <BStyleFeatureCard
             icon={Router}
             title="Future-Proof"
-            description="Ready for tomorrow's technology with expandable bandwidth capacity"
+            description="Ready for tomorrow\'s technology with expandable bandwidth capacity"
           />
           <BStyleFeatureCard
             icon={Upload}
@@ -86,6 +88,7 @@ const FibreBroadband = () => {
       </BStyleContent>
 
       <FibreBroadbandGuide />
+      <FibreBroadbandAvailability />
     </BStyleTemplate>
   );
 };
