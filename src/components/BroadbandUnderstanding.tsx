@@ -1,5 +1,6 @@
 import React from 'react';
 import { Wifi, Monitor, Gamepad2, MessageCircle, ShoppingCart, Video, Cable, Router, Satellite } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const BroadbandUnderstanding = () => {
   return (
@@ -55,7 +56,9 @@ const BroadbandUnderstanding = () => {
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Router className="w-6 h-6 text-black" />
-                <h4 className="text-xl font-semibold text-black">Full Fibre Broadband</h4>
+                <Link to="/broadband/fibre-broadband" className="hover:text-primary transition-colors">
+                  <h4 className="text-xl font-semibold text-black">Full Fibre Broadband</h4>
+                </Link>
               </div>
               <ul className="space-y-2 text-gray-700">
                 <li>• Available to 69% of UK homes</li>
