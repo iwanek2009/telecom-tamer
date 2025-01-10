@@ -29,10 +29,10 @@ const CheapBroadbandDeals = () => {
   return (
     <BStyleTemplate>
       <Helmet>
-        <title>Cheap Broadband Deals UK | Compare Affordable Internet Packages</title>
+        <title>Compare Cheap Broadband Deals | Find Lowest Prices UK</title>
         <meta 
           name="description" 
-          content="Find the cheapest broadband deals in the UK. Compare affordable internet packages from leading providers and save on your monthly bills."
+          content="Compare and find the cheapest broadband deals in your area. Use our price comparison tool to save money on your internet package. Check availability now."
         />
       </Helmet>
 
