@@ -8,9 +8,11 @@ interface BStyleTemplateProps {
 
 export const BStyleTemplate = ({ children }: BStyleTemplateProps) => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       <Header />
-      {children}
+      <div className="flex-1 flex flex-col space-y-0">
+        {children}
+      </div>
       <Footer />
     </div>
   );
