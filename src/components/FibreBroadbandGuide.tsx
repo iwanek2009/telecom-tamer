@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, Wifi, Router, Zap } from 'lucide-react';
+import { Check, Wifi, Router, Zap, PoundSterling, Globe, Database, ChartBar } from 'lucide-react';
 
 const FibreBroadbandGuide = () => {
   return (
@@ -62,6 +62,75 @@ const FibreBroadbandGuide = () => {
                       </li>
                     ))}
                   </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Finding Best Deals */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Finding The Best Fibre Broadband Deals</h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <ul className="space-y-3">
+                    {[
+                      'Check availability using your postcode',
+                      'Evaluate your household\'s speed requirements',
+                      'Consider contract lengths and setup costs',
+                      'Review included equipment and features'
+                    ].map((item, index) => (
+                      <li key={index} className="flex items-center gap-2 text-gray-700">
+                        <Database className="w-5 h-5 text-primary" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="space-y-4">
+                  <h4 className="text-xl font-semibold flex items-center gap-2">
+                    <Wifi className="w-6 h-6 text-primary" />
+                    Why Choose Full Fibre Broadband Deals?
+                  </h4>
+                  <ul className="space-y-3">
+                    {[
+                      'Same starting prices as standard fibre deals',
+                      'Superior equipment included',
+                      'Consistently reliable performance',
+                      'Easy upgrades to faster packages',
+                      'Future-proof technology'
+                    ].map((item, index) => (
+                      <li key={index} className="flex items-center gap-2 text-gray-700">
+                        <Check className="w-5 h-5 text-secondary" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Value Maximization */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Maximizing Value from Fibre Broadband Deals</h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <ul className="space-y-3">
+                    {[
+                      'Compare prices across multiple providers',
+                      'Look for special introductory offers',
+                      'Check for bundle deals with TV or phone services',
+                      'Review customer satisfaction scores',
+                      'Consider long-term value over initial pricing'
+                    ].map((item, index) => (
+                      <li key={index} className="flex items-center gap-2 text-gray-700">
+                        <PoundSterling className="w-5 h-5 text-primary" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex items-center justify-center">
+                  <ChartBar className="w-32 h-32 text-primary opacity-80" />
                 </div>
               </div>
             </div>
