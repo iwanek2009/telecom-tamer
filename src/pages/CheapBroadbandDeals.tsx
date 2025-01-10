@@ -6,6 +6,7 @@ import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
 import { PoundSterling, Wifi, Clock, Shield, Zap, Award } from 'lucide-react';
 import BroadbandFilters from '@/components/BroadbandFilters';
 import BroadbandOffers from '@/components/BroadbandOffers';
+import BudgetBroadbandGuide from '@/components/BudgetBroadbandGuide';
 import { Helmet } from 'react-helmet';
 
 const CheapBroadbandDeals = () => {
@@ -86,6 +87,8 @@ const CheapBroadbandDeals = () => {
           </div>
         </div>
       </BStyleContent>
+
+      <BudgetBroadbandGuide />
     </BStyleTemplate>
   );
 };
