@@ -129,7 +129,12 @@ const Mobile = () => {
         />
       </div>
 
-      {/* Main Content */}
+      <MobileEssentialSteps />
+      <ContractComparison />
+      <NumberPortability />
+      <ContractGuide />
+
+      {/* Deals Section */}
       <div className="container mx-auto px-4 py-8">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Filters */}
@@ -177,11 +182,6 @@ const Mobile = () => {
           </div>
         </div>
       </div>
-
-      <MobileEssentialSteps />
-      <ContractComparison />
-      <NumberPortability />
-      <ContractGuide />
 
       <Footer />
     </div>
