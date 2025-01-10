@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wifi, Router, Zap, Timer, Download, Upload } from 'lucide-react';
+import { Wifi, Router, Zap, Timer, Download } from 'lucide-react';
 import { BStyleTemplate } from '@/components/templates/BStyleTemplate';
 import { BStyleHero } from '@/components/templates/BStyleHero';
 import { BStyleContent } from '@/components/templates/BStyleContent';
@@ -68,21 +68,6 @@ const FibreBroadband = () => {
             icon={Timer}
             title="Low Latency"
             description="Enjoy lag-free gaming and crystal-clear video calls with minimal delay"
-          />
-          <BStyleFeatureCard
-            icon={Router}
-            title="Future-Proof"
-            description="Ready for tomorrow\'s technology with expandable bandwidth capacity"
-          />
-          <BStyleFeatureCard
-            icon={Upload}
-            title="Fast Uploads"
-            description="Share large files and host video calls with symmetrical upload speeds"
-          />
-          <BStyleFeatureCard
-            icon={Zap}
-            title="Quick Installation"
-            description="Get connected quickly with professional installation included"
           />
         </BStyleFeatureGrid>
       </BStyleContent>
