@@ -34,10 +34,10 @@ const FibreBroadband = () => {
   return (
     <BStyleTemplate>
       <Helmet>
-        <title>Compare Fibre Broadband Deals | Ultra-Fast Internet | Best Prices</title>
+        <title>Ultra-Fast Fibre Broadband Deals From £25/month | Compare & Save</title>
         <meta 
           name="description" 
-          content="Compare the latest fibre broadband deals from top UK providers. Get ultra-fast speeds from £20/month. Check availability in your area and switch today."
+          content="Compare the best fibre broadband deals starting from just £25/month. Enjoy ultra-fast speeds and reliable connection for your home. Check availability today."
         />
       </Helmet>
 
