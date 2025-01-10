@@ -13,6 +13,14 @@ import { Helmet } from 'react-helmet';
 const CheapBroadbandDeals = () => {
   const heroAccordionItems = [
     {
+      title: "Why choose cheap broadband?",
+      content: "Budget broadband packages offer great value for cost-conscious customers. You can get reliable speeds for everyday use, avoid unnecessary extras, and save money without compromising on basic internet performance.",
+    },
+    {
+      title: "Are cheap broadband deals reliable?",
+      content: "Yes! Cheap broadband uses the same infrastructure as expensive packages. While you might get fewer extras, the basic internet service is just as reliable as higher-priced options.",
+    },
+    {
       title: "How to find the cheapest deals?",
       content: "Compare different providers, check for special offers, and consider longer contracts for better monthly rates. Look at the total cost including setup fees.",
       linkText: "View all deals",
