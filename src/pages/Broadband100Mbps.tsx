@@ -26,10 +26,10 @@ const Broadband100Mbps = () => {
   return (
     <BStyleTemplate>
       <Helmet>
-        <title>100Mbps Broadband Deals | Compare Fast Internet Packages</title>
+        <title>Compare 100Mbps Broadband Deals | Find Best Value Packages</title>
         <meta 
           name="description" 
-          content="Compare the best 100Mbps broadband deals. Perfect for streaming, gaming, and working from home. Find the fastest broadband packages at competitive prices."
+          content="Looking for 100Mbps broadband? Compare deals from top providers, see pros and cons, and find the perfect package for your home. Check availability today."
         />
       </Helmet>
 
