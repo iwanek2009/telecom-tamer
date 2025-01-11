@@ -11,6 +11,7 @@ import SimOnly from "./pages/SimOnly";
 import InternetUK from "./pages/InternetUK";
 import FibreBroadband from "./pages/FibreBroadband";
 import CheapBroadbandDeals from "./pages/CheapBroadbandDeals";
+import Broadband100Mbps from "./pages/Broadband100Mbps";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/sim" element={<SimOnly />} />
           <Route path="/internet-uk" element={<InternetUK />} />
           <Route path="/broadband/cheap-broadband-deals" element={<CheapBroadbandDeals />} />
+          <Route path="/broadband/100mbps" element={<Broadband100Mbps />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
