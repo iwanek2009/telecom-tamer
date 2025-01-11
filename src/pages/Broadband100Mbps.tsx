@@ -3,7 +3,7 @@ import { BStyleHero } from '@/components/templates/BStyleHero';
 import { BStyleContent } from '@/components/templates/BStyleContent';
 import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
 import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
-import { Download, Users, Gamepad2, CheckCircle2, Building2, ArrowRight, ThumbsUp, ThumbsDown, Video, Cloud, Tv, Wifi, PoundSterling, Home, Users2 } from 'lucide-react';
+import { Download, Users, Gamepad2, CheckCircle2, Building2, ArrowRight, ThumbsUp, ThumbsDown, Video, Cloud, Tv, Wifi, PoundSterling, Home, Users2, Monitor } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 
 const Broadband100Mbps = () => {
