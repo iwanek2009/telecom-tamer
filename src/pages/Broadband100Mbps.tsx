@@ -35,7 +35,7 @@ const Broadband100Mbps = () => {
 
       <BStyleHero
         title="100Mbps Broadband Deals"
-        subtitle="Fast, reliable internet perfect for streaming, gaming, and working from home"
+        subtitle="Compare ultrafast broadband deals and find the perfect speed for your busy household today"
         image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
         imageAlt="Person comparing broadband deals on tablet"
         accordionItems={heroAccordionItems}
