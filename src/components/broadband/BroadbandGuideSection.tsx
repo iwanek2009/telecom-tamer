@@ -3,7 +3,7 @@ import { CheckCircle2 } from 'lucide-react';
 
 const BroadbandGuideSection = () => {
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-blue-100 py-16">
+    <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] bg-gradient-to-br from-blue-50 to-blue-100 py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm">
