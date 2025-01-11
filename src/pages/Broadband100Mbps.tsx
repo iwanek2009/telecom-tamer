@@ -3,7 +3,7 @@ import { BStyleHero } from '@/components/templates/BStyleHero';
 import { BStyleContent } from '@/components/templates/BStyleContent';
 import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
 import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
-import { Download, Users, Gamepad2 } from 'lucide-react';
+import { Download, Users, Gamepad2, Wifi, Monitor, Router, CheckCircle2, Building2, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 
 const Broadband100Mbps = () => {
@@ -110,6 +110,134 @@ const Broadband100Mbps = () => {
           </div>
         </div>
       </BStyleContent>
+
+      <section className="bg-gradient-to-br from-blue-50 to-blue-100 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-12">
+            {/* Ultimate Guide Section */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Ultimate Guide to 100Mbps Broadband Deals: Is This Speed Right For You?
+              </h2>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                Discover What 100Mbps Broadband Deals Offer
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                100Mbps broadband deals deliver ultrafast internet speeds that transform your online experience. 
+                These packages offer ten times the speed of standard broadband, with prices starting from just £25/month from leading providers.
+              </p>
+            </div>
+
+            {/* Speed Capabilities */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+                What Speed Do 100Mbps Broadband Deals Deliver?
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  { icon: Download, text: "Download a HD movie (4GB) in just 5-6 minutes" },
+                  { icon: Monitor, text: "Stream 4K content on multiple devices simultaneously" },
+                  { icon: Users, text: "Support 8-10 devices connected at once" },
+                  { icon: Gamepad2, text: "Perfect for online gaming and video calls" },
+                  { icon: ArrowRight, text: "Upload large files quickly and efficiently" }
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <item.icon className="w-5 h-5 text-blue-600" />
+                    <span className="text-gray-700">{item.text}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Compare Deals */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+                Compare 100Mbps Broadband Deals
+              </h3>
+              <p className="text-gray-700 mb-4">Today's 100Mbps broadband deals typically include:</p>
+              <ul className="space-y-4">
+                {[
+                  "Guaranteed minimum speeds",
+                  "Latest Wi-Fi router technology",
+                  "Flexible contract lengths",
+                  "Optional TV and phone bundles",
+                  "Professional installation"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Who Needs Section */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+                Who Needs 100Mbps Broadband Deals?
+              </h3>
+              <p className="text-gray-700 mb-4">These packages are ideal for:</p>
+              <div className="grid md:grid-cols-2 gap-4">
+                {[
+                  "Families with multiple users online",
+                  "Remote workers handling large files",
+                  "Gamers requiring fast, stable connections",
+                  "4K streaming enthusiasts",
+                  "Smart home technology users"
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-3 bg-blue-50 p-3 rounded-lg">
+                    <Users className="w-5 h-5 text-blue-600" />
+                    <span className="text-gray-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Available Providers */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+                Available 100Mbps Broadband Providers
+              </h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                {[
+                  "Virgin Media",
+                  "BT Full Fibre",
+                  "Sky Ultrafast",
+                  "Vodafone Gigafast",
+                  "TalkTalk Future Fibre"
+                ].map((provider, index) => (
+                  <div key={index} className="flex items-center gap-3 bg-gray-50 p-4 rounded-lg">
+                    <Building2 className="w-5 h-5 text-blue-600" />
+                    <span className="text-gray-700 font-medium">{provider}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Availability Check */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                Check 100Mbps Broadband Availability
+              </h3>
+              <p className="text-gray-700 mb-6">
+                While 100Mbps broadband coverage is expanding rapidly across the UK, availability depends on your location. 
+                Enter your postcode to compare available 100Mbps broadband deals in your area.
+              </p>
+            </div>
+
+            {/* Future Proof */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                Future-Proof Your Connection
+              </h3>
+              <p className="text-gray-700">
+                Choosing a 100Mbps broadband deal ensures your household has sufficient bandwidth for years to come, 
+                with options to upgrade to even faster speeds when needed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </BStyleTemplate>
   );
 };
