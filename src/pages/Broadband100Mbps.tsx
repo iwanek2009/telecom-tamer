@@ -1,5 +1,4 @@
 import { BStyleTemplate } from '@/components/templates/BStyleTemplate';
-import { BStyleHero } from '@/components/templates/BStyleHero';
 import { BStyleContent } from '@/components/templates/BStyleContent';
 import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
 import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
@@ -62,52 +61,69 @@ const Broadband100Mbps = () => {
           />
         </BStyleFeatureGrid>
 
-        <div className="mt-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">What Can You Do with 100Mbps?</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="font-semibold text-lg">Perfect for:</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                  <span>4K video streaming on multiple devices</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                  <span>Online gaming with low latency</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                  <span>Large file downloads</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                  <span>Multiple video calls simultaneously</span>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h3 className="font-semibold text-lg">Download times:</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                  <span>HD movie (4GB): ~5-7 minutes</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                  <span>Music album (100MB): ~8 seconds</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                  <span>Game update (20GB): ~27-30 minutes</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                  <span>Photo (5MB): Almost instant</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div className="space-y-8 mt-16">
+          <section className="space-y-4">
+            <h1 className="text-3xl font-bold">Ultimate Guide to 100Mbps Broadband Deals: Is This Speed Right For You?</h1>
+            <h2 className="text-2xl font-semibold">Discover What 100Mbps Broadband Deals Offer</h2>
+            <p className="text-gray-700">100Mbps broadband deals deliver ultrafast internet speeds that transform your online experience. These packages offer ten times the speed of standard broadband, with prices starting from just £25/month from leading providers.</p>
+          </section>
+
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold">What Speed Do 100Mbps Broadband Deals Deliver?</h2>
+            <ul className="list-disc pl-6 space-y-2 text-gray-700">
+              <li>Download a HD movie (4GB) in just 5-6 minutes</li>
+              <li>Stream 4K content on multiple devices simultaneously</li>
+              <li>Support 8-10 devices connected at once</li>
+              <li>Perfect for online gaming and video calls</li>
+              <li>Upload large files quickly and efficiently</li>
+            </ul>
+          </section>
+
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold">Compare 100Mbps Broadband Deals</h2>
+            <p className="text-gray-700">Today's 100Mbps broadband deals typically include:</p>
+            <ul className="list-disc pl-6 space-y-2 text-gray-700">
+              <li>Guaranteed minimum speeds</li>
+              <li>Latest Wi-Fi router technology</li>
+              <li>Flexible contract lengths</li>
+              <li>Optional TV and phone bundles</li>
+              <li>Professional installation</li>
+            </ul>
+          </section>
+
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold">Who Needs 100Mbps Broadband Deals?</h2>
+            <p className="text-gray-700">These packages are ideal for:</p>
+            <ul className="list-disc pl-6 space-y-2 text-gray-700">
+              <li>Families with multiple users online</li>
+              <li>Remote workers handling large files</li>
+              <li>Gamers requiring fast, stable connections</li>
+              <li>4K streaming enthusiasts</li>
+              <li>Smart home technology users</li>
+            </ul>
+          </section>
+
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold">Available 100Mbps Broadband Providers</h2>
+            <p className="text-gray-700">Major providers offering 100Mbps broadband deals include:</p>
+            <ul className="list-disc pl-6 space-y-2 text-gray-700">
+              <li>Virgin Media</li>
+              <li>BT Full Fibre</li>
+              <li>Sky Ultrafast</li>
+              <li>Vodafone Gigafast</li>
+              <li>TalkTalk Future Fibre</li>
+            </ul>
+          </section>
+
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold">Check 100Mbps Broadband Availability</h2>
+            <p className="text-gray-700">While 100Mbps broadband coverage is expanding rapidly across the UK, availability depends on your location. Enter your postcode to compare available 100Mbps broadband deals in your area.</p>
+          </section>
+
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold">Future-Proof Your Connection</h2>
+            <p className="text-gray-700">Choosing a 100Mbps broadband deal ensures your household has sufficient bandwidth for years to come, with options to upgrade to even faster speeds when needed.</p>
+          </section>
         </div>
       </BStyleContent>
     </BStyleTemplate>
