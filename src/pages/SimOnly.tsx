@@ -14,6 +14,13 @@ const SimOnly = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Compare SIM only deals from top UK networks. Find plans from £1.58/month with 5G included. Switch today and save up to £352 yearly on your mobile bills');
     }
+
+    // Reinitialize Stickee widget
+    if (window.StickeeLoader) {
+      window.StickeeLoader.load();
+    } else {
+      console.warn('StickeeLoader not found');
+    }
   }, []);
 
   return (
