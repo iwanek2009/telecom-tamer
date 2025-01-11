@@ -109,11 +109,9 @@ const Broadband = () => {
         <div data-stickee-widget-id="smartfony-91">Loading...</div>
       </div>
 
-      <main className="container mx-auto px-4 py-8">
-        <div className="grid md:grid-cols-12 gap-8">
-          <BroadbandFilters />
-          <BroadbandOffers />
-        </div>
+      <main className="container mx-auto px-4 py-8 grid md:grid-cols-12 gap-8">
+        <BroadbandFilters />
+        <BroadbandOffers />
       </main>
 
       <BroadbandGuide />
