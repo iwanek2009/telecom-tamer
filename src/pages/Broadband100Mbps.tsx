@@ -1,8 +1,8 @@
 import { BStyleTemplate } from '@/components/templates/BStyleTemplate';
+import { BStyleHero } from '@/components/templates/BStyleHero';
 import { BStyleContent } from '@/components/templates/BStyleContent';
 import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
 import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
-import { BStyleHero } from '@/components/templates/BStyleHero';
 import { Download, Users, Gamepad2 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 
@@ -62,103 +62,52 @@ const Broadband100Mbps = () => {
           />
         </BStyleFeatureGrid>
 
-        <div className="space-y-8 mt-16">
-          <section className="space-y-4">
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Ultimate Guide to 100Mbps Broadband Deals: Is This Speed Right For You?</h1>
-            <h2 className="text-2xl font-semibold text-gray-800">Discover What 100Mbps Broadband Deals Offer</h2>
-            <p className="text-gray-700 leading-relaxed">100Mbps broadband deals deliver ultrafast internet speeds that transform your online experience. These packages offer ten times the speed of standard broadband, with prices starting from just £25/month from leading providers.</p>
-          </section>
-
-          <section className="bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] p-8 rounded-2xl shadow-sm">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">What Speed Do 100Mbps Broadband Deals Deliver?</h2>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-center gap-2">
-                <Download className="w-5 h-5 text-primary" />
-                Download a HD movie (4GB) in just 5-6 minutes
-              </li>
-              <li className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-primary" />
-                Stream 4K content on multiple devices simultaneously
-              </li>
-              <li className="flex items-center gap-2">
-                <Gamepad2 className="w-5 h-5 text-primary" />
-                Support 8-10 devices connected at once
-              </li>
-            </ul>
-          </section>
-
-          <section className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Compare 100Mbps Broadband Deals</h2>
-            <p className="text-gray-700 mb-4">Today's 100Mbps broadband deals typically include:</p>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
-              <li className="flex items-center gap-2 bg-gray-50 p-3 rounded-lg">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                Guaranteed minimum speeds
-              </li>
-              <li className="flex items-center gap-2 bg-gray-50 p-3 rounded-lg">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                Latest Wi-Fi router technology
-              </li>
-              <li className="flex items-center gap-2 bg-gray-50 p-3 rounded-lg">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                Flexible contract lengths
-              </li>
-              <li className="flex items-center gap-2 bg-gray-50 p-3 rounded-lg">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                Professional installation
-              </li>
-            </ul>
-          </section>
-
-          <section className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] p-8 rounded-2xl shadow-sm">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Who Needs 100Mbps Broadband Deals?</h2>
-              <p className="text-gray-700 mb-4">These packages are ideal for:</p>
-              <ul className="space-y-3 text-gray-700">
+        <div className="mt-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">What Can You Do with 100Mbps?</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <h3 className="font-semibold text-lg">Perfect for:</h3>
+              <ul className="space-y-2">
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  Families with multiple users online
+                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                  <span>4K video streaming on multiple devices</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  Remote workers handling large files
+                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                  <span>Online gaming with low latency</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  Gamers requiring fast, stable connections
+                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                  <span>Large file downloads</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  4K streaming enthusiasts
+                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                  <span>Multiple video calls simultaneously</span>
                 </li>
               </ul>
             </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Available 100Mbps Broadband Providers</h2>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg">Virgin Media</li>
-                <li className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg">BT Full Fibre</li>
-                <li className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg">Sky Ultrafast</li>
-                <li className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg">Vodafone Gigafast</li>
-                <li className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg">TalkTalk Future Fibre</li>
+            <div className="space-y-4">
+              <h3 className="font-semibold text-lg">Download times:</h3>
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                  <span>HD movie (4GB): ~5-7 minutes</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                  <span>Music album (100MB): ~8 seconds</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                  <span>Game update (20GB): ~27-30 minutes</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                  <span>Photo (5MB): Almost instant</span>
+                </li>
               </ul>
             </div>
-          </section>
-
-          <section className="space-y-4 bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] p-8 rounded-2xl shadow-sm">
-            <h2 className="text-2xl font-semibold text-gray-800">Check 100Mbps Broadband Availability</h2>
-            <p className="text-gray-700 leading-relaxed">
-              While 100Mbps broadband coverage is expanding rapidly across the UK, availability depends on your location. Enter your postcode to compare available 100Mbps broadband deals in your area.
-            </p>
-          </section>
-
-          <section className="space-y-4 bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-            <h2 className="text-2xl font-semibold text-gray-800">Future-Proof Your Connection</h2>
-            <p className="text-gray-700 leading-relaxed">
-              Choosing a 100Mbps broadband deal ensures your household has sufficient bandwidth for years to come, with options to upgrade to even faster speeds when needed.
-            </p>
-          </section>
+          </div>
         </div>
       </BStyleContent>
     </BStyleTemplate>
