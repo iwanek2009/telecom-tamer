@@ -62,55 +62,6 @@ const Broadband100Mbps = () => {
           />
         </BStyleFeatureGrid>
 
-        <div className="mt-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">What Can You Do with 100Mbps?</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="font-semibold text-lg">Perfect for:</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                  <span>4K video streaming on multiple devices</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                  <span>Online gaming with low latency</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                  <span>Large file downloads</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                  <span>Multiple video calls simultaneously</span>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h3 className="font-semibold text-lg">Download times:</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                  <span>HD movie (4GB): ~5-7 minutes</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                  <span>Music album (100MB): ~8 seconds</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                  <span>Game update (20GB): ~27-30 minutes</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                  <span>Photo (5MB): Almost instant</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </BStyleContent>
-
       <section className="bg-gradient-to-br from-blue-50 to-blue-100 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-12">
@@ -238,6 +189,7 @@ const Broadband100Mbps = () => {
           </div>
         </div>
       </section>
+      </BStyleContent>
     </BStyleTemplate>
   );
 };
