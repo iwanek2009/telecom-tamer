@@ -2,6 +2,7 @@ import { BStyleTemplate } from '@/components/templates/BStyleTemplate';
 import { BStyleContent } from '@/components/templates/BStyleContent';
 import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
 import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
+import { BStyleHero } from '@/components/templates/BStyleHero';
 import { Download, Users, Gamepad2 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 
