@@ -3,7 +3,7 @@ import { BStyleHero } from '@/components/templates/BStyleHero';
 import { BStyleContent } from '@/components/templates/BStyleContent';
 import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
 import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
-import { Wifi, Users, Gamepad2, Download } from 'lucide-react';
+import { Download, Users, Gamepad2 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 
 const Broadband100Mbps = () => {
@@ -59,11 +59,6 @@ const Broadband100Mbps = () => {
             icon={Gamepad2}
             title="Gaming Ready"
             description="Low latency and stable connection for online gaming"
-          />
-          <BStyleFeatureCard
-            icon={Wifi}
-            title="Multiple Devices"
-            description="Connect 8-10 devices simultaneously without slowdown"
           />
         </BStyleFeatureGrid>
 
