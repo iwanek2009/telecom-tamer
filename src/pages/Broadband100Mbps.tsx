@@ -4,7 +4,6 @@ import { BStyleContent } from '@/components/templates/BStyleContent';
 import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
 import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
 import { Wifi, Users, Gamepad2, Download } from 'lucide-react';
-import BroadbandOffers from '@/components/BroadbandOffers';
 import { Helmet } from 'react-helmet';
 
 const Broadband100Mbps = () => {
@@ -67,11 +66,6 @@ const Broadband100Mbps = () => {
             description="Connect 8-10 devices simultaneously without slowdown"
           />
         </BStyleFeatureGrid>
-
-        <div className="mt-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Available 100Mbps Deals</h2>
-          <BroadbandOffers />
-        </div>
 
         <div className="mt-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">What Can You Do with 100Mbps?</h2>
