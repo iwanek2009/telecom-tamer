@@ -1,5 +1,5 @@
 import { Header } from '../components/Header';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronDown } from "lucide-react";
 import MobileFilters from '@/components/MobileFilters';
@@ -14,50 +14,6 @@ import { Helmet } from 'react-helmet';
 const Mobile = () => {
   const [isFirstOpen, setIsFirstOpen] = useState(false);
   const [isSecondOpen, setIsSecondOpen] = useState(false);
-
-  useEffect(() => {
-    document.title = "Compare Phone Contracts | Find Best Mobile Phone Deals";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Compare the latest phone contracts from all major UK networks. Find deals on iPhone, Samsung & more. Save up to 40% on your monthly plan with our comparison tool.');
-    }
-
-    // Initialize Stickee widget
-    const initStickee = () => {
-      if (window.StickeeLoader) {
-        try {
-          console.log('Initializing Stickee widget...');
-          window.StickeeLoader.load();
-        } catch (error) {
-          console.error('Error loading Stickee widget:', error);
-        }
-      } else {
-        console.log('StickeeLoader not found, waiting...');
-      }
-    };
-
-    // Try to initialize immediately
-    initStickee();
-
-    // Set up an observer to watch for script load
-    const observer = new MutationObserver((mutations, obs) => {
-      if (window.StickeeLoader) {
-        console.log('StickeeLoader detected, initializing...');
-        initStickee();
-        obs.disconnect();
-      }
-    });
-
-    observer.observe(document, {
-      childList: true,
-      subtree: true
-    });
-
-    // Cleanup
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
   
   const mockDeals = [
     {
