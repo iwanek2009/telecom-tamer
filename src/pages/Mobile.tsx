@@ -10,6 +10,7 @@ import ContractGuide from '@/components/ContractGuide';
 import { Button } from "@/components/ui/button";
 import { Footer } from '@/components/Footer';
 import { Helmet } from 'react-helmet';
+import StickeeWidget from '@/components/StickeeWidget';
 
 const Mobile = () => {
   const [isFirstOpen, setIsFirstOpen] = useState(false);
@@ -109,29 +110,7 @@ const Mobile = () => {
         </div>
       </div>
 
-      {/* Stickee Widget */}
-      <div className="container mx-auto px-4 py-8">
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                var script = document.createElement('script');
-                script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
-                script.async = true;
-                script.onload = function() {
-                  if (window.StickeeLoader) {
-                    window.StickeeLoader.load();
-                  }
-                };
-                document.body.appendChild(script);
-              })();
-            `
-          }}
-        />
-        <div id="stickee-container">
-          <div data-stickee-widget-id="smartfony-90" data-filters='{"families":[1971]}'>Loading...</div>
-        </div>
-      </div>
+      <StickeeWidget />
 
       <MobileEssentialSteps />
       <ContractComparison />
