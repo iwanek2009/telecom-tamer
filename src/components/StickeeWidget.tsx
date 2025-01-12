@@ -22,37 +22,27 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
       }
     };
 
-    // Function to check and initialize widget
-    const checkAndInitialize = () => {
-      // Add timestamp to URL to force widget refresh
-      const url = new URL(window.location.href);
-      url.searchParams.set('refresh', Date.now().toString());
-      window.history.replaceState({}, '', url);
-
-      // Set up interval to check for StickeeLoader
-      const interval = setInterval(() => {
-        if ((window as any).StickeeLoader) {
-          clearInterval(interval);
-          initializeWidget();
-        }
-      }, 100);
-
-      // Clear interval after 5 seconds if widget hasn't loaded
-      setTimeout(() => clearInterval(interval), 5000);
-
-      return interval;
+    // Function to handle navigation
+    const handleNavigation = () => {
+      // Force page reload when navigating
+      window.location.reload();
     };
 
-    // Initial check and setup
-    const interval = checkAndInitialize();
+    // Check if this is a navigation (not initial load)
+    if (window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_NAVIGATE) {
+      handleNavigation();
+      return;
+    }
 
-    // Add popstate event listener for browser navigation
-    window.addEventListener('popstate', initializeWidget);
+    // Initial load setup
+    initializeWidget();
 
+    // Add navigation event listeners
+    window.addEventListener('popstate', handleNavigation);
+    
     // Cleanup
     return () => {
-      clearInterval(interval);
-      window.removeEventListener('popstate', initializeWidget);
+      window.removeEventListener('popstate', handleNavigation);
     };
   }, [location.pathname]);
 
