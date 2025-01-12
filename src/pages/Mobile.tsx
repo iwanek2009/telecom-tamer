@@ -149,7 +149,10 @@ const Mobile = () => {
 
       {/* Stickee Widget */}
       <div className="container mx-auto px-4 py-8">
-        <div data-stickee-widget-id="smartfony-90" data-filters='{"families":[1971]}'>Loading...</div>
+        <div id="stickee-container">
+          <script src="https://whitelabels.stickeebroadband.co.uk/js/loader.js" async></script>
+          <div data-stickee-widget-id="smartfony-90" data-filters='{"families":[1971]}'>Loading...</div>
+        </div>
       </div>
 
       <MobileEssentialSteps />
