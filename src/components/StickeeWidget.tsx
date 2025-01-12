@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
 interface StickeeWidgetProps {
   widgetId: string;
@@ -6,52 +7,47 @@ interface StickeeWidgetProps {
 }
 
 const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
-  const initAttempts = useRef(0);
-  const maxAttempts = 5;
-
-  const initWidget = () => {
-    console.log('Attempting to initialize widget...', widgetId);
-    
-    if ((window as any).StickeeLoader) {
-      (window as any).StickeeLoader.load();
-      console.log('Widget initialized successfully');
-      return true;
-    }
-    
-    initAttempts.current += 1;
-    console.log(`Initialization attempt ${initAttempts.current} of ${maxAttempts}`);
-    return false;
-  };
-
+  const location = useLocation();
+  const containerRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
-    // Initial initialization
-    if (!initWidget()) {
-      // If initial load fails, try again every second for up to maxAttempts
-      const interval = setInterval(() => {
-        if (initWidget() || initAttempts.current >= maxAttempts) {
-          clearInterval(interval);
-        }
-      }, 1000);
+    console.log('Location or widget ID changed, reinitializing...');
+    
+    // Remove any existing scripts
+    const existingScripts = document.querySelectorAll('script[src*="stickeebroadband"]');
+    existingScripts.forEach(script => script.remove());
 
-      return () => clearInterval(interval);
-    }
+    // Create fresh script element
+    const script = document.createElement('script');
+    script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
+    script.async = true;
 
-    // Handle visibility changes
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === 'visible') {
-        initWidget();
+    // Initialize widget after script loads
+    script.onload = () => {
+      console.log('Script loaded, initializing widget...');
+      if ((window as any).StickeeLoader) {
+        setTimeout(() => {
+          (window as any).StickeeLoader.load();
+          console.log('Widget initialized');
+        }, 100);
       }
     };
 
-    document.addEventListener('visibilitychange', handleVisibilityChange);
+    document.body.appendChild(script);
+
     return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      // Cleanup
+      if (containerRef.current) {
+        containerRef.current.innerHTML = 'Loading...';
+      }
+      script.remove();
     };
-  }, [widgetId]);
+  }, [location.pathname, widgetId]);
 
   return (
     <div className="container mx-auto px-4 py-8">
       <div 
+        ref={containerRef}
         data-stickee-widget-id={widgetId}
         data-filters={filters ? JSON.stringify(filters) : undefined}
       >
