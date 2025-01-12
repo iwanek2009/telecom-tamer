@@ -10,15 +10,20 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
   const location = useLocation();
 
   useEffect(() => {
-    // Function to initialize the widget
     const initializeWidget = () => {
-      if ((window as any).StickeeLoader) {
+      // Check if StickeeLoader is available
+      if (window && (window as any).StickeeLoader) {
         try {
           console.log('Initializing Stickee widget...');
+          // Initialize with filters if provided
           (window as any).StickeeLoader.load();
         } catch (error) {
           console.error('Error initializing widget:', error);
         }
+      } else {
+        console.warn('StickeeLoader not found. Retrying...');
+        // Retry initialization after a short delay
+        setTimeout(initializeWidget, 1000);
       }
     };
 
@@ -27,12 +32,6 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
       // Force page reload when navigating
       window.location.reload();
     };
-
-    // Check if this is a navigation (not initial load)
-    if (window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_NAVIGATE) {
-      handleNavigation();
-      return;
-    }
 
     // Initial load setup
     initializeWidget();
@@ -44,7 +43,7 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
     return () => {
       window.removeEventListener('popstate', handleNavigation);
     };
-  }, [location.pathname]);
+  }, [location.pathname, widgetId, filters]);
 
   return (
     <div className="container mx-auto px-4 py-8">
