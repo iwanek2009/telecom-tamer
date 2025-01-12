@@ -1,50 +1,53 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useRef } from 'react';
 
 const StickeeWidget = () => {
-  const location = useLocation();
+  const widgetRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let isSubscribed = true;
-    
-    const loadStickee = () => {
-      if (!isSubscribed) return;
-
-      // First clear any existing widgets
-      const container = document.getElementById('stickee-container');
-      if (container) {
-        container.innerHTML = '<div data-stickee-widget-id="smartfony-90" data-filters=\'{"families":[1971]}\'>Loading...</div>';
-      }
-
-      // Remove any existing Stickee scripts
+    const initializeWidget = () => {
+      // Clear existing widgets and scripts
       const existingScripts = document.querySelectorAll('script[src*="stickeebroadband"]');
       existingScripts.forEach(script => script.remove());
 
-      // Create and add new script
+      if (widgetRef.current) {
+        widgetRef.current.innerHTML = '<div data-stickee-widget-id="smartfony-90" data-filters=\'{"families":[1971]}\'>Loading...</div>';
+      }
+
+      // Create and load new script
       const script = document.createElement('script');
       script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
       script.async = true;
       script.onload = () => {
-        if (!isSubscribed) return;
-        if ((window as any).StickeeLoader) {
-          (window as any).StickeeLoader.load();
-        }
+        setTimeout(() => {
+          if ((window as any).StickeeLoader) {
+            (window as any).StickeeLoader.load();
+          }
+        }, 100);
       };
       document.body.appendChild(script);
     };
 
-    loadStickee();
+    // Initialize on mount
+    initializeWidget();
+
+    // Add event listener for route changes
+    window.addEventListener('popstate', initializeWidget);
+    window.addEventListener('pushstate', initializeWidget);
+    
+    // Add custom event for manual reload
+    const reloadEvent = new Event('reloadStickeeWidget');
+    window.addEventListener('reloadStickeeWidget', initializeWidget);
 
     return () => {
-      isSubscribed = false;
-      const scripts = document.querySelectorAll('script[src*="stickeebroadband"]');
-      scripts.forEach(script => script.remove());
+      window.removeEventListener('popstate', initializeWidget);
+      window.removeEventListener('pushstate', initializeWidget);
+      window.removeEventListener('reloadStickeeWidget', initializeWidget);
     };
-  }, [location]);
+  }, []);
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div id="stickee-container">
+      <div ref={widgetRef} id="stickee-container">
         <div data-stickee-widget-id="smartfony-90" data-filters='{"families":[1971]}'>
           Loading...
         </div>
