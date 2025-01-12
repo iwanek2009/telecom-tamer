@@ -155,8 +155,24 @@ const Mobile = () => {
 
       {/* Stickee Widget */}
       <div className="container mx-auto px-4 py-8">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var script = document.createElement('script');
+                script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
+                script.async = true;
+                script.onload = function() {
+                  if (window.StickeeLoader) {
+                    window.StickeeLoader.load();
+                  }
+                };
+                document.body.appendChild(script);
+              })();
+            `
+          }}
+        />
         <div id="stickee-container">
-          <script src="https://whitelabels.stickeebroadband.co.uk/js/loader.js" async></script>
           <div data-stickee-widget-id="smartfony-90" data-filters='{"families":[1971]}'>Loading...</div>
         </div>
       </div>
