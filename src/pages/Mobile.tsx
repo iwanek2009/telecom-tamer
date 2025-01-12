@@ -22,34 +22,40 @@ const Mobile = () => {
       metaDescription.setAttribute('content', 'Compare the latest phone contracts from all major UK networks. Find deals on iPhone, Samsung & more. Save up to 40% on your monthly plan with our comparison tool.');
     }
 
-    // Simple initialization of Stickee widget
-    const loadStickee = () => {
+    // Initialize Stickee widget
+    const initStickee = () => {
       if (window.StickeeLoader) {
         try {
+          console.log('Initializing Stickee widget...');
           window.StickeeLoader.load();
         } catch (error) {
           console.error('Error loading Stickee widget:', error);
         }
+      } else {
+        console.log('StickeeLoader not found, waiting...');
       }
     };
 
-    // Initial load attempt
-    loadStickee();
+    // Try to initialize immediately
+    initStickee();
 
-    // Retry every second for 10 seconds if not loaded
-    const retryInterval = setInterval(() => {
-      if (!document.querySelector('[data-stickee-loaded="true"]')) {
-        loadStickee();
-      } else {
-        clearInterval(retryInterval);
+    // Set up an observer to watch for script load
+    const observer = new MutationObserver((mutations, obs) => {
+      if (window.StickeeLoader) {
+        console.log('StickeeLoader detected, initializing...');
+        initStickee();
+        obs.disconnect();
       }
-    }, 1000);
+    });
 
-    // Clear interval after 10 seconds to prevent infinite retries
-    setTimeout(() => clearInterval(retryInterval), 10000);
+    observer.observe(document, {
+      childList: true,
+      subtree: true
+    });
 
+    // Cleanup
     return () => {
-      clearInterval(retryInterval);
+      observer.disconnect();
     };
   }, []);
   
