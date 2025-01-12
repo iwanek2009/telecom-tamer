@@ -14,12 +14,44 @@ const SimOnly = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Compare SIM only deals from top UK networks. Find plans from £1.58/month with 5G included. Switch today and save up to £352 yearly on your mobile bills');
     }
+
+    // Initialize Stickee widget with retry mechanism
+    const initializeStickee = () => {
+      if (window.StickeeLoader) {
+        window.StickeeLoader.load();
+        return;
+      }
+
+      // If StickeeLoader is not available, retry after a short delay
+      const retryTimeout = setTimeout(() => {
+        console.log('Retrying StickeeLoader initialization...');
+        initializeStickee();
+      }, 1000); // Retry every second
+
+      // Cleanup timeout on component unmount
+      return () => clearTimeout(retryTimeout);
+    };
+
+    const cleanup = initializeStickee();
+    return cleanup;
   }, []);
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
       <SimHeroSection />
+      
+      {/* Stickee Widget */}
+      <div className="container mx-auto px-4 py-8">
+        <div 
+          data-stickee-widget-id="smartfony-90" 
+          data-fixed-filters='{"hardware_types":["SIM_ONLY"]}' 
+          data-filters='{"data":{"min": 65535000, "max": 65535000}}'
+        >
+          Loading...
+        </div>
+      </div>
+
       <SimPlansSection />
       <SimBenefitsSection />
       <SimWhySection />
