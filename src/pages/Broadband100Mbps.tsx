@@ -41,6 +41,16 @@ const Broadband100Mbps = () => {
         accordionItems={heroAccordionItems}
       />
 
+      <div style={{ width: '100%', height: '100vh', overflow: 'hidden' }}>
+        <iframe 
+          src="https://smartfony.stickeebroadband.co.uk/" 
+          width="100%" 
+          height="100%" 
+          style={{ border: 'none' }}
+          title="Broadband Comparison"
+        />
+      </div>
+
       <BStyleContent>
         <BroadbandFeatures />
         <BroadbandGuideSection />
