@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const StickeeWidget = () => {
   const location = useLocation();
-  const [key, setKey] = useState(0);
 
   useEffect(() => {
-    // Reset widget when location changes
-    setKey(prev => prev + 1);
+    let isSubscribed = true;
     
     const loadStickee = () => {
+      if (!isSubscribed) return;
+
       // First clear any existing widgets
       const container = document.getElementById('stickee-container');
       if (container) {
@@ -23,11 +23,11 @@ const StickeeWidget = () => {
       // Create and add new script
       const script = document.createElement('script');
       script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
+      script.async = true;
       script.onload = () => {
+        if (!isSubscribed) return;
         if ((window as any).StickeeLoader) {
-          setTimeout(() => {
-            (window as any).StickeeLoader.load();
-          }, 100);
+          (window as any).StickeeLoader.load();
         }
       };
       document.body.appendChild(script);
@@ -36,10 +36,11 @@ const StickeeWidget = () => {
     loadStickee();
 
     return () => {
+      isSubscribed = false;
       const scripts = document.querySelectorAll('script[src*="stickeebroadband"]');
       scripts.forEach(script => script.remove());
     };
-  }, [location, key]);
+  }, [location]);
 
   return (
     <div className="container mx-auto px-4 py-8">
