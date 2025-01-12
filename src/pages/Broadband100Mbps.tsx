@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BStyleTemplate } from '@/components/templates/BStyleTemplate';
 import { BStyleHero } from '@/components/templates/BStyleHero';
 import { BStyleContent } from '@/components/templates/BStyleContent';
@@ -23,6 +23,23 @@ const Broadband100Mbps = () => {
     }
   ];
 
+  useEffect(() => {
+    const handleIframeMessage = (event: MessageEvent) => {
+      if (event.origin === "https://smartfony.stickeebroadband.co.uk") {
+        const iframe = document.getElementById("widget-iframe") as HTMLIFrameElement;
+        if (iframe && event.data.height) {
+          iframe.style.height = `${event.data.height}px`;
+        }
+      }
+    };
+
+    window.addEventListener("message", handleIframeMessage);
+
+    return () => {
+      window.removeEventListener("message", handleIframeMessage);
+    };
+  }, []);
+
   return (
     <BStyleTemplate>
       <Helmet>
@@ -41,11 +58,11 @@ const Broadband100Mbps = () => {
         accordionItems={heroAccordionItems}
       />
 
-      <div style={{ width: '100%', height: '100vh', overflow: 'hidden' }}>
+      <div id="iframe-container" style={{ width: '100%', overflow: 'hidden' }}>
         <iframe 
+          id="widget-iframe" 
           src="https://smartfony.stickeebroadband.co.uk/" 
           width="100%" 
-          height="100%" 
           style={{ border: 'none' }}
           title="Broadband Comparison"
         />
