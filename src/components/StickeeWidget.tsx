@@ -2,59 +2,39 @@ import React, { useEffect } from 'react';
 
 const StickeeWidget = () => {
   useEffect(() => {
-    // Function to initialize Stickee
-    const initializeStickee = () => {
-      if ((window as any).StickeeLoader) {
-        console.log('Initializing Stickee widget...');
-        // Clear existing widget content first
-        const container = document.querySelector('[data-stickee-widget-id]');
-        if (container) {
-          container.innerHTML = 'Loading...';
-        }
-        // Reinitialize the widget
-        (window as any).StickeeLoader.load();
-      } else {
-        console.log('StickeeLoader not found');
-      }
+    // Function to load Stickee script
+    const loadStickee = () => {
+      return new Promise((resolve) => {
+        const script = document.createElement('script');
+        script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
+        script.onload = () => {
+          if ((window as any).StickeeLoader) {
+            (window as any).StickeeLoader.load();
+          }
+          resolve(true);
+        };
+        document.body.appendChild(script);
+      });
     };
 
-    // Create and load the Stickee script
-    const script = document.createElement('script');
-    script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
-    script.async = true;
+    // Remove any existing Stickee scripts
+    const existingScripts = document.querySelectorAll('script[src*="stickeebroadband"]');
+    existingScripts.forEach(script => script.remove());
 
-    // Add load handler
-    script.onload = () => {
-      initializeStickee();
-    };
+    // Load new script
+    loadStickee();
 
-    // Add script to document
-    document.body.appendChild(script);
-
-    // Add route change listener
-    const handleRouteChange = () => {
-      setTimeout(initializeStickee, 100); // Small delay to ensure DOM is ready
-    };
-
-    // Listen for popstate events (browser back/forward)
-    window.addEventListener('popstate', handleRouteChange);
-
+    // Cleanup function
     return () => {
-      // Cleanup listener and script on component unmount
-      window.removeEventListener('popstate', handleRouteChange);
-      document.body.removeChild(script);
+      const scripts = document.querySelectorAll('script[src*="stickeebroadband"]');
+      scripts.forEach(script => script.remove());
     };
-  }, []);
+  }, []); 
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div id="stickee-container">
-        <div 
-          data-stickee-widget-id="smartfony-90" 
-          data-filters='{"families":[1971]}'
-        >
-          Loading...
-        </div>
+      <div data-stickee-widget-id="smartfony-90" data-filters='{"families":[1971]}'>
+        Loading...
       </div>
     </div>
   );
