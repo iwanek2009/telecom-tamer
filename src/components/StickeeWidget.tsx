@@ -1,10 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import { useNavigate, useLocation, UNSAFE_NavigationContext } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const StickeeWidget = () => {
   const widgetRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
-  const navigationContext = React.useContext(UNSAFE_NavigationContext);
 
   useEffect(() => {
     const initializeWidget = () => {
@@ -23,6 +22,7 @@ const StickeeWidget = () => {
       const script = document.createElement('script');
       script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
       script.async = true;
+      script.crossOrigin = 'anonymous';
       script.onload = () => {
         if ((window as any).StickeeLoader) {
           setTimeout(() => {
@@ -34,21 +34,14 @@ const StickeeWidget = () => {
       document.body.appendChild(script);
     };
 
-    // Listen for navigation
-    const unlisten = navigationContext.navigator.listen(() => {
-      console.log('Navigation occurred');
-      initializeWidget();
-    });
-
-    // Initial load
+    // Initialize when location changes
     initializeWidget();
 
     return () => {
-      unlisten();
       const scripts = document.querySelectorAll('script[src*="stickeebroadband"]');
       scripts.forEach(script => script.remove());
     };
-  }, [navigationContext.navigator, location]);
+  }, [location.pathname]); // Only reinitialize when the path changes
 
   return (
     <div className="container mx-auto px-4 py-8">
