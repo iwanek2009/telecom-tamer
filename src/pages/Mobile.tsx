@@ -10,6 +10,7 @@ import ContractGuide from '@/components/ContractGuide';
 import { Button } from "@/components/ui/button";
 import { Footer } from '@/components/Footer';
 import { Helmet } from 'react-helmet';
+import StickeeWidget from '@/components/StickeeWidget';
 
 const Mobile = () => {
   const [isFirstOpen, setIsFirstOpen] = useState(false);
@@ -146,15 +147,10 @@ const Mobile = () => {
       </div>
 
       {/* Stickee Widget */}
-      <div className="container mx-auto px-4 py-8">
-        <div 
-          data-stickee-widget-id="smartfony-90" 
-          data-filters='{"families":[1971]}'
-          data-widget-url="https://whitelabels.stickeebroadband.co.uk"
-        >
-          Loading deals...
-        </div>
-      </div>
+      <StickeeWidget 
+        widgetId="smartfony-90"
+        filters={{ families: [1971] }}
+      />
 
       <MobileEssentialSteps />
       <ContractComparison />
