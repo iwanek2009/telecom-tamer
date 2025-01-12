@@ -18,20 +18,40 @@ const StickeeWidget = () => {
   };
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
-    script.async = true;
-    script.onload = () => {
-      if ((window as any).StickeeLoader) {
-        (window as any).StickeeLoader.load();
-      }
+    const initializeWidget = () => {
+      // Remove any existing scripts first
+      const existingScripts = document.querySelectorAll('script[src*="stickeebroadband"]');
+      existingScripts.forEach(script => script.remove());
+
+      const script = document.createElement('script');
+      script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
+      script.async = true;
+      script.crossOrigin = 'anonymous'; // Add CORS attribute
+      
+      // Add error handling
+      script.onerror = (error) => {
+        console.error('Error loading Stickee widget script:', error);
+      };
+      
+      script.onload = () => {
+        if ((window as any).StickeeLoader) {
+          // Add a small delay to ensure proper initialization
+          setTimeout(() => {
+            (window as any).StickeeLoader.load();
+          }, 500);
+        }
+      };
+      
+      document.body.appendChild(script);
     };
-    document.body.appendChild(script);
+
+    initializeWidget();
 
     return () => {
-      script.remove();
+      const scripts = document.querySelectorAll('script[src*="stickeebroadband"]');
+      scripts.forEach(script => script.remove());
     };
-  }, []);
+  }, [location.pathname]); // Reinitialize when path changes
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -47,7 +67,11 @@ const StickeeWidget = () => {
         </Button>
       </div>
       <div ref={widgetRef} id="stickee-container">
-        <div data-stickee-widget-id="smartfony-90" data-filters='{"families":[1971]}'>
+        <div 
+          data-stickee-widget-id="smartfony-90" 
+          data-filters='{"families":[1971]}'
+          data-fixed-filters='{"hardware_types":["HANDSET"]}'
+        >
           Loading...
         </div>
       </div>
