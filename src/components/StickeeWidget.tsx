@@ -1,61 +1,43 @@
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const StickeeWidget = () => {
+  const location = useLocation();
+
   useEffect(() => {
-    console.log('StickeeWidget mounted');
+    console.log('Location changed, reloading widget...');
     
     const loadStickee = () => {
       console.log('Loading Stickee script...');
-      return new Promise((resolve) => {
-        const script = document.createElement('script');
-        // Updated URL to use the correct domain
-        script.src = 'https://smartfony.stickeemobiles.co.uk/js/loader.js';
-        script.async = true;
-        script.onload = () => {
-          console.log('Script loaded, checking StickeeLoader...');
-          if ((window as any).StickeeLoader) {
-            console.log('StickeeLoader found, initializing...');
-            try {
-              (window as any).StickeeLoader.load();
-              console.log('StickeeLoader initialized');
-            } catch (error) {
-              console.error('Error initializing StickeeLoader:', error);
-            }
-          } else {
-            console.log('StickeeLoader not found');
-            // Retry after a short delay if loader is not immediately available
-            setTimeout(() => {
-              if ((window as any).StickeeLoader) {
-                (window as any).StickeeLoader.load();
-                console.log('StickeeLoader initialized after delay');
-              }
-            }, 1000);
-          }
-          resolve(true);
-        };
-        script.onerror = (error) => {
-          console.error('Error loading Stickee script:', error);
-          resolve(false);
-        };
-        document.body.appendChild(script);
+      // Remove any existing widgets
+      const existingWidgets = document.querySelectorAll('[data-stickee-widget-id]');
+      existingWidgets.forEach(widget => {
+        widget.innerHTML = 'Loading...';
       });
+
+      // Create and load new script
+      const script = document.createElement('script');
+      script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
+      script.onload = () => {
+        if ((window as any).StickeeLoader) {
+          (window as any).StickeeLoader.load();
+        }
+      };
+      document.body.appendChild(script);
     };
 
-    const existingScripts = document.querySelectorAll('script[src*="stickeemobiles"]');
-    console.log('Found existing scripts:', existingScripts.length);
-    existingScripts.forEach(script => {
-      console.log('Removing script:', script);
-      script.remove();
-    });
+    // Remove existing scripts
+    const existingScripts = document.querySelectorAll('script[src*="stickeebroadband"]');
+    existingScripts.forEach(script => script.remove());
 
+    // Load new script
     loadStickee();
 
     return () => {
-      console.log('StickeeWidget unmounting');
-      const scripts = document.querySelectorAll('script[src*="stickeemobiles"]');
+      const scripts = document.querySelectorAll('script[src*="stickeebroadband"]');
       scripts.forEach(script => script.remove());
     };
-  }, []); 
+  }, [location]); // Re-run effect when location changes
 
   return (
     <div className="container mx-auto px-4 py-8">
