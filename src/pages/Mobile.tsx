@@ -22,27 +22,35 @@ const Mobile = () => {
       metaDescription.setAttribute('content', 'Compare the latest phone contracts from all major UK networks. Find deals on iPhone, Samsung & more. Save up to 40% on your monthly plan with our comparison tool.');
     }
 
-    // Initialize Stickee widget
+    // Initialize Stickee widget with error handling
     const initStickee = () => {
       if (window.StickeeLoader) {
-        window.StickeeLoader.load();
+        try {
+          window.StickeeLoader.load({
+            onError: (error: any) => {
+              console.error('Stickee widget error:', error);
+            }
+          });
+        } catch (error) {
+          console.error('Error initializing Stickee widget:', error);
+        }
       }
     };
 
-    // Load Stickee script
-    const script = document.createElement('script');
-    script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
-    script.async = true;
-    script.onload = initStickee;
-    document.body.appendChild(script);
+    // Wait for the script to be fully loaded
+    const checkStickeeLoaded = setInterval(() => {
+      if (window.StickeeLoader) {
+        clearInterval(checkStickeeLoaded);
+        initStickee();
+      }
+    }, 100);
 
+    // Cleanup
     return () => {
-      // Cleanup script on unmount
-      document.querySelectorAll('script[src*="stickeebroadband"]')
-        .forEach(s => s.remove());
+      clearInterval(checkStickeeLoaded);
     };
   }, []);
-  
+
   const mockDeals = [
     {
       provider: "VodaNet",
@@ -142,8 +150,9 @@ const Mobile = () => {
         <div 
           data-stickee-widget-id="smartfony-90" 
           data-filters='{"families":[1971]}'
+          data-widget-url="https://whitelabels.stickeebroadband.co.uk"
         >
-          Loading...
+          Loading deals...
         </div>
       </div>
 
