@@ -146,16 +146,11 @@ const Mobile = () => {
         </div>
       </div>
 
-      {/* Stickee Widget */}
+      {/* Add StickeeWidget here */}
       <StickeeWidget 
         widgetId="smartfony-90"
         filters={{ families: [1971] }}
       />
-
-      <MobileEssentialSteps />
-      <ContractComparison />
-      <NumberPortability />
-      <ContractGuide />
 
       {/* Deals Section */}
       <div className="container mx-auto px-4 py-8">
@@ -195,6 +190,11 @@ const Mobile = () => {
           </div>
         </div>
       </div>
+
+      <MobileEssentialSteps />
+      <ContractComparison />
+      <NumberPortability />
+      <ContractGuide />
 
       <Footer />
     </div>
