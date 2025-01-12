@@ -101,12 +101,6 @@ const Broadband = () => {
       </div>
 
       <BroadbandComparisonSteps />
-
-      {/* Stickee Widget */}
-      <div className="container mx-auto px-4 py-8">
-        <div data-stickee-widget-id="smartfony-91">Loading...</div>
-      </div>
-
       <BroadbandGuide />
       <BroadbandUnderstanding />
       <BroadbandSpeed />
