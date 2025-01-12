@@ -10,51 +10,67 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
   const location = useLocation();
   const containerRef = useRef<HTMLDivElement>(null);
   
-  useEffect(() => {
-    // Function to load script and initialize widget
-    const loadScript = () => {
-      // Remove any existing scripts first
-      const existingScripts = document.querySelectorAll('script[src*="stickeebroadband"]');
-      existingScripts.forEach(script => script.remove());
-
-      // Create and load new script
-      const script = document.createElement('script');
-      script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
-      script.defer = true; // Use defer instead of async
-      
-      script.onload = () => {
+  const initWidget = () => {
+    console.log('Initializing widget...');
+    // Reset container content
+    if (containerRef.current) {
+      containerRef.current.innerHTML = `
+        <div 
+          data-stickee-widget-id="${widgetId}"
+          data-filters='${filters ? JSON.stringify(filters) : ""}'
+        >Loading...</div>
+      `;
+    }
+    
+    // Load script and initialize
+    const script = document.createElement('script');
+    script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
+    
+    script.onload = () => {
+      if ((window as any).StickeeLoader) {
         setTimeout(() => {
-          if ((window as any).StickeeLoader) {
-            try {
-              (window as any).StickeeLoader.load();
-            } catch (error) {
-              console.error('Error loading widget:', error);
-            }
-          }
-        }, 500); // Increased timeout
-      };
-
-      document.body.appendChild(script);
-      return script;
-    };
-
-    const script = loadScript();
-
-    return () => {
-      if (script) {
-        script.remove();
+          (window as any).StickeeLoader.load();
+          console.log('Widget loaded successfully');
+        }, 500);
       }
     };
-  }, [location.pathname, widgetId]);
+    
+    // Remove any existing Stickee scripts
+    document.querySelectorAll('script[src*="stickeebroadband"]')
+      .forEach(s => s.remove());
+      
+    // Add new script
+    document.body.appendChild(script);
+  };
+
+  useEffect(() => {
+    initWidget();
+
+    // Handle visibility changes
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        initWidget();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('popstate', initWidget);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('popstate', initWidget);
+    };
+  }, [location.pathname]); // Re-run effect when path changes
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div 
-        ref={containerRef}
-        data-stickee-widget-id={widgetId}
-        data-filters={filters ? JSON.stringify(filters) : undefined}
-      >
-        Loading...
+      <div ref={containerRef}>
+        <div 
+          data-stickee-widget-id={widgetId}
+          data-filters={filters ? JSON.stringify(filters) : undefined}
+        >
+          Loading...
+        </div>
       </div>
     </div>
   );
