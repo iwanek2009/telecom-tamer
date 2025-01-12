@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const StickeeWidget = () => {
   const widgetRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
 
   useEffect(() => {
     const initializeWidget = () => {
       // Clear existing widgets and scripts
-      const existingScripts = document.querySelectorAll('script[src*="stickeebroadband"]');
+      const existingScripts = document.querySelectorAll('script[src*="stickee"]');
       existingScripts.forEach(script => script.remove());
 
       if (widgetRef.current) {
@@ -17,33 +19,30 @@ const StickeeWidget = () => {
       const script = document.createElement('script');
       script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
       script.async = true;
+      script.crossOrigin = 'anonymous';
       script.onload = () => {
-        setTimeout(() => {
-          if ((window as any).StickeeLoader) {
-            (window as any).StickeeLoader.load();
-          }
-        }, 100);
+        if ((window as any).StickeeLoader) {
+          (window as any).StickeeLoader.load();
+        }
+      };
+      script.onerror = (error) => {
+        console.error('Error loading Stickee widget:', error);
+        if (widgetRef.current) {
+          widgetRef.current.innerHTML = '<div class="text-center p-4">Unable to load comparison widget. Please refresh the page.</div>';
+        }
       };
       document.body.appendChild(script);
     };
 
-    // Initialize on mount
+    // Initialize on mount and route changes
     initializeWidget();
 
-    // Add event listener for route changes
-    window.addEventListener('popstate', initializeWidget);
-    window.addEventListener('pushstate', initializeWidget);
-    
-    // Add custom event for manual reload
-    const reloadEvent = new Event('reloadStickeeWidget');
-    window.addEventListener('reloadStickeeWidget', initializeWidget);
-
     return () => {
-      window.removeEventListener('popstate', initializeWidget);
-      window.removeEventListener('pushstate', initializeWidget);
-      window.removeEventListener('reloadStickeeWidget', initializeWidget);
+      // Cleanup on unmount
+      const scripts = document.querySelectorAll('script[src*="stickee"]');
+      scripts.forEach(script => script.remove());
     };
-  }, []);
+  }, [location]); // Re-initialize when location changes
 
   return (
     <div className="container mx-auto px-4 py-8">
