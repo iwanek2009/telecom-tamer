@@ -25,14 +25,27 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
     // Load script and initialize
     const script = document.createElement('script');
     script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
+    script.crossOrigin = 'anonymous'; // Add CORS header
+    script.defer = true;
     
     script.onload = () => {
       if ((window as any).StickeeLoader) {
-        setTimeout(() => {
-          (window as any).StickeeLoader.load();
-          console.log('Widget loaded successfully');
-        }, 500);
+        try {
+          console.log('Attempting to load StickeeLoader...');
+          setTimeout(() => {
+            (window as any).StickeeLoader.load();
+            console.log('Widget loaded successfully');
+          }, 1000); // Increased timeout for better reliability
+        } catch (error) {
+          console.error('Error loading widget:', error);
+        }
+      } else {
+        console.error('StickeeLoader not found in window object');
       }
+    };
+
+    script.onerror = (error) => {
+      console.error('Error loading Stickee script:', error);
     };
     
     // Remove any existing Stickee scripts
@@ -60,7 +73,7 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
       window.removeEventListener('popstate', initWidget);
     };
-  }, [location.pathname]); // Re-run effect when path changes
+  }, [location.pathname, widgetId, filters]); // Added dependencies
 
   return (
     <div className="container mx-auto px-4 py-8">
