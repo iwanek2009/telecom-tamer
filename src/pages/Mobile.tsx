@@ -10,6 +10,7 @@ import ContractGuide from '@/components/ContractGuide';
 import { Button } from "@/components/ui/button";
 import { Footer } from '@/components/Footer';
 import { Helmet } from 'react-helmet';
+import StickeeWidget from '@/components/StickeeWidget';
 
 const Mobile = () => {
   const [isFirstOpen, setIsFirstOpen] = useState(false);
@@ -116,6 +117,9 @@ const Mobile = () => {
           </div>
         </div>
       </div>
+
+      {/* Add StickeeWidget here */}
+      <StickeeWidget widgetId="smartfony-90" filters={{ families: [1971] }} />
 
       <MobileEssentialSteps />
       <ContractComparison />
