@@ -15,6 +15,7 @@ import StickeeWidget from '@/components/StickeeWidget';
 const Mobile = () => {
   const [isFirstOpen, setIsFirstOpen] = useState(false);
   const [isSecondOpen, setIsSecondOpen] = useState(false);
+  const location = window.location.pathname;
   
   const mockDeals = [
     {
@@ -110,7 +111,8 @@ const Mobile = () => {
         </div>
       </div>
 
-      <StickeeWidget />
+      {/* Stickee Widget with location key */}
+      <StickeeWidget key={location} />
 
       <MobileEssentialSteps />
       <ContractComparison />
