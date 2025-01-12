@@ -21,6 +21,26 @@ const Mobile = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Compare the latest phone contracts from all major UK networks. Find deals on iPhone, Samsung & more. Save up to 40% on your monthly plan with our comparison tool.');
     }
+
+    // Initialize Stickee widget
+    const initStickee = () => {
+      if (window.StickeeLoader) {
+        window.StickeeLoader.load();
+      }
+    };
+
+    // Load Stickee script
+    const script = document.createElement('script');
+    script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
+    script.async = true;
+    script.onload = initStickee;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      document.querySelectorAll('script[src*="stickeebroadband"]')
+        .forEach(s => s.remove());
+    };
   }, []);
   
   const mockDeals = [
@@ -119,7 +139,12 @@ const Mobile = () => {
 
       {/* Stickee Widget */}
       <div className="container mx-auto px-4 py-8">
-        <div data-stickee-widget-id="smartfony-90" data-filters='{"families":[1971]}'>Loading...</div>
+        <div 
+          data-stickee-widget-id="smartfony-90" 
+          data-filters='{"families":[1971]}'
+        >
+          Loading...
+        </div>
       </div>
 
       <MobileEssentialSteps />
