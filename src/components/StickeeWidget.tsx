@@ -1,48 +1,52 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const StickeeWidget = () => {
   const location = useLocation();
+  const [key, setKey] = useState(0);
 
   useEffect(() => {
-    console.log('Location changed, reloading widget...');
+    // Reset widget when location changes
+    setKey(prev => prev + 1);
     
     const loadStickee = () => {
-      console.log('Loading Stickee script...');
-      // Remove any existing widgets
-      const existingWidgets = document.querySelectorAll('[data-stickee-widget-id]');
-      existingWidgets.forEach(widget => {
-        widget.innerHTML = 'Loading...';
-      });
+      // First clear any existing widgets
+      const container = document.getElementById('stickee-container');
+      if (container) {
+        container.innerHTML = '<div data-stickee-widget-id="smartfony-90" data-filters=\'{"families":[1971]}\'>Loading...</div>';
+      }
 
-      // Create and load new script
+      // Remove any existing Stickee scripts
+      const existingScripts = document.querySelectorAll('script[src*="stickeebroadband"]');
+      existingScripts.forEach(script => script.remove());
+
+      // Create and add new script
       const script = document.createElement('script');
       script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
       script.onload = () => {
         if ((window as any).StickeeLoader) {
-          (window as any).StickeeLoader.load();
+          setTimeout(() => {
+            (window as any).StickeeLoader.load();
+          }, 100);
         }
       };
       document.body.appendChild(script);
     };
 
-    // Remove existing scripts
-    const existingScripts = document.querySelectorAll('script[src*="stickeebroadband"]');
-    existingScripts.forEach(script => script.remove());
-
-    // Load new script
     loadStickee();
 
     return () => {
       const scripts = document.querySelectorAll('script[src*="stickeebroadband"]');
       scripts.forEach(script => script.remove());
     };
-  }, [location]); // Re-run effect when location changes
+  }, [location, key]);
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div data-stickee-widget-id="smartfony-90" data-filters='{"families":[1971]}'>
-        Loading...
+      <div id="stickee-container">
+        <div data-stickee-widget-id="smartfony-90" data-filters='{"families":[1971]}'>
+          Loading...
+        </div>
       </div>
     </div>
   );
