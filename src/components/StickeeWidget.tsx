@@ -8,15 +8,28 @@ const StickeeWidget = () => {
       console.log('Loading Stickee script...');
       return new Promise((resolve) => {
         const script = document.createElement('script');
-        script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
+        // Updated URL to use the correct domain
+        script.src = 'https://smartfony.stickeemobiles.co.uk/js/loader.js';
+        script.async = true;
         script.onload = () => {
           console.log('Script loaded, checking StickeeLoader...');
           if ((window as any).StickeeLoader) {
             console.log('StickeeLoader found, initializing...');
-            (window as any).StickeeLoader.load();
-            console.log('StickeeLoader initialized');
+            try {
+              (window as any).StickeeLoader.load();
+              console.log('StickeeLoader initialized');
+            } catch (error) {
+              console.error('Error initializing StickeeLoader:', error);
+            }
           } else {
             console.log('StickeeLoader not found');
+            // Retry after a short delay if loader is not immediately available
+            setTimeout(() => {
+              if ((window as any).StickeeLoader) {
+                (window as any).StickeeLoader.load();
+                console.log('StickeeLoader initialized after delay');
+              }
+            }, 1000);
           }
           resolve(true);
         };
@@ -28,7 +41,7 @@ const StickeeWidget = () => {
       });
     };
 
-    const existingScripts = document.querySelectorAll('script[src*="stickeebroadband"]');
+    const existingScripts = document.querySelectorAll('script[src*="stickeemobiles"]');
     console.log('Found existing scripts:', existingScripts.length);
     existingScripts.forEach(script => {
       console.log('Removing script:', script);
@@ -39,7 +52,7 @@ const StickeeWidget = () => {
 
     return () => {
       console.log('StickeeWidget unmounting');
-      const scripts = document.querySelectorAll('script[src*="stickeebroadband"]');
+      const scripts = document.querySelectorAll('script[src*="stickeemobiles"]');
       scripts.forEach(script => script.remove());
     };
   }, []); 
