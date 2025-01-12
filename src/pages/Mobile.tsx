@@ -22,6 +22,25 @@ const Mobile = () => {
       metaDescription.setAttribute('content', 'Compare the latest phone contracts from all major UK networks. Find deals on iPhone, Samsung & more. Save up to 40% on your monthly plan with our comparison tool.');
     }
   }, []);
+
+  // Add new useEffect for Stickee widget initialization
+  useEffect(() => {
+    // Check if StickeeLoader exists and hasn't been initialized
+    if (window.StickeeLoader) {
+      window.StickeeLoader.load();
+    } else {
+      // If StickeeLoader isn't available yet, wait for it
+      const checkStickeeLoader = setInterval(() => {
+        if (window.StickeeLoader) {
+          window.StickeeLoader.load();
+          clearInterval(checkStickeeLoader);
+        }
+      }, 100);
+
+      // Cleanup interval if component unmounts
+      return () => clearInterval(checkStickeeLoader);
+    }
+  }, []);
   
   const mockDeals = [
     {
