@@ -2,30 +2,43 @@ import React, { useEffect } from 'react';
 
 const StickeeWidget = () => {
   useEffect(() => {
-    // Function to load Stickee script
+    console.log('StickeeWidget mounted');
+    
     const loadStickee = () => {
+      console.log('Loading Stickee script...');
       return new Promise((resolve) => {
         const script = document.createElement('script');
         script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
         script.onload = () => {
+          console.log('Script loaded, checking StickeeLoader...');
           if ((window as any).StickeeLoader) {
+            console.log('StickeeLoader found, initializing...');
             (window as any).StickeeLoader.load();
+            console.log('StickeeLoader initialized');
+          } else {
+            console.log('StickeeLoader not found');
           }
           resolve(true);
+        };
+        script.onerror = (error) => {
+          console.error('Error loading Stickee script:', error);
+          resolve(false);
         };
         document.body.appendChild(script);
       });
     };
 
-    // Remove any existing Stickee scripts
     const existingScripts = document.querySelectorAll('script[src*="stickeebroadband"]');
-    existingScripts.forEach(script => script.remove());
+    console.log('Found existing scripts:', existingScripts.length);
+    existingScripts.forEach(script => {
+      console.log('Removing script:', script);
+      script.remove();
+    });
 
-    // Load new script
     loadStickee();
 
-    // Cleanup function
     return () => {
+      console.log('StickeeWidget unmounting');
       const scripts = document.querySelectorAll('script[src*="stickeebroadband"]');
       scripts.forEach(script => script.remove());
     };
