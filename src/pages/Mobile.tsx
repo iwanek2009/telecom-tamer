@@ -21,25 +21,43 @@ const Mobile = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Compare the latest phone contracts from all major UK networks. Find deals on iPhone, Samsung & more. Save up to 40% on your monthly plan with our comparison tool.');
     }
-  }, []);
 
-  // Add new useEffect for Stickee widget initialization
-  useEffect(() => {
-    // Check if StickeeLoader exists and hasn't been initialized
-    if (window.StickeeLoader) {
-      window.StickeeLoader.load();
-    } else {
-      // If StickeeLoader isn't available yet, wait for it
-      const checkStickeeLoader = setInterval(() => {
-        if (window.StickeeLoader) {
+    // Initialize Stickee widget
+    const initializeStickee = () => {
+      if (typeof window !== 'undefined' && window.StickeeLoader) {
+        try {
           window.StickeeLoader.load();
-          clearInterval(checkStickeeLoader);
+        } catch (error) {
+          console.error('Error loading Stickee widget:', error);
         }
-      }, 100);
+      }
+    };
 
-      // Cleanup interval if component unmounts
-      return () => clearInterval(checkStickeeLoader);
+    // Initial attempt to load
+    initializeStickee();
+
+    // Set up a mutation observer to watch for changes in the widget container
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList' && !document.querySelector('[data-stickee-loaded="true"]')) {
+          initializeStickee();
+        }
+      });
+    });
+
+    // Start observing the widget container
+    const widgetContainer = document.querySelector('[data-stickee-widget-id]');
+    if (widgetContainer) {
+      observer.observe(widgetContainer, {
+        childList: true,
+        subtree: true
+      });
     }
+
+    // Cleanup
+    return () => {
+      observer.disconnect();
+    };
   }, []);
   
   const mockDeals = [
