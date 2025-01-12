@@ -11,36 +11,39 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
-    console.log('Location or widget ID changed, reinitializing...');
-    
-    // Remove any existing scripts
-    const existingScripts = document.querySelectorAll('script[src*="stickeebroadband"]');
-    existingScripts.forEach(script => script.remove());
+    // Function to load script and initialize widget
+    const loadScript = () => {
+      // Remove any existing scripts first
+      const existingScripts = document.querySelectorAll('script[src*="stickeebroadband"]');
+      existingScripts.forEach(script => script.remove());
 
-    // Create fresh script element
-    const script = document.createElement('script');
-    script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
-    script.async = true;
-
-    // Initialize widget after script loads
-    script.onload = () => {
-      console.log('Script loaded, initializing widget...');
-      if ((window as any).StickeeLoader) {
+      // Create and load new script
+      const script = document.createElement('script');
+      script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
+      script.defer = true; // Use defer instead of async
+      
+      script.onload = () => {
         setTimeout(() => {
-          (window as any).StickeeLoader.load();
-          console.log('Widget initialized');
-        }, 100);
-      }
+          if ((window as any).StickeeLoader) {
+            try {
+              (window as any).StickeeLoader.load();
+            } catch (error) {
+              console.error('Error loading widget:', error);
+            }
+          }
+        }, 500); // Increased timeout
+      };
+
+      document.body.appendChild(script);
+      return script;
     };
 
-    document.body.appendChild(script);
+    const script = loadScript();
 
     return () => {
-      // Cleanup
-      if (containerRef.current) {
-        containerRef.current.innerHTML = 'Loading...';
+      if (script) {
+        script.remove();
       }
-      script.remove();
     };
   }, [location.pathname, widgetId]);
 
