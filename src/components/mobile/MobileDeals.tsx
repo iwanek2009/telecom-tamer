@@ -32,16 +32,6 @@ const MobileDeals = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="space-y-4">
-        {mockDeals.map((deal, index) => (
-          <Button 
-            key={index}
-            className="w-full mt-4 bg-[#FC5185] text-white hover:bg-[#FC5185]/90"
-          >
-            View Deal
-          </Button>
-        ))}
-      </div>
     </div>
   );
 };
