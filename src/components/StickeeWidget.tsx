@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useToast } from '@/components/ui/use-toast';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -15,34 +15,44 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
   const maxRetries = 15;
   const isMobile = useIsMobile();
   const [isLoading, setIsLoading] = useState(true);
-  const [widgetContainer, setWidgetContainer] = useState<HTMLDivElement | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const mountedRef = useRef(true);
 
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
-    let mounted = true;
+    mountedRef.current = true;
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    let timeoutId: NodeJS.Timeout | null = null;
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     
+    const cleanupWidget = () => {
+      if (window && (window as any).StickeeLoader?.cleanup) {
+        try {
+          (window as any).StickeeLoader.cleanup();
+        } catch (error) {
+          console.warn('Cleanup warning:', error);
+        }
+      }
+    };
+
     const initializeWidget = () => {
-      if (!mounted || !widgetContainer) return;
+      if (!mountedRef.current || !containerRef.current) return;
 
       if (window && (window as any).StickeeLoader) {
         try {
           console.log('Initializing Stickee widget...');
           
-          // Safely cleanup existing widget
-          if ((window as any).StickeeLoader.cleanup) {
-            try {
-              (window as any).StickeeLoader.cleanup();
-            } catch (error) {
-              console.warn('Cleanup warning:', error);
-            }
-          }
+          // Clean up existing widget first
+          cleanupWidget();
           
-          // Add longer delay for Safari and mobile
           const delay = isSafari ? 3000 : (isMobile ? 2000 : 1000);
           
           timeoutId = setTimeout(() => {
-            if (mounted && widgetContainer) {
+            if (mountedRef.current && containerRef.current) {
               (window as any).StickeeLoader.load();
               setRetryCount(0);
               setIsLoading(false);
@@ -66,7 +76,7 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
     };
 
     const handleRetry = () => {
-      if (mounted && retryCount < maxRetries) {
+      if (mountedRef.current && retryCount < maxRetries) {
         const retryDelay = isSafari ? 3000 : (isMobile ? 2500 : 1000);
         timeoutId = setTimeout(() => {
           setRetryCount(prev => prev + 1);
@@ -75,32 +85,26 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
       }
     };
 
-    // Initial load with appropriate delay
+    // Initial load
     const initialDelay = isSafari ? 3000 : (isMobile ? 1500 : 1000);
-    timeoutId = setTimeout(() => {
-      initializeWidget();
-    }, initialDelay);
+    timeoutId = setTimeout(initializeWidget, initialDelay);
 
-    // Cleanup
+    // Cleanup function
     return () => {
-      mounted = false;
-      if (timeoutId) clearTimeout(timeoutId);
-      
-      // Safely cleanup widget on unmount
-      if (window && (window as any).StickeeLoader && (window as any).StickeeLoader.cleanup) {
-        try {
-          (window as any).StickeeLoader.cleanup();
-        } catch (error) {
-          console.warn('Cleanup warning:', error);
-        }
+      if (timeoutId) {
+        clearTimeout(timeoutId);
       }
+      if (mountedRef.current) {
+        cleanupWidget();
+      }
+      mountedRef.current = false;
     };
-  }, [location.pathname, widgetId, filters, retryCount, isMobile, widgetContainer]);
+  }, [location.pathname, widgetId, filters, retryCount, isMobile, toast]);
 
   return (
     <div className="container mx-auto px-4 py-8">
       <div 
-        ref={setWidgetContainer}
+        ref={containerRef}
         className={`w-full ${isMobile ? 'min-h-[500px] overflow-x-hidden' : ''}`}
         data-stickee-widget-id={widgetId}
         data-filters={filters ? JSON.stringify(filters) : undefined}
