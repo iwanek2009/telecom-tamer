@@ -1,11 +1,11 @@
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { SimHeroSection } from '@/components/sim/SimHeroSection';
-import { SimPlansSection } from '@/components/sim/SimPlansSection';
 import { SimBenefitsSection } from '@/components/sim/SimBenefitsSection';
-import { SimWhySection } from '@/components/sim/SimWhySection';
 import { SimGuideSection } from '@/components/sim/SimGuideSection';
+import { StickeeWidgetContent } from '@/components/StickeeWidgetContent';
 import { useEffect } from 'react';
+import { loadStickeeScript, cleanupStickeeScript } from '@/utils/stickeeLoader';
 
 const SimOnly = () => {
   useEffect(() => {
@@ -15,25 +15,13 @@ const SimOnly = () => {
       metaDescription.setAttribute('content', 'Compare SIM only deals from top UK networks. Find plans from £1.58/month with 5G included. Switch today and save up to £352 yearly on your mobile bills');
     }
 
-    // Initialize Stickee widget with retry mechanism
-    const initializeStickee = () => {
-      if (window.StickeeLoader) {
-        window.StickeeLoader.load();
-        return;
-      }
+    // Initialize Stickee widget
+    cleanupStickeeScript();
+    loadStickeeScript();
 
-      // If StickeeLoader is not available, retry after a short delay
-      const retryTimeout = setTimeout(() => {
-        console.log('Retrying StickeeLoader initialization...');
-        initializeStickee();
-      }, 1000); // Retry every second
-
-      // Cleanup timeout on component unmount
-      return () => clearTimeout(retryTimeout);
+    return () => {
+      cleanupStickeeScript();
     };
-
-    const cleanup = initializeStickee();
-    return cleanup;
   }, []);
 
   return (
@@ -43,18 +31,13 @@ const SimOnly = () => {
       
       {/* Stickee Widget */}
       <div className="container mx-auto px-4 py-8">
-        <div 
-          data-stickee-widget-id="smartfony-90" 
-          data-fixed-filters='{"hardware_types":["SIM_ONLY"]}' 
-          data-filters='{"data":{"min": 65535000, "max": 65535000}}'
-        >
-          Loading...
-        </div>
+        <StickeeWidgetContent 
+          widgetId="smartfony-90" 
+          filters='{"hardware_types":["SIM_ONLY"]}'
+        />
       </div>
 
-      <SimPlansSection />
       <SimBenefitsSection />
-      <SimWhySection />
       <SimGuideSection />
       <Footer />
     </div>
