@@ -8,6 +8,8 @@ import BudgetBroadbandGuide from '@/components/BudgetBroadbandGuide';
 import { ValueBroadbandGuide } from '@/components/ValueBroadbandGuide';
 import { Helmet } from 'react-helmet';
 import { StickeeWidgetContent } from '@/components/StickeeWidgetContent';
+import { useEffect } from 'react';
+import { loadStickeeScript, cleanupStickeeScript } from '@/utils/stickeeLoader';
 
 const CheapBroadbandDeals = () => {
   const heroAccordionItems = [
@@ -20,6 +22,16 @@ const CheapBroadbandDeals = () => {
       content: "Yes! Cheap broadband uses the same infrastructure as expensive packages. While you might get fewer extras, the basic internet service is just as reliable as higher-priced options.",
     }
   ];
+
+  useEffect(() => {
+    // Initialize Stickee widget
+    cleanupStickeeScript();
+    loadStickeeScript();
+
+    return () => {
+      cleanupStickeeScript();
+    };
+  }, []);
 
   return (
     <BStyleTemplate>
