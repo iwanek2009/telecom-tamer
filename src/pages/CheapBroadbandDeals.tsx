@@ -4,8 +4,6 @@ import { BStyleContent } from '@/components/templates/BStyleContent';
 import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
 import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
 import { PoundSterling, Wifi, Clock } from 'lucide-react';
-import BroadbandFilters from '@/components/BroadbandFilters';
-import BroadbandOffers from '@/components/BroadbandOffers';
 import BudgetBroadbandGuide from '@/components/BudgetBroadbandGuide';
 import { ValueBroadbandGuide } from '@/components/ValueBroadbandGuide';
 import { Helmet } from 'react-helmet';
@@ -61,13 +59,6 @@ const CheapBroadbandDeals = () => {
             description="Choose from 12, 18, or 24-month contracts to suit your needs"
           />
         </BStyleFeatureGrid>
-
-        <div className="mt-16">
-          <div className="grid md:grid-cols-12 gap-8">
-            <BroadbandFilters />
-            <BroadbandOffers />
-          </div>
-        </div>
       </BStyleContent>
 
       <BudgetBroadbandGuide />
