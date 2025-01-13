@@ -1,48 +1,34 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { loadStickeeScript, cleanupStickeeScript } from '../utils/stickeeLoader';
+import { StickeeWidgetContent } from './StickeeWidgetContent';
 
 const StickeeWidget = () => {
   const location = useLocation();
   const isBroadbandPage = location.pathname === '/broadband';
 
   useEffect(() => {
-    // Function to load Stickee script
-    const loadStickee = () => {
-      return new Promise((resolve) => {
-        const script = document.createElement('script');
-        script.src = 'https://whitelabels.stickeebroadband.co.uk/js/loader.js';
-        script.onload = () => {
-          if ((window as any).StickeeLoader) {
-            (window as any).StickeeLoader.load();
-          }
-          resolve(true);
-        };
-        document.body.appendChild(script);
-      });
-    };
-
     // Remove any existing Stickee scripts
-    const existingScripts = document.querySelectorAll('script[src*="stickeebroadband"]');
-    existingScripts.forEach(script => script.remove());
+    cleanupStickeeScript();
 
     // Load new script
-    loadStickee();
+    loadStickeeScript();
 
     // Cleanup function
     return () => {
-      const scripts = document.querySelectorAll('script[src*="stickeebroadband"]');
-      scripts.forEach(script => script.remove());
+      cleanupStickeeScript();
     };
   }, []); 
 
   return (
     <div className="container mx-auto px-4 py-8">
       {isBroadbandPage ? (
-        <div data-stickee-widget-id="smartfony-91">Loading...</div>
+        <StickeeWidgetContent widgetId="smartfony-91" />
       ) : (
-        <div data-stickee-widget-id="smartfony-90" data-filters='{"families":[1971]}'>
-          Loading...
-        </div>
+        <StickeeWidgetContent 
+          widgetId="smartfony-90" 
+          filters='{"families":[1971]}'
+        />
       )}
     </div>
   );
