@@ -26,13 +26,14 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
         try {
           console.log('Initializing Stickee widget...');
           (window as any).StickeeLoader.cleanup();
-          // Add a small delay for mobile devices
+          
+          // Add a longer delay for mobile devices
           setTimeout(() => {
             if (mounted) {
               (window as any).StickeeLoader.load();
               setRetryCount(0); // Reset retry count on successful load
             }
-          }, isMobile ? 500 : 0);
+          }, isMobile ? 2000 : 0);
         } catch (error) {
           console.error('Error initializing widget:', error);
           handleRetry();
@@ -54,14 +55,14 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
         timeoutId = setTimeout(() => {
           setRetryCount(prev => prev + 1);
           initializeWidget();
-        }, isMobile ? 1500 : 1000); // Longer delay for mobile
+        }, isMobile ? 2500 : 1000); // Longer delay for mobile
       }
     };
 
-    // Initial load with a slight delay for mobile
+    // Initial load with a longer delay for mobile
     const initialTimer = setTimeout(() => {
       initializeWidget();
-    }, isMobile ? 300 : 0);
+    }, isMobile ? 1500 : 0);
 
     // Cleanup
     return () => {
@@ -81,11 +82,13 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div 
-        className={`w-full ${isMobile ? 'overflow-x-auto' : ''}`}
+        className={`w-full ${isMobile ? 'min-h-[500px] overflow-x-hidden' : ''}`}
         data-stickee-widget-id={widgetId}
         data-filters={filters ? JSON.stringify(filters) : undefined}
       >
-        Loading comparison widget...
+        <div className="flex items-center justify-center h-full">
+          <p className="text-gray-500">Loading comparison widget...</p>
+        </div>
       </div>
     </div>
   );
