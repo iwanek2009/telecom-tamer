@@ -12,7 +12,7 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
   const location = useLocation();
   const { toast } = useToast();
   const [retryCount, setRetryCount] = useState(0);
-  const maxRetries = 5; // Reduced from 10 to 5
+  const maxRetries = 10;
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -27,24 +27,21 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
           console.log('Initializing Stickee widget...');
           (window as any).StickeeLoader.cleanup();
           
-          const delay = isMobile ? 3000 : 1000; // Increased delay for mobile
-          
+          // Add a longer delay for mobile devices
           setTimeout(() => {
             if (mounted) {
-              console.log('Loading Stickee widget with ID:', widgetId);
               (window as any).StickeeLoader.load();
-              setRetryCount(0);
+              setRetryCount(0); // Reset retry count on successful load
             }
-          }, delay);
+          }, isMobile ? 2000 : 0);
         } catch (error) {
           console.error('Error initializing widget:', error);
           handleRetry();
         }
       } else if (retryCount < maxRetries) {
-        console.log(`Waiting for StickeeLoader... Attempt ${retryCount + 1} of ${maxRetries}`);
+        console.warn(`StickeeLoader not found. Attempt ${retryCount + 1} of ${maxRetries}`);
         handleRetry();
       } else {
-        console.error('StickeeLoader failed to load after maximum retries');
         toast({
           variant: "destructive",
           title: "Widget Load Error",
@@ -55,20 +52,17 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
 
     const handleRetry = () => {
       if (mounted && retryCount < maxRetries) {
-        const retryDelay = isMobile ? 3000 : 1500;
         timeoutId = setTimeout(() => {
           setRetryCount(prev => prev + 1);
           initializeWidget();
-        }, retryDelay);
+        }, isMobile ? 2500 : 1000); // Longer delay for mobile
       }
     };
 
-    // Initial load
-    const initialDelay = isMobile ? 2000 : 500;
+    // Initial load with a longer delay for mobile
     const initialTimer = setTimeout(() => {
-      console.log('Initial widget load attempt...');
       initializeWidget();
-    }, initialDelay);
+    }, isMobile ? 1500 : 0);
 
     // Cleanup
     return () => {
@@ -88,7 +82,7 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div 
-        className={`w-full ${isMobile ? 'min-h-[600px]' : 'min-h-[500px]'} relative`}
+        className={`w-full ${isMobile ? 'min-h-[500px] overflow-x-hidden' : ''}`}
         data-stickee-widget-id={widgetId}
         data-filters={filters ? JSON.stringify(filters) : undefined}
       >
