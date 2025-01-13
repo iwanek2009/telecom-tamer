@@ -91,7 +91,10 @@ const InternetUK = () => {
       <BroadbandComparisonStepsPolish />
       
       <div className="container mx-auto px-4 py-8">
-        <StickeeWidget />
+        <StickeeWidget 
+          widgetId="smartfony-91"
+          filters='{"connection_types": ["FTTP"]}'
+        />
       </div>
 
       <BroadbandGuide />
