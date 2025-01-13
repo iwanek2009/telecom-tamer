@@ -6,6 +6,9 @@ import { Helmet } from 'react-helmet';
 import BroadbandFeatures from '@/components/broadband/BroadbandFeatures';
 import BroadbandGuideSection from '@/components/broadband/BroadbandGuideSection';
 import ProsConsSection from '@/components/broadband/ProsConsSection';
+import { StickeeWidgetContent } from '@/components/StickeeWidgetContent';
+import { useEffect } from 'react';
+import { loadStickeeScript, cleanupStickeeScript } from '@/utils/stickeeLoader';
 
 const Broadband100Mbps = () => {
   const heroAccordionItems = [
@@ -22,6 +25,16 @@ const Broadband100Mbps = () => {
       content: "100Mbps broadband packages typically range from £25-35 per month, depending on the provider and contract length. Many providers also offer special deals and incentives.",
     }
   ];
+
+  useEffect(() => {
+    // Initialize Stickee widget
+    cleanupStickeeScript();
+    loadStickeeScript();
+
+    return () => {
+      cleanupStickeeScript();
+    };
+  }, []);
 
   return (
     <BStyleTemplate>
@@ -43,6 +56,15 @@ const Broadband100Mbps = () => {
 
       <BStyleContent>
         <BroadbandFeatures />
+        
+        {/* Stickee Widget Section */}
+        <div className="my-8">
+          <StickeeWidgetContent 
+            widgetId="smartfony-91"
+            filters='{"download_speed": {"min":500, "max":1000}}'
+          />
+        </div>
+
         <BroadbandGuideSection />
         <ProsConsSection />
       </BStyleContent>
