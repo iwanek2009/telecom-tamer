@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const StickeeWidget = () => {
+  const location = useLocation();
+  const isBroadbandPage = location.pathname === '/broadband';
+
   useEffect(() => {
     // Function to load Stickee script
     const loadStickee = () => {
@@ -33,9 +37,13 @@ const StickeeWidget = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div data-stickee-widget-id="smartfony-90" data-filters='{"families":[1971]}'>
-        Loading...
-      </div>
+      {isBroadbandPage ? (
+        <div data-stickee-widget-id="smartfony-91">Loading...</div>
+      ) : (
+        <div data-stickee-widget-id="smartfony-90" data-filters='{"families":[1971]}'>
+          Loading...
+        </div>
+      )}
     </div>
   );
 };

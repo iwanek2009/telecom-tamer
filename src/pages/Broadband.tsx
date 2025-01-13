@@ -8,6 +8,7 @@ import BroadbandUnderstanding from '../components/BroadbandUnderstanding';
 import BroadbandSpeed from '../components/BroadbandSpeed';
 import { Footer } from '../components/Footer';
 import { Helmet } from 'react-helmet';
+import StickeeWidget from '../components/StickeeWidget';
 
 const Broadband = () => {
   const [isValueOpen, setIsValueOpen] = useState(false);
@@ -103,9 +104,7 @@ const Broadband = () => {
       <BroadbandComparisonSteps />
 
       {/* Stickee Widget */}
-      <div className="container mx-auto px-4 py-8">
-        <div data-stickee-widget-id="smartfony-91">Loading...</div>
-      </div>
+      <StickeeWidget />
 
       <BroadbandGuide />
       <BroadbandUnderstanding />
