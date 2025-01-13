@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useToast } from '@/components/ui/use-toast';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface StickeeWidgetProps {
   widgetId: string;
@@ -12,6 +13,7 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
   const { toast } = useToast();
   const [retryCount, setRetryCount] = useState(0);
   const maxRetries = 10;
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
@@ -24,8 +26,13 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
         try {
           console.log('Initializing Stickee widget...');
           (window as any).StickeeLoader.cleanup();
-          (window as any).StickeeLoader.load();
-          setRetryCount(0); // Reset retry count on successful load
+          // Add a small delay for mobile devices
+          setTimeout(() => {
+            if (mounted) {
+              (window as any).StickeeLoader.load();
+              setRetryCount(0); // Reset retry count on successful load
+            }
+          }, isMobile ? 500 : 0);
         } catch (error) {
           console.error('Error initializing widget:', error);
           handleRetry();
@@ -47,17 +54,20 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
         timeoutId = setTimeout(() => {
           setRetryCount(prev => prev + 1);
           initializeWidget();
-        }, 1000);
+        }, isMobile ? 1500 : 1000); // Longer delay for mobile
       }
     };
 
-    // Initial load
-    initializeWidget();
+    // Initial load with a slight delay for mobile
+    const initialTimer = setTimeout(() => {
+      initializeWidget();
+    }, isMobile ? 300 : 0);
 
     // Cleanup
     return () => {
       mounted = false;
       if (timeoutId) clearTimeout(timeoutId);
+      if (initialTimer) clearTimeout(initialTimer);
       if (window && (window as any).StickeeLoader) {
         try {
           (window as any).StickeeLoader.cleanup();
@@ -66,11 +76,12 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
         }
       }
     };
-  }, [location.pathname, widgetId, filters, retryCount]);
+  }, [location.pathname, widgetId, filters, retryCount, isMobile]);
 
   return (
     <div className="container mx-auto px-4 py-8">
       <div 
+        className={`w-full ${isMobile ? 'overflow-x-auto' : ''}`}
         data-stickee-widget-id={widgetId}
         data-filters={filters ? JSON.stringify(filters) : undefined}
       >
