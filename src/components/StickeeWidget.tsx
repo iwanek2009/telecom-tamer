@@ -12,13 +12,17 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
   const location = useLocation();
   const { toast } = useToast();
   const [retryCount, setRetryCount] = useState(0);
-  const maxRetries = 10;
+  const maxRetries = 15; // Increased retries for Safari
   const isMobile = useIsMobile();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
     let mounted = true;
 
+    // Check if browser is Safari
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    
     const initializeWidget = () => {
       if (!mounted) return;
 
@@ -27,13 +31,16 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
           console.log('Initializing Stickee widget...');
           (window as any).StickeeLoader.cleanup();
           
-          // Add a longer delay for mobile devices
+          // Add longer delay for Safari and mobile
+          const delay = isSafari ? 3000 : (isMobile ? 2000 : 1000);
+          
           setTimeout(() => {
             if (mounted) {
               (window as any).StickeeLoader.load();
-              setRetryCount(0); // Reset retry count on successful load
+              setRetryCount(0);
+              setIsLoading(false);
             }
-          }, isMobile ? 2000 : 0);
+          }, delay);
         } catch (error) {
           console.error('Error initializing widget:', error);
           handleRetry();
@@ -42,6 +49,7 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
         console.warn(`StickeeLoader not found. Attempt ${retryCount + 1} of ${maxRetries}`);
         handleRetry();
       } else {
+        setIsLoading(false);
         toast({
           variant: "destructive",
           title: "Widget Load Error",
@@ -52,17 +60,19 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
 
     const handleRetry = () => {
       if (mounted && retryCount < maxRetries) {
+        const retryDelay = isSafari ? 3000 : (isMobile ? 2500 : 1000);
         timeoutId = setTimeout(() => {
           setRetryCount(prev => prev + 1);
           initializeWidget();
-        }, isMobile ? 2500 : 1000); // Longer delay for mobile
+        }, retryDelay);
       }
     };
 
-    // Initial load with a longer delay for mobile
+    // Initial load with appropriate delay
+    const initialDelay = isSafari ? 3000 : (isMobile ? 1500 : 1000);
     const initialTimer = setTimeout(() => {
       initializeWidget();
-    }, isMobile ? 1500 : 0);
+    }, initialDelay);
 
     // Cleanup
     return () => {
@@ -86,9 +96,11 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
         data-stickee-widget-id={widgetId}
         data-filters={filters ? JSON.stringify(filters) : undefined}
       >
-        <div className="flex items-center justify-center h-full">
-          <p className="text-gray-500">Loading comparison widget...</p>
-        </div>
+        {isLoading && (
+          <div className="flex items-center justify-center h-full min-h-[200px]">
+            <p className="text-gray-500">Loading comparison widget...</p>
+          </div>
+        )}
       </div>
     </div>
   );
