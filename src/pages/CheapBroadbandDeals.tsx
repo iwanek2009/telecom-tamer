@@ -7,6 +7,7 @@ import { PoundSterling, Wifi, Clock } from 'lucide-react';
 import BudgetBroadbandGuide from '@/components/BudgetBroadbandGuide';
 import { ValueBroadbandGuide } from '@/components/ValueBroadbandGuide';
 import { Helmet } from 'react-helmet';
+import { StickeeWidgetContent } from '@/components/StickeeWidgetContent';
 
 const CheapBroadbandDeals = () => {
   const heroAccordionItems = [
@@ -59,6 +60,13 @@ const CheapBroadbandDeals = () => {
             description="Choose from 12, 18, or 24-month contracts to suit your needs"
           />
         </BStyleFeatureGrid>
+
+        <div className="mt-12">
+          <StickeeWidgetContent 
+            widgetId="smartfony-91"
+            filters='{"deals":[7418]}'
+          />
+        </div>
       </BStyleContent>
 
       <BudgetBroadbandGuide />
