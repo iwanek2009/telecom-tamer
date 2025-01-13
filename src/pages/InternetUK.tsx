@@ -90,14 +90,6 @@ const InternetUK = () => {
       </div>
 
       <BroadbandComparisonStepsPolish />
-
-      <main className="container mx-auto px-4 py-8">
-        <div className="grid md:grid-cols-12 gap-8">
-          <BroadbandFilters />
-          <BroadbandOffers />
-        </div>
-      </main>
-
       <BroadbandGuide />
       <BroadbandUnderstanding />
       <BroadbandSpeed />
