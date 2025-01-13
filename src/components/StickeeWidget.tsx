@@ -3,7 +3,12 @@ import { useLocation } from 'react-router-dom';
 import { loadStickeeScript, cleanupStickeeScript } from '../utils/stickeeLoader';
 import { StickeeWidgetContent } from './StickeeWidgetContent';
 
-const StickeeWidget = () => {
+interface StickeeWidgetProps {
+  widgetId?: string;
+  filters?: string;
+}
+
+const StickeeWidget: React.FC<StickeeWidgetProps> = ({ widgetId, filters }) => {
   const location = useLocation();
   const isBroadbandPage = location.pathname === '/broadband';
 
@@ -26,8 +31,8 @@ const StickeeWidget = () => {
         <StickeeWidgetContent widgetId="smartfony-91" />
       ) : (
         <StickeeWidgetContent 
-          widgetId="smartfony-90" 
-          filters='{"upfront_price": {"min":0, "max":100}}'
+          widgetId={widgetId || "smartfony-90"}
+          filters={filters}
         />
       )}
     </div>
