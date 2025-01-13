@@ -23,6 +23,19 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Compare Fibre Broadband Deals | Find Best Deals & Switch Today" />
     <meta name="twitter:description" content="Compare fibre broadband deals from all major UK providers, check local availability and switch easily. Find the best packages in your area" />
+    <!-- Move Stickee script to head and add configuration -->
+    <script>
+      window.stickeeConfig = {
+        allowOrigins: ["*"], // Update this with your specific domain in production
+        debug: true // Enable debug mode to help troubleshoot
+      };
+    </script>
+    <script 
+      src="https://whitelabels.stickeebroadband.co.uk/js/loader.js" 
+      async 
+      defer
+      crossorigin="anonymous"
+    ></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -57,6 +70,5 @@
     <div id="root"></div>
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
-    <script src="https://whitelabels.stickeebroadband.co.uk/js/loader.js"></script>
   </body>
 </html>
