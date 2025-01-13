@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useToast } from '@/components/ui/use-toast';
 
 interface StickeeWidgetProps {
   widgetId: string;
@@ -8,42 +9,64 @@ interface StickeeWidgetProps {
 
 const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
   const location = useLocation();
+  const { toast } = useToast();
+  const [retryCount, setRetryCount] = useState(0);
+  const maxRetries = 10;
 
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+    let mounted = true;
+
     const initializeWidget = () => {
-      // Check if StickeeLoader is available
+      if (!mounted) return;
+
       if (window && (window as any).StickeeLoader) {
         try {
           console.log('Initializing Stickee widget...');
-          // Initialize with filters if provided
+          (window as any).StickeeLoader.cleanup();
           (window as any).StickeeLoader.load();
+          setRetryCount(0); // Reset retry count on successful load
         } catch (error) {
           console.error('Error initializing widget:', error);
+          handleRetry();
         }
+      } else if (retryCount < maxRetries) {
+        console.warn(`StickeeLoader not found. Attempt ${retryCount + 1} of ${maxRetries}`);
+        handleRetry();
       } else {
-        console.warn('StickeeLoader not found. Retrying...');
-        // Retry initialization after a short delay
-        setTimeout(initializeWidget, 1000);
+        toast({
+          variant: "destructive",
+          title: "Widget Load Error",
+          description: "Unable to load comparison widget. Please refresh the page.",
+        });
       }
     };
 
-    // Function to handle navigation
-    const handleNavigation = () => {
-      // Force page reload when navigating
-      window.location.reload();
+    const handleRetry = () => {
+      if (mounted && retryCount < maxRetries) {
+        timeoutId = setTimeout(() => {
+          setRetryCount(prev => prev + 1);
+          initializeWidget();
+        }, 1000);
+      }
     };
 
-    // Initial load setup
+    // Initial load
     initializeWidget();
 
-    // Add navigation event listeners
-    window.addEventListener('popstate', handleNavigation);
-    
     // Cleanup
     return () => {
-      window.removeEventListener('popstate', handleNavigation);
+      mounted = false;
+      if (timeoutId) clearTimeout(timeoutId);
+      if (window && (window as any).StickeeLoader) {
+        try {
+          (window as any).StickeeLoader.cleanup();
+        } catch (error) {
+          console.error('Error cleaning up StickeeLoader:', error);
+        }
+      }
     };
-  }, [location.pathname, widgetId, filters]);
+  }, [location.pathname, widgetId, filters, retryCount]);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -51,7 +74,7 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
         data-stickee-widget-id={widgetId}
         data-filters={filters ? JSON.stringify(filters) : undefined}
       >
-        Loading...
+        Loading comparison widget...
       </div>
     </div>
   );
