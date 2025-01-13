@@ -12,30 +12,37 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
   const location = useLocation();
   const { toast } = useToast();
   const [retryCount, setRetryCount] = useState(0);
-  const maxRetries = 15; // Increased retries for Safari
+  const maxRetries = 15;
   const isMobile = useIsMobile();
   const [isLoading, setIsLoading] = useState(true);
+  const [widgetContainer, setWidgetContainer] = useState<HTMLDivElement | null>(null);
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
     let mounted = true;
-
-    // Check if browser is Safari
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     
     const initializeWidget = () => {
-      if (!mounted) return;
+      if (!mounted || !widgetContainer) return;
 
       if (window && (window as any).StickeeLoader) {
         try {
           console.log('Initializing Stickee widget...');
-          (window as any).StickeeLoader.cleanup();
+          
+          // Safely cleanup existing widget
+          if ((window as any).StickeeLoader.cleanup) {
+            try {
+              (window as any).StickeeLoader.cleanup();
+            } catch (error) {
+              console.warn('Cleanup warning:', error);
+            }
+          }
           
           // Add longer delay for Safari and mobile
           const delay = isSafari ? 3000 : (isMobile ? 2000 : 1000);
           
-          setTimeout(() => {
-            if (mounted) {
+          timeoutId = setTimeout(() => {
+            if (mounted && widgetContainer) {
               (window as any).StickeeLoader.load();
               setRetryCount(0);
               setIsLoading(false);
@@ -70,7 +77,7 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
 
     // Initial load with appropriate delay
     const initialDelay = isSafari ? 3000 : (isMobile ? 1500 : 1000);
-    const initialTimer = setTimeout(() => {
+    timeoutId = setTimeout(() => {
       initializeWidget();
     }, initialDelay);
 
@@ -78,20 +85,22 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
     return () => {
       mounted = false;
       if (timeoutId) clearTimeout(timeoutId);
-      if (initialTimer) clearTimeout(initialTimer);
-      if (window && (window as any).StickeeLoader) {
+      
+      // Safely cleanup widget on unmount
+      if (window && (window as any).StickeeLoader && (window as any).StickeeLoader.cleanup) {
         try {
           (window as any).StickeeLoader.cleanup();
         } catch (error) {
-          console.error('Error cleaning up StickeeLoader:', error);
+          console.warn('Cleanup warning:', error);
         }
       }
     };
-  }, [location.pathname, widgetId, filters, retryCount, isMobile]);
+  }, [location.pathname, widgetId, filters, retryCount, isMobile, widgetContainer]);
 
   return (
     <div className="container mx-auto px-4 py-8">
       <div 
+        ref={setWidgetContainer}
         className={`w-full ${isMobile ? 'min-h-[500px] overflow-x-hidden' : ''}`}
         data-stickee-widget-id={widgetId}
         data-filters={filters ? JSON.stringify(filters) : undefined}
