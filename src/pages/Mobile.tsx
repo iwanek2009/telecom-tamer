@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Helmet } from 'react-helmet';
@@ -11,6 +11,41 @@ import NumberPortability from '@/components/NumberPortability';
 import ContractGuide from '@/components/ContractGuide';
 
 const Mobile = () => {
+  useEffect(() => {
+    // Force cleanup of any existing widgets
+    if (window && (window as any).StickeeLoader) {
+      try {
+        (window as any).StickeeLoader.cleanup();
+      } catch (error) {
+        console.error('Error cleaning up StickeeLoader:', error);
+      }
+    }
+
+    // Add a small delay before initializing to ensure proper cleanup
+    const initTimer = setTimeout(() => {
+      if (window && (window as any).StickeeLoader) {
+        try {
+          console.log('Initializing Stickee widget...');
+          (window as any).StickeeLoader.load();
+        } catch (error) {
+          console.error('Error initializing widget:', error);
+        }
+      }
+    }, 100);
+
+    return () => {
+      clearTimeout(initTimer);
+      // Cleanup on unmount
+      if (window && (window as any).StickeeLoader) {
+        try {
+          (window as any).StickeeLoader.cleanup();
+        } catch (error) {
+          console.error('Error cleaning up StickeeLoader:', error);
+        }
+      }
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
