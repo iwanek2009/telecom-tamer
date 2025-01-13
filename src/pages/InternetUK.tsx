@@ -7,7 +7,7 @@ import BroadbandGuide from '../components/BroadbandGuide';
 import BroadbandUnderstanding from '../components/BroadbandUnderstanding';
 import BroadbandSpeed from '../components/BroadbandSpeed';
 import { Footer } from '../components/Footer';
-import { StickeeWidgetContent } from '../components/StickeeWidgetContent';
+import StickeeWidget from '../components/StickeeWidget';
 
 const InternetUK = () => {
   const [isValueOpen, setIsValueOpen] = useState(false);
@@ -91,10 +91,7 @@ const InternetUK = () => {
       <BroadbandComparisonStepsPolish />
       
       <div className="container mx-auto px-4 py-8">
-        <StickeeWidgetContent 
-          widgetId="smartfony-91" 
-          filters='{"sort":"MONTHLY_PRICE"}'
-        />
+        <StickeeWidget />
       </div>
 
       <BroadbandGuide />
