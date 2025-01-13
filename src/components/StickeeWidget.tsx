@@ -27,7 +27,7 @@ const StickeeWidget = () => {
       ) : (
         <StickeeWidgetContent 
           widgetId="smartfony-90" 
-          filters='{"families":[1971]}'
+          filters='{"upfront_price": {"min":0, "max":100}}'
         />
       )}
     </div>
