@@ -8,6 +8,7 @@ import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
 import FibreBroadbandGuide from '@/components/FibreBroadbandGuide';
 import FibreBroadbandAvailability from '@/components/FibreBroadbandAvailability';
 import { Helmet } from 'react-helmet';
+import { StickeeWidgetContent } from '@/components/StickeeWidgetContent';
 
 const FibreBroadband = () => {
   const heroAccordionItems = [
@@ -70,6 +71,13 @@ const FibreBroadband = () => {
             description="Enjoy lag-free gaming and crystal-clear video calls with minimal delay"
           />
         </BStyleFeatureGrid>
+
+        <div className="mt-12">
+          <StickeeWidgetContent 
+            widgetId="smartfony-91"
+            filters='{"connection_types": ["FTTP"]}'
+          />
+        </div>
       </BStyleContent>
 
       <FibreBroadbandGuide />
