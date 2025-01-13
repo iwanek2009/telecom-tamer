@@ -17,6 +17,34 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
   const [isLoading, setIsLoading] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
   const mountedRef = useRef(true);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Browser detection
+  const getBrowserInfo = () => {
+    const ua = navigator.userAgent;
+    const isSafari = /^((?!chrome|android).)*safari/i.test(ua);
+    const isFirefox = ua.toLowerCase().indexOf('firefox') > -1;
+    const isChrome = /chrome|chromium|crios/i.test(ua);
+    const isEdge = /edg/i.test(ua);
+    const isIE = /msie|trident/i.test(ua);
+
+    return { isSafari, isFirefox, isChrome, isEdge, isIE };
+  };
+
+  // Get loading delay based on browser and device
+  const getLoadingDelay = () => {
+    const { isSafari, isFirefox, isIE } = getBrowserInfo();
+    
+    if (isMobile) {
+      return isSafari ? 3500 : 2500;
+    }
+    
+    if (isSafari) return 3000;
+    if (isFirefox) return 2500;
+    if (isIE) return 3500;
+    
+    return 2000; // Default delay for other browsers
+  };
 
   useEffect(() => {
     mountedRef.current = true;
@@ -26,12 +54,10 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
   }, []);
 
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout | null = null;
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    
     const cleanupWidget = () => {
       if (window && (window as any).StickeeLoader?.cleanup) {
         try {
+          console.log('Cleaning up Stickee widget...');
           (window as any).StickeeLoader.cleanup();
         } catch (error) {
           console.warn('Cleanup warning:', error);
@@ -49,13 +75,15 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
           // Clean up existing widget first
           cleanupWidget();
           
-          const delay = isSafari ? 3000 : (isMobile ? 2000 : 1000);
+          const delay = getLoadingDelay();
+          console.log(`Using delay of ${delay}ms for widget initialization`);
           
-          timeoutId = setTimeout(() => {
+          timeoutRef.current = setTimeout(() => {
             if (mountedRef.current && containerRef.current) {
               (window as any).StickeeLoader.load();
               setRetryCount(0);
               setIsLoading(false);
+              console.log('Widget loaded successfully');
             }
           }, delay);
         } catch (error) {
@@ -77,8 +105,8 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
 
     const handleRetry = () => {
       if (mountedRef.current && retryCount < maxRetries) {
-        const retryDelay = isSafari ? 3000 : (isMobile ? 2500 : 1000);
-        timeoutId = setTimeout(() => {
+        const retryDelay = getLoadingDelay();
+        timeoutRef.current = setTimeout(() => {
           setRetryCount(prev => prev + 1);
           initializeWidget();
         }, retryDelay);
@@ -86,13 +114,14 @@ const StickeeWidget = ({ widgetId, filters }: StickeeWidgetProps) => {
     };
 
     // Initial load
-    const initialDelay = isSafari ? 3000 : (isMobile ? 1500 : 1000);
-    timeoutId = setTimeout(initializeWidget, initialDelay);
+    const initialDelay = getLoadingDelay();
+    console.log(`Starting widget initialization with ${initialDelay}ms delay`);
+    timeoutRef.current = setTimeout(initializeWidget, initialDelay);
 
     // Cleanup function
     return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
       }
       if (mountedRef.current) {
         cleanupWidget();
