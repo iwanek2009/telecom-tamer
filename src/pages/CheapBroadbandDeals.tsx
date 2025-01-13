@@ -7,7 +7,7 @@ import { PoundSterling, Wifi, Clock } from 'lucide-react';
 import BudgetBroadbandGuide from '@/components/BudgetBroadbandGuide';
 import { ValueBroadbandGuide } from '@/components/ValueBroadbandGuide';
 import { Helmet } from 'react-helmet';
-import { StickeeWidgetContent } from '@/components/StickeeWidgetContent';
+import StickeeWidget from '@/components/StickeeWidget';
 
 const CheapBroadbandDeals = () => {
   const heroAccordionItems = [
@@ -61,11 +61,22 @@ const CheapBroadbandDeals = () => {
           />
         </BStyleFeatureGrid>
 
-        <div className="mt-12">
-          <StickeeWidgetContent 
-            widgetId="smartfony-91" 
-            filters='{"monthly_price": {"min":0, "max":25}}'
-          />
+        {/* Stickee Widget Section */}
+        <div className="container mx-auto px-4 py-8">
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-xl font-semibold">Available Broadband Deals</h2>
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-gray-600">sort by</span>
+                <select className="border rounded-md p-2">
+                  <option>Most Popular</option>
+                  <option>Lowest Price</option>
+                  <option>Highest Price</option>
+                </select>
+              </div>
+            </div>
+            <StickeeWidget />
+          </div>
         </div>
       </BStyleContent>
 
