@@ -43,13 +43,6 @@ const Broadband100Mbps = () => {
 
       <BStyleContent>
         <BroadbandFeatures />
-        <div 
-          data-stickee-widget-id="smartfony-91" 
-          data-filters='{"download_speed": {"min":500, "max":1000}}'
-          className="my-8"
-        >
-          Loading...
-        </div>
         <BroadbandGuideSection />
         <ProsConsSection />
       </BStyleContent>
