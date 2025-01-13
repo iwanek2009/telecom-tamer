@@ -5,10 +5,9 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import BroadbandComparisonStepsPolish from '../components/polish/BroadbandComparisonStepsPolish';
 import BroadbandGuide from '../components/BroadbandGuide';
 import BroadbandUnderstanding from '../components/BroadbandUnderstanding';
-import BroadbandFilters from '../components/BroadbandFilters';
-import BroadbandOffers from '../components/BroadbandOffers';
 import BroadbandSpeed from '../components/BroadbandSpeed';
 import { Footer } from '../components/Footer';
+import { StickeeWidgetContent } from '../components/StickeeWidgetContent';
 
 const InternetUK = () => {
   const [isValueOpen, setIsValueOpen] = useState(false);
@@ -90,6 +89,14 @@ const InternetUK = () => {
       </div>
 
       <BroadbandComparisonStepsPolish />
+      
+      <div className="container mx-auto px-4 py-8">
+        <StickeeWidgetContent 
+          widgetId="smartfony-91" 
+          filters='{"sort":"MONTHLY_PRICE"}'
+        />
+      </div>
+
       <BroadbandGuide />
       <BroadbandUnderstanding />
       <BroadbandSpeed />
