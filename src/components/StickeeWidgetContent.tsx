@@ -10,8 +10,6 @@ export const StickeeWidgetContent: React.FC<StickeeWidgetContentProps> = ({ widg
     <div 
       data-stickee-widget-id={widgetId}
       {...(filters && { 'data-filters': filters })}
-    >
-      Loading...
-    </div>
+    />
   );
 };
