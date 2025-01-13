@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Wifi, Router, Zap, Timer, Download } from 'lucide-react';
 import { BStyleTemplate } from '@/components/templates/BStyleTemplate';
 import { BStyleHero } from '@/components/templates/BStyleHero';
@@ -9,6 +9,7 @@ import FibreBroadbandGuide from '@/components/FibreBroadbandGuide';
 import FibreBroadbandAvailability from '@/components/FibreBroadbandAvailability';
 import { Helmet } from 'react-helmet';
 import { StickeeWidgetContent } from '@/components/StickeeWidgetContent';
+import { loadStickeeScript, cleanupStickeeScript } from '@/utils/stickeeLoader';
 
 const FibreBroadband = () => {
   const heroAccordionItems = [
@@ -31,6 +32,16 @@ const FibreBroadband = () => {
       linkHref: "#check-availability"
     }
   ];
+
+  useEffect(() => {
+    // Initialize Stickee widget
+    cleanupStickeeScript();
+    loadStickeeScript();
+
+    return () => {
+      cleanupStickeeScript();
+    };
+  }, []);
 
   return (
     <BStyleTemplate>
