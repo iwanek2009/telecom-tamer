@@ -48,19 +48,19 @@ const BroadbandHomePhone = () => {
           subtitle="Discover what makes our home broadband and phone deals stand out"
         >
           <BStyleFeatureCard
-            icon={PoundSterling}
-            title="Save Money"
-            description="Bundle your services and save compared to separate contracts"
+            icon={Phone}
+            title="Inclusive Call Plans"
+            description="Choose from evening & weekend or anytime UK landline calls with clear connection quality"
           />
           <BStyleFeatureCard
             icon={Wifi}
             title="Reliable Connection"
-            description="Fast broadband with unlimited downloads and stable phone line"
+            description="Fast broadband with dedicated phone line support and 24/7 technical assistance"
           />
           <BStyleFeatureCard
-            icon={Phone}
-            title="Inclusive Calls"
-            description="Free evening & weekend calls to UK landlines included"
+            icon={PoundSterling}
+            title="Better Value"
+            description="Save money and get more by bundling your home broadband and phone services together"
           />
         </BStyleFeatureGrid>
 
