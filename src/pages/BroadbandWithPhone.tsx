@@ -59,7 +59,7 @@ const BroadbandWithPhone = () => {
         heroProps={heroProps}
         features={features}
         widgetId="smartfony-91"
-        filters={"package_types": ["BROADBAND_PHONE"]}
+        filters={{ package_types: ["BROADBAND_PHONE"] }}
       >
         <div className="space-y-16">
           {/* Additional content sections can be added here */}
