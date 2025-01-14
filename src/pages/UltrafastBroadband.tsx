@@ -4,7 +4,7 @@ import { BStyleHero } from '@/components/templates/BStyleHero';
 import { BStyleContent } from '@/components/templates/BStyleContent';
 import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
 import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
-import { Wifi, Zap, Timer, PoundSterling } from 'lucide-react';
+import { Wifi, Zap, Rocket } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import { StickeeWidgetContent } from '@/components/StickeeWidgetContent';
 import { loadStickeeScript, cleanupStickeeScript } from '@/utils/stickeeLoader';
@@ -56,27 +56,22 @@ const UltrafastBroadband = () => {
       <BStyleContent>
         <BStyleFeatureGrid
           title="Why Choose Ultrafast Broadband?"
-          subtitle="Experience the benefits of next-generation internet speeds"
+          subtitle="With speeds of 500Mb or more, ultrafast broadband is perfect for streaming, gaming, and working from home. Here's why it's worth the upgrade."
         >
           <BStyleFeatureCard
             icon={Zap}
-            title="Lightning Fast"
-            description="Download HD movies in minutes with speeds over 100Mbps"
+            title="Lightning-Fast Speeds"
+            description="Enjoy seamless 4K streaming, lag-free gaming, and smooth video calls with speeds of 500Mb or more."
           />
           <BStyleFeatureCard
             icon={Wifi}
-            title="Multiple Devices"
-            description="Connect 10+ devices simultaneously without slowdown"
+            title="Perfect for Busy Households"
+            description="Support multiple devices at once without slowing down your connection—ideal for families and remote workers."
           />
           <BStyleFeatureCard
-            icon={Timer}
-            title="Zero Lag"
-            description="Perfect for online gaming and 4K streaming"
-          />
-          <BStyleFeatureCard
-            icon={PoundSterling}
-            title="Great Value"
-            description="Competitive prices from leading UK providers"
+            icon={Rocket}
+            title="Future-Proof Your Internet"
+            description="With ultrafast broadband, you'll be ready for the latest tech, from smart homes to 8K streaming."
           />
         </BStyleFeatureGrid>
 
