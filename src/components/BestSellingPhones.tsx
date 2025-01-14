@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const BestSellingPhones = () => {
   const phones = [
@@ -52,12 +53,14 @@ const BestSellingPhones = () => {
                   <p className="text-sm text-gray-600">No upfront cost from</p>
                   <p className="font-bold">£{phone.price} per month</p>
                 </div>
-                <Button 
-                  variant="default"
-                  className="bg-pink-500 hover:bg-pink-600 w-[90%] py-1.5"
-                >
-                  See all deals
-                </Button>
+                <Link to="/mobile">
+                  <Button 
+                    variant="default"
+                    className="bg-pink-500 hover:bg-pink-600 w-[90%] py-1.5"
+                  >
+                    See all deals
+                  </Button>
+                </Link>
               </div>
             </div>
           ))}
