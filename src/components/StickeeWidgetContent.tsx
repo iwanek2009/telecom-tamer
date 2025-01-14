@@ -9,7 +9,8 @@ export const StickeeWidgetContent: React.FC<StickeeWidgetContentProps> = ({ widg
   return (
     <div 
       data-stickee-widget-id={widgetId}
-      {...(filters && { 'data-filters': filters })}
+      data-filters={filters}
+      className="w-full min-h-[400px]"
     >
       Loading...
     </div>
