@@ -1,10 +1,9 @@
-import React from 'react';
 import { BStyleTemplate } from '@/components/templates/BStyleTemplate';
 import { BStyleHero } from '@/components/templates/BStyleHero';
 import { BStyleContent } from '@/components/templates/BStyleContent';
 import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
 import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
-import { Phone, Wifi, PoundSterling, Check } from 'lucide-react';
+import { Phone, Wifi, PoundSterling, Check, Clock, Calendar, PhoneCall } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 import { Card, CardContent } from '@/components/ui/card';
@@ -131,6 +130,107 @@ const BroadbandHomePhone = () => {
                   </ul>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-16 bg-gradient-to-br from-gray-50 to-gray-100 py-16">
+          <div className="max-w-4xl mx-auto space-y-8 px-4">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl font-bold text-gray-900">Choosing the Best Broadband & Home Phone Package: Essential Tips</h2>
+              <p className="text-lg text-gray-600">
+                Before selecting your perfect broadband and phone bundle, consider these key factors to ensure you get the most value from your home package.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900 text-center">Call Plan Options Explained</h3>
+              <p className="text-gray-600 text-center">
+                Your broadband and phone package will typically include one of these calling plans:
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                <Card className="bg-white hover:shadow-lg transition-shadow duration-300">
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex justify-center mb-4">
+                      <Calendar className="w-10 h-10 text-primary" />
+                    </div>
+                    <h4 className="text-xl font-semibold text-gray-900 text-center">Weekend Calls Package</h4>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-2 text-gray-600">
+                        <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                        <span>Free calls during weekends</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-gray-600">
+                        <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                        <span>Standard rates apply on weekdays</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-gray-600">
+                        <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                        <span>Most affordable option for occasional callers</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-gray-600">
+                        <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                        <span>Perfect for households using mobile phones as primary contact</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-white hover:shadow-lg transition-shadow duration-300">
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex justify-center mb-4">
+                      <Clock className="w-10 h-10 text-primary" />
+                    </div>
+                    <h4 className="text-xl font-semibold text-gray-900 text-center">Evening & Weekend Calls</h4>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-2 text-gray-600">
+                        <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                        <span>Free calls from 7pm to 7am on weekdays</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-gray-600">
+                        <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                        <span>All weekend calls included</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-gray-600">
+                        <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                        <span>Popular choice for home workers</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-gray-600">
+                        <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                        <span>Ideal balance of flexibility and cost</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-white hover:shadow-lg transition-shadow duration-300">
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex justify-center mb-4">
+                      <PhoneCall className="w-10 h-10 text-primary" />
+                    </div>
+                    <h4 className="text-xl font-semibold text-gray-900 text-center">Anytime Calls Package</h4>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-2 text-gray-600">
+                        <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                        <span>Unlimited calls 24/7</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-gray-600">
+                        <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                        <span>Higher monthly rate</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-gray-600">
+                        <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                        <span>Best for regular daytime callers</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-gray-600">
+                        <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                        <span>Suitable for home businesses</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </section>
