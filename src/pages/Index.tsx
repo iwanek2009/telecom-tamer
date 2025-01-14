@@ -31,7 +31,7 @@ const Index = () => {
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl font-bold mb-4">Compare deals, switch and save</h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Find the perfect mobile contract at Smartfony.co.uk. We compare deals from all major UK providers to help you save time and money.
+              Looking for mobile and broadband deals? Smartfony.co.uk compares all major UK providers to bring you the best packages at the best prices.
             </p>
           </div>
           
