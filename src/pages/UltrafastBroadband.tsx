@@ -26,7 +26,6 @@ const UltrafastBroadband = () => {
   ];
 
   useEffect(() => {
-    // Initialize Stickee widget
     cleanupStickeeScript();
     loadStickeeScript();
 
@@ -47,7 +46,7 @@ const UltrafastBroadband = () => {
 
       <BStyleHero
         title="Ultrafast Broadband Deals"
-        subtitle="Experience lightning-fast internet with speeds over 100Mbps"
+        subtitle="Discover the best ultrafast broadband deals with 500Mb+ internet packages. Compare providers, speeds, and prices to find the perfect high-speed connection for your home or business"
         image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
         imageAlt="High-speed internet connection visualization"
         accordionItems={heroAccordionItems}
