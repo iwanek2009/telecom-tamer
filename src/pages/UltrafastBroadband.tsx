@@ -81,29 +81,47 @@ const UltrafastBroadband = () => {
           />
         </div>
 
-        {/* New Information Section */}
-        <div className="mt-16 space-y-8">
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8">
-            <h2 className="text-2xl font-bold text-black mb-4">What is Ultrafast Broadband?</h2>
-            <div className="space-y-4 text-gray-700">
-              <p>
+        {/* Information Sections */}
+        <div className="mt-16 space-y-8 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-[#F8F9FF] to-[#FFFFFF] backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-indigo-100/20 hover:shadow-xl transition-all duration-300">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-6">What is Ultrafast Broadband?</h2>
+            <div className="space-y-4 text-gray-600 leading-relaxed">
+              <p className="text-lg">
                 Ultrafast broadband refers to internet speeds of 300Mb per second (Mbps) or higher, with many providers now offering packages reaching 500Mb, 1Gb (gigabit), and beyond. To put that into perspective, a 500Mb connection allows you to download a full HD movie in under a minute—perfect for households with multiple devices or heavy internet usage.
               </p>
-              <p>
+              <p className="text-lg">
                 Unlike standard broadband, which maxes out at around 67Mb, ultrafast broadband ensures you're always connected, even during peak hours. Whether you're streaming, gaming, or working from home, these speeds eliminate buffering and lag, giving you a seamless online experience.
               </p>
             </div>
           </div>
 
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8">
-            <h2 className="text-2xl font-bold text-black mb-4">How to Find the Best Ultrafast Broadband Deals</h2>
-            <p className="text-gray-700 mb-4">
+          <div className="bg-gradient-to-br from-[#F8F9FF] to-[#FFFFFF] backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-indigo-100/20 hover:shadow-xl transition-all duration-300">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-6">How to Find the Best Ultrafast Broadband Deals</h2>
+            <p className="text-lg text-gray-600 mb-6">
               Finding the right ultrafast broadband deal is easier than ever with our simple three-step process:
             </p>
-            <ol className="list-decimal list-inside space-y-3 text-gray-700 pl-4">
-              <li className="pl-2"><span className="font-semibold">Find Available Deals:</span> Enter your postcode to see what broadband packages are available in your area.</li>
-              <li className="pl-2"><span className="font-semibold">Choose Your Perfect Package:</span> Filter results by speed, price, provider, or contract length to find the deal that suits you best.</li>
-              <li className="pl-2"><span className="font-semibold">Switch with Confidence:</span> Complete your order through the provider's website. Don't worry—you'll have 14 days to change your mind.</li>
+            <ol className="space-y-4">
+              <li className="flex items-start space-x-4 p-4 bg-white/50 rounded-xl">
+                <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full font-semibold">1</span>
+                <div>
+                  <span className="font-semibold text-gray-800">Find Available Deals:</span>
+                  <p className="text-gray-600 mt-1">Enter your postcode to see what broadband packages are available in your area.</p>
+                </div>
+              </li>
+              <li className="flex items-start space-x-4 p-4 bg-white/50 rounded-xl">
+                <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full font-semibold">2</span>
+                <div>
+                  <span className="font-semibold text-gray-800">Choose Your Perfect Package:</span>
+                  <p className="text-gray-600 mt-1">Filter results by speed, price, provider, or contract length to find the deal that suits you best.</p>
+                </div>
+              </li>
+              <li className="flex items-start space-x-4 p-4 bg-white/50 rounded-xl">
+                <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full font-semibold">3</span>
+                <div>
+                  <span className="font-semibold text-gray-800">Switch with Confidence:</span>
+                  <p className="text-gray-600 mt-1">Complete your order through the provider's website. Don't worry—you'll have 14 days to change your mind.</p>
+                </div>
+              </li>
             </ol>
           </div>
         </div>
