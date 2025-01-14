@@ -2,7 +2,6 @@ import React from 'react';
 import { Phone, Wifi, PoundSterling } from 'lucide-react';
 import { BroadbandTemplate } from '@/components/templates/BroadbandTemplate';
 import { Helmet } from 'react-helmet';
-import StickeeWidget from '@/components/StickeeWidget';
 
 const BroadbandWithPhone = () => {
   const heroProps = {
@@ -51,23 +50,16 @@ const BroadbandWithPhone = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>Broadband & Phone Packages | Compare Deals</title>
-        <meta name="description" content="Compare the best broadband and phone packages from leading UK providers. Find great deals on combined internet and landline services." />
-      </Helmet>
-      <BroadbandTemplate
-        heroProps={heroProps}
-        features={features}
-      >
-        <div className="space-y-16">
-          <StickeeWidget 
-            widgetId="smartfony-91"
-            filters='{"package_types": ["BROADBAND_PHONE"]}'
-          />
-        </div>
-      </BroadbandTemplate>
-    </>
+    <BroadbandTemplate
+      heroProps={heroProps}
+      features={features}
+      widgetId="smartfony-91"
+      filters='{"package_types": ["BROADBAND_PHONE"]}'
+    >
+      <div className="space-y-16">
+        {/* Additional content sections can be added here */}
+      </div>
+    </BroadbandTemplate>
   );
 };
 
