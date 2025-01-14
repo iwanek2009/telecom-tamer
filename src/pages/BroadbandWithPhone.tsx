@@ -37,17 +37,17 @@ const BroadbandWithPhone = () => {
     {
       icon: Phone,
       title: "Inclusive Call Plans",
-      description: "Choose flexible UK landline call packages to suit your needs - including unlimited evening and weekend calls or comprehensive anytime packages. All major UK landline numbers covered with crystal-clear connection quality."
+      description: "Choose flexible UK landline call packages to suit your needs - including unlimited evening and weekend calls or comprehensive anytime packages."
     },
     {
       icon: Wifi,
       title: "Reliable Connection",
-      description: "Enjoy stable, high-speed broadband with dedicated phone line support for uninterrupted connectivity. Our packages include professional line installation and 24/7 technical assistance for both broadband and landline services."
+      description: "Enjoy stable, high-speed broadband with dedicated phone line support for uninterrupted connectivity."
     },
     {
       icon: PoundSterling,
       title: "Better Value",
-      description: "Save up to £200 annually by combining your home broadband and phone services in one package. Compare exclusive deals from leading UK providers featuring discounted bundle rates and special introductory offers on phone and internet packages."
+      description: "Save up to £200 annually by combining your home broadband and phone services in one package."
     }
   ];
 
@@ -61,48 +61,54 @@ const BroadbandWithPhone = () => {
         />
       </Helmet>
 
-      <BroadbandTemplate
-        heroProps={heroProps}
-        features={features}
-      >
-        <StickeeWidget />
-        
-        <div className="space-y-16">
-          <BroadbandContentSection background="gradient">
-            <div className="prose prose-lg max-w-none">
-              <h2 className="text-3xl font-bold mb-6">Broadband & Home Phone Packages: What You Need to Know</h2>
-              
-              <p className="text-lg mb-6">
-                Save time and money by combining your internet and phone services into one convenient home package. Modern broadband and phone bundles offer you reliable connectivity with flexible calling plans, perfect for both daily internet users and regular landline callers.
-              </p>
-
-              <h3 className="text-2xl font-semibold mb-4">Why Choose a Combined Package?</h3>
-              <p className="mb-6">
-                A broadband and phone bundle provides more than just internet access. Your package includes a dedicated phone line essential for stable broadband connection, plus the option to add calling features that suit your lifestyle.
-              </p>
-
-              <h3 className="text-2xl font-semibold mb-4">Key Benefits of Home Phone Bundles:</h3>
-              <p className="mb-4">Most UK providers now offer extensive coverage across residential areas, ensuring you get:</p>
-              <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li>Reliable landline service for areas with inconsistent mobile coverage</li>
-                <li>Cost-effective international calling rates compared to mobile plans</li>
-                <li>Crystal-clear call quality for important home or business conversations</li>
-                <li>Professional technical support for both services</li>
-                <li>Single monthly bill for easier budget management</li>
-              </ul>
-
-              <h3 className="text-2xl font-semibold mb-4">Making the Right Choice:</h3>
-              <p className="mb-4">Before selecting your broadband and phone package, consider:</p>
-              <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li>Available connection speeds in your area</li>
-                <li>Your typical monthly calling patterns</li>
-                <li>Whether you need evening, weekend, or anytime calls</li>
-                <li>Bundle discounts and current provider offers</li>
-              </ul>
+      <div className="min-h-screen bg-gray-50">
+        <BroadbandTemplate
+          heroProps={heroProps}
+          features={features}
+        >
+          <div className="bg-[#f9fafc] w-full">
+            <div className="container mx-auto px-4 py-8">
+              <StickeeWidget />
             </div>
-          </BroadbandContentSection>
-        </div>
-      </BroadbandTemplate>
+          </div>
+
+          <div className="space-y-16">
+            <BroadbandContentSection background="gradient">
+              <div className="prose prose-lg max-w-none">
+                <h2 className="text-3xl font-bold mb-6">Broadband & Home Phone Packages: What You Need to Know</h2>
+                
+                <p className="text-lg mb-6">
+                  Save time and money by combining your internet and phone services into one convenient home package. Modern broadband and phone bundles offer you reliable connectivity with flexible calling plans, perfect for both daily internet users and regular landline callers.
+                </p>
+
+                <h3 className="text-2xl font-semibold mb-4">Why Choose a Combined Package?</h3>
+                <p className="mb-6">
+                  A broadband and phone bundle provides more than just internet access. Your package includes a dedicated phone line essential for stable broadband connection, plus the option to add calling features that suit your lifestyle.
+                </p>
+
+                <h3 className="text-2xl font-semibold mb-4">Key Benefits of Home Phone Bundles:</h3>
+                <p className="mb-4">Most UK providers now offer extensive coverage across residential areas, ensuring you get:</p>
+                <ul className="list-disc pl-6 mb-6 space-y-2">
+                  <li>Reliable landline service for areas with inconsistent mobile coverage</li>
+                  <li>Cost-effective international calling rates compared to mobile plans</li>
+                  <li>Crystal-clear call quality for important home or business conversations</li>
+                  <li>Professional technical support for both services</li>
+                  <li>Single monthly bill for easier budget management</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold mb-4">Making the Right Choice:</h3>
+                <p className="mb-4">Before selecting your broadband and phone package, consider:</p>
+                <ul className="list-disc pl-6 mb-6 space-y-2">
+                  <li>Available connection speeds in your area</li>
+                  <li>Your typical monthly calling patterns</li>
+                  <li>Whether you need evening, weekend, or anytime calls</li>
+                  <li>Bundle discounts and current provider offers</li>
+                </ul>
+              </div>
+            </BroadbandContentSection>
+          </div>
+        </BroadbandTemplate>
+      </div>
     </>
   );
 };
