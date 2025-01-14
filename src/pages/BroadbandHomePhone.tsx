@@ -3,7 +3,7 @@ import { BStyleHero } from '@/components/templates/BStyleHero';
 import { BStyleContent } from '@/components/templates/BStyleContent';
 import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
 import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
-import { Phone, Wifi, PoundSterling, Check, Clock, Calendar, PhoneCall, Info, AlertCircle, CreditCard, World } from 'lucide-react';
+import { Phone, Wifi, PoundSterling, Check, Clock, Calendar, PhoneCall, Info, AlertCircle, CreditCard, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 import { Card, CardContent } from '@/components/ui/card';
@@ -270,7 +270,7 @@ const BroadbandHomePhone = () => {
               <Card className="bg-white">
                 <CardContent className="p-6 space-y-4">
                   <div className="flex items-center gap-2 mb-4">
-                    <World className="w-6 h-6 text-primary" />
+                    <Globe className="w-6 h-6 text-primary" />
                     <h3 className="text-xl font-semibold">Special Call Requirements</h3>
                   </div>
                   <ul className="space-y-3">
