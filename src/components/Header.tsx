@@ -11,8 +11,7 @@ const routeStructure = {
     subpages: [
       { path: '/broadband/fibre-broadband', label: 'Fibre Broadband' },
       { path: '/broadband/cheap-broadband-deals', label: 'Cheap Broadband Deals' },
-      { path: '/broadband/100mbps', label: '100Mbps Broadband' },
-      { path: '/broadband/with-phone', label: 'Broadband with Phone' }
+      { path: '/broadband/100mbps', label: '100Mbps Broadband' }
     ]
   },
   '/sim': { label: 'Sim Only', subpages: [] }
