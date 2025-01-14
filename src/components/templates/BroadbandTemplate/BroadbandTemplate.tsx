@@ -30,7 +30,7 @@ export const BroadbandTemplate = ({
         <BroadbandHero {...heroProps} />
 
         <BroadbandFeatureGrid
-          title="Key Features"
+          title="Key Features of Our Broadband & Phone Packages"
           subtitle="Discover what makes our service different"
         >
           {features.map((feature, index) => (
