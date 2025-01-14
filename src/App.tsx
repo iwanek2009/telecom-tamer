@@ -14,6 +14,7 @@ import FibreBroadband from "./pages/FibreBroadband";
 import CheapBroadbandDeals from "./pages/CheapBroadbandDeals";
 import Broadband100Mbps from "./pages/Broadband100Mbps";
 import BroadbandHomePhone from "./pages/BroadbandHomePhone";
+import UltrafastBroadband from "./pages/UltrafastBroadband";
 
 const queryClient = new QueryClient();
 
@@ -55,6 +56,7 @@ const App = () => {
             <Route path="/broadband" element={<Broadband />} />
             <Route path="/broadband/fibre-broadband" element={<FibreBroadband />} />
             <Route path="/broadband/home-phone" element={<BroadbandHomePhone />} />
+            <Route path="/broadband/ultrafast" element={<UltrafastBroadband />} />
             <Route path="/about" element={<About />} />
             <Route path="/sim" element={<SimOnly />} />
             <Route path="/internet-uk" element={<InternetUK />} />
