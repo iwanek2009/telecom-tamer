@@ -65,7 +65,7 @@ const BroadbandHomePhone = () => {
         </BStyleFeatureGrid>
 
         <div className="mt-12">
-          <StickeeWidget filters='{"includes_phone": true}' />
+          <StickeeWidget filters='{"package_types": ["BROADBAND_ONLY"]}' />
         </div>
       </BStyleContent>
     </BStyleTemplate>
