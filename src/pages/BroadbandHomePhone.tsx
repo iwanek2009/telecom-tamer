@@ -6,6 +6,7 @@ import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
 import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
 import { Phone, Wifi, PoundSterling } from 'lucide-react';
 import { Helmet } from 'react-helmet';
+import { StickeeWidgetContent } from '@/components/StickeeWidgetContent';
 
 const BroadbandHomePhone = () => {
   const heroAccordionItems = [
@@ -64,11 +65,10 @@ const BroadbandHomePhone = () => {
         </BStyleFeatureGrid>
 
         <div className="mt-12">
-          <div className="w-full bg-[#f9fafc]">
-            <div className="container mx-auto px-4 py-8">
-              <div data-stickee-widget-id="smartfony-91" data-filters='{"package_types": ["BROADBAND_PHONE"]}'>Loading...</div>
-            </div>
-          </div>
+          <StickeeWidgetContent 
+            widgetId="smartfony-91"
+            filters='{"package_types": ["BROADBAND_PHONE"]}'
+          />
         </div>
       </BStyleContent>
     </BStyleTemplate>
