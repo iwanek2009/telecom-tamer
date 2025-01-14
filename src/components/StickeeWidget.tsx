@@ -26,15 +26,17 @@ const StickeeWidget: React.FC<StickeeWidgetProps> = ({ widgetId, filters }) => {
   }, []); 
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      {isBroadbandPage ? (
-        <StickeeWidgetContent widgetId="smartfony-91" />
-      ) : (
-        <StickeeWidgetContent 
-          widgetId={widgetId || "smartfony-90"}
-          filters={filters}
-        />
-      )}
+    <div className="w-full bg-[#f9fafc]">
+      <div className="container mx-auto px-4 py-8">
+        {isBroadbandPage ? (
+          <StickeeWidgetContent widgetId="smartfony-91" />
+        ) : (
+          <StickeeWidgetContent 
+            widgetId={widgetId || "smartfony-90"}
+            filters={filters}
+          />
+        )}
+      </div>
     </div>
   );
 };
