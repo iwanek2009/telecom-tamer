@@ -36,7 +36,7 @@ const BroadbandHomePhone = () => {
 
       <BStyleHero
         title="Broadband & Home Phone Deals"
-        subtitle="Find the best home broadband and phone packages from leading UK providers."
+        subtitle="Get the fastest broadband and best value phone deals for your home. Compare prices and speeds from trusted UK providers to find your perfect package"
         image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
         imageAlt="Person using laptop and phone"
         accordionItems={heroAccordionItems}
