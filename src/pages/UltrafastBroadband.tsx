@@ -77,7 +77,7 @@ const UltrafastBroadband = () => {
         <div className="mt-12">
           <StickeeWidgetContent 
             widgetId="smartfony-91"
-            filters='{"download_speed": {"min":100}}'
+            filters='{"download_speed": {"min":500, "max":1000}}'
           />
         </div>
       </BStyleContent>
