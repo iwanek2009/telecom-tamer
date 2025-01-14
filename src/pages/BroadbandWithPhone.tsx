@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 const BroadbandWithPhone = () => {
   const heroProps = {
     title: "Broadband & Home Phone Packages",
-    subtitle: "Find the perfect broadband and landline bundle for your home",
+    subtitle: "Get the fastest broadband and best value phone deals for your home. Compare prices and speeds from trusted UK providers to find your perfect package. Switch today and save",
     image: "/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png",
     imageAlt: "Person using phone and laptop",
     accordionItems: [
