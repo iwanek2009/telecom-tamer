@@ -2,7 +2,6 @@ import React from 'react';
 import { Phone, Wifi, PoundSterling } from 'lucide-react';
 import { BroadbandTemplate } from '@/components/templates/BroadbandTemplate';
 import { Helmet } from 'react-helmet';
-import StickeeWidget from '@/components/StickeeWidget';
 
 const BroadbandWithPhone = () => {
   const heroProps = {
@@ -59,14 +58,9 @@ const BroadbandWithPhone = () => {
       <BroadbandTemplate
         heroProps={heroProps}
         features={features}
-      >
-        <div className="space-y-16">
-          <StickeeWidget 
-            widgetId="smartfony-91"
-            filters='{"package_types": ["BROADBAND_PHONE"]}'
-          />
-        </div>
-      </BroadbandTemplate>
+        widgetId="smartfony-91"
+        filters='{"package_types": ["BROADBAND_PHONE"]}'
+      />
     </>
   );
 };
