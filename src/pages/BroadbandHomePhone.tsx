@@ -27,10 +27,10 @@ const BroadbandHomePhone = () => {
   return (
     <BStyleTemplate>
       <Helmet>
-        <title>Broadband & Home Phone Deals | Compare Packages & Save</title>
+        <title>Broadband & Phone Deals | Compare UK Home Packages</title>
         <meta 
           name="description" 
-          content="Compare the best broadband and home phone packages. Find deals with free evening & weekend calls, unlimited broadband, and great value bundles."
+          content="Get fast broadband with inclusive UK calls. Compare the latest home broadband and phone deals from trusted providers. Save money with our exclusive packages"
         />
       </Helmet>
 
