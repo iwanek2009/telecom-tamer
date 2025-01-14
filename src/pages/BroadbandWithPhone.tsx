@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Wifi, PoundSterling, Clock } from 'lucide-react';
+import { Phone, Wifi, PoundSterling } from 'lucide-react';
 import { BroadbandTemplate } from '@/components/templates/BroadbandTemplate';
 import { Helmet } from 'react-helmet';
 
@@ -46,11 +46,6 @@ const BroadbandWithPhone = () => {
       icon: PoundSterling,
       title: "Better Value",
       description: "Save money by bundling your broadband and phone services"
-    },
-    {
-      icon: Clock,
-      title: "24/7 Support",
-      description: "Round-the-clock customer service for both services"
     }
   ];
 
