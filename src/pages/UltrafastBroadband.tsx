@@ -10,20 +10,20 @@ import { Helmet } from 'react-helmet';
 import { StickeeWidgetContent } from '@/components/StickeeWidgetContent';
 import { loadStickeeScript, cleanupStickeeScript } from '@/utils/stickeeLoader';
 
-  const heroAccordionItems = [
-    {
-      title: "What is ultrafast broadband?",
-      content: "Ultrafast broadband offers speeds of 100Mbps or higher, perfect for heavy internet users, gamers, and households with multiple devices streaming 4K content simultaneously.",
-    },
-    {
-      title: "Why choose ultrafast broadband?",
-      content: "With ultrafast speeds, you can download HD movies in minutes, enjoy lag-free gaming, and handle multiple 4K streams without buffering. Perfect for modern digital households.",
-    },
-    {
-      title: "Is ultrafast broadband available in my area?",
-      content: "Ultrafast broadband is now available to over 65% of UK homes. Enter your postcode to check availability and compare the best deals in your area.",
-    }
-  ];
+const heroAccordionItems = [
+  {
+    title: "What is ultrafast broadband?",
+    content: "Ultrafast broadband offers speeds of 100Mbps or higher, perfect for heavy internet users, gamers, and households with multiple devices streaming 4K content simultaneously.",
+  },
+  {
+    title: "Why choose ultrafast broadband?",
+    content: "With ultrafast speeds, you can download HD movies in minutes, enjoy lag-free gaming, and handle multiple 4K streams without buffering. Perfect for modern digital households.",
+  },
+  {
+    title: "Is ultrafast broadband available in my area?",
+    content: "Ultrafast broadband is now available to over 65% of UK homes. Enter your postcode to check availability and compare the best deals in your area.",
+  }
+];
 
 const UltrafastBroadband = () => {
   useEffect(() => {
@@ -38,10 +38,10 @@ const UltrafastBroadband = () => {
   return (
     <BStyleTemplate>
       <Helmet>
-        <title>Ultrafast Broadband Deals | Compare 100Mbps+ Packages</title>
+        <title>Ultrafast Broadband Deals | Compare 500Mb+ Internet Packages</title>
         <meta 
           name="description" 
-          content="Compare ultrafast broadband deals with speeds over 100Mbps. Find the best packages from leading UK providers with our price comparison tool."
+          content="Find the best ultrafast broadband deals with 500Mb+ internet packages. Compare providers, speeds, and prices to save up to £163 per year. Start comparing today!"
         />
       </Helmet>
 
