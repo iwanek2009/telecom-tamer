@@ -44,8 +44,8 @@ const BroadbandHomePhone = () => {
 
       <BStyleContent>
         <BStyleFeatureGrid
-          title="Why Choose a Broadband & Phone Bundle?"
-          subtitle="Get more value with our combined packages"
+          title="Key Features of Our Broadband & Phone Packages"
+          subtitle="Discover what makes our home broadband and phone deals stand out"
         >
           <BStyleFeatureCard
             icon={PoundSterling}
