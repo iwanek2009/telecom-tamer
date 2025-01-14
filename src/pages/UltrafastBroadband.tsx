@@ -10,20 +10,20 @@ import { Helmet } from 'react-helmet';
 import { StickeeWidgetContent } from '@/components/StickeeWidgetContent';
 import { loadStickeeScript, cleanupStickeeScript } from '@/utils/stickeeLoader';
 
-  const heroAccordionItems = [
-    {
-      title: "What is ultrafast broadband?",
-      content: "Ultrafast broadband offers speeds of 100Mbps or higher, perfect for heavy internet users, gamers, and households with multiple devices streaming 4K content simultaneously.",
-    },
-    {
-      title: "Why choose ultrafast broadband?",
-      content: "With ultrafast speeds, you can download HD movies in minutes, enjoy lag-free gaming, and handle multiple 4K streams without buffering. Perfect for modern digital households.",
-    },
-    {
-      title: "Is ultrafast broadband available in my area?",
-      content: "Ultrafast broadband is now available to over 65% of UK homes. Enter your postcode to check availability and compare the best deals in your area.",
-    }
-  ];
+const heroAccordionItems = [
+  {
+    title: "What is ultrafast broadband?",
+    content: "Ultrafast broadband offers speeds of 100Mbps or higher, perfect for heavy internet users, gamers, and households with multiple devices streaming 4K content simultaneously.",
+  },
+  {
+    title: "Why choose ultrafast broadband?",
+    content: "With ultrafast speeds, you can download HD movies in minutes, enjoy lag-free gaming, and handle multiple 4K streams without buffering. Perfect for modern digital households.",
+  },
+  {
+    title: "Is ultrafast broadband available in my area?",
+    content: "Ultrafast broadband is now available to over 65% of UK homes. Enter your postcode to check availability and compare the best deals in your area.",
+  }
+];
 
 const UltrafastBroadband = () => {
   useEffect(() => {
@@ -83,7 +83,7 @@ const UltrafastBroadband = () => {
         </div>
 
         {/* Information Sections */}
-        <div className="mt-16 space-y-8 max-w-4xl mx-auto">
+        <div className="mt-16 space-y-12 max-w-5xl mx-auto bg-gradient-to-b from-white to-gray-50/50 rounded-3xl shadow-lg border border-gray-100/50 p-8 backdrop-blur-sm">
           <div className="bg-gradient-to-br from-[#F8F9FF] to-[#FFFFFF] backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-indigo-100/20 hover:shadow-xl transition-all duration-300">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-6">What is Ultrafast Broadband?</h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
