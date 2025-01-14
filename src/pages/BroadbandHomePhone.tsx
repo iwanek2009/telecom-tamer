@@ -67,7 +67,7 @@ const BroadbandHomePhone = () => {
         <div className="mt-12">
           <StickeeWidgetContent 
             widgetId="smartfony-91"
-            filters='{"package_types": ["BROADBAND_PHONE"]}'
+            filters='{"package_types":["BROADBAND_PHONE"]}'
           />
         </div>
       </BStyleContent>
