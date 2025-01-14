@@ -13,17 +13,17 @@ const StickeeWidget: React.FC<StickeeWidgetProps> = ({ widgetId, filters }) => {
   const isBroadbandPage = location.pathname === '/broadband';
 
   useEffect(() => {
-    // Remove any existing Stickee scripts
-    cleanupStickeeScript();
+    const initializeWidget = async () => {
+      await cleanupStickeeScript();
+      await loadStickeeScript();
+    };
 
-    // Load new script
-    loadStickeeScript();
+    initializeWidget();
 
-    // Cleanup function
     return () => {
       cleanupStickeeScript();
     };
-  }, []); 
+  }, [location.pathname]); 
 
   return (
     <div className="w-full bg-[#f9fafc]">
