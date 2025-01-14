@@ -35,17 +35,17 @@ const BroadbandWithPhone = () => {
     {
       icon: Phone,
       title: "Inclusive Call Plans",
-      description: "Choose from evening & weekend or anytime UK calls packages"
+      description: "Choose flexible UK landline call packages to suit your needs - including unlimited evening and weekend calls or comprehensive anytime packages. All major UK landline numbers covered with crystal-clear connection quality."
     },
     {
       icon: Wifi,
       title: "Reliable Connection",
-      description: "Fast broadband with dedicated phone line support"
+      description: "Enjoy stable, high-speed broadband with dedicated phone line support for uninterrupted connectivity. Our packages include professional line installation and 24/7 technical assistance for both broadband and landline services."
     },
     {
       icon: PoundSterling,
       title: "Better Value",
-      description: "Save money by bundling your broadband and phone services"
+      description: "Save up to £200 annually by combining your home broadband and phone services in one package. Compare exclusive deals from leading UK providers featuring discounted bundle rates and special introductory offers on phone and internet packages."
     }
   ];
 

@@ -31,7 +31,7 @@ export const BroadbandTemplate = ({
 
         <BroadbandFeatureGrid
           title="Key Features of Our Broadband & Phone Packages"
-          subtitle="Discover what makes our service different"
+          subtitle="Discover what makes our home broadband and phone deals stand out"
         >
           {features.map((feature, index) => (
             <BroadbandFeatureCard key={index} {...feature} />
