@@ -16,7 +16,7 @@ const LiverpoolBroadbandContent = () => {
       <div className="text-center space-y-4">
         <h2 className="text-4xl font-bold text-gray-900">Broadband Deals in Liverpool - Find Your Perfect Connection</h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Get connected with the best broadband deals Liverpool has to offer. Our comparison service helps you discover the perfect balance of speed and value, tailored to your digital lifestyle.
+          Ready to get the best internet deal in Liverpool? We make it simple to compare all the local broadband packages, so you can find exactly what you need at a price that works for you. No fuss, just fast and reliable internet that fits your lifestyle.
         </p>
       </div>
 
