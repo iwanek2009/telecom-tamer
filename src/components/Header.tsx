@@ -14,8 +14,7 @@ const routeStructure = {
       { path: '/broadband/100mbps', label: '100Mbps Broadband' },
       { path: '/broadband/home-phone', label: 'Broadband & Home Phone' },
       { path: '/broadband/ultrafast', label: 'Ultrafast Broadband' },
-      { path: '/broadband/local', label: 'Local Broadband' },
-      { path: '/broadband/local/southampton', label: 'Southampton Broadband' }
+      { path: '/broadband/local', label: 'Local Broadband' }
     ]
   },
   '/sim': { label: 'Sim Only', subpages: [] }
