@@ -3,7 +3,7 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { Wifi, PoundSterling, Clock, Building2 } from 'lucide-react';
+import { Wifi, PoundSterling, Building2 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 import { CitySection } from '@/components/local/CitySection';
@@ -62,11 +62,6 @@ const LiverpoolBroadband = () => {
             icon={PoundSterling}
             title="Best Value"
             description="Compare deals from £25/month with exclusive online discounts"
-          />
-          <CitystyleFeatureCard
-            icon={Clock}
-            title="Quick Install"
-            description="Get connected within days with free standard installation"
           />
           <CitystyleFeatureCard
             icon={Building2}
