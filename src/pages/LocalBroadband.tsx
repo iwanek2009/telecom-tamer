@@ -7,9 +7,6 @@ import LondonCard from '@/components/local/LondonCard';
 import BirminghamCard from '@/components/local/BirminghamCard';
 import ManchesterCard from '@/components/local/ManchesterCard';
 import { Helmet } from 'react-helmet';
-import { Input } from "@/components/ui/input";
-import { Search } from "lucide-react";
-import { useState } from 'react';
 
 const heroAccordionItems = [
   {
@@ -27,23 +24,6 @@ const heroAccordionItems = [
 ];
 
 const LocalBroadband = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const filterContent = (content: JSX.Element) => {
-    const contentText = content.type.name.toLowerCase();
-    return contentText.includes(searchQuery.toLowerCase());
-  };
-
-  const cityCards = [
-    <LondonCard key="london" />,
-    <BirminghamCard key="birmingham" />,
-    <ManchesterCard key="manchester" />,
-    <SouthamptonCard key="southampton" />,
-    <PortsmouthCard key="portsmouth" />
-  ];
-
-  const filteredCards = cityCards.filter(filterContent);
-
   return (
     <BStyleTemplate>
       <Helmet>
@@ -62,27 +42,15 @@ const LocalBroadband = () => {
         accordionItems={heroAccordionItems}
       />
 
-      <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Find Your City</h2>
-        <div className="bg-white rounded-xl shadow-lg p-6 backdrop-blur-sm border border-gray-100">
-          <div className="flex items-center gap-4 bg-gray-50 rounded-lg px-4 py-3">
-            <Search className="w-5 h-5 text-gray-400 flex-shrink-0" />
-            <Input
-              type="text"
-              placeholder="Search for a city..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="flex-1 border-none bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-gray-400"
-            />
-          </div>
-        </div>
-      </div>
-
       <BStyleContent>
         <div className="max-w-7xl mx-auto">
           <div className="space-y-8">
             <div className="flex flex-col gap-8">
-              {filteredCards}
+              <LondonCard />
+              <BirminghamCard />
+              <ManchesterCard />
+              <SouthamptonCard />
+              <PortsmouthCard />
             </div>
           </div>
         </div>
