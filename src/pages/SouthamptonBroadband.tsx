@@ -8,6 +8,14 @@ import { Helmet } from 'react-helmet';
 import StickeeWidget from '../components/StickeeWidget';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 const SouthamptonBroadband = () => {
   const heroAccordionItems = [
@@ -37,6 +45,41 @@ const SouthamptonBroadband = () => {
       widgetElement.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const providers = [
+    {
+      name: "Virgin Media",
+      speed: "Up to 1Gb",
+      cost: "From £28",
+      contract: "18 months",
+      perks: "Free setup, Wi-Fi booster",
+      link: "https://www.virginmedia.com"
+    },
+    {
+      name: "BT",
+      speed: "Up to 900Mb",
+      cost: "From £30",
+      contract: "24 months",
+      perks: "£20 reward card, free router",
+      link: "https://www.bt.com"
+    },
+    {
+      name: "Sky",
+      speed: "Up to 500Mb",
+      cost: "From £25",
+      contract: "18 months",
+      perks: "Free Netflix for 12 months",
+      link: "https://www.sky.com"
+    },
+    {
+      name: "Hyperoptic",
+      speed: "Up to 1Gb",
+      cost: "From £35",
+      contract: "12 months",
+      perks: "No setup fee, 24/7 support",
+      link: "https://www.hyperoptic.com"
+    }
+  ];
 
   return (
     <BStyleTemplate>
@@ -139,6 +182,71 @@ const SouthamptonBroadband = () => {
                 <Button size="lg" className="text-lg" onClick={scrollToWidget}>
                   Start comparing broadband deals in Southampton today!
                 </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+        
+        {/* Top Providers Section */}
+        <div className="max-w-4xl mx-auto mt-16 mb-16">
+          <Card className="bg-gradient-to-br from-white to-gray-50 border-none shadow-lg">
+            <CardContent className="p-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Top Broadband Providers in Southampton
+              </h2>
+              <p className="text-lg text-gray-700 mb-8">
+                Here are some of the leading providers offering great deals in Southampton:
+              </p>
+              
+              <div className="overflow-x-auto">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Provider</TableHead>
+                      <TableHead>Speed</TableHead>
+                      <TableHead>Monthly Cost</TableHead>
+                      <TableHead>Contract Length</TableHead>
+                      <TableHead>Perks</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {providers.map((provider) => (
+                      <TableRow key={provider.name}>
+                        <TableCell className="font-medium">
+                          <a 
+                            href={provider.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:underline"
+                          >
+                            {provider.name}
+                          </a>
+                        </TableCell>
+                        <TableCell>{provider.speed}</TableCell>
+                        <TableCell>{provider.cost}</TableCell>
+                        <TableCell>{provider.contract}</TableCell>
+                        <TableCell>{provider.perks}</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </div>
+
+              <div className="mt-6 text-sm text-gray-600">
+                External Links:{' '}
+                {providers.map((provider, index) => (
+                  <span key={provider.name}>
+                    <a
+                      href={provider.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      {provider.name}
+                    </a>
+                    {index < providers.length - 1 ? ', ' : ''}
+                  </span>
+                ))}
               </div>
             </CardContent>
           </Card>
