@@ -6,6 +6,7 @@ import { CitystyleFeatureCard } from '@/components/templates/citystyle/Citystyle
 import { Wifi, PoundSterling, Building2 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
+import LiverpoolBroadbandContent from '@/components/local/LiverpoolBroadbandContent';
 
 const LiverpoolBroadband = () => {
   const heroAccordionItems = [
@@ -72,6 +73,8 @@ const LiverpoolBroadband = () => {
         <div id="compare-deals" className="mt-12">
           <StickeeWidget widgetId="smartfony-91" />
         </div>
+
+        <LiverpoolBroadbandContent />
       </CitystyleContent>
     </CitystyleTemplate>
   );
