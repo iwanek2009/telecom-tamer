@@ -3,7 +3,7 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { Tv, Wifi, Package, PoundSterling } from 'lucide-react';
+import { Tv, Wifi, Package, PoundSterling, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 
@@ -76,36 +76,64 @@ const BroadbandTVSouthampton = () => {
           />
         </div>
 
-        <div className="mt-12 max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Why Choose Broadband & TV Bundles in Southampton?
-          </h2>
-          <p className="text-gray-600 leading-relaxed">
-            In our connected lives today, fast internet and good TV are crucial for most families. The answer lies in broadband and TV bundles which combine a broadband package with your favourite TV channels, on-demand services and even subscriptions to streaming platforms, such as Netflix or Sky Sports. Whether you're a film fanatic, sports devotee or family, looking for a wide range of entertainment options, these bundles are hard to beat in value and ease of use.
-          </p>
+        <div className="mt-16 bg-gradient-to-b from-white to-gray-50 py-12 rounded-2xl shadow-sm">
+          <div className="max-w-3xl mx-auto px-6">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+              Why Choose Broadband & TV Bundles in Southampton?
+            </h2>
+            <p className="text-gray-600 leading-relaxed text-lg">
+              In our connected lives today, fast internet and good TV are crucial for most families. The answer lies in broadband and TV bundles which combine a broadband package with your favourite TV channels, on-demand services and even subscriptions to streaming platforms, such as Netflix or Sky Sports. Whether you're a film fanatic, sports devotee or family, looking for a wide range of entertainment options, these bundles are hard to beat in value and ease of use.
+            </p>
+          </div>
         </div>
 
-        <div className="mt-12 max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            How to Find the Best Broadband & TV Deals in Southampton
-          </h2>
-          <p className="text-gray-600 mb-4">
-            Finding the right bundle is simple with our three-step process:
-          </p>
-          <ul className="list-disc pl-6 space-y-3 text-gray-600 mb-6">
-            <li>
-              <span className="font-semibold">Enter Your Postcode:</span> Check which providers and packages are available in your area.
-            </li>
-            <li>
-              <span className="font-semibold">Compare Deals:</span> Filter results by speed, TV channels, price, and contract length.
-            </li>
-            <li>
-              <span className="font-semibold">Switch with Confidence:</span> Complete your order online and enjoy a seamless transition to your new provider.
-            </li>
-          </ul>
-          <p className="text-lg font-semibold text-primary">
-            Start comparing broadband and TV bundles in Southampton today!
-          </p>
+        <div className="mt-16 bg-white rounded-2xl shadow-sm border border-gray-100 py-12">
+          <div className="max-w-3xl mx-auto px-6">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              How to Find the Best Broadband & TV Deals in Southampton
+            </h2>
+            <p className="text-gray-600 mb-8 text-lg">
+              Finding the right bundle is simple with our three-step process:
+            </p>
+            <ul className="space-y-6 mb-10">
+              <li className="flex items-start gap-4">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <span className="text-primary font-semibold">1</span>
+                </div>
+                <div>
+                  <span className="font-semibold text-gray-900 block mb-1">Enter Your Postcode</span>
+                  <span className="text-gray-600">Check which providers and packages are available in your area.</span>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <span className="text-primary font-semibold">2</span>
+                </div>
+                <div>
+                  <span className="font-semibold text-gray-900 block mb-1">Compare Deals</span>
+                  <span className="text-gray-600">Filter results by speed, TV channels, price, and contract length.</span>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <span className="text-primary font-semibold">3</span>
+                </div>
+                <div>
+                  <span className="font-semibold text-gray-900 block mb-1">Switch with Confidence</span>
+                  <span className="text-gray-600">Complete your order online and enjoy a seamless transition to your new provider.</span>
+                </div>
+              </li>
+            </ul>
+            <div className="text-center">
+              <a 
+                href="#compare-deals" 
+                className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary/90 transition-all hover:gap-3"
+              >
+                Start comparing broadband and TV bundles in Southampton today!
+                <ArrowRight className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
         </div>
       </CitystyleContent>
     </CitystyleTemplate>
