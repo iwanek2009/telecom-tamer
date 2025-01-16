@@ -70,11 +70,11 @@ const SouthamptonBroadband = () => {
             />
           </BStyleFeatureGrid>
         </div>
-      </BStyleContent>
 
-      {/* Stickee Widget */}
-      <StickeeWidget widgetId="smartfony-91" />
-      
+        {/* Stickee Widget */}
+        <StickeeWidget widgetId="smartfony-91" />
+        
+      </BStyleContent>
     </BStyleTemplate>
   );
 };
