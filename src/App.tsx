@@ -16,7 +16,7 @@ import Broadband100Mbps from "./pages/Broadband100Mbps";
 import BroadbandHomePhone from "./pages/BroadbandHomePhone";
 import UltrafastBroadband from "./pages/UltrafastBroadband";
 import LocalBroadband from "./pages/LocalBroadband";
-import SouthamptonBroadband from "./pages/SouthamptonBroadband";
+import FibreBroadbandSouthampton from "./pages/FibreBroadbandSouthampton";
 
 const queryClient = new QueryClient();
 
@@ -62,7 +62,7 @@ const App = () => {
             <Route path="/broadband/home-phone" element={<BroadbandHomePhone />} />
             <Route path="/broadband/ultrafast" element={<UltrafastBroadband />} />
             <Route path="/broadband/local" element={<LocalBroadband />} />
-            <Route path="/broadband/local/southampton" element={<SouthamptonBroadband />} />
+            <Route path="/local/fibre-broadband-southampton" element={<FibreBroadbandSouthampton />} />
             <Route path="/about" element={<About />} />
             <Route path="/sim" element={<SimOnly />} />
             <Route path="/internet-uk" element={<InternetUK />} />
