@@ -6,6 +6,7 @@ import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
 import { Wifi, PoundSterling, Package } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import { Button } from '@/components/ui/button';
+import StickeeWidget from '@/components/StickeeWidget';
 import {
   Table,
   TableBody,
@@ -54,6 +55,8 @@ const SouthamptonBroadband = () => {
         imageAlt="Southampton cityscape with fiber optic cables"
         accordionItems={heroAccordionItems}
       />
+
+      <StickeeWidget widgetId="smartfony-91" />
 
       <BStyleContent>
         <div className="max-w-4xl mx-auto space-y-12">
