@@ -22,6 +22,13 @@ export const CitystyleHero = ({
   imageAlt,
   accordionItems 
 }: CitystyleHeroProps) => {
+  const scrollToWidget = () => {
+    const widgetElement = document.getElementById('compare-deals');
+    if (widgetElement) {
+      widgetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="bg-[#3FC1C9]">
       <div className="container mx-auto px-4 pt-12 pb-8 md:pt-16 md:pb-0">
@@ -50,13 +57,13 @@ export const CitystyleHero = ({
                     <p className="text-gray-700 text-sm mb-2">
                       {item.content}
                     </p>
-                    {item.linkText && item.linkHref && (
-                      <a 
-                        href={item.linkHref} 
+                    {item.linkText && (
+                      <button 
+                        onClick={scrollToWidget}
                         className="text-pink-600 hover:text-pink-700 text-sm font-medium inline-flex items-center gap-1"
                       >
                         {item.linkText}
-                      </a>
+                      </button>
                     )}
                   </CollapsibleContent>
                 </Collapsible>
@@ -66,8 +73,8 @@ export const CitystyleHero = ({
 
           <div className="hidden md:flex items-center justify-center">
             <img 
-              src="/lovable-uploads/1b012afb-4d73-409b-8298-f3b81e3024f2.png"
-              alt="Person using a tablet device" 
+              src={image}
+              alt={imageAlt} 
               className="w-full h-auto max-w-[658px] object-contain rounded-2xl"
             />
           </div>
