@@ -80,9 +80,9 @@ const LocalBroadband = () => {
       />
 
       <BStyleContent>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="space-y-8">
-            <div className="grid gap-8 md:grid-cols-2">
+            <div className="flex flex-col gap-8">
               <SouthamptonCard />
               <PortsmouthCard />
             </div>

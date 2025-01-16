@@ -38,36 +38,40 @@ const SouthamptonCard = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-[#F0FCFD] to-[#E5F9FA] backdrop-blur-sm rounded-2xl shadow-lg p-8 space-y-8 border border-[#3FC1C9]/20 hover:shadow-xl transition-all duration-300">
-      <h2 className="text-3xl font-bold text-gray-900 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-        Southampton Broadband
-      </h2>
-      
-      <div className="grid gap-8">
-        {sections.map((section, index) => (
-          <div key={index} className="space-y-4">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-lg bg-white shadow-sm">
-                {section.icon}
+    <div className="bg-gradient-to-br from-[#F0FCFD] to-[#E5F9FA] backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#3FC1C9]/20 hover:shadow-xl transition-all duration-300">
+      <div className="flex flex-col lg:flex-row gap-8">
+        <div className="lg:w-1/4">
+          <h2 className="text-3xl font-bold text-gray-900 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+            Southampton Broadband
+          </h2>
+        </div>
+        
+        <div className="lg:w-3/4 grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          {sections.map((section, index) => (
+            <div key={index} className="space-y-4">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-white shadow-sm">
+                  {section.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800">{section.title}</h3>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800">{section.title}</h3>
+              <ul className="space-y-3 text-gray-600">
+                {section.items.map((item, itemIndex) => (
+                  <li 
+                    key={itemIndex} 
+                    className={`hover:text-primary transition-colors duration-200 ${
+                      typeof item === 'string' 
+                        ? 'pl-4 border-l-2 border-gray-200' 
+                        : 'pl-4 border-l-2 border-primary hover:border-secondary'
+                    }`}
+                  >
+                    {typeof item === 'string' ? item : item}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="space-y-3 text-gray-600">
-              {section.items.map((item, itemIndex) => (
-                <li 
-                  key={itemIndex} 
-                  className={`hover:text-primary transition-colors duration-200 ${
-                    typeof item === 'string' 
-                      ? 'pl-4 border-l-2 border-gray-200' 
-                      : 'pl-4 border-l-2 border-primary hover:border-secondary'
-                  }`}
-                >
-                  {typeof item === 'string' ? item : item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
