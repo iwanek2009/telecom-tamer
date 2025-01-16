@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Wifi, PoundSterling, Clock, Zap, Users, Gamepad, Monitor, Mail } from 'lucide-react';
 
 const LiverpoolBroadbandContent = () => {
+  const scrollToWidget = () => {
+    const widgetElement = document.getElementById('compare-deals');
+    if (widgetElement) {
+      widgetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="space-y-16 py-12">
       {/* Hero Section */}
@@ -159,7 +166,11 @@ const LiverpoolBroadbandContent = () => {
 
       {/* CTA */}
       <div className="text-center space-y-8">
-        <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+        <Button 
+          size="lg" 
+          className="bg-blue-600 hover:bg-blue-700"
+          onClick={scrollToWidget}
+        >
           Compare Liverpool Broadband Deals Now
         </Button>
 
