@@ -34,9 +34,6 @@ export const CitystyleHero = ({
               <h2 className="text-xl text-gray-700 mt-4 mb-2">
                 Best broadband and TV deals in Southampton. Compare home bundles from top providers to enjoy fast internet and premium entertainment in one affordable package.
               </h2>
-              <p className="text-xl text-gray-700 mt-4 mb-6">
-                {subtitle}
-              </p>
             </div>
 
             <div className="space-y-3">
