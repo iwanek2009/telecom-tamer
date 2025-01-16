@@ -6,7 +6,6 @@ import { CitystyleFeatureCard } from '@/components/templates/citystyle/Citystyle
 import { Wifi, PoundSterling, Building2 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
-import { CitySection } from '@/components/local/CitySection';
 
 const LiverpoolBroadband = () => {
   const heroAccordionItems = [
@@ -42,7 +41,7 @@ const LiverpoolBroadband = () => {
 
       <CitystyleHero
         title="Liverpool Broadband Deals"
-        subtitle="Compare the best broadband packages in Liverpool and find exclusive offers from leading providers"
+        subtitle="Find the best broadband deals in Liverpool. Compare speeds, prices, and packages from top providers to get the perfect internet connection"
         image="/lovable-uploads/f47024ea-50f0-4583-89a7-f5cbc9e3beb9.png"
         imageAlt="Liverpool cityscape with modern internet connectivity"
         accordionItems={heroAccordionItems}
@@ -73,27 +72,6 @@ const LiverpoolBroadband = () => {
         <div id="compare-deals" className="mt-12">
           <StickeeWidget widgetId="smartfony-91" />
         </div>
-
-        <CitySection
-          city="Liverpool"
-          providers={[
-            "Virgin Media",
-            "BT",
-            "Sky",
-            "TalkTalk",
-            "Hyperoptic",
-            "CityFibre"
-          ]}
-          averageSpeed="108 Mbps"
-          features={[
-            "Full fibre coverage in most areas",
-            "Speeds up to 1Gb available",
-            "Free installation on many packages",
-            "TV bundles with Premier League football"
-          ]}
-          priceRange="£25 - £60 per month"
-          installationTime="1-2 weeks average"
-        />
       </CitystyleContent>
     </CitystyleTemplate>
   );
