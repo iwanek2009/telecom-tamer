@@ -7,6 +7,7 @@ import { Wifi, PoundSterling, Package } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '../components/StickeeWidget';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
 const SouthamptonBroadband = () => {
   const heroAccordionItems = [
@@ -88,6 +89,48 @@ const SouthamptonBroadband = () => {
                 having the right broadband package is essential. By comparing deals, you can find 
                 a plan that matches your needs and budget—without overpaying for unnecessary extras.
               </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* How to Compare Section */}
+        <div className="max-w-4xl mx-auto mt-16 mb-16">
+          <Card className="bg-gradient-to-br from-white to-gray-50 border-none shadow-lg">
+            <CardContent className="p-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                How to Compare Broadband Deals in Southampton
+              </h2>
+              <p className="text-lg text-gray-700 mb-6">
+                Finding the right broadband deal is simple with our three-step process:
+              </p>
+              <div className="space-y-4 mb-8">
+                <div className="flex gap-4">
+                  <span className="text-2xl font-bold text-primary">1.</span>
+                  <div>
+                    <p className="text-lg font-semibold text-gray-900">Enter Your Postcode</p>
+                    <p className="text-gray-700">Check which providers and packages are available in your area.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <span className="text-2xl font-bold text-primary">2.</span>
+                  <div>
+                    <p className="text-lg font-semibold text-gray-900">Compare Deals</p>
+                    <p className="text-gray-700">Filter results by speed, price, contract length, and provider.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <span className="text-2xl font-bold text-primary">3.</span>
+                  <div>
+                    <p className="text-lg font-semibold text-gray-900">Switch with Confidence</p>
+                    <p className="text-gray-700">Complete your order online and enjoy a seamless transition to your new provider.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="text-center">
+                <Button size="lg" className="text-lg">
+                  Start comparing broadband deals in Southampton today!
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </div>
