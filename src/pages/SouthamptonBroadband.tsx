@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet';
 import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { ExternalLink } from 'lucide-react';
+import StickeeWidget from '@/components/StickeeWidget';
 
 const cityData = [
   {
@@ -204,7 +205,6 @@ const SouthamptonBroadband = () => {
           </div>
         </div>
       </BStyleContent>
-      
     </BStyleTemplate>
   );
 };
