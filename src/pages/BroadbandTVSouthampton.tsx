@@ -84,6 +84,29 @@ const BroadbandTVSouthampton = () => {
             In our connected lives today, fast internet and good TV are crucial for most families. The answer lies in broadband and TV bundles which combine a broadband package with your favourite TV channels, on-demand services and even subscriptions to streaming platforms, such as Netflix or Sky Sports. Whether you're a film fanatic, sports devotee or family, looking for a wide range of entertainment options, these bundles are hard to beat in value and ease of use.
           </p>
         </div>
+
+        <div className="mt-12 max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            How to Find the Best Broadband & TV Deals in Southampton
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Finding the right bundle is simple with our three-step process:
+          </p>
+          <ul className="list-disc pl-6 space-y-3 text-gray-600 mb-6">
+            <li>
+              <span className="font-semibold">Enter Your Postcode:</span> Check which providers and packages are available in your area.
+            </li>
+            <li>
+              <span className="font-semibold">Compare Deals:</span> Filter results by speed, TV channels, price, and contract length.
+            </li>
+            <li>
+              <span className="font-semibold">Switch with Confidence:</span> Complete your order online and enjoy a seamless transition to your new provider.
+            </li>
+          </ul>
+          <p className="text-lg font-semibold text-primary">
+            Start comparing broadband and TV bundles in Southampton today!
+          </p>
+        </div>
       </CitystyleContent>
     </CitystyleTemplate>
   );
