@@ -32,10 +32,10 @@ const SouthamptonBroadband = () => {
   return (
     <CitystyleTemplate>
       <Helmet>
-        <title>Southampton Broadband Deals | Compare Local Internet Packages</title>
+        <title>Southampton Broadband Deals | Compare Internet Providers & Save</title>
         <meta 
           name="description" 
-          content="Compare the best broadband deals in Southampton. Find exclusive offers from Virgin Media, BT, Sky and local providers. Student deals and ultrafast packages available."
+          content="Compare the best broadband deals in Southampton. Find fast, reliable internet packages from top providers tailored to your needs. Start comparing today!"
         />
       </Helmet>
 
