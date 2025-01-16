@@ -62,7 +62,8 @@ const LocalBroadband = () => {
         accordionItems={heroAccordionItems}
       />
 
-      <div className="container mx-auto px-4 -mt-12 relative z-10 mb-16">
+      <div className="container mx-auto px-4 relative z-10">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Find Your City</h2>
         <div className="bg-white rounded-xl shadow-lg p-6 backdrop-blur-sm border border-gray-100">
           <div className="flex items-center gap-4 bg-gray-50 rounded-lg px-4 py-3">
             <Search className="w-5 h-5 text-gray-400 flex-shrink-0" />
