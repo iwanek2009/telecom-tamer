@@ -4,7 +4,7 @@ import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
 import { CitystyleCard } from '@/components/templates/citystyle/CitystyleCard';
-import { Wifi, Shield, ArrowUp } from 'lucide-react';
+import { Wifi, Home, Globe2, Shield, ArrowUp } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '../components/StickeeWidget';
 
@@ -59,12 +59,12 @@ const FibreBroadbandSouthampton = () => {
             description="Get download speeds up to 1Gbps with full fibre coverage across Southampton"
           />
           <CitystyleFeatureCard
-            icon={House}
+            icon={Home}
             title="Local Support"
             description="Benefit from local installation teams and dedicated customer service"
           />
           <CitystyleFeatureCard
-            icon={Globe}
+            icon={Globe2}
             title="City-Wide Coverage"
             description="Extensive fibre network covering all Southampton neighborhoods"
           />
