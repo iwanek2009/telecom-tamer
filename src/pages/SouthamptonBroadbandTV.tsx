@@ -9,8 +9,8 @@ const SouthamptonBroadbandTV = () => {
       <CitystyleHero
         title="Southampton Broadband & TV Deals"
         subtitle="Find the perfect broadband and TV bundle for your Southampton home"
-        image="/lovable-uploads/southampton-tv-broadband.jpg"
-        imageAlt="Southampton Broadband and TV Services"
+        image="/lovable-uploads/6042cec1-bfde-4010-bb79-8d951f0dcce7.png"
+        imageAlt="Woman smiling while using a tablet device to browse broadband and TV deals"
         accordionItems={[
           {
             title: "Why Bundle Broadband & TV?",
