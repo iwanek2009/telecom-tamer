@@ -6,7 +6,7 @@ const BirminghamCard = () => {
     {
       title: "Main City Pages",
       items: [
-        <Link to="/local/birmingham">Birmingham Broadband Deals | Compare Internet Packages 2024</Link>,
+        <Link to="/local/birmingham">Birmingham Broadband Deals | Compare Internet Packages</Link>,
         <Link to="/local/fibre-birmingham">Fibre Broadband Birmingham | Fast Internet Providers</Link>,
         <Link to="/local/birmingham-tv">Birmingham TV & Broadband | Complete Home Packages</Link>
       ],

@@ -6,7 +6,7 @@ const ManchesterCard = () => {
     {
       title: "Main City Pages",
       items: [
-        <Link to="/local/manchester">Manchester Broadband Deals | Compare Internet Packages 2024</Link>,
+        <Link to="/local/manchester">Manchester Broadband Deals | Compare Internet Packages</Link>,
         <Link to="/local/fibre-manchester">Fibre Broadband Manchester | Fast Internet Providers</Link>,
         <Link to="/local/manchester-tv">Manchester TV & Internet | Complete Home Bundles</Link>
       ],
