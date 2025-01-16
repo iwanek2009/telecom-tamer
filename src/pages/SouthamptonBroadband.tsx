@@ -31,6 +31,13 @@ const SouthamptonBroadband = () => {
     }
   ];
 
+  const scrollToWidget = () => {
+    const widgetElement = document.getElementById('broadband-widget');
+    if (widgetElement) {
+      widgetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <BStyleTemplate>
       <Helmet>
@@ -74,7 +81,9 @@ const SouthamptonBroadband = () => {
         </div>
 
         {/* Stickee Widget */}
-        <StickeeWidget widgetId="smartfony-91" />
+        <div id="broadband-widget">
+          <StickeeWidget widgetId="smartfony-91" />
+        </div>
         
         {/* Why Compare Section */}
         <div className="max-w-4xl mx-auto mt-16">
@@ -127,7 +136,7 @@ const SouthamptonBroadband = () => {
                 </div>
               </div>
               <div className="text-center">
-                <Button size="lg" className="text-lg">
+                <Button size="lg" className="text-lg" onClick={scrollToWidget}>
                   Start comparing broadband deals in Southampton today!
                 </Button>
               </div>
