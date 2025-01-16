@@ -2,6 +2,7 @@ import { BStyleTemplate } from '@/components/templates/BStyleTemplate';
 import { BStyleHero } from '@/components/templates/BStyleHero';
 import { BStyleContent } from '@/components/templates/BStyleContent';
 import { CitySection } from '@/components/local/CitySection';
+import { SouthamptonCard } from '@/components/local/SouthamptonCard';
 import { Helmet } from 'react-helmet';
 
 const cityData = [
@@ -79,13 +80,8 @@ const LocalBroadband = () => {
 
       <BStyleContent>
         <div className="max-w-4xl mx-auto">
-          <div className="prose prose-lg mb-12">
-            <p className="text-gray-700 leading-relaxed">
-              Our city-by-city comparison helps you understand what's available in your area, from ultrafast fibre options to budget-friendly packages. We'll show you local installation times, average speeds, and exclusive deals from top providers.
-            </p>
-          </div>
-
           <div className="space-y-8">
+            <SouthamptonCard />
             {cityData.map((city, index) => (
               <CitySection key={index} {...city} />
             ))}
