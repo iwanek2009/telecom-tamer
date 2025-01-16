@@ -5,6 +5,7 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
 import { CitystyleCard } from '@/components/templates/citystyle/CitystyleCard';
+import StickeeWidget from '@/components/StickeeWidget';
 import { Wifi, Zap, PoundSterling } from 'lucide-react';
 
 const AllertonBroadband = () => {
@@ -36,7 +37,7 @@ const AllertonBroadband = () => {
       <CitystyleHero
         title="Allerton Broadband Deals"
         subtitle="Compare local internet packages and find the perfect connection for your home"
-        image="/lovable-uploads/f47024ea-50f0-4583-89a7-f5cbc9e3beb9.png"
+        image="/lovable-uploads/1df43293-e821-4ff4-b82c-d81a1d949fb4.png"
         imageAlt="Allerton broadband comparison"
         accordionItems={accordionItems}
       />
@@ -71,8 +72,8 @@ const AllertonBroadband = () => {
             <p className="text-gray-600">
               Whether you're streaming, gaming, or working from home, we'll help you find the right broadband package for your needs. Compare deals from leading providers in Allerton and get connected today.
             </p>
-            <div id="compare-deals" className="pt-8">
-              {/* StickeeWidget will be rendered here */}
+            <div id="compare-deals">
+              <StickeeWidget />
             </div>
           </div>
         </CitystyleCard>
