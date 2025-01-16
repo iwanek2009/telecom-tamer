@@ -30,15 +30,60 @@ const LocalBroadband = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const cards = [
-    { component: LondonCard, title: 'London' },
-    { component: BirminghamCard, title: 'Birmingham' },
-    { component: ManchesterCard, title: 'Manchester' },
-    { component: SouthamptonCard, title: 'Southampton' },
-    { component: PortsmouthCard, title: 'Portsmouth' }
+    { 
+      component: LondonCard, 
+      title: 'London',
+      topics: [
+        'Central London', 'North London', 'South London', 'Student Broadband',
+        'Business Broadband', 'Gaming Broadband', 'Work From Home',
+        'Virgin Media', 'Hyperoptic', 'BT', 'G.Network'
+      ]
+    },
+    { 
+      component: BirminghamCard, 
+      title: 'Birmingham',
+      topics: [
+        'City Centre', 'Jewellery Quarter', 'Digbeth', 'Aston',
+        'Moseley', 'Edgbaston', 'Harborne', 'Kings Heath',
+        'Selly Oak', 'Erdington', 'Perry Barr',
+        'Virgin Media', 'BT', 'Hyperoptic', 'CityFibre'
+      ]
+    },
+    { 
+      component: ManchesterCard, 
+      title: 'Manchester',
+      topics: [
+        'City Centre', 'Northern Quarter', 'Deansgate', 'Spinningfields',
+        'Fallowfield', 'Oxford Road', 'Rusholme', 'Victoria Park',
+        'Didsbury', 'Chorlton', 'Withington', 'Prestwich',
+        'Virgin Media', 'BT', 'Hyperoptic', 'CityFibre'
+      ]
+    },
+    { 
+      component: SouthamptonCard, 
+      title: 'Southampton',
+      topics: [
+        'Ocean Village', 'Bassett', 'Shirley', 'Bitterne',
+        'Portswood', 'Virgin Media', 'BT Fibre', 'Sky Broadband',
+        'Student Broadband', 'No Contract Broadband'
+      ]
+    },
+    { 
+      component: PortsmouthCard, 
+      title: 'Portsmouth',
+      topics: [
+        'Southsea', 'Old Portsmouth', 'North End', 'Fratton',
+        'Milton', 'Student Broadband', 'Naval Base', 'Business Broadband',
+        'Virgin Media', 'BT', 'Sky', 'Toob'
+      ]
+    }
   ];
 
   const filteredCards = cards.filter(card =>
-    card.title.toLowerCase().includes(searchQuery.toLowerCase())
+    card.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    card.topics.some(topic => 
+      topic.toLowerCase().includes(searchQuery.toLowerCase())
+    )
   );
 
   return (
@@ -63,13 +108,10 @@ const LocalBroadband = () => {
         <div className="max-w-7xl mx-auto">
           <div className="space-y-8">
             <div className="relative w-full max-w-2xl mx-auto">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-                Find Your City
-              </h2>
               <div className="relative">
                 <Input
                   type="text"
-                  placeholder="Search for your city..."
+                  placeholder="Search by city or area (e.g. London, Southsea, Student Broadband)..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-3 text-lg bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl shadow-sm focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
