@@ -72,7 +72,7 @@ const SouthamptonBroadband = () => {
         </div>
       </BStyleContent>
 
-      {/* Add Stickee Widget */}
+      {/* Add Stickee Widget with Southampton-specific configuration */}
       <StickeeWidget />
     </BStyleTemplate>
   );

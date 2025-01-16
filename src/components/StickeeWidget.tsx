@@ -11,6 +11,7 @@ interface StickeeWidgetProps {
 const StickeeWidget: React.FC<StickeeWidgetProps> = ({ widgetId, filters }) => {
   const location = useLocation();
   const isBroadbandPage = location.pathname === '/broadband';
+  const isSouthamptonPage = location.pathname === '/broadband/local/southampton';
 
   useEffect(() => {
     const initializeWidget = async () => {
@@ -30,6 +31,11 @@ const StickeeWidget: React.FC<StickeeWidgetProps> = ({ widgetId, filters }) => {
       <div className="container mx-auto px-4 py-8">
         {isBroadbandPage ? (
           <StickeeWidgetContent widgetId="smartfony-91" />
+        ) : isSouthamptonPage ? (
+          <StickeeWidgetContent 
+            widgetId="smartfony-91"
+            filters='{"tariff_types":["BROADBAND"],"location":"Southampton"}'
+          />
         ) : (
           <StickeeWidgetContent 
             widgetId={widgetId || "smartfony-90"}
