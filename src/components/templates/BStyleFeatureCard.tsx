@@ -8,12 +8,12 @@ interface BStyleFeatureCardProps {
 
 export const BStyleFeatureCard = ({ icon: Icon, title, description }: BStyleFeatureCardProps) => {
   return (
-    <div className="bg-[#F0FCFD] rounded-2xl p-8 text-center flex flex-col items-center transition-all duration-300 hover:shadow-lg">
-      <div className="mb-6 bg-white p-4 rounded-full shadow-sm">
-        <Icon className="w-8 h-8 text-primary" />
+    <div className="bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#3FC1C9]/20 text-center">
+      <div className="flex justify-center mb-6">
+        <Icon className="w-8 h-8 text-gray-900" />
       </div>
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">{title}</h3>
-      <p className="text-gray-600 leading-relaxed">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <p className="text-gray-600">
         {description}
       </p>
     </div>
