@@ -2,7 +2,6 @@ import { BStyleTemplate } from '@/components/templates/BStyleTemplate';
 import { BStyleHero } from '@/components/templates/BStyleHero';
 import { BStyleContent } from '@/components/templates/BStyleContent';
 import { CitySection } from '@/components/local/CitySection';
-import StickeeWidget from '@/components/StickeeWidget';
 import { Helmet } from 'react-helmet';
 
 const cityData = [
@@ -82,15 +81,8 @@ const LocalBroadband = () => {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg mb-12">
             <p className="text-gray-700 leading-relaxed">
-              Finding the right broadband deal in your area is crucial for getting the best value and service. Different cities have varying levels of coverage, speeds, and provider options, making local comparison essential for making an informed choice.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
               Our city-by-city comparison helps you understand what's available in your area, from ultrafast fibre options to budget-friendly packages. We'll show you local installation times, average speeds, and exclusive deals from top providers.
             </p>
-          </div>
-
-          <div className="mb-12">
-            <StickeeWidget />
           </div>
 
           <div className="space-y-8">
