@@ -14,7 +14,7 @@ export const CitystyleFeatureGrid = ({ children, title, subtitle }: CitystyleFea
           <div className="text-center mb-12">
             {title && (
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-                Why Choose Broadband & TV Bundles in Southampton?
+                Ready to get the best internet deal in Liverpool?
               </h2>
             )}
             {subtitle && (
