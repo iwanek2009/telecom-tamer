@@ -5,7 +5,6 @@ import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
 import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
 import { Wifi, PoundSterling, Package } from 'lucide-react';
 import { Helmet } from 'react-helmet';
-import StickeeWidget from '../components/StickeeWidget';
 
 const SouthamptonBroadband = () => {
   const heroAccordionItems = [
@@ -71,10 +70,6 @@ const SouthamptonBroadband = () => {
           </BStyleFeatureGrid>
         </div>
       </BStyleContent>
-
-      {/* Stickee Widget */}
-      <StickeeWidget />
-      
     </BStyleTemplate>
   );
 };
