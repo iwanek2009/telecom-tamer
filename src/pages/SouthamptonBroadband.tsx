@@ -73,7 +73,9 @@ const SouthamptonBroadband = () => {
       </BStyleContent>
 
       {/* Add Stickee Widget with Southampton-specific configuration */}
-      <StickeeWidget />
+      <div className="w-full bg-white py-8">
+        <StickeeWidget />
+      </div>
     </BStyleTemplate>
   );
 };
