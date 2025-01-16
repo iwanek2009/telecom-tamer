@@ -7,7 +7,7 @@ const LiverpoolCard = () => {
       title: "Main City Pages",
       items: [
         <Link to="/local/liverpool">Liverpool Broadband Deals | Compare Internet Packages</Link>,
-        <Link to="/local/fibre-liverpool">Fibre Broadband Liverpool | Fast Internet Providers</Link>,
+        <Link to="/fibre-broadband-liverpool">Fibre Broadband Liverpool | Fast Internet Providers</Link>,
         <Link to="/local/liverpool-tv">Liverpool TV & Internet | Complete Home Packages</Link>
       ],
       icon: <Building2 className="w-5 h-5 text-primary" />
