@@ -6,7 +6,7 @@ const LondonCard = () => {
     {
       title: "Main City Coverage",
       items: [
-        <Link to="/local/london">London Broadband Deals | Compare Internet Packages 2024</Link>,
+        <Link to="/local/london">London Broadband Deals | Compare Internet Packages</Link>,
         <Link to="/local/fibre-london">Fibre Broadband London | Ultra-Fast Internet Providers</Link>,
         <Link to="/local/london-tv">London TV & Broadband Bundles | Best Entertainment Packages</Link>
       ],
