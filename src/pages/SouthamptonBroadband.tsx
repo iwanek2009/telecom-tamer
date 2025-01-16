@@ -40,7 +40,7 @@ const SouthamptonBroadband = () => {
 
       <BStyleHero
         title="Southampton Broadband Deals"
-        subtitle="Compare internet packages and find the best broadband deals in Southampton"
+        subtitle="Find the best broadband deals in Southampton. Compare speeds, prices, and packages from top providers to get the perfect internet connection"
         image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
         imageAlt="Southampton cityscape with fiber optic cables"
         accordionItems={heroAccordionItems}
