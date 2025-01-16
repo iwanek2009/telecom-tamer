@@ -8,17 +8,17 @@ interface BStyleFeatureGridProps {
 
 export const BStyleFeatureGrid = ({ children, title, subtitle }: BStyleFeatureGridProps) => {
   return (
-    <section className="bg-white py-16">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         {(title || subtitle) && (
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             {title && (
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 {title}
               </h2>
             )}
             {subtitle && (
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 {subtitle}
               </p>
             )}
