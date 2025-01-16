@@ -32,10 +32,10 @@ const BroadbandTVSouthampton = () => {
   return (
     <CitystyleTemplate>
       <Helmet>
-        <title>Broadband & TV Deals Southampton | Best Home Bundles</title>
+        <title>Broadband & TV Deals Southampton | Compare Best Home Bundles & Save</title>
         <meta 
           name="description" 
-          content="Find the best broadband and TV bundles in Southampton. Compare packages from top providers including Sky, Virgin Media, and BT. Get exclusive entertainment and fast internet in one great value deal."
+          content="Discover the best broadband and TV deals in Southampton. Compare home bundles from top providers to enjoy fast internet and premium entertainment in one affordable package. Start comparing today!"
         />
       </Helmet>
 
