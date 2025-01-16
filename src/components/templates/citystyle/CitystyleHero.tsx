@@ -32,7 +32,7 @@ export const CitystyleHero = ({
                 {title}
               </h1>
               <h2 className="text-xl text-gray-700 mt-4 mb-2">
-                Best broadband and TV deals in Southampton. Compare home bundles from top providers to enjoy fast internet and premium entertainment in one affordable package.
+                Find the best broadband deals in Liverpool. Compare speeds, prices, and packages from top providers to get the perfect internet connection
               </h2>
             </div>
 
