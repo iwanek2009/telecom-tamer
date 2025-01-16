@@ -64,11 +64,11 @@ export const CitystyleHero = ({
             </div>
           </div>
 
-          <div className="flex items-center justify-center">
+          <div className="hidden md:flex items-center justify-center">
             <img 
               src={image}
               alt={imageAlt} 
-              className="w-full h-auto max-h-[600px] object-cover rounded-2xl shadow-lg"
+              className="w-full h-auto object-contain rounded-2xl"
             />
           </div>
         </div>
