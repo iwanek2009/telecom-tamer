@@ -62,7 +62,7 @@ const App = () => {
             <Route path="/broadband/home-phone" element={<BroadbandHomePhone />} />
             <Route path="/broadband/ultrafast" element={<UltrafastBroadband />} />
             <Route path="/broadband/local" element={<LocalBroadband />} />
-            <Route path="/local/southampton" element={<SouthamptonBroadband />} />
+            <Route path="/broadband/local/southampton" element={<SouthamptonBroadband />} />
             <Route path="/about" element={<About />} />
             <Route path="/sim" element={<SimOnly />} />
             <Route path="/internet-uk" element={<InternetUK />} />
