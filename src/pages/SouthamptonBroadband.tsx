@@ -73,7 +73,7 @@ const SouthamptonBroadband = () => {
       </BStyleContent>
 
       {/* Stickee Widget */}
-      <StickeeWidget />
+      <StickeeWidget widgetId="smartfony-91" />
       
     </BStyleTemplate>
   );
