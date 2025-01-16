@@ -2,7 +2,7 @@ import { BStyleTemplate } from '@/components/templates/BStyleTemplate';
 import { BStyleHero } from '@/components/templates/BStyleHero';
 import { BStyleContent } from '@/components/templates/BStyleContent';
 import { CitySection } from '@/components/local/CitySection';
-import { SouthamptonCard } from '@/components/local/SouthamptonCard';
+import SouthamptonCard from '@/components/local/SouthamptonCard';
 import { Helmet } from 'react-helmet';
 
 const cityData = [
