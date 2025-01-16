@@ -1,6 +1,9 @@
 import { BStyleTemplate } from '@/components/templates/BStyleTemplate';
 import { BStyleContent } from '@/components/templates/BStyleContent';
 import { BStyleHero } from '@/components/templates/BStyleHero';
+import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
+import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
+import { Wifi, PoundSterling, Package } from 'lucide-react';
 import SouthamptonCard from '@/components/local/SouthamptonCard';
 import { Helmet } from 'react-helmet';
 
@@ -46,6 +49,38 @@ const SouthamptonBroadband = () => {
 
       <BStyleContent>
         <div className="max-w-4xl mx-auto space-y-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Why Compare Broadband Deals in Southampton?
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Southampton is a vibrant city with a growing demand for fast and reliable internet. 
+              Whether you're streaming, gaming, working from home, or running a small business, 
+              having the right broadband package is essential. By comparing deals, you can find 
+              a plan that matches your needs and budget—without overpaying for unnecessary extras.
+            </p>
+          </div>
+
+          <BStyleFeatureGrid
+            title="3 Key Reasons to Compare Broadband in Southampton"
+          >
+            <BStyleFeatureCard
+              icon={Wifi}
+              title="Find the Best Speeds"
+              description="From standard broadband to ultrafast fibre, compare speeds to ensure your connection keeps up with your lifestyle."
+            />
+            <BStyleFeatureCard
+              icon={PoundSterling}
+              title="Save Money"
+              description="Discover affordable deals from top providers and avoid paying for services you don't need."
+            />
+            <BStyleFeatureCard
+              icon={Package}
+              title="Tailored Packages"
+              description="Choose a package that fits your household's needs, whether you're a light user or a heavy streamer."
+            />
+          </BStyleFeatureGrid>
+
           <SouthamptonCard />
         </div>
       </BStyleContent>
