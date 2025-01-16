@@ -66,9 +66,9 @@ export const CitystyleHero = ({
 
           <div className="hidden md:flex items-center justify-center">
             <img 
-              src={image}
-              alt={imageAlt} 
-              className="w-full h-auto object-contain rounded-2xl"
+              src="/lovable-uploads/1b012afb-4d73-409b-8298-f3b81e3024f2.png"
+              alt="Person using a tablet device" 
+              className="w-full h-auto max-w-md object-contain rounded-2xl"
             />
           </div>
         </div>
