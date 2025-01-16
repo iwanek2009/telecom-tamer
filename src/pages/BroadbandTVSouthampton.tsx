@@ -30,6 +30,12 @@ const BroadbandTVSouthampton = () => {
     }
   ];
 
+  const scrollToWidget = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const element = document.getElementById('compare-deals');
+    element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
     <CitystyleTemplate>
       <Helmet>
@@ -70,7 +76,7 @@ const BroadbandTVSouthampton = () => {
           />
         </CitystyleFeatureGrid>
 
-        <div className="mt-12">
+        <div id="compare-deals" className="mt-12">
           <StickeeWidget 
             widgetId="smartfony-91"
             filters='{"package_types":["BROADBAND_TV"]}'
@@ -126,13 +132,13 @@ const BroadbandTVSouthampton = () => {
               </li>
             </ul>
             <div className="text-center">
-              <a 
-                href="#compare-deals" 
+              <button 
+                onClick={scrollToWidget}
                 className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary/90 transition-all hover:gap-3"
               >
-                Start comparing broadband and TV bundles in Southampton today!
+                Compare these deals and find the best broadband and TV bundle for your home
                 <ArrowRight className="w-5 h-5" />
-              </a>
+              </button>
             </div>
           </div>
         </div>
