@@ -186,68 +186,96 @@ const SouthamptonBroadband = () => {
             </CardContent>
           </Card>
         </div>
-        
-        {/* Top Providers Section */}
-        <div className="max-w-4xl mx-auto mt-16 mb-16">
+
+        {/* Speed Requirements Section */}
+        <div className="max-w-4xl mx-auto mt-16">
           <Card className="bg-gradient-to-br from-white to-gray-50 border-none shadow-lg">
             <CardContent className="p-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Top Broadband Providers in Southampton
+                What Speed Do You Need in Southampton?
               </h2>
-              <p className="text-lg text-gray-700 mb-8">
-                Here are some of the leading providers offering great deals in Southampton:
+              <p className="text-lg text-gray-700 mb-6">
+                Choosing the right broadband speed depends on your household's internet usage:
               </p>
-              
-              <div className="overflow-x-auto">
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead>Provider</TableHead>
-                      <TableHead>Speed</TableHead>
-                      <TableHead>Monthly Cost</TableHead>
-                      <TableHead>Contract Length</TableHead>
-                      <TableHead>Perks</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {providers.map((provider) => (
-                      <TableRow key={provider.name}>
-                        <TableCell className="font-medium">
-                          <a 
-                            href={provider.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary hover:underline"
-                          >
-                            {provider.name}
-                          </a>
-                        </TableCell>
-                        <TableCell>{provider.speed}</TableCell>
-                        <TableCell>{provider.cost}</TableCell>
-                        <TableCell>{provider.contract}</TableCell>
-                        <TableCell>{provider.perks}</TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </div>
+              <ul className="space-y-4 mb-6">
+                <li className="flex items-start gap-3">
+                  <span className="font-semibold text-gray-900">Light Usage:</span>
+                  <span className="text-gray-700">Browsing, emails, and social media (10-30Mb).</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="font-semibold text-gray-900">Moderate Usage:</span>
+                  <span className="text-gray-700">Streaming HD videos and online gaming (30-100Mb).</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="font-semibold text-gray-900">Heavy Usage:</span>
+                  <span className="text-gray-700">4K streaming, large file downloads, and multiple devices (100Mb+).</span>
+                </li>
+              </ul>
+              <Button variant="link" className="text-primary p-0">
+                Read our guide on Choosing the Right Broadband Speed
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
 
-              <div className="mt-6 text-sm text-gray-600">
-                External Links:{' '}
-                {providers.map((provider, index) => (
-                  <span key={provider.name}>
-                    <a
-                      href={provider.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary hover:underline"
-                    >
-                      {provider.name}
-                    </a>
-                    {index < providers.length - 1 ? ', ' : ''}
-                  </span>
-                ))}
-              </div>
+        {/* Saving Tips Section */}
+        <div className="max-w-4xl mx-auto mt-8">
+          <Card className="bg-gradient-to-br from-white to-gray-50 border-none shadow-lg">
+            <CardContent className="p-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                How to Save on Your Broadband Deal
+              </h2>
+              <p className="text-lg text-gray-700 mb-6">
+                Here are some tips to get the best value:
+              </p>
+              <ul className="space-y-4 mb-6">
+                <li className="flex items-start gap-3">
+                  <span className="font-semibold text-gray-900">Compare Providers:</span>
+                  <span className="text-gray-700">Check availability and speeds in your area.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="font-semibold text-gray-900">Look for Discounts:</span>
+                  <span className="text-gray-700">Many providers offer reduced rates for the first 6-12 months.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="font-semibold text-gray-900">Check the Total Cost:</span>
+                  <span className="text-gray-700">Include setup fees, equipment charges, and potential price increases.</span>
+                </li>
+              </ul>
+              <Button variant="link" className="text-primary p-0">
+                Read our guide on How to Save Money on Your Broadband Deal
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Current Best Deals Section */}
+        <div className="max-w-4xl mx-auto mt-8 mb-16">
+          <Card className="bg-gradient-to-br from-white to-gray-50 border-none shadow-lg">
+            <CardContent className="p-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Current Best Broadband Deals in Southampton
+              </h2>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3">
+                  <span className="font-semibold text-gray-900">Virgin Media:</span>
+                  <span className="text-gray-700">Up to 1Gb for £28/month (18-month contract, free setup).</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="font-semibold text-gray-900">BT:</span>
+                  <span className="text-gray-700">Up to 900Mb for £30/month (24-month contract, £20 reward card).</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="font-semibold text-gray-900">Sky:</span>
+                  <span className="text-gray-700">Up to 500Mb for £25/month (18-month contract, free Netflix).</span>
+                </li>
+              </ul>
+              <Button 
+                onClick={scrollToWidget}
+                className="w-full md:w-auto"
+              >
+                Compare these deals and find the best broadband package for your needs
+              </Button>
             </CardContent>
           </Card>
         </div>
