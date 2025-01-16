@@ -43,8 +43,8 @@ const FibreBroadbandLiverpool = () => {
       <CitystyleHero
         title="Fibre Broadband in Liverpool"
         subtitle="Find the fastest and most reliable fibre broadband deals in Liverpool. Compare packages from leading providers to get the best value for your home."
-        image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
-        imageAlt="Liverpool cityscape with fiber optic illustration"
+        image="/lovable-uploads/f47024ea-50f0-4583-89a7-f5cbc9e3beb9.png"
+        imageAlt="Liverpool cityscape with modern internet connectivity"
         accordionItems={heroAccordionItems}
       />
 
