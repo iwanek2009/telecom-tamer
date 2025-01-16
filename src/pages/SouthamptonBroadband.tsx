@@ -73,7 +73,7 @@ const SouthamptonBroadband = () => {
       </BStyleContent>
 
       {/* Stickee Widget */}
-      <StickeeWidget filters='{"tariff_types": ["BROADBAND"]}' />
+      <StickeeWidget />
       
     </BStyleTemplate>
   );
