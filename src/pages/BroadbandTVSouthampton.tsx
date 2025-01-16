@@ -75,6 +75,15 @@ const BroadbandTVSouthampton = () => {
             filters='{"package_types":["BROADBAND_TV"]}'
           />
         </div>
+
+        <div className="mt-12 max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            Why Choose Broadband & TV Bundles in Southampton?
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            In our connected lives today, fast internet and good TV are crucial for most families. The answer lies in broadband and TV bundles which combine a broadband package with your favourite TV channels, on-demand services and even subscriptions to streaming platforms, such as Netflix or Sky Sports. Whether you're a film fanatic, sports devotee or family, looking for a wide range of entertainment options, these bundles are hard to beat in value and ease of use.
+          </p>
+        </div>
       </CitystyleContent>
     </CitystyleTemplate>
   );
