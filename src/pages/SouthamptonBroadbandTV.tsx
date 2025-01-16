@@ -1,7 +1,7 @@
 import React from 'react';
 import { CitystyleTemplate } from '@/components/templates/citystyle/CitystyleTemplate';
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
-import { StickeeWidget } from '@/components/StickeeWidget';
+import StickeeWidget from '@/components/StickeeWidget';
 
 const SouthamptonBroadbandTV = () => {
   return (
