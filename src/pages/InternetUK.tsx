@@ -8,6 +8,7 @@ import BroadbandUnderstanding from '../components/BroadbandUnderstanding';
 import BroadbandSpeed from '../components/BroadbandSpeed';
 import { Footer } from '../components/Footer';
 import StickeeWidget from '../components/StickeeWidget';
+import { Helmet } from 'react-helmet';
 
 const InternetUK = () => {
   const [isValueOpen, setIsValueOpen] = useState(false);
@@ -15,6 +16,14 @@ const InternetUK = () => {
   
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Wyszukiwarka Internetu UK | Porównaj i Zaoszczędź do £163 Rocznie</title>
+        <meta 
+          name="description" 
+          content="Znajdź najtańsze oferty internetu w Twojej okolicy w UK. Porównaj pakiety, ceny i prędkości od różnych dostawców. Prosty proces w 3 krokach pomoże Ci wybrać idealną ofertę." 
+        />
+      </Helmet>
+      
       <Header />
       
       {/* Hero Section */}
@@ -87,7 +96,7 @@ const InternetUK = () => {
           </div>
         </div>
       </div>
-
+      
       <BroadbandComparisonStepsPolish />
       
       <div className="container mx-auto px-4 py-8">
