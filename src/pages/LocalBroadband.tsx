@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { BStyleTemplate } from '@/components/templates/BStyleTemplate';
 import { BStyleContent } from '@/components/templates/BStyleContent';
 import { LocalCitySection } from '@/components/local/LocalCitySection';
-import { StickeeWidget } from '@/components/StickeeWidget';
+import StickeeWidget from '@/components/StickeeWidget';
 import { useEffect } from 'react';
 import { loadStickeeScript, cleanupStickeeScript } from '@/utils/stickeeLoader';
 
