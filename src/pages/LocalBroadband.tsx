@@ -7,6 +7,9 @@ import LondonCard from '@/components/local/LondonCard';
 import BirminghamCard from '@/components/local/BirminghamCard';
 import ManchesterCard from '@/components/local/ManchesterCard';
 import { Helmet } from 'react-helmet';
+import { Input } from "@/components/ui/input";
+import { Search } from "lucide-react";
+import { useState } from 'react';
 
 const heroAccordionItems = [
   {
@@ -24,6 +27,23 @@ const heroAccordionItems = [
 ];
 
 const LocalBroadband = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const filterContent = (content: JSX.Element) => {
+    const contentText = content.type.name.toLowerCase();
+    return contentText.includes(searchQuery.toLowerCase());
+  };
+
+  const cityCards = [
+    <LondonCard key="london" />,
+    <BirminghamCard key="birmingham" />,
+    <ManchesterCard key="manchester" />,
+    <SouthamptonCard key="southampton" />,
+    <PortsmouthCard key="portsmouth" />
+  ];
+
+  const filteredCards = cityCards.filter(filterContent);
+
   return (
     <BStyleTemplate>
       <Helmet>
@@ -42,15 +62,24 @@ const LocalBroadband = () => {
         accordionItems={heroAccordionItems}
       />
 
+      <div className="container mx-auto px-4 -mt-8 relative z-10">
+        <div className="bg-white rounded-lg shadow-lg p-4 flex items-center gap-3">
+          <Search className="w-5 h-5 text-gray-400" />
+          <Input
+            type="text"
+            placeholder="Search for a city..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="flex-1 border-none focus-visible:ring-0 focus-visible:ring-offset-0"
+          />
+        </div>
+      </div>
+
       <BStyleContent>
         <div className="max-w-7xl mx-auto">
           <div className="space-y-8">
             <div className="flex flex-col gap-8">
-              <LondonCard />
-              <BirminghamCard />
-              <ManchesterCard />
-              <SouthamptonCard />
-              <PortsmouthCard />
+              {filteredCards}
             </div>
           </div>
         </div>
