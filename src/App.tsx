@@ -20,6 +20,7 @@ import FibreBroadbandSouthampton from "./pages/FibreBroadbandSouthampton";
 import SouthamptonBroadband from "./pages/SouthamptonBroadband";
 import BroadbandTVSouthampton from "./pages/BroadbandTVSouthampton";
 import LiverpoolBroadband from "./pages/LiverpoolBroadband";
+import FibreBroadbandLiverpool from "./pages/FibreBroadbandLiverpool";
 
 const queryClient = new QueryClient();
 
@@ -69,6 +70,7 @@ const App = () => {
             <Route path="/local/southampton" element={<SouthamptonBroadband />} />
             <Route path="/local/southampton-broadband-tv" element={<BroadbandTVSouthampton />} />
             <Route path="/local/liverpool" element={<LiverpoolBroadband />} />
+            <Route path="/local/fibre-broadband-liverpool" element={<FibreBroadbandLiverpool />} />
             <Route path="/about" element={<About />} />
             <Route path="/sim" element={<SimOnly />} />
             <Route path="/internet-uk" element={<InternetUK />} />
