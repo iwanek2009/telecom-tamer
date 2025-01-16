@@ -3,7 +3,8 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { Wifi, House, Globe } from 'lucide-react';
+import { CitystyleCard } from '@/components/templates/citystyle/CitystyleCard';
+import { Wifi, Shield, ArrowUp } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '../components/StickeeWidget';
 
@@ -75,6 +76,36 @@ const FibreBroadbandSouthampton = () => {
             filters='{"connection_types": ["FTTP"]}'
           />
         </div>
+
+        <section className="mt-16">
+          <div className="max-w-4xl mx-auto text-center space-y-6 px-4">
+            <h2 className="text-3xl font-bold text-gray-900">Why Choose Fibre Broadband in Southampton?</h2>
+            <p className="text-lg text-gray-600">
+              Southampton is a city that thrives on connectivity. Whether you're streaming your favourite shows, competing in online games, or running a business from home, fibre broadband offers the speed and reliability you need. With download speeds ranging from 30Mb to 1Gb, fibre broadband ensures you stay connected without interruptions.
+            </p>
+          </div>
+
+          <div className="mt-12">
+            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">3 Key Benefits of Fibre Broadband</h3>
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+              <CitystyleFeatureCard
+                icon={Wifi}
+                title="Blazing-Fast Speeds"
+                description="Enjoy seamless 4K streaming, lag-free gaming, and smooth video calls with fibre broadband."
+              />
+              <CitystyleFeatureCard
+                icon={Shield}
+                title="Reliable Connections"
+                description="Say goodbye to buffering and dropped connections—fibre broadband keeps you online, even during peak hours."
+              />
+              <CitystyleFeatureCard
+                icon={ArrowUp}
+                title="Future-Proof Your Home"
+                description="With fibre broadband, you're ready for the latest tech, from smart homes to 8K streaming."
+              />
+            </div>
+          </div>
+        </section>
       </CitystyleContent>
     </CitystyleTemplate>
   );
