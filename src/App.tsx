@@ -57,15 +57,15 @@ const App = () => {
             <Route path="/mobile" element={<Mobile />} />
             <Route path="/broadband" element={<Broadband />} />
             <Route path="/broadband/fibre-broadband" element={<FibreBroadband />} />
+            <Route path="/broadband/cheap-broadband-deals" element={<CheapBroadbandDeals />} />
+            <Route path="/broadband/100mbps" element={<Broadband100Mbps />} />
             <Route path="/broadband/home-phone" element={<BroadbandHomePhone />} />
             <Route path="/broadband/ultrafast" element={<UltrafastBroadband />} />
             <Route path="/broadband/local" element={<LocalBroadband />} />
-            <Route path="/broadband/southampton" element={<SouthamptonBroadband />} />
+            <Route path="/local/southampton" element={<SouthamptonBroadband />} />
             <Route path="/about" element={<About />} />
             <Route path="/sim" element={<SimOnly />} />
             <Route path="/internet-uk" element={<InternetUK />} />
-            <Route path="/broadband/cheap-broadband-deals" element={<CheapBroadbandDeals />} />
-            <Route path="/broadband/100mbps" element={<Broadband100Mbps />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>

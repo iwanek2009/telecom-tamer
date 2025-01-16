@@ -17,6 +17,12 @@ const routeStructure = {
       { path: '/broadband/local', label: 'Local Broadband' }
     ]
   },
+  '/local': {
+    label: 'Local',
+    subpages: [
+      { path: '/local/southampton', label: 'Southampton Broadband' }
+    ]
+  },
   '/sim': { label: 'Sim Only', subpages: [] }
 };
 
