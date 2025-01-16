@@ -41,7 +41,7 @@ const FibreBroadbandSouthampton = () => {
 
       <CitystyleHero
         title="Fibre Broadband in Southampton"
-        subtitle="Find the best fibre broadband deals in Southampton. Compare speeds, prices, and packages from top providers"
+        subtitle="Best fibre broadband deals in Southampton. Compare fast internet packages from top providers to find the perfect connection for streaming, gaming, and working from home"
         image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
         imageAlt="Southampton cityscape with fiber optic cables"
         accordionItems={heroAccordionItems}
