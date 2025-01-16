@@ -3,10 +3,10 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { CitystyleCard } from '@/components/templates/citystyle/CitystyleCard';
-import { Wifi, Home, Globe2, Shield, ArrowUp } from 'lucide-react';
+import { Wifi, Home, Globe2, Shield, ArrowUp, Check, PoundSterling, Tags, Calculator } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '../components/StickeeWidget';
+import { Link } from 'react-router-dom';
 
 const FibreBroadbandSouthampton = () => {
   const heroAccordionItems = [
@@ -154,6 +154,70 @@ const FibreBroadbandSouthampton = () => {
                 </tbody>
               </table>
             </div>
+          </div>
+
+          {/* Speed Requirements Section */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">What Speed Do You Need in Southampton?</h2>
+            
+            <p className="text-lg text-gray-600 mb-6">
+              Choosing the right fibre broadband speed depends on your household's internet usage:
+            </p>
+            
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-primary mt-1" />
+                <div>
+                  <span className="font-semibold">Light Usage:</span> Browsing, emails, and social media (30-50Mb).
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-primary mt-1" />
+                <div>
+                  <span className="font-semibold">Moderate Usage:</span> Streaming HD videos and online gaming (50-100Mb).
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-primary mt-1" />
+                <div>
+                  <span className="font-semibold">Heavy Usage:</span> 4K streaming, large file downloads, and multiple devices (100Mb+).
+                </div>
+              </li>
+            </ul>
+
+            <Link to="/broadband-speed" className="text-primary hover:underline">
+              Read our guide on Choosing the Right Broadband Speed →
+            </Link>
+          </div>
+
+          {/* Saving Tips Section */}
+          <div className="mt-16 max-w-4xl mx-auto mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">How to Save on Your Fibre Broadband Deal</h2>
+            
+            <p className="text-lg text-gray-600 mb-6">
+              Here are some tips to get the best value:
+            </p>
+            
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <PoundSterling className="w-5 h-5 text-primary mt-1" />
+                <div>
+                  <span className="font-semibold">Compare Providers:</span> Check availability and speeds in your area.
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <Tags className="w-5 h-5 text-primary mt-1" />
+                <div>
+                  <span className="font-semibold">Look for Discounts:</span> Many providers offer reduced rates for the first 6-12 months.
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <Calculator className="w-5 h-5 text-primary mt-1" />
+                <div>
+                  <span className="font-semibold">Check the Total Cost:</span> Include setup fees, equipment charges, and potential price increases.
+                </div>
+              </li>
+            </ul>
           </div>
         </section>
       </CitystyleContent>
