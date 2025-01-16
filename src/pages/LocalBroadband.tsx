@@ -3,6 +3,7 @@ import { BStyleHero } from '@/components/templates/BStyleHero';
 import { BStyleContent } from '@/components/templates/BStyleContent';
 import { CitySection } from '@/components/local/CitySection';
 import SouthamptonCard from '@/components/local/SouthamptonCard';
+import PortsmouthCard from '@/components/local/PortsmouthCard';
 import { Helmet } from 'react-helmet';
 
 const cityData = [
@@ -81,7 +82,10 @@ const LocalBroadband = () => {
       <BStyleContent>
         <div className="max-w-4xl mx-auto">
           <div className="space-y-8">
-            <SouthamptonCard />
+            <div className="grid gap-8 md:grid-cols-2">
+              <SouthamptonCard />
+              <PortsmouthCard />
+            </div>
             {cityData.map((city, index) => (
               <CitySection key={index} {...city} />
             ))}
