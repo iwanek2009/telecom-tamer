@@ -75,14 +75,17 @@ const SouthamptonBroadband = () => {
       {/* Stickee Widget */}
       <StickeeWidget widgetId="smartfony-91" />
       
-      <BStyleContent className="bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Why Compare Broadband Deals in Southampton?
-          </h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Southampton is a vibrant city with a growing demand for fast and reliable internet. Whether you're streaming, gaming, working from home, or running a small business, having the right broadband package is essential. By comparing deals, you can find a plan that matches your needs and budget—without overpaying for unnecessary extras.
-          </p>
+      <BStyleContent>
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-50 via-white to-blue-50 p-8 md:p-12 shadow-lg max-w-4xl mx-auto">
+          <div className="relative z-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">
+              Why Compare Broadband Deals in Southampton?
+            </h2>
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+              Southampton is a vibrant city with a growing demand for fast and reliable internet. Whether you're streaming, gaming, working from home, or running a small business, having the right broadband package is essential. By comparing deals, you can find a plan that matches your needs and budget—without overpaying for unnecessary extras.
+            </p>
+          </div>
+          <div className="absolute inset-0 bg-grid-gray-100 opacity-[0.2] mix-blend-multiply"></div>
         </div>
       </BStyleContent>
       
