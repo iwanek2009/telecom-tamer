@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, Wifi, Tv, GraduationCap, Briefcase, Zap, Home, MapPin } from 'lucide-react';
 
@@ -7,7 +8,7 @@ const SouthamptonCard = () => {
     {
       title: "City-Wide Deals",
       items: [
-        "Southampton Broadband Deals | Compare Internet Providers",
+        <Link to="/broadband/local/southampton">Southampton Broadband Deals | Compare Internet Providers</Link>,
         "Fibre Broadband Southampton | Fast Internet Packages",
         "Broadband & TV Deals Southampton | Best Home Bundles"
       ],
