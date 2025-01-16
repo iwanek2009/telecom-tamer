@@ -5,6 +5,7 @@ import { CitySection } from '@/components/local/CitySection';
 import SouthamptonCard from '@/components/local/SouthamptonCard';
 import PortsmouthCard from '@/components/local/PortsmouthCard';
 import LondonCard from '@/components/local/LondonCard';
+import BirminghamCard from '@/components/local/BirminghamCard';
 import { Helmet } from 'react-helmet';
 
 const cityData = [
@@ -85,6 +86,7 @@ const LocalBroadband = () => {
           <div className="space-y-8">
             <div className="flex flex-col gap-8">
               <LondonCard />
+              <BirminghamCard />
               <SouthamptonCard />
               <PortsmouthCard />
             </div>
