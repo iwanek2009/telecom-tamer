@@ -6,6 +6,7 @@ import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
 import { Wifi, PoundSterling, Package } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '../components/StickeeWidget';
+import { Card, CardContent } from '@/components/ui/card';
 
 const SouthamptonBroadband = () => {
   const heroAccordionItems = [
@@ -74,6 +75,22 @@ const SouthamptonBroadband = () => {
         {/* Stickee Widget */}
         <StickeeWidget widgetId="smartfony-91" />
         
+        {/* Why Compare Section */}
+        <div className="max-w-4xl mx-auto mt-16">
+          <Card className="bg-gradient-to-br from-white to-gray-50 border-none shadow-lg">
+            <CardContent className="p-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Why Compare Broadband Deals in Southampton?
+              </h2>
+              <p className="text-lg leading-relaxed text-gray-700">
+                Southampton is a vibrant city with a growing demand for fast and reliable internet. 
+                Whether you're streaming, gaming, working from home, or running a small business, 
+                having the right broadband package is essential. By comparing deals, you can find 
+                a plan that matches your needs and budget—without overpaying for unnecessary extras.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
       </BStyleContent>
     </BStyleTemplate>
   );
