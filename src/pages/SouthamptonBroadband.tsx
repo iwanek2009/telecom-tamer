@@ -4,7 +4,6 @@ import { BStyleHero } from '@/components/templates/BStyleHero';
 import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
 import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
 import { Wifi, PoundSterling, Package } from 'lucide-react';
-import SouthamptonCard from '@/components/local/SouthamptonCard';
 import { Helmet } from 'react-helmet';
 
 const SouthamptonBroadband = () => {
@@ -80,8 +79,6 @@ const SouthamptonBroadband = () => {
               description="Choose a package that fits your household's needs, whether you're a light user or a heavy streamer."
             />
           </BStyleFeatureGrid>
-
-          <SouthamptonCard />
         </div>
       </BStyleContent>
     </BStyleTemplate>
