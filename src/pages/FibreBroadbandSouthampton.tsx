@@ -7,7 +7,6 @@ import { CitystyleCard } from '@/components/templates/citystyle/CitystyleCard';
 import { Wifi, Home, Globe2, Shield, ArrowUp } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '../components/StickeeWidget';
-import { Button } from "@/components/ui/button";
 
 const FibreBroadbandSouthampton = () => {
   const heroAccordionItems = [
@@ -80,78 +79,30 @@ const FibreBroadbandSouthampton = () => {
 
         <section className="mt-16">
           <div className="max-w-4xl mx-auto text-center space-y-6 px-4">
-            <h2 className="text-3xl font-bold text-gray-900">How to Find the Best Fibre Broadband Deals in Southampton</h2>
+            <h2 className="text-3xl font-bold text-gray-900">Why Choose Fibre Broadband in Southampton?</h2>
             <p className="text-lg text-gray-600">
-              Finding the right fibre broadband deal is simple with our three-step process:
+              Southampton is a city that thrives on connectivity. Whether you're streaming your favourite shows, competing in online games, or running a business from home, fibre broadband offers the speed and reliability you need. With download speeds ranging from 30Mb to 1Gb, fibre broadband ensures you stay connected without interruptions.
             </p>
-            <div className="space-y-4 text-left">
-              <div className="flex gap-4">
-                <span className="font-bold text-xl">1.</span>
-                <p className="text-gray-600"><span className="font-semibold">Enter Your Postcode:</span> Check which providers and packages are available in your area.</p>
-              </div>
-              <div className="flex gap-4">
-                <span className="font-bold text-xl">2.</span>
-                <p className="text-gray-600"><span className="font-semibold">Compare Deals:</span> Filter results by speed, price, contract length, and provider.</p>
-              </div>
-              <div className="flex gap-4">
-                <span className="font-bold text-xl">3.</span>
-                <p className="text-gray-600"><span className="font-semibold">Switch with Confidence:</span> Complete your order online and enjoy a seamless transition to your new provider.</p>
-              </div>
-            </div>
-            <Button className="bg-primary text-white px-8 py-6 text-lg mt-8">
-              Start comparing fibre broadband deals in Southampton today!
-            </Button>
           </div>
-        </section>
 
-        <section className="mt-16">
-          <div className="max-w-4xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Top Fibre Broadband Providers in Southampton</h2>
-            <p className="text-lg text-gray-600 mb-8 text-center">
-              Here are some of the leading providers offering great fibre broadband deals in Southampton:
-            </p>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="bg-gray-50">
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Provider</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Speed</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Monthly Cost</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Contract Length</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Perks</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  <tr className="hover:bg-gray-50">
-                    <td className="px-6 py-4 text-sm text-gray-900">Virgin Media</td>
-                    <td className="px-6 py-4 text-sm text-gray-600">Up to 1Gb</td>
-                    <td className="px-6 py-4 text-sm text-gray-600">From £28</td>
-                    <td className="px-6 py-4 text-sm text-gray-600">18 months</td>
-                    <td className="px-6 py-4 text-sm text-gray-600">Free setup, Wi-Fi booster</td>
-                  </tr>
-                  <tr className="hover:bg-gray-50">
-                    <td className="px-6 py-4 text-sm text-gray-900">BT</td>
-                    <td className="px-6 py-4 text-sm text-gray-600">Up to 900Mb</td>
-                    <td className="px-6 py-4 text-sm text-gray-600">From £30</td>
-                    <td className="px-6 py-4 text-sm text-gray-600">24 months</td>
-                    <td className="px-6 py-4 text-sm text-gray-600">£20 reward card, free router</td>
-                  </tr>
-                  <tr className="hover:bg-gray-50">
-                    <td className="px-6 py-4 text-sm text-gray-900">Sky</td>
-                    <td className="px-6 py-4 text-sm text-gray-600">Up to 500Mb</td>
-                    <td className="px-6 py-4 text-sm text-gray-600">From £25</td>
-                    <td className="px-6 py-4 text-sm text-gray-600">18 months</td>
-                    <td className="px-6 py-4 text-sm text-gray-600">Free Netflix for 12 months</td>
-                  </tr>
-                  <tr className="hover:bg-gray-50">
-                    <td className="px-6 py-4 text-sm text-gray-900">Hyperoptic</td>
-                    <td className="px-6 py-4 text-sm text-gray-600">Up to 1Gb</td>
-                    <td className="px-6 py-4 text-sm text-gray-600">From £35</td>
-                    <td className="px-6 py-4 text-sm text-gray-600">12 months</td>
-                    <td className="px-6 py-4 text-sm text-gray-600">No setup fee, 24/7 support</td>
-                  </tr>
-                </tbody>
-              </table>
+          <div className="mt-12">
+            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">3 Key Benefits of Fibre Broadband</h3>
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+              <CitystyleFeatureCard
+                icon={Wifi}
+                title="Blazing-Fast Speeds"
+                description="Enjoy seamless 4K streaming, lag-free gaming, and smooth video calls with fibre broadband."
+              />
+              <CitystyleFeatureCard
+                icon={Shield}
+                title="Reliable Connections"
+                description="Say goodbye to buffering and dropped connections—fibre broadband keeps you online, even during peak hours."
+              />
+              <CitystyleFeatureCard
+                icon={ArrowUp}
+                title="Future-Proof Your Home"
+                description="With fibre broadband, you're ready for the latest tech, from smart homes to 8K streaming."
+              />
             </div>
           </div>
         </section>
