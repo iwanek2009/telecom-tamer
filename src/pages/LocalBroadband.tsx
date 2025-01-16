@@ -6,6 +6,7 @@ import PortsmouthCard from '@/components/local/PortsmouthCard';
 import LondonCard from '@/components/local/LondonCard';
 import BirminghamCard from '@/components/local/BirminghamCard';
 import ManchesterCard from '@/components/local/ManchesterCard';
+import LiverpoolCard from '@/components/local/LiverpoolCard';
 import { Helmet } from 'react-helmet';
 import { Search } from 'lucide-react';
 import { useState } from 'react';
@@ -56,6 +57,17 @@ const LocalBroadband = () => {
         'City Centre', 'Northern Quarter', 'Deansgate', 'Spinningfields',
         'Fallowfield', 'Oxford Road', 'Rusholme', 'Victoria Park',
         'Didsbury', 'Chorlton', 'Withington', 'Prestwich',
+        'Virgin Media', 'BT', 'Hyperoptic', 'CityFibre'
+      ]
+    },
+    {
+      component: LiverpoolCard,
+      title: 'Liverpool',
+      topics: [
+        'City Centre', 'Liverpool ONE', 'Albert Dock', 'Baltic Triangle',
+        'University District', 'Edge Hill', 'Kensington', 'Hope Campus',
+        'Allerton', 'Mossley Hill', 'Childwall', 'Woolton',
+        'Wirral', 'Bootle', 'Crosby', 'Kirkby',
         'Virgin Media', 'BT', 'Hyperoptic', 'CityFibre'
       ]
     },
