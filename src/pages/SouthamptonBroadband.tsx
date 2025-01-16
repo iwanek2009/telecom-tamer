@@ -50,6 +50,7 @@ const SouthamptonBroadband = () => {
         <div className="max-w-4xl mx-auto space-y-12">
           <BStyleFeatureGrid
             title="3 Key Reasons to Compare Broadband in Southampton"
+            subtitle="By comparing deals, you can find a plan that matches your needs and budget—without overpaying for unnecessary extras."
           >
             <BStyleFeatureCard
               icon={Wifi}
