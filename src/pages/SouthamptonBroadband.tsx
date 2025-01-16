@@ -1,21 +1,11 @@
-import { BStyleTemplate } from '@/components/templates/BStyleTemplate';
-import { BStyleContent } from '@/components/templates/BStyleContent';
-import { BStyleHero } from '@/components/templates/BStyleHero';
-import { BStyleFeatureGrid } from '@/components/templates/BStyleFeatureGrid';
-import { BStyleFeatureCard } from '@/components/templates/BStyleFeatureCard';
-import { Wifi, PoundSterling, Package } from 'lucide-react';
+import { CitystyleTemplate } from '@/components/templates/citystyle/CitystyleTemplate';
+import { CitystyleContent } from '@/components/templates/citystyle/CitystyleContent';
+import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
+import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
+import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
+import { Wifi, Home, Globe2, Shield } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '../components/StickeeWidget';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 
 const SouthamptonBroadband = () => {
   const heroAccordionItems = [
@@ -39,50 +29,8 @@ const SouthamptonBroadband = () => {
     }
   ];
 
-  const scrollToWidget = () => {
-    const widgetElement = document.getElementById('broadband-widget');
-    if (widgetElement) {
-      widgetElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const providers = [
-    {
-      name: "Virgin Media",
-      speed: "Up to 1Gb",
-      cost: "From £28",
-      contract: "18 months",
-      perks: "Free setup, Wi-Fi booster",
-      link: "https://www.virginmedia.com"
-    },
-    {
-      name: "BT",
-      speed: "Up to 900Mb",
-      cost: "From £30",
-      contract: "24 months",
-      perks: "£20 reward card, free router",
-      link: "https://www.bt.com"
-    },
-    {
-      name: "Sky",
-      speed: "Up to 500Mb",
-      cost: "From £25",
-      contract: "18 months",
-      perks: "Free Netflix for 12 months",
-      link: "https://www.sky.com"
-    },
-    {
-      name: "Hyperoptic",
-      speed: "Up to 1Gb",
-      cost: "From £35",
-      contract: "12 months",
-      perks: "No setup fee, 24/7 support",
-      link: "https://www.hyperoptic.com"
-    }
-  ];
-
   return (
-    <BStyleTemplate>
+    <CitystyleTemplate>
       <Helmet>
         <title>Southampton Broadband Deals | Compare Local Internet Packages</title>
         <meta 
@@ -91,7 +39,7 @@ const SouthamptonBroadband = () => {
         />
       </Helmet>
 
-      <BStyleHero
+      <CitystyleHero
         title="Southampton Broadband Deals"
         subtitle="Find the best broadband deals in Southampton. Compare speeds, prices, and packages from top providers to get the perfect internet connection"
         image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
@@ -99,188 +47,36 @@ const SouthamptonBroadband = () => {
         accordionItems={heroAccordionItems}
       />
 
-      <BStyleContent>
-        <div className="max-w-4xl mx-auto space-y-12">
-          <BStyleFeatureGrid
-            title="3 Key Reasons to Compare Broadband in Southampton"
-            subtitle="By comparing deals, you can find a plan that matches your needs and budget—without overpaying for unnecessary extras."
-          >
-            <BStyleFeatureCard
-              icon={Wifi}
-              title="Find the Best Speeds"
-              description="From standard broadband to ultrafast fibre, compare speeds to ensure your connection keeps up with your lifestyle."
-            />
-            <BStyleFeatureCard
-              icon={PoundSterling}
-              title="Save Money"
-              description="Discover affordable deals from top providers and avoid paying for services you don't need."
-            />
-            <BStyleFeatureCard
-              icon={Package}
-              title="Tailored Packages"
-              description="Choose a package that fits your household's needs, whether you're a light user or a heavy streamer."
-            />
-          </BStyleFeatureGrid>
-        </div>
+      <CitystyleContent>
+        <CitystyleFeatureGrid
+          title="Why Choose Broadband in Southampton?"
+          subtitle="Experience reliable internet connectivity tailored to your needs"
+        >
+          <CitystyleFeatureCard
+            icon={Wifi}
+            title="Fast Speeds"
+            description="Access ultrafast fibre broadband with speeds up to 1Gbps"
+          />
+          <CitystyleFeatureCard
+            icon={Home}
+            title="Local Support"
+            description="Get dedicated customer service from local installation teams"
+          />
+          <CitystyleFeatureCard
+            icon={Globe2}
+            title="Wide Coverage"
+            description="Extensive network coverage across Southampton and surrounding areas"
+          />
+        </CitystyleFeatureGrid>
 
-        {/* Stickee Widget */}
-        <div id="broadband-widget">
-          <StickeeWidget widgetId="smartfony-91" />
+        <div className="mt-12">
+          <StickeeWidget 
+            widgetId="smartfony-91"
+            filters='{"connection_types": ["FTTP"]}'
+          />
         </div>
-        
-        {/* Why Compare Section */}
-        <div className="max-w-4xl mx-auto mt-16">
-          <Card className="bg-gradient-to-br from-white to-gray-50 border-none shadow-lg">
-            <CardContent className="p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Why Compare Broadband Deals in Southampton?
-              </h2>
-              <p className="text-lg leading-relaxed text-gray-700">
-                Southampton is a vibrant city with a growing demand for fast and reliable internet. 
-                Whether you're streaming, gaming, working from home, or running a small business, 
-                having the right broadband package is essential. By comparing deals, you can find 
-                a plan that matches your needs and budget—without overpaying for unnecessary extras.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* How to Compare Section */}
-        <div className="max-w-4xl mx-auto mt-16 mb-16">
-          <Card className="bg-gradient-to-br from-white to-gray-50 border-none shadow-lg">
-            <CardContent className="p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                How to Compare Broadband Deals in Southampton
-              </h2>
-              <p className="text-lg text-gray-700 mb-6">
-                Finding the right broadband deal is simple with our three-step process:
-              </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex gap-4">
-                  <span className="text-2xl font-bold text-primary">1.</span>
-                  <div>
-                    <p className="text-lg font-semibold text-gray-900">Enter Your Postcode</p>
-                    <p className="text-gray-700">Check which providers and packages are available in your area.</p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <span className="text-2xl font-bold text-primary">2.</span>
-                  <div>
-                    <p className="text-lg font-semibold text-gray-900">Compare Deals</p>
-                    <p className="text-gray-700">Filter results by speed, price, contract length, and provider.</p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <span className="text-2xl font-bold text-primary">3.</span>
-                  <div>
-                    <p className="text-lg font-semibold text-gray-900">Switch with Confidence</p>
-                    <p className="text-gray-700">Complete your order online and enjoy a seamless transition to your new provider.</p>
-                  </div>
-                </div>
-              </div>
-              <div className="text-center">
-                <Button size="lg" className="text-lg" onClick={scrollToWidget}>
-                  Start comparing broadband deals in Southampton today!
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Speed Requirements Section */}
-        <div className="max-w-4xl mx-auto mt-16">
-          <Card className="bg-gradient-to-br from-white to-gray-50 border-none shadow-lg">
-            <CardContent className="p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                What Speed Do You Need in Southampton?
-              </h2>
-              <p className="text-lg text-gray-700 mb-6">
-                Choosing the right broadband speed depends on your household's internet usage:
-              </p>
-              <ul className="space-y-4 mb-6">
-                <li className="flex items-start gap-3">
-                  <span className="font-semibold text-gray-900">Light Usage:</span>
-                  <span className="text-gray-700">Browsing, emails, and social media (10-30Mb).</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="font-semibold text-gray-900">Moderate Usage:</span>
-                  <span className="text-gray-700">Streaming HD videos and online gaming (30-100Mb).</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="font-semibold text-gray-900">Heavy Usage:</span>
-                  <span className="text-gray-700">4K streaming, large file downloads, and multiple devices (100Mb+).</span>
-                </li>
-              </ul>
-              <Button variant="link" className="text-primary p-0">
-                Read our guide on Choosing the Right Broadband Speed
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Saving Tips Section */}
-        <div className="max-w-4xl mx-auto mt-8">
-          <Card className="bg-gradient-to-br from-white to-gray-50 border-none shadow-lg">
-            <CardContent className="p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                How to Save on Your Broadband Deal
-              </h2>
-              <p className="text-lg text-gray-700 mb-6">
-                Here are some tips to get the best value:
-              </p>
-              <ul className="space-y-4 mb-6">
-                <li className="flex items-start gap-3">
-                  <span className="font-semibold text-gray-900">Compare Providers:</span>
-                  <span className="text-gray-700">Check availability and speeds in your area.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="font-semibold text-gray-900">Look for Discounts:</span>
-                  <span className="text-gray-700">Many providers offer reduced rates for the first 6-12 months.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="font-semibold text-gray-900">Check the Total Cost:</span>
-                  <span className="text-gray-700">Include setup fees, equipment charges, and potential price increases.</span>
-                </li>
-              </ul>
-              <Button variant="link" className="text-primary p-0">
-                Read our guide on How to Save Money on Your Broadband Deal
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Current Best Deals Section */}
-        <div className="max-w-4xl mx-auto mt-8 mb-16">
-          <Card className="bg-gradient-to-br from-white to-gray-50 border-none shadow-lg">
-            <CardContent className="p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Current Best Broadband Deals in Southampton
-              </h2>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <span className="font-semibold text-gray-900">Virgin Media:</span>
-                  <span className="text-gray-700">Up to 1Gb for £28/month (18-month contract, free setup).</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="font-semibold text-gray-900">BT:</span>
-                  <span className="text-gray-700">Up to 900Mb for £30/month (24-month contract, £20 reward card).</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="font-semibold text-gray-900">Sky:</span>
-                  <span className="text-gray-700">Up to 500Mb for £25/month (18-month contract, free Netflix).</span>
-                </li>
-              </ul>
-              <Button 
-                onClick={scrollToWidget}
-                className="w-full md:w-auto"
-              >
-                Compare these deals and find the best broadband package for your needs
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-      </BStyleContent>
-    </BStyleTemplate>
+      </CitystyleContent>
+    </CitystyleTemplate>
   );
 };
 
