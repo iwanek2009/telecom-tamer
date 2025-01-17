@@ -41,7 +41,7 @@ const BroadbandSpeed = () => {
 
           {/* Providers */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Who's Offering Internet in Allerton?</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Who's Offering Internet?</h3>
             
             <div className="grid md:grid-cols-2 gap-6">
               {/* Virgin Media */}
