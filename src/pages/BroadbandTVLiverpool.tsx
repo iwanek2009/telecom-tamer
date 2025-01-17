@@ -58,7 +58,7 @@ const BroadbandTVLiverpool = () => {
       <CitystyleHero
         title={locationContent?.title || 'Liverpool TV & Internet Packages'}
         subtitle={locationContent?.subtitle || 'Find the perfect entertainment bundle for your Liverpool home'}
-        image="/lovable-uploads/f47024ea-50f0-4583-89a7-f5cbc9e3beb9.png"
+        image="/lovable-uploads/1df43293-e821-4ff4-b82c-d81a1d949fb4.png"
         imageAlt={locationContent?.hero_image_alt || 'Liverpool TV and internet packages'}
         accordionItems={heroAccordionItems}
       />
