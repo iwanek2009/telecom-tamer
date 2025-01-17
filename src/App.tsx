@@ -34,6 +34,7 @@ import WestEndBroadband from "./pages/WestEndBroadband";
 import StudentBroadbandLondon from "./pages/StudentBroadbandLondon";
 import BusinessBroadbandLondon from "./pages/BusinessBroadbandLondon";
 import GamingBroadbandLondon from "./pages/GamingBroadbandLondon";
+import WorkFromHomeLondon from "./pages/WorkFromHomeLondon";
 import CstylePage from "./pages/CstylePage";
 
 const queryClient = new QueryClient();
@@ -100,6 +101,7 @@ const App = () => {
             <Route path="/local/student-london" element={<StudentBroadbandLondon />} />
             <Route path="/local/business-london" element={<BusinessBroadbandLondon />} />
             <Route path="/local/gaming-london" element={<GamingBroadbandLondon />} />
+            <Route path="/local/wfh-london" element={<WorkFromHomeLondon />} />
             <Route path="/about" element={<About />} />
             <Route path="/sim" element={<SimOnly />} />
             <Route path="/internet-uk" element={<InternetUK />} />
