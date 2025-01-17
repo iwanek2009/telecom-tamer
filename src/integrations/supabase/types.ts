@@ -9,7 +9,54 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      location_content: {
+        Row: {
+          created_at: string
+          hero_image_alt: string
+          id: string
+          location: string
+          meta_description: string
+          meta_title: string
+          speed_tip_content: string
+          speed_tip_title: string
+          subtitle: string
+          title: string
+          updated_at: string
+          value_tip_content: string
+          value_tip_title: string
+        }
+        Insert: {
+          created_at?: string
+          hero_image_alt: string
+          id?: string
+          location: string
+          meta_description: string
+          meta_title: string
+          speed_tip_content: string
+          speed_tip_title: string
+          subtitle: string
+          title: string
+          updated_at?: string
+          value_tip_content: string
+          value_tip_title: string
+        }
+        Update: {
+          created_at?: string
+          hero_image_alt?: string
+          id?: string
+          location?: string
+          meta_description?: string
+          meta_title?: string
+          speed_tip_content?: string
+          speed_tip_title?: string
+          subtitle?: string
+          title?: string
+          updated_at?: string
+          value_tip_content?: string
+          value_tip_title?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
