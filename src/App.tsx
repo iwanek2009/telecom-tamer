@@ -28,6 +28,7 @@ import SouthLondonBroadband from "./pages/SouthLondonBroadband";
 import BrixtonBroadband from "./pages/BrixtonBroadband";
 import GreenwichBroadband from "./pages/GreenwichBroadband";
 import CroydonBroadband from "./pages/CroydonBroadband";
+import CentralLondonBroadband from "./pages/CentralLondonBroadband";
 import CstylePage from "./pages/CstylePage";
 
 const queryClient = new QueryClient();
@@ -86,6 +87,7 @@ const App = () => {
             <Route path="/local/brixton" element={<BrixtonBroadband />} />
             <Route path="/local/greenwich" element={<GreenwichBroadband />} />
             <Route path="/local/croydon" element={<CroydonBroadband />} />
+            <Route path="/local/central-london" element={<CentralLondonBroadband />} />
             <Route path="/about" element={<About />} />
             <Route path="/sim" element={<SimOnly />} />
             <Route path="/internet-uk" element={<InternetUK />} />
