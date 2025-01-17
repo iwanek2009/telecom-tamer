@@ -22,6 +22,9 @@ export const CitystyleHero = ({
   imageAlt,
   accordionItems 
 }: CitystyleHeroProps) => {
+  // Take only the first two items from accordionItems
+  const displayedItems = accordionItems.slice(0, 2);
+
   return (
     <div className="bg-[#3FC1C9]">
       <div className="container mx-auto px-4 pt-12 pb-8 md:pt-16 md:pb-0">
@@ -37,7 +40,7 @@ export const CitystyleHero = ({
             </div>
 
             <div className="space-y-3">
-              {accordionItems.map((item, index) => (
+              {displayedItems.map((item, index) => (
                 <Collapsible
                   key={index}
                   className="bg-white/80 backdrop-blur-sm rounded-lg overflow-hidden"

@@ -20,12 +20,6 @@ const WorkFromHomeLondon = () => {
       content: "Compare packages with static IPs, enhanced security, and priority support for remote workers.",
       linkText: "View features",
       linkHref: "#features"
-    },
-    {
-      title: "Quick Setup",
-      content: "Many providers offer priority installation for home workers, with some providing next-day setup in eligible areas.",
-      linkText: "Installation info",
-      linkHref: "#installation"
     }
   ];
 
