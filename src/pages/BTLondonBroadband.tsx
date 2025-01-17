@@ -66,7 +66,7 @@ const BTLondonBroadband = () => {
         <div className="mt-12" id="compare-deals">
           <StickeeWidget 
             widgetId="smartfony-91"
-            filters='{"suppliers": [2]}'
+            filters='{"suppliers": [135]}'
           />
         </div>
       </CitystyleContent>
