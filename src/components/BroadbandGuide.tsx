@@ -4,7 +4,6 @@ export default function BroadbandGuide() {
   return (
     <div className="container mx-auto px-4" id="guide">
       <Card className="p-6 md:p-8 space-y-6 bg-white shadow-lg rounded-xl">
-        <div className="space-y-4">
           <h2 className="text-3xl font-bold text-gray-900">
             Need Better Internet in Allerton? Let's Find Your Perfect Match!
           </h2>
@@ -53,7 +52,6 @@ export default function BroadbandGuide() {
               </p>
             </div>
           </div>
-        </div>
       </Card>
     </div>
   );
