@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://smartfony.co.uk/sitemaps/main-sitemap.xml</loc>
+    <lastmod>2024-03-19</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://smartfony.co.uk/sitemaps/broadband-sitemap.xml</loc>
+    <lastmod>2024-03-19</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://smartfony.co.uk/sitemaps/london-sitemap.xml</loc>
+    <lastmod>2024-03-19</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://smartfony.co.uk/sitemaps/local-sitemap.xml</loc>
+    <lastmod>2024-03-19</lastmod>
+  </sitemap>
+</sitemapindex>
