@@ -49,6 +49,7 @@ import BirminghamBroadband from "./pages/BirminghamBroadband";
 import FibreBroadbandBirmingham from "./pages/FibreBroadbandBirmingham";
 import BirminghamTVBroadband from "./pages/BirminghamTVBroadband";
 import BirminghamCityCentreBroadband from "./pages/BirminghamCityCentreBroadband";
+import JewelleryQuarterBroadband from "./pages/JewelleryQuarterBroadband";
 
 const queryClient = new QueryClient();
 
@@ -130,6 +131,7 @@ const App = () => {
             <Route path="/sim" element={<SimOnly />} />
             <Route path="/internet-uk" element={<InternetUK />} />
             <Route path="/cstyle" element={<CstylePage />} />
+            <Route path="/local/jewellery-quarter" element={<JewelleryQuarterBroadband />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
