@@ -21,7 +21,8 @@ import SouthamptonBroadband from "./pages/SouthamptonBroadband";
 import BroadbandTVSouthampton from "./pages/BroadbandTVSouthampton";
 import LiverpoolBroadband from "./pages/LiverpoolBroadband";
 import FibreBroadbandLiverpool from "./pages/FibreBroadbandLiverpool";
-import LondonBroadband from "./pages/LondonBroadband";
+import AllertonBroadband from "./pages/AllertonBroadband";
+import CstylePage from "./pages/CstylePage";
 
 const queryClient = new QueryClient();
 
@@ -72,10 +73,13 @@ const App = () => {
             <Route path="/local/southampton-broadband-tv" element={<BroadbandTVSouthampton />} />
             <Route path="/local/liverpool" element={<LiverpoolBroadband />} />
             <Route path="/local/fibre-broadband-liverpool" element={<FibreBroadbandLiverpool />} />
-            <Route path="/local/london" element={<LondonBroadband />} />
+            <Route path="/local/allerton" element={<AllertonBroadband />} />
             <Route path="/about" element={<About />} />
             <Route path="/sim" element={<SimOnly />} />
             <Route path="/internet-uk" element={<InternetUK />} />
+            <Route path="/cstyle" element={<CstylePage />} />
+            {/* Example of how to add a new location-based page */}
+            <Route path="/local/manchester" element={<CstylePage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>

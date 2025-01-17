@@ -7,94 +7,119 @@ const BroadbandSpeed = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 id="choose-speed" className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-            Choosing the Right Broadband Speed
+            What Can You Get in Allerton?
           </h2>
 
-          {/* Find Your Perfect Speed */}
+          {/* Available Options */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Find Your Perfect Speed</h3>
-            <p className="text-gray-700 mb-4">
-              Your ideal broadband speed depends on two key factors:
-            </p>
-            <ul className="list-disc list-inside text-gray-700 mb-6 ml-4">
-              <li>The number of connected devices in your home</li>
-              <li>Your household's internet usage habits</li>
+            <p className="text-gray-700 mb-4">You've got some great options here:</p>
+            <ul className="space-y-3 text-gray-700">
+              <li className="flex items-center gap-2">
+                <Router className="w-5 h-5 text-blue-500" />
+                <span><strong>Standard Broadband</strong> - Perfect for basic browsing and emails</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Wifi className="w-5 h-5 text-blue-500" />
+                <span><strong>Fibre Broadband</strong> - Great for streaming and working from home</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Activity className="w-5 h-5 text-blue-500" />
+                <span><strong>Full Fibre</strong> - Ultra-fast speeds for serious tech users</span>
+              </li>
             </ul>
           </div>
 
-          {/* Understanding Usage Patterns */}
+          {/* Steps */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Understanding Usage Patterns</h3>
-            <p className="text-gray-700 mb-4">
-              A family home or shared house typically needs higher speeds as multiple devices connect simultaneously. You'll need faster speeds if your household:
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-              <div className="flex items-center gap-2 text-gray-700">
-                <Video className="w-5 h-5" />
-                <span>Streams 4K content</span>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Finding Your Perfect Match Is Easy:</h3>
+            <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-4">
+              <li>Pop in your postcode</li>
+              <li>Compare what's available</li>
+              <li>Pick your perfect package</li>
+            </ol>
+          </div>
+
+          {/* Providers */}
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Who's Offering Internet in Allerton?</h3>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Virgin Media */}
+              <div className="space-y-3">
+                <h4 className="text-xl font-semibold text-gray-900">Virgin Media</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-center gap-2">
+                    <Activity className="w-4 h-4 text-blue-500" />
+                    Lightning-fast gigabit speeds
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Home className="w-4 h-4 text-blue-500" />
+                    Free setup and WiFi boosters
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Video className="w-4 h-4 text-blue-500" />
+                    Entertainment bundles available
+                  </li>
+                </ul>
               </div>
-              <div className="flex items-center gap-2 text-gray-700">
-                <Home className="w-5 h-5" />
-                <span>Works from home</span>
+
+              {/* BT */}
+              <div className="space-y-3">
+                <h4 className="text-xl font-semibold text-gray-900">BT</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-center gap-2">
+                    <Wifi className="w-4 h-4 text-blue-500" />
+                    Reliable nationwide coverage
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Router className="w-4 h-4 text-blue-500" />
+                    Smart hub technology
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Activity className="w-4 h-4 text-blue-500" />
+                    Security features included
+                  </li>
+                </ul>
               </div>
-              <div className="flex items-center gap-2 text-gray-700">
-                <Gamepad2 className="w-5 h-5" />
-                <span>Plays online games</span>
+
+              {/* Sky */}
+              <div className="space-y-3">
+                <h4 className="text-xl font-semibold text-gray-900">Sky</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-center gap-2">
+                    <Video className="w-4 h-4 text-blue-500" />
+                    Great for TV lovers
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Activity className="w-4 h-4 text-blue-500" />
+                    Flexible packages
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Wifi className="w-4 h-4 text-blue-500" />
+                    Strong WiFi guarantee
+                  </li>
+                </ul>
               </div>
-              <div className="flex items-center gap-2 text-gray-700">
-                <Video className="w-5 h-5" />
-                <span>Uses video calls regularly</span>
+
+              {/* Hyperoptic */}
+              <div className="space-y-3">
+                <h4 className="text-xl font-semibold text-gray-900">Hyperoptic</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-center gap-2">
+                    <Activity className="w-4 h-4 text-blue-500" />
+                    Ultra-fast full fibre
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Router className="w-4 h-4 text-blue-500" />
+                    No-contract options
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Home className="w-4 h-4 text-blue-500" />
+                    24/7 support team
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
-
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Speed Guidelines</h3>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-center gap-2">
-                <Wifi className="w-5 h-5" />
-                <span>UK average speed: 69Mbps (suitable for 3-4 users)</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Activity className="w-5 h-5" />
-                <span>Heavy usage households: 100Mbps+ recommended</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Router className="w-5 h-5" />
-                <span>Single user/basic browsing: 30-50Mbps sufficient</span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Check Your Current Speed */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Check Your Current Speed</h3>
-            <p className="text-gray-700 mb-4">To measure your current connection's performance:</p>
-            <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-4">
-              <li>Run a speed test while at home</li>
-              <li>Connect directly to your Wi-Fi router</li>
-              <li>Test at different times of day</li>
-              <li>Compare with available deals in your area</li>
-            </ol>
-            <p className="text-sm text-gray-600 mt-4 italic">
-              Note: Speed tests show a snapshot - actual speeds may vary throughout the day.
-            </p>
-          </div>
-
-          {/* Available Speeds */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Available Speeds in Your Area</h3>
-            <p className="text-gray-700 mb-4">The fastest internet options depend on your location:</p>
-            <ul className="space-y-3 text-gray-700">
-              <li>• Full fibre: Available to 65% of homes, offering the fastest and most reliable speeds</li>
-              <li>• Virgin Media network: Ultra-fast speeds in selected areas</li>
-              <li>• Part fibre: Widely available but speeds depend on distance</li>
-              <li>• Standard broadband: Available almost everywhere but slower</li>
-            </ul>
-            <p className="text-gray-700 mt-4">
-              <strong>Remember:</strong> While ultra-fast options like full fibre offer the highest speeds, 
-              part-fibre connections are still suitable for most households' needs.
-            </p>
           </div>
         </div>
       </div>
