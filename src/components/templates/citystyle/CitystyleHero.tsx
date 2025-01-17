@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react';
 interface CitystyleHeroProps {
   title: string;
   subtitle: string;
-  image: string;
+  image?: string;
   imageAlt: string;
   accordionItems: {
     title: string;
@@ -18,7 +18,7 @@ interface CitystyleHeroProps {
 export const CitystyleHero = ({ 
   title, 
   subtitle, 
-  image = "/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png", 
+  image = "/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png",
   imageAlt,
   accordionItems 
 }: CitystyleHeroProps) => {
@@ -39,7 +39,7 @@ export const CitystyleHero = ({
                 {title}
               </h1>
               <h2 className="text-xl text-gray-700 mt-4 mb-2">
-                Find the best broadband deals in Liverpool. Compare speeds, prices, and packages from top providers to get the perfect internet connection
+                {subtitle}
               </h2>
             </div>
 
@@ -73,7 +73,7 @@ export const CitystyleHero = ({
 
           <div className="hidden md:flex items-center justify-center">
             <img 
-              src="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
+              src={image}
               alt={imageAlt} 
               className="w-full h-auto max-w-[658px] object-contain rounded-2xl"
             />
