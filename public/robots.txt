@@ -5,7 +5,7 @@ Allow: /broadband
 Allow: /about
 Allow: /sim
 
-Sitemap: https://smartfony.co.uk/sitemap.xml
+Sitemap: https://smartfony.co.uk/sitemap-index.xml
 
 # Crawl-delay: 10
 
