@@ -45,10 +45,9 @@ import GNetworkLondon from "./pages/GNetworkLondon";
 import LondonTVBroadband from "./pages/LondonTVBroadband";
 import BTLondonBroadband from "./pages/BTLondonBroadband";
 import CstylePage from "./pages/CstylePage";
+import BirminghamBroadband from "./pages/BirminghamBroadband";
 
 const queryClient = new QueryClient();
-
-// ... keep existing code (handleClick useEffect)
 
 const App = () => {
   useEffect(() => {
@@ -120,6 +119,7 @@ const App = () => {
             <Route path="/local/g-network" element={<GNetworkLondon />} />
             <Route path="/local/tv-broadband" element={<LondonTVBroadband />} />
             <Route path="/local/bt-london" element={<BTLondonBroadband />} />
+            <Route path="/local/birmingham" element={<BirminghamBroadband />} />
             <Route path="/about" element={<About />} />
             <Route path="/sim" element={<SimOnly />} />
             <Route path="/internet-uk" element={<InternetUK />} />
