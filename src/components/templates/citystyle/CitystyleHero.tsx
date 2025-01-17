@@ -18,7 +18,7 @@ interface CitystyleHeroProps {
 export const CitystyleHero = ({ 
   title, 
   subtitle, 
-  image, 
+  image = "/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png", 
   imageAlt,
   accordionItems 
 }: CitystyleHeroProps) => {
@@ -73,7 +73,7 @@ export const CitystyleHero = ({
 
           <div className="hidden md:flex items-center justify-center">
             <img 
-              src={image}
+              src="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
               alt={imageAlt} 
               className="w-full h-auto max-w-[658px] object-contain rounded-2xl"
             />
