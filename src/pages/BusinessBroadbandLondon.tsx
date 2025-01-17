@@ -3,7 +3,7 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { Building2, Wifi, Shield, Clock, Cloud } from 'lucide-react';
+import { Building2, Wifi, Shield } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 
@@ -55,27 +55,17 @@ const BusinessBroadbandLondon = () => {
           <CitystyleFeatureCard
             icon={Building2}
             title="Business-Grade"
-            description="Dedicated lines with guaranteed speeds"
+            description="Dedicated lines with guaranteed speeds and priority support"
           />
           <CitystyleFeatureCard
             icon={Wifi}
             title="Ultra-Fast Speeds"
-            description="Up to 10Gbps for demanding businesses"
+            description="Up to 10Gbps for demanding businesses with symmetric upload/download"
           />
           <CitystyleFeatureCard
             icon={Shield}
             title="Enhanced Security"
-            description="Advanced security features included"
-          />
-          <CitystyleFeatureCard
-            icon={Clock}
-            title="24/7 Support"
-            description="Priority business support available"
-          />
-          <CitystyleFeatureCard
-            icon={Cloud}
-            title="Cloud Ready"
-            description="Optimized for cloud services"
+            description="Advanced security features and 24/7 monitoring included"
           />
         </CitystyleFeatureGrid>
 
