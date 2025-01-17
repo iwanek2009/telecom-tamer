@@ -42,7 +42,7 @@ const BirminghamTVBroadband = () => {
       <CitystyleHero
         title="TV & Broadband Packages in Birmingham"
         subtitle="Compare the best entertainment bundles from leading providers. Find packages combining fast internet with premium TV channels for your Birmingham home."
-        image="/lovable-uploads/1721322800607-8c38375eef04.jpg"
+        image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
         imageAlt="Living room setup with TV and internet connection"
         accordionItems={heroAccordionItems}
       />
