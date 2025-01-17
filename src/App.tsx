@@ -37,6 +37,7 @@ import GamingBroadbandLondon from "./pages/GamingBroadbandLondon";
 import WorkFromHomeLondon from "./pages/WorkFromHomeLondon";
 import NorthLondonBroadband from "./pages/NorthLondonBroadband";
 import IslingtonBroadband from "./pages/IslingtonBroadband";
+import CamdenBroadband from "./pages/CamdenBroadband";
 import CstylePage from "./pages/CstylePage";
 
 const queryClient = new QueryClient();
@@ -106,6 +107,7 @@ const App = () => {
             <Route path="/local/gaming-london" element={<GamingBroadbandLondon />} />
             <Route path="/local/wfh-london" element={<WorkFromHomeLondon />} />
             <Route path="/local/islington" element={<IslingtonBroadband />} />
+            <Route path="/local/camden" element={<CamdenBroadband />} />
             <Route path="/about" element={<About />} />
             <Route path="/sim" element={<SimOnly />} />
             <Route path="/internet-uk" element={<InternetUK />} />
