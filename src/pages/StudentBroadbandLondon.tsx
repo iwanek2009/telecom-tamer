@@ -20,12 +20,6 @@ const StudentBroadbandLondon = () => {
       content: "Compare deals available near major London universities including UCL, King's College, LSE, Imperial, and more.",
       linkText: "Check availability",
       linkHref: "#availability"
-    },
-    {
-      title: "Shared Housing Solutions",
-      content: "Get broadband packages perfect for student houses and flat-shares, with unlimited data and fast speeds for multiple users.",
-      linkText: "Learn more",
-      linkHref: "#shared-housing"
     }
   ];
 
@@ -42,15 +36,15 @@ const StudentBroadbandLondon = () => {
       <CitystyleHero
         title="Student Broadband Deals in London"
         subtitle="Compare flexible broadband packages perfect for students. Find deals with short-term contracts, fast speeds, and great value near London universities."
-        image="/lovable-uploads/1486312338219-ce68d2c6f44d.png"
+        image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
         imageAlt="Students using laptops with fast internet connection"
         accordionItems={heroAccordionItems}
       />
 
       <CitystyleContent>
         <CitystyleFeatureGrid
-          title="Why Choose Our Student Broadband Deals?"
-          subtitle="Get the perfect internet package for your student life in London"
+          title="Why Choose Student Broadband?"
+          subtitle="Get connected with broadband tailored for student life"
         >
           <CitystyleFeatureCard
             icon={GraduationCap}
