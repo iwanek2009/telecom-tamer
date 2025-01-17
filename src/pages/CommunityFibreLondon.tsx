@@ -72,7 +72,7 @@ const CommunityFibreLondon = () => {
         <div className="mt-12" id="compare-deals">
           <StickeeWidget 
             widgetId="smartfony-91"
-            filters='{"provider": "Community Fibre"}'
+            filters='{"download_speed": {"min":500, "max":1000}}'
           />
         </div>
       </CitystyleContent>
