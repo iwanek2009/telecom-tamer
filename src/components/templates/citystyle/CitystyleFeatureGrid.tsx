@@ -14,12 +14,12 @@ export const CitystyleFeatureGrid = ({ children, title, subtitle }: CitystyleFea
           <div className="text-center mb-12">
             {title && (
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-                Ready to get the best internet deal in Liverpool?
+                {title}
               </h2>
             )}
             {subtitle && (
               <p className="text-lg text-gray-600">
-                Enjoy fast internet, premium TV channels, and unbeatable savings—all in one convenient package
+                {subtitle}
               </p>
             )}
           </div>

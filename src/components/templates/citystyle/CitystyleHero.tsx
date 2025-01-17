@@ -22,13 +22,6 @@ export const CitystyleHero = ({
   imageAlt,
   accordionItems 
 }: CitystyleHeroProps) => {
-  const scrollToWidget = () => {
-    const widgetElement = document.getElementById('compare-deals');
-    if (widgetElement) {
-      widgetElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="bg-[#3FC1C9]">
       <div className="container mx-auto px-4 pt-12 pb-8 md:pt-16 md:pb-0">
@@ -38,9 +31,9 @@ export const CitystyleHero = ({
               <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
                 {title}
               </h1>
-              <h2 className="text-xl text-gray-700 mt-4 mb-2">
-                Find the best broadband deals in Liverpool. Compare speeds, prices, and packages from top providers to get the perfect internet connection
-              </h2>
+              <p className="text-xl text-gray-700 mt-4 mb-6">
+                {subtitle}
+              </p>
             </div>
 
             <div className="space-y-3">
@@ -57,13 +50,13 @@ export const CitystyleHero = ({
                     <p className="text-gray-700 text-sm mb-2">
                       {item.content}
                     </p>
-                    {item.linkText && (
-                      <button 
-                        onClick={scrollToWidget}
+                    {item.linkText && item.linkHref && (
+                      <a 
+                        href={item.linkHref} 
                         className="text-pink-600 hover:text-pink-700 text-sm font-medium inline-flex items-center gap-1"
                       >
                         {item.linkText}
-                      </button>
+                      </a>
                     )}
                   </CollapsibleContent>
                 </Collapsible>
@@ -75,7 +68,7 @@ export const CitystyleHero = ({
             <img 
               src={image}
               alt={imageAlt} 
-              className="w-full h-auto max-w-[658px] object-contain rounded-2xl"
+              className="w-full h-auto object-contain rounded-2xl"
             />
           </div>
         </div>
