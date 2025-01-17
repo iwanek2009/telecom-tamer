@@ -43,6 +43,7 @@ import CommunityFibreLondon from "./pages/CommunityFibreLondon";
 import VirginMediaLondon from "./pages/VirginMediaLondon";
 import GNetworkLondon from "./pages/GNetworkLondon";
 import LondonTVBroadband from "./pages/LondonTVBroadband";
+import BTLondonBroadband from "./pages/BTLondonBroadband";
 import CstylePage from "./pages/CstylePage";
 
 const queryClient = new QueryClient();
@@ -118,6 +119,7 @@ const App = () => {
             <Route path="/local/virgin-media" element={<VirginMediaLondon />} />
             <Route path="/local/g-network" element={<GNetworkLondon />} />
             <Route path="/local/tv-broadband" element={<LondonTVBroadband />} />
+            <Route path="/local/bt-london" element={<BTLondonBroadband />} />
             <Route path="/about" element={<About />} />
             <Route path="/sim" element={<SimOnly />} />
             <Route path="/internet-uk" element={<InternetUK />} />
