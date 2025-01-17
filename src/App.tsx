@@ -28,8 +28,8 @@ const App = () => {
         e.preventDefault();
         const href = anchor.getAttribute('href');
         if (href) {
-          console.log('Forcing full page reload for:', href);
-          window.location.href = href;
+          window.history.pushState({}, '', href);
+          window.dispatchEvent(new PopStateEvent('popstate'));
         }
       }
     };
