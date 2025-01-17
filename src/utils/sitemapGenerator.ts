@@ -62,6 +62,9 @@ const localRoutes: Route[] = [
   { path: '/local/tv-broadband', priority: 0.8, changefreq: 'weekly' },
   { path: '/local/bt-london', priority: 0.8, changefreq: 'weekly' },
   { path: '/local/birmingham', priority: 0.8, changefreq: 'weekly' },
+  { path: '/local/fibre-broadband-birmingham', priority: 0.8, changefreq: 'weekly' },
+  { path: '/local/birmingham-tv-broadband', priority: 0.8, changefreq: 'weekly' },
+  { path: '/local/birmingham-city-centre', priority: 0.8, changefreq: 'weekly' },
 ];
 
 function generateSitemapXML(routes: Route[]): string {

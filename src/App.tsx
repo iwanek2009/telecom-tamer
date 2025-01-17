@@ -48,6 +48,7 @@ import CstylePage from "./pages/CstylePage";
 import BirminghamBroadband from "./pages/BirminghamBroadband";
 import FibreBroadbandBirmingham from "./pages/FibreBroadbandBirmingham";
 import BirminghamTVBroadband from "./pages/BirminghamTVBroadband";
+import BirminghamCityCentreBroadband from "./pages/BirminghamCityCentreBroadband";
 
 const queryClient = new QueryClient();
 
@@ -124,6 +125,7 @@ const App = () => {
             <Route path="/local/birmingham" element={<BirminghamBroadband />} />
             <Route path="/local/fibre-broadband-birmingham" element={<FibreBroadbandBirmingham />} />
             <Route path="/local/birmingham-tv-broadband" element={<BirminghamTVBroadband />} />
+            <Route path="/local/birmingham-city-centre" element={<BirminghamCityCentreBroadband />} />
             <Route path="/about" element={<About />} />
             <Route path="/sim" element={<SimOnly />} />
             <Route path="/internet-uk" element={<InternetUK />} />
