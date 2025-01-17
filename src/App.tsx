@@ -40,6 +40,7 @@ import IslingtonBroadband from "./pages/IslingtonBroadband";
 import CamdenBroadband from "./pages/CamdenBroadband";
 import FinsburyParkBroadband from "./pages/FinsburyParkBroadband";
 import CommunityFibreLondon from "./pages/CommunityFibreLondon";
+import VirginMediaLondon from "./pages/VirginMediaLondon";
 import CstylePage from "./pages/CstylePage";
 
 const queryClient = new QueryClient();
@@ -112,6 +113,7 @@ const App = () => {
             <Route path="/local/camden" element={<CamdenBroadband />} />
             <Route path="/local/finsbury-park" element={<FinsburyParkBroadband />} />
             <Route path="/local/community-fibre" element={<CommunityFibreLondon />} />
+            <Route path="/local/virgin-media" element={<VirginMediaLondon />} />
             <Route path="/about" element={<About />} />
             <Route path="/sim" element={<SimOnly />} />
             <Route path="/internet-uk" element={<InternetUK />} />
