@@ -41,9 +41,13 @@ import CamdenBroadband from "./pages/CamdenBroadband";
 import FinsburyParkBroadband from "./pages/FinsburyParkBroadband";
 import CommunityFibreLondon from "./pages/CommunityFibreLondon";
 import VirginMediaLondon from "./pages/VirginMediaLondon";
-import BTLondonBroadband from "./pages/BTLondonBroadband";
+import GNetworkLondon from "./pages/GNetworkLondon";
+import LondonTVBroadband from "./pages/LondonTVBroadband";
+import CstylePage from "./pages/CstylePage";
 
 const queryClient = new QueryClient();
+
+// ... keep existing code (handleClick useEffect)
 
 const App = () => {
   useEffect(() => {
@@ -112,7 +116,12 @@ const App = () => {
             <Route path="/local/finsbury-park" element={<FinsburyParkBroadband />} />
             <Route path="/local/community-fibre" element={<CommunityFibreLondon />} />
             <Route path="/local/virgin-media" element={<VirginMediaLondon />} />
-            <Route path="/local/bt-london" element={<BTLondonBroadband />} />
+            <Route path="/local/g-network" element={<GNetworkLondon />} />
+            <Route path="/local/tv-broadband" element={<LondonTVBroadband />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/sim" element={<SimOnly />} />
+            <Route path="/internet-uk" element={<InternetUK />} />
+            <Route path="/cstyle" element={<CstylePage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
