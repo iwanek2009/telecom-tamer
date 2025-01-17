@@ -42,8 +42,8 @@ const WorkFromHomeLondon = () => {
       <CitystyleHero
         title="Work From Home Broadband in London"
         subtitle="Find the perfect internet package for remote working. Compare reliable broadband deals designed for home workers in London."
-        image="/lovable-uploads/1581091226825-a6a2a5aee158.png"
-        imageAlt="Professional working from home setup in London"
+        image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
+        imageAlt="London cityscape with modern internet connectivity"
         accordionItems={heroAccordionItems}
       />
 
