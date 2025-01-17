@@ -23,6 +23,7 @@ import LiverpoolBroadband from "./pages/LiverpoolBroadband";
 import FibreBroadbandLiverpool from "./pages/FibreBroadbandLiverpool";
 import AllertonBroadband from "./pages/AllertonBroadband";
 import LondonBroadband from "./pages/LondonBroadband";
+import FibreBroadbandLondon from "./pages/FibreBroadbandLondon";
 import CstylePage from "./pages/CstylePage";
 
 const queryClient = new QueryClient();
@@ -76,6 +77,7 @@ const App = () => {
             <Route path="/local/fibre-broadband-liverpool" element={<FibreBroadbandLiverpool />} />
             <Route path="/local/allerton" element={<AllertonBroadband />} />
             <Route path="/local/london" element={<LondonBroadband />} />
+            <Route path="/local/fibre-broadband-london" element={<FibreBroadbandLondon />} />
             <Route path="/about" element={<About />} />
             <Route path="/sim" element={<SimOnly />} />
             <Route path="/internet-uk" element={<InternetUK />} />
