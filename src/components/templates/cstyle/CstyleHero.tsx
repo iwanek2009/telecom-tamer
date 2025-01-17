@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 interface CstyleHeroProps {
@@ -49,13 +49,9 @@ export const CstyleHero = ({
                   <ChevronDown className={`h-4 w-4 transition-transform ${isValueOpen ? 'transform rotate-180' : ''}`} />
                 </CollapsibleTrigger>
                 <CollapsibleContent className="px-4 pb-4">
-                  <p className="text-gray-700 text-sm mb-2">
+                  <p className="text-gray-700 text-sm">
                     {valueTipContent}
                   </p>
-                  <a href="#choose-provider" className="text-pink-600 hover:text-pink-700 text-sm font-medium inline-flex items-center gap-1">
-                    Read our guide
-                    <ArrowRight size={14} />
-                  </a>
                 </CollapsibleContent>
               </Collapsible>
 
@@ -69,13 +65,9 @@ export const CstyleHero = ({
                   <ChevronDown className={`h-4 w-4 transition-transform ${isSpeedOpen ? 'transform rotate-180' : ''}`} />
                 </CollapsibleTrigger>
                 <CollapsibleContent className="px-4 pb-4">
-                  <p className="text-gray-700 text-sm mb-2">
+                  <p className="text-gray-700 text-sm">
                     {speedTipContent}
                   </p>
-                  <a href="#choose-speed" className="text-pink-600 hover:text-pink-700 text-sm font-medium inline-flex items-center gap-1">
-                    Read our guide
-                    <ArrowRight size={14} />
-                  </a>
                 </CollapsibleContent>
               </Collapsible>
             </div>
