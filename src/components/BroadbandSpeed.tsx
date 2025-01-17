@@ -7,7 +7,7 @@ const BroadbandSpeed = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 id="choose-speed" className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-            What Can You Get in Allerton?
+            What Can You Get?
           </h2>
 
           {/* Available Options */}
