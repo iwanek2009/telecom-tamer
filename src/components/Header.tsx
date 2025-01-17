@@ -45,7 +45,7 @@ export const Header = () => {
       (hasSubpages && subpages.some(subpage => subpage.path === location.pathname));
 
     return (
-      <div key={path} className={`relative ${isMobile ? '' : 'group'}`}>
+      <div key={path} className="relative">
         {hasSubpages ? (
           <button
             onClick={() => toggleSubmenu(path)}
@@ -58,9 +58,7 @@ export const Header = () => {
             {label}
             <ChevronDown
               size={16}
-              className={`transition-transform ${
-                isMobile ? (openSubmenu === path ? 'rotate-180' : '') : 'group-hover:rotate-180'
-              }`}
+              className={`transition-transform ${openSubmenu === path ? 'rotate-180' : ''}`}
             />
           </button>
         ) : (
@@ -75,14 +73,10 @@ export const Header = () => {
           </Link>
         )}
 
-        {hasSubpages && (
-          <div 
-            className={`${
-              isMobile 
-                ? (openSubmenu === path ? 'block pl-4' : 'hidden') 
-                : 'absolute top-full left-0 bg-white shadow-lg rounded-md py-2 min-w-[200px] hidden group-hover:block'
-            }`}
-          >
+        {hasSubpages && openSubmenu === path && (
+          <div className={`${
+            isMobile ? 'pl-4' : 'absolute top-full left-0 bg-white shadow-lg rounded-md py-2 min-w-[200px]'
+          }`}>
             {subpages.map(subpage => (
               <Link
                 key={subpage.path}
