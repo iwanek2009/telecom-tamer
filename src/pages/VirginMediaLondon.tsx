@@ -72,7 +72,7 @@ const VirginMediaLondon = () => {
         <div className="mt-12" id="compare-deals">
           <StickeeWidget 
             widgetId="smartfony-91"
-            filters='{"provider": "Virgin Media"}'
+            filters='{"suppliers": [152]}'
           />
         </div>
       </CitystyleContent>
