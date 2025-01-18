@@ -65,6 +65,7 @@ import ChorltonBroadband from "./pages/ChorltonBroadband";
 import WithingtonBroadband from "./pages/WithingtonBroadband";
 import PrestwichBroadband from "./pages/PrestwichBroadband";
 import NorthernQuarterBroadband from "./pages/NorthernQuarterBroadband";
+import DeansgateInternetBroadband from "./pages/DeansgateInternetBroadband";
 
 const queryClient = new QueryClient();
 
@@ -152,6 +153,7 @@ const App = () => {
             <Route path="/manchester/withington" element={<WithingtonBroadband />} />
             <Route path="/manchester/prestwich" element={<PrestwichBroadband />} />
             <Route path="/manchester/northern-quarter" element={<NorthernQuarterBroadband />} />
+            <Route path="/manchester/deansgate" element={<DeansgateInternetBroadband />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>

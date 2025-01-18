@@ -16,8 +16,8 @@ const ManchesterCard = () => {
       title: "City Centre",
       items: [
         <Link to="/manchester/city-centre">Manchester City Centre Broadband | Urban Internet Deals</Link>,
-        <Link to="/local/northern-quarter">Northern Quarter Broadband | Creative District Internet</Link>,
-        <Link to="/local/deansgate">Deansgate Internet Packages | City Living Broadband</Link>,
+        <Link to="/manchester/northern-quarter">Northern Quarter Broadband | Creative District Internet</Link>,
+        <Link to="/manchester/deansgate">Deansgate Internet | City Living Broadband</Link>,
         <Link to="/local/spinningfields">Spinningfields Broadband | Business District Deals</Link>
       ],
       icon: <Landmark className="w-5 h-5 text-primary" />
