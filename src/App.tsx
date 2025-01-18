@@ -67,6 +67,11 @@ import PrestwichBroadband from "./pages/PrestwichBroadband";
 import NorthernQuarterBroadband from "./pages/NorthernQuarterBroadband";
 import DeansgateInternetBroadband from "./pages/DeansgateInternetBroadband";
 
+import SalfordBroadband from "./pages/SalfordBroadband";
+import TraffordBroadband from "./pages/TraffordBroadband";
+import StockportBroadband from "./pages/StockportBroadband";
+import BoltonBroadband from "./pages/BoltonBroadband";
+
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -154,6 +159,10 @@ const App = () => {
             <Route path="/manchester/prestwich" element={<PrestwichBroadband />} />
             <Route path="/manchester/northern-quarter" element={<NorthernQuarterBroadband />} />
             <Route path="/manchester/deansgate" element={<DeansgateInternetBroadband />} />
+            <Route path="/local/salford" element={<SalfordBroadband />} />
+            <Route path="/local/trafford" element={<TraffordBroadband />} />
+            <Route path="/local/stockport" element={<StockportBroadband />} />
+            <Route path="/local/bolton" element={<BoltonBroadband />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>

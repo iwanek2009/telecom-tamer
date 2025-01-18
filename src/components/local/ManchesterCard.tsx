@@ -17,20 +17,19 @@ const ManchesterCard = () => {
       items: [
         <Link to="/manchester/city-centre">Manchester City Centre Broadband | Urban Internet Deals</Link>,
         <Link to="/manchester/northern-quarter">Northern Quarter Broadband | Creative District Internet</Link>,
-        <Link to="/manchester/deansgate">Deansgate Internet | City Living Broadband</Link>,
-        <Link to="/local/spinningfields">Spinningfields Broadband | Business District Deals</Link>
+        <Link to="/manchester/deansgate">Deansgate Internet | City Living Broadband</Link>
       ],
       icon: <Landmark className="w-5 h-5 text-primary" />
     },
     {
-      title: "Student Areas",
+      title: "Greater Manchester Areas",
       items: [
-        <Link to="/local/fallowfield">Fallowfield Broadband | Student Internet Packages</Link>,
-        <Link to="/local/oxford-road">Oxford Road Corridor Internet | University Area Deals</Link>,
-        <Link to="/local/rusholme">Rusholme Broadband | Student Housing Internet</Link>,
-        <Link to="/local/victoria-park">Victoria Park Internet | Student Accommodation Deals</Link>
+        <Link to="/local/salford">Salford Broadband | Media City Internet Deals</Link>,
+        <Link to="/local/trafford">Trafford Internet | Local Broadband Deals</Link>,
+        <Link to="/local/stockport">Stockport Broadband | Home Internet Solutions</Link>,
+        <Link to="/local/bolton">Bolton Internet | Greater Manchester Broadband</Link>
       ],
-      icon: <MapPin className="w-5 h-5 text-primary" />
+      icon: <Network className="w-5 h-5 text-primary" />
     },
     {
       title: "Popular Residential Areas",
@@ -41,16 +40,6 @@ const ManchesterCard = () => {
         <Link to="/manchester/prestwich">Prestwich Internet | Home Broadband Deals</Link>
       ],
       icon: <MapPin className="w-5 h-5 text-primary" />
-    },
-    {
-      title: "Greater Manchester Areas",
-      items: [
-        <Link to="/local/salford">Salford Broadband | Media City Internet Deals</Link>,
-        <Link to="/local/trafford">Trafford Internet Packages | Local Broadband Offers</Link>,
-        <Link to="/local/stockport">Stockport Broadband | Home Internet Solutions</Link>,
-        <Link to="/local/bolton">Bolton Internet Deals | Greater Manchester Broadband</Link>
-      ],
-      icon: <Network className="w-5 h-5 text-primary" />
     },
     {
       title: "Local Providers",
