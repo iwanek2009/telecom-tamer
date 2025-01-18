@@ -8,6 +8,10 @@ import UniversityPortsmouthBroadband from "@/pages/UniversityPortsmouthBroadband
 import HistoricDockyardBroadband from "@/pages/HistoricDockyardBroadband";
 import GunwharfQuaysBroadband from "@/pages/GunwharfQuaysBroadband";
 import PortsmouthCityCentreBroadband from "@/pages/PortsmouthCityCentreBroadband";
+import StudentBroadbandPortsmouth from "@/pages/StudentBroadbandPortsmouth";
+import NavalBasePortsmouth from "@/pages/NavalBasePortsmouth";
+import PortsmouthBusinessBroadband from "@/pages/PortsmouthBusinessBroadband";
+import CoastalAreaPortsmouth from "@/pages/CoastalAreaPortsmouth";
 
 export const PortsmouthRoutes = [
   <Route key="portsmouth" path="/portsmouth" element={<PortsmouthBroadband />} />,
@@ -19,4 +23,8 @@ export const PortsmouthRoutes = [
   <Route key="historic-dockyard" path="/portsmouth/historic-dockyard" element={<HistoricDockyardBroadband />} />,
   <Route key="gunwharf-quays" path="/portsmouth/gunwharf-quays" element={<GunwharfQuaysBroadband />} />,
   <Route key="city-centre" path="/portsmouth/city-centre" element={<PortsmouthCityCentreBroadband />} />,
+  <Route key="student" path="/portsmouth/student" element={<StudentBroadbandPortsmouth />} />,
+  <Route key="naval-base" path="/portsmouth/naval-base" element={<NavalBasePortsmouth />} />,
+  <Route key="business" path="/portsmouth/business" element={<PortsmouthBusinessBroadband />} />,
+  <Route key="coastal" path="/portsmouth/coastal" element={<CoastalAreaPortsmouth />} />,
 ];
