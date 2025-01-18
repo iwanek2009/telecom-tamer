@@ -38,7 +38,7 @@ const ManchesterCard = () => {
         <Link to="/manchester/didsbury">Didsbury Broadband | Home Internet Packages</Link>,
         <Link to="/manchester/chorlton">Chorlton Internet | Family Broadband Deals</Link>,
         <Link to="/manchester/withington">Withington Broadband | Residential Internet Solutions</Link>,
-        <Link to="/local/prestwich">Prestwich Internet Packages | Home Broadband Deals</Link>
+        <Link to="/manchester/prestwich">Prestwich Internet | Home Broadband Deals</Link>
       ],
       icon: <MapPin className="w-5 h-5 text-primary" />
     },
