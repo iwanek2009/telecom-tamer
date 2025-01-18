@@ -12,6 +12,10 @@ import StudentBroadbandPortsmouth from "@/pages/StudentBroadbandPortsmouth";
 import NavalBasePortsmouth from "@/pages/NavalBasePortsmouth";
 import PortsmouthBusinessBroadband from "@/pages/PortsmouthBusinessBroadband";
 import CoastalAreaPortsmouth from "@/pages/CoastalAreaPortsmouth";
+import VirginMediaPortsmouth from "@/pages/VirginMediaPortsmouth";
+import BTPortsmouth from "@/pages/BTPortsmouth";
+import SkyPortsmouth from "@/pages/SkyPortsmouth";
+import ToobPortsmouth from "@/pages/ToobPortsmouth";
 
 export const PortsmouthRoutes = [
   <Route key="portsmouth" path="/portsmouth" element={<PortsmouthBroadband />} />,
@@ -27,4 +31,8 @@ export const PortsmouthRoutes = [
   <Route key="naval-base" path="/portsmouth/naval-base" element={<NavalBasePortsmouth />} />,
   <Route key="business" path="/portsmouth/business" element={<PortsmouthBusinessBroadband />} />,
   <Route key="coastal" path="/portsmouth/coastal" element={<CoastalAreaPortsmouth />} />,
+  <Route key="virgin-media" path="/portsmouth/virgin-media" element={<VirginMediaPortsmouth />} />,
+  <Route key="bt" path="/portsmouth/bt" element={<BTPortsmouth />} />,
+  <Route key="sky" path="/portsmouth/sky" element={<SkyPortsmouth />} />,
+  <Route key="toob" path="/portsmouth/toob" element={<ToobPortsmouth />} />,
 ];

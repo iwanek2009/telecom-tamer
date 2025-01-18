@@ -79,6 +79,30 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://smartfony.co.uk/portsmouth/virgin-media</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smartfony.co.uk/portsmouth/bt</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smartfony.co.uk/portsmouth/sky</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smartfony.co.uk/portsmouth/toob</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://smartfony.co.uk/local/fibre-broadband-southampton</loc>
     <lastmod>2024-03-19</lastmod>
     <changefreq>weekly</changefreq>
