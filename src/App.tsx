@@ -53,6 +53,7 @@ import JewelleryQuarterBroadband from "./pages/JewelleryQuarterBroadband";
 import DigbethBroadband from "./pages/DigbethBroadband";
 import AstonBroadband from "./pages/AstonBroadband";
 import HyperopticLondon from "./pages/HyperopticLondon";
+import SmallHeathBroadband from "./pages/SmallHeathBroadband";
 
 const queryClient = new QueryClient();
 
@@ -138,6 +139,7 @@ const App = () => {
             <Route path="/local/jewellery-quarter" element={<JewelleryQuarterBroadband />} />
             <Route path="/local/digbeth" element={<DigbethBroadband />} />
             <Route path="/local/aston" element={<AstonBroadband />} />
+            <Route path="/local/small-heath" element={<SmallHeathBroadband />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
