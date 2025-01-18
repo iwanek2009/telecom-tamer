@@ -56,46 +56,65 @@ const BlogPostPage = () => {
             ← Back to Blog
           </Button>
           
-          <header>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#1A1F2C] to-[#9b87f5] bg-clip-text text-transparent" itemProp="headline">
+          <header className="mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#1A1F2C] to-[#9b87f5] bg-clip-text text-transparent leading-tight" itemProp="headline">
               {post.title}
             </h1>
             <meta itemProp="datePublished" content={new Date(post.date).toISOString().split('T')[0]} />
+            <div className="text-[#1A1F2C]/70 text-lg flex items-center gap-2">
+              <span>By {post.author}</span>
+              <span className="text-[#9b87f5]">•</span>
+              <span>{new Date(post.date).toLocaleDateString()}</span>
+            </div>
           </header>
           
-          <div className="text-[#1A1F2C]/70 mb-8 text-lg">
-            <span>By {post.author}</span>
-            <span className="mx-2">•</span>
-            <span>{new Date(post.date).toLocaleDateString()}</span>
-          </div>
-          
-          <div className="prose prose-lg max-w-none prose-headings:text-[#1A1F2C] prose-p:text-[#1A1F2C]/80 prose-li:text-[#1A1F2C]/80" itemProp="articleBody">
+          <div className="prose prose-lg max-w-none" itemProp="articleBody">
             {post.content.split('\n\n').map((paragraph, index) => {
+              // Handle h2 headings
               if (paragraph.startsWith('# ')) {
-                return <h2 key={index} className="text-2xl font-bold mt-8 mb-4 bg-gradient-to-r from-[#1A1F2C] to-[#9b87f5] bg-clip-text text-transparent">{paragraph.replace('# ', '')}</h2>;
+                return (
+                  <h2 key={index} className="text-3xl font-bold mt-12 mb-6 bg-gradient-to-r from-[#1A1F2C] to-[#9b87f5] bg-clip-text text-transparent">
+                    {paragraph.replace('# ', '')}
+                  </h2>
+                );
               }
+              // Handle h3 headings
+              if (paragraph.startsWith('## ')) {
+                return (
+                  <h3 key={index} className="text-2xl font-semibold mt-8 mb-4 text-[#1A1F2C]">
+                    {paragraph.replace('## ', '')}
+                  </h3>
+                );
+              }
+              // Handle unordered lists
               if (paragraph.startsWith('- ')) {
                 const items = paragraph.split('\n').map(item => item.replace('- ', ''));
                 return (
-                  <ul key={index} className="list-disc pl-6 mb-4 space-y-2">
-                    {items.map((item, i) => <li key={i}>{item}</li>)}
+                  <ul key={index} className="list-disc pl-6 mb-8 space-y-3 text-[#1A1F2C]/80">
+                    {items.map((item, i) => <li key={i} className="leading-relaxed">{item}</li>)}
                   </ul>
                 );
               }
+              // Handle ordered lists
               if (paragraph.startsWith('1. ')) {
                 const items = paragraph.split('\n').map(item => item.replace(/^\d+\. /, ''));
                 return (
-                  <ol key={index} className="list-decimal pl-6 mb-4 space-y-2">
-                    {items.map((item, i) => <li key={i}>{item}</li>)}
+                  <ol key={index} className="list-decimal pl-6 mb-8 space-y-3 text-[#1A1F2C]/80">
+                    {items.map((item, i) => <li key={i} className="leading-relaxed">{item}</li>)}
                   </ol>
                 );
               }
-              return <p key={index} className="mb-4 leading-relaxed">{paragraph}</p>;
+              // Regular paragraphs
+              return (
+                <p key={index} className="mb-6 leading-relaxed text-[#1A1F2C]/80">
+                  {paragraph}
+                </p>
+              );
             })}
           </div>
 
-          <footer className="mt-12 pt-8 border-t border-gray-200">
-            <p className="text-sm text-[#1A1F2C]/60">
+          <footer className="mt-16 pt-8 border-t border-gray-200">
+            <p className="text-sm text-[#1A1F2C]/60 mb-8">
               <small>
                 Published by <span itemProp="publisher" itemScope itemType="http://schema.org/Organization">
                   <meta itemProp="name" content="smartfony.co.uk" />
@@ -103,16 +122,19 @@ const BlogPostPage = () => {
               </small>
             </p>
             
-            <div className="mt-8 bg-gradient-to-br from-[#F1F0FB] to-[#E5DEFF] p-6 rounded-xl">
-              <p className="text-[#1A1F2C] font-medium mb-4">
-                Need help choosing the right broadband package for your smart home needs?
+            <div className="bg-gradient-to-br from-[#F1F0FB] to-[#E5DEFF] p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-[#1A1F2C] mb-4">
+                Ready to find the perfect broadband package for your smart home?
+              </h3>
+              <p className="text-[#1A1F2C]/80 mb-6">
+                Compare the best broadband deals in your area and ensure your home stays connected.
               </p>
               <Button 
                 onClick={() => navigate('/broadband')} 
-                className="bg-[#9b87f5] hover:bg-[#8B5CF6] text-white flex items-center gap-2"
+                className="bg-[#9b87f5] hover:bg-[#8B5CF6] text-white flex items-center gap-2 text-lg px-8"
               >
                 Compare Broadband Deals
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-5 h-5" />
               </Button>
             </div>
           </footer>
