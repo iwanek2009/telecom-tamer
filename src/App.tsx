@@ -84,9 +84,6 @@ import FibrePortsmouthBroadband from "./pages/FibrePortsmouthBroadband";
 import PortsmouthHomeBroadband from "./pages/PortsmouthHomeBroadband";
 import SouthseaBroadband from "./pages/SouthseaBroadband";
 import OldPortsmouthBroadband from "./pages/OldPortsmouthBroadband";
-import NorthEndPortsmouthBroadband from "./pages/NorthEndPortsmouthBroadband";
-import FrattonBroadband from "./pages/FrattonBroadband";
-import MiltonBroadband from "./pages/MiltonBroadband";
 
 const queryClient = new QueryClient();
 
@@ -165,9 +162,34 @@ const App = () => {
             <Route path="/local/fibre-broadband-birmingham" element={<FibreBroadbandBirmingham />} />
             <Route path="/local/birmingham-tv-broadband" element={<BirminghamTVBroadband />} />
             <Route path="/local/birmingham-city-centre" element={<BirminghamCityCentreBroadband />} />
-            <Route path="/local/north-end" element={<NorthEndPortsmouthBroadband />} />
-            <Route path="/local/fratton" element={<FrattonBroadband />} />
-            <Route path="/local/milton" element={<MiltonBroadband />} />
+            <Route path="/manchester" element={<ManchesterBroadband />} />
+            <Route path="/manchester/city-centre" element={<ManchesterCityCentreBroadband />} />
+            <Route path="/manchester/fibre-manchester" element={<FibreBroadbandManchester />} />
+            <Route path="/manchester/manchester-tv" element={<ManchesterTVBroadband />} />
+            <Route path="/manchester/didsbury" element={<DidsburyBroadband />} />
+            <Route path="/manchester/chorlton" element={<ChorltonBroadband />} />
+            <Route path="/manchester/withington" element={<WithingtonBroadband />} />
+            <Route path="/manchester/prestwich" element={<PrestwichBroadband />} />
+            <Route path="/manchester/northern-quarter" element={<NorthernQuarterBroadband />} />
+            <Route path="/manchester/deansgate" element={<DeansgateInternetBroadband />} />
+            <Route path="/local/salford" element={<SalfordBroadband />} />
+            <Route path="/local/trafford" element={<TraffordBroadband />} />
+            <Route path="/local/stockport" element={<StockportBroadband />} />
+            <Route path="/local/bolton" element={<BoltonBroadband />} />
+            <Route path="/manchester/spinningfields" element={<SpinningfieldsBroadband />} />
+            <Route path="/manchester/fallowfield" element={<FallowfieldBroadband />} />
+            <Route path="/manchester/oxford-road" element={<OxfordRoadBroadband />} />
+            <Route path="/manchester/rusholme" element={<RusholmeBroadband />} />
+            <Route path="/manchester/victoria-park" element={<VictoriaParkBroadband />} />
+            <Route path="/manchester/virgin-media" element={<VirginMediaManchester />} />
+            <Route path="/manchester/bt" element={<BTManchester />} />
+            <Route path="/manchester/hyperoptic" element={<HyperopticManchester />} />
+            <Route path="/manchester/cityfibre" element={<CityFibreManchester />} />
+            <Route path="/portsmouth" element={<PortsmouthBroadband />} />
+            <Route path="/local/fibre-portsmouth" element={<FibrePortsmouthBroadband />} />
+            <Route path="/local/portsmouth-home" element={<PortsmouthHomeBroadband />} />
+            <Route path="/local/southsea" element={<SouthseaBroadband />} />
+            <Route path="/local/old-portsmouth" element={<OldPortsmouthBroadband />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
