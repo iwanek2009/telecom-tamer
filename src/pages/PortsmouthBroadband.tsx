@@ -48,6 +48,27 @@ const PortsmouthBroadband = () => {
         accordionItems={heroAccordionItems}
       />
 
+      <CitystyleFeatureGrid
+        title="Why Choose Our Portsmouth Broadband Deals?"
+        subtitle="Get the ideal internet package for your Portsmouth location"
+      >
+        <CitystyleFeatureCard
+          icon={Wifi}
+          title="Fast Speeds"
+          description="Access high-speed internet with up to 1Gbps in eligible areas"
+        />
+        <CitystyleFeatureCard
+          icon={Globe}
+          title="Local Coverage"
+          description="Extensive network coverage across all Portsmouth neighborhoods"
+        />
+        <CitystyleFeatureCard
+          icon={Home}
+          title="Home-Ready"
+          description="Perfect for streaming, gaming, and working from home"
+        />
+      </CitystyleFeatureGrid>
+
       <CitystyleContent>
         <div className="mt-12" id="compare-deals">
           <StickeeWidget widgetId="smartfony-91" />
@@ -120,27 +141,6 @@ const PortsmouthBroadband = () => {
             </ul>
           </div>
         </div>
-
-        <CitystyleFeatureGrid
-          title="Why Choose Our Portsmouth Broadband Deals?"
-          subtitle="Get the ideal internet package for your Portsmouth location"
-        >
-          <CitystyleFeatureCard
-            icon={Wifi}
-            title="Fast Speeds"
-            description="Access high-speed internet with up to 1Gbps in eligible areas"
-          />
-          <CitystyleFeatureCard
-            icon={Globe}
-            title="Local Coverage"
-            description="Extensive network coverage across all Portsmouth neighborhoods"
-          />
-          <CitystyleFeatureCard
-            icon={Home}
-            title="Home-Ready"
-            description="Perfect for streaming, gaming, and working from home"
-          />
-        </CitystyleFeatureGrid>
       </CitystyleContent>
     </CitystyleTemplate>
   );
