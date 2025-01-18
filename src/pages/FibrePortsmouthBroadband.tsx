@@ -3,7 +3,7 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { Wifi, Signal, House } from 'lucide-react';
+import { Wifi, Signal, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 
@@ -41,28 +41,28 @@ const FibrePortsmouthBroadband = () => {
         accordionItems={heroAccordionItems}
       />
 
-      <CitystyleContent>
-        <CitystyleFeatureGrid
-          title="Why Choose Fibre Broadband?"
-          subtitle="Experience the benefits of high-speed fibre internet"
-        >
-          <CitystyleFeatureCard
-            icon={Wifi}
-            title="Ultra-Fast Speeds"
-            description="Get download speeds up to 1Gbps with fibre broadband"
-          />
-          <CitystyleFeatureCard
-            icon={Signal}
-            title="Reliable Connection"
-            description="Enjoy stable internet with minimal downtime"
-          />
-          <CitystyleFeatureCard
-            icon={House}
-            title="Perfect for Homes"
-            description="Ideal for streaming, gaming, and remote work"
-          />
-        </CitystyleFeatureGrid>
+      <CitystyleFeatureGrid
+        title="Ultra-Fast Fibre Broadband in Portsmouth"
+        subtitle="Looking for lightning-quick internet? Compare the fastest fibre deals in your area"
+      >
+        <CitystyleFeatureCard
+          icon={Wifi}
+          title="Lightning-Fast Speeds"
+          description="Experience ultra-fast fibre broadband perfect for 4K streaming, lag-free gaming, and seamless video calls. Get download speeds up to 1Gb in Portsmouth."
+        />
+        <CitystyleFeatureCard
+          icon={Signal}
+          title="Reliable Connection"
+          description="Say goodbye to buffering with stable fibre connections. Perfect for busy households where everyone's online at once."
+        />
+        <CitystyleFeatureCard
+          icon={Zap}
+          title="Future-Proof Technology"
+          description="Get ready for whatever comes next with fibre broadband that can handle tomorrow's tech - from 8K streaming to cloud gaming."
+        />
+      </CitystyleFeatureGrid>
 
+      <CitystyleContent>
         <div className="mt-12" id="compare-deals">
           <StickeeWidget widgetId="smartfony-91" />
         </div>
