@@ -72,7 +72,7 @@ const HyperopticLondon = () => {
         <div className="mt-12" id="compare-deals">
           <StickeeWidget 
             widgetId="smartfony-91"
-            filters='{"suppliers": [139]}'
+            filters='{"suppliers": [227]}'
           />
         </div>
       </CitystyleContent>
