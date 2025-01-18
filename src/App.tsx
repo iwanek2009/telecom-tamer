@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useEffect } from "react";
+
 import Index from "./pages/Index";
 import Mobile from "./pages/Mobile";
 import Broadband from "./pages/Broadband";
@@ -57,6 +58,8 @@ import SmallHeathBroadband from "./pages/SmallHeathBroadband";
 import ManchesterBroadband from "./pages/ManchesterBroadband";
 import FibreBroadbandManchester from "./pages/FibreBroadbandManchester";
 import ManchesterTVBroadband from "./pages/ManchesterTVBroadband";
+
+import ManchesterCityCentreBroadband from "./pages/ManchesterCityCentreBroadband";
 
 const queryClient = new QueryClient();
 
@@ -144,6 +147,7 @@ const App = () => {
             <Route path="/local/aston" element={<AstonBroadband />} />
             <Route path="/local/small-heath" element={<SmallHeathBroadband />} />
             <Route path="/manchester" element={<ManchesterBroadband />} />
+            <Route path="/manchester/city-centre" element={<ManchesterCityCentreBroadband />} />
             <Route path="/manchester/fibre-manchester" element={<FibreBroadbandManchester />} />
             <Route path="/manchester/manchester-tv" element={<ManchesterTVBroadband />} />
             <Route path="*" element={<Navigate to="/" replace />} />
