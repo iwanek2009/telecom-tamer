@@ -1,4 +1,4 @@
-import { Building2, Wifi, PoundSterling, Landmark, MapPin, Network } from 'lucide-react';
+import { Building2, Wifi, PoundSterling, Landmark, MapPin, Network, GraduationCap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ManchesterCard = () => {
@@ -17,12 +17,23 @@ const ManchesterCard = () => {
       items: [
         <Link to="/manchester/city-centre">Manchester City Centre Broadband | Urban Internet Deals</Link>,
         <Link to="/manchester/northern-quarter">Northern Quarter Broadband | Creative District Internet</Link>,
-        <Link to="/manchester/deansgate">Deansgate Internet | City Living Broadband</Link>
+        <Link to="/manchester/deansgate">Deansgate Internet | City Living Broadband</Link>,
+        <Link to="/manchester/spinningfields">Spinningfields Broadband | Business District Deals</Link>
       ],
       icon: <Landmark className="w-5 h-5 text-primary" />
     },
     {
-      title: "Greater Manchester Areas",
+      title: "Student Areas",
+      items: [
+        <Link to="/manchester/fallowfield">Fallowfield Broadband | Student Internet Packages</Link>,
+        <Link to="/manchester/oxford-road">Oxford Road Corridor Internet | University Area Deals</Link>,
+        <Link to="/manchester/rusholme">Rusholme Broadband | Student Housing Internet</Link>,
+        <Link to="/manchester/victoria-park">Victoria Park Internet | Student Accommodation Deals</Link>
+      ],
+      icon: <GraduationCap className="w-5 h-5 text-primary" />
+    },
+    {
+      title: "Greater Manchester",
       items: [
         <Link to="/local/salford">Salford Broadband | Media City Internet Deals</Link>,
         <Link to="/local/trafford">Trafford Internet | Local Broadband Deals</Link>,
@@ -30,26 +41,6 @@ const ManchesterCard = () => {
         <Link to="/local/bolton">Bolton Internet | Greater Manchester Broadband</Link>
       ],
       icon: <Network className="w-5 h-5 text-primary" />
-    },
-    {
-      title: "Popular Residential Areas",
-      items: [
-        <Link to="/manchester/didsbury">Didsbury Broadband | Home Internet Packages</Link>,
-        <Link to="/manchester/chorlton">Chorlton Internet | Family Broadband Deals</Link>,
-        <Link to="/manchester/withington">Withington Broadband | Residential Internet Solutions</Link>,
-        <Link to="/manchester/prestwich">Prestwich Internet | Home Broadband Deals</Link>
-      ],
-      icon: <MapPin className="w-5 h-5 text-primary" />
-    },
-    {
-      title: "Local Providers",
-      items: [
-        "Virgin Media Manchester | Cable Internet Deals",
-        "BT Manchester | Fibre Broadband Packages",
-        "Hyperoptic Manchester | Full Fibre Internet",
-        "CityFibre Manchester | Pure Fibre Broadband"
-      ],
-      icon: <Wifi className="w-5 h-5 text-primary" />
     }
   ];
 
@@ -81,7 +72,7 @@ const ManchesterCard = () => {
                         : 'pl-4 border-l-2 border-primary hover:border-secondary'
                     }`}
                   >
-                    {typeof item === 'string' ? item : item}
+                    {item}
                   </li>
                 ))}
               </ul>

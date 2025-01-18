@@ -71,6 +71,11 @@ import SalfordBroadband from "./pages/SalfordBroadband";
 import TraffordBroadband from "./pages/TraffordBroadband";
 import StockportBroadband from "./pages/StockportBroadband";
 import BoltonBroadband from "./pages/BoltonBroadband";
+import SpinningfieldsBroadband from "./pages/SpinningfieldsBroadband";
+import FallowfieldBroadband from "./pages/FallowfieldBroadband";
+import OxfordRoadBroadband from "./pages/OxfordRoadBroadband";
+import RusholmeBroadband from "./pages/RusholmeBroadband";
+import VictoriaParkBroadband from "./pages/VictoriaParkBroadband";
 
 const queryClient = new QueryClient();
 
@@ -163,6 +168,11 @@ const App = () => {
             <Route path="/local/trafford" element={<TraffordBroadband />} />
             <Route path="/local/stockport" element={<StockportBroadband />} />
             <Route path="/local/bolton" element={<BoltonBroadband />} />
+            <Route path="/manchester/spinningfields" element={<SpinningfieldsBroadband />} />
+            <Route path="/manchester/fallowfield" element={<FallowfieldBroadband />} />
+            <Route path="/manchester/oxford-road" element={<OxfordRoadBroadband />} />
+            <Route path="/manchester/rusholme" element={<RusholmeBroadband />} />
+            <Route path="/manchester/victoria-park" element={<VictoriaParkBroadband />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>

@@ -91,61 +91,31 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smartfony.co.uk/manchester</loc>
+    <loc>https://smartfony.co.uk/manchester/spinningfields</loc>
     <lastmod>2024-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smartfony.co.uk/manchester/city-centre</loc>
+    <loc>https://smartfony.co.uk/manchester/fallowfield</loc>
     <lastmod>2024-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smartfony.co.uk/manchester/northern-quarter</loc>
+    <loc>https://smartfony.co.uk/manchester/oxford-road</loc>
     <lastmod>2024-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smartfony.co.uk/manchester/fibre-manchester</loc>
+    <loc>https://smartfony.co.uk/manchester/rusholme</loc>
     <lastmod>2024-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smartfony.co.uk/manchester/manchester-tv</loc>
-    <lastmod>2024-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://smartfony.co.uk/manchester/deansgate</loc>
-    <lastmod>2024-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://smartfony.co.uk/local/salford</loc>
-    <lastmod>2024-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://smartfony.co.uk/local/trafford</loc>
-    <lastmod>2024-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://smartfony.co.uk/local/stockport</loc>
-    <lastmod>2024-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://smartfony.co.uk/local/bolton</loc>
+    <loc>https://smartfony.co.uk/manchester/victoria-park</loc>
     <lastmod>2024-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
