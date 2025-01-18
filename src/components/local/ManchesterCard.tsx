@@ -41,6 +41,16 @@ const ManchesterCard = () => {
         <Link to="/local/bolton">Bolton Internet | Greater Manchester Broadband</Link>
       ],
       icon: <Network className="w-5 h-5 text-primary" />
+    },
+    {
+      title: "Internet Providers",
+      items: [
+        <Link to="/manchester/virgin-media">Virgin Media Manchester | Cable Internet Packages</Link>,
+        <Link to="/manchester/bt">BT Manchester | Fibre Broadband Deals</Link>,
+        <Link to="/manchester/hyperoptic">Hyperoptic Manchester | Full Fibre Internet</Link>,
+        <Link to="/manchester/cityfibre">CityFibre Manchester | Pure Fibre Broadband</Link>
+      ],
+      icon: <Network className="w-5 h-5 text-primary" />
     }
   ];
 
