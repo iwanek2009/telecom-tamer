@@ -34,8 +34,8 @@ const OldPortsmouthBroadband = () => {
       </Helmet>
 
       <CitystyleHero
-        title="Internet Deals in Old Portsmouth"
-        subtitle="Compare the latest broadband packages available in Old Portsmouth. Find reliable internet for your home or business."
+        title="Historic Quarter, Modern Internet"
+        subtitle="Find the perfect broadband package in Old Portsmouth's unique setting"
         image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
         imageAlt="Old Portsmouth internet connectivity"
         accordionItems={heroAccordionItems}
@@ -47,19 +47,19 @@ const OldPortsmouthBroadband = () => {
           subtitle="Get connected with the perfect local package"
         >
           <CitystyleFeatureCard
-            icon={Wifi}
-            title="Local Coverage"
-            description="Packages available throughout Old Portsmouth"
+            icon={House}
+            title="Heritage-Friendly Installation"
+            description="Get connected with providers who understand Old Portsmouth's historic buildings. Expert installation that respects listed properties and period features."
           />
           <CitystyleFeatureCard
             icon={Signal}
-            title="Reliable Speed"
-            description="Stable connections for all your needs"
+            title="Reliable Waterfront Connection"
+            description="Enjoy stable internet whether you're in a Spice Island apartment or a High Street residence. Perfect for coastal living and working."
           />
           <CitystyleFeatureCard
-            icon={House}
-            title="Flexible Options"
-            description="Choose the perfect package for your usage"
+            icon={Wifi}
+            title="Community-Focused Service"
+            description="Packages designed for Old Portsmouth's diverse community - from Camber Dock businesses to Point residents."
           />
         </CitystyleFeatureGrid>
 
