@@ -186,10 +186,10 @@ const App = () => {
             <Route path="/manchester/hyperoptic" element={<HyperopticManchester />} />
             <Route path="/manchester/cityfibre" element={<CityFibreManchester />} />
             <Route path="/portsmouth" element={<PortsmouthBroadband />} />
-            <Route path="/local/fibre-portsmouth" element={<FibrePortsmouthBroadband />} />
-            <Route path="/local/portsmouth-home" element={<PortsmouthHomeBroadband />} />
-            <Route path="/local/southsea" element={<SouthseaBroadband />} />
-            <Route path="/local/old-portsmouth" element={<OldPortsmouthBroadband />} />
+            <Route path="/portsmouth/fibre-broadband" element={<FibrePortsmouthBroadband />} />
+            <Route path="/portsmouth/home-broadband" element={<PortsmouthHomeBroadband />} />
+            <Route path="/portsmouth/southsea" element={<SouthseaBroadband />} />
+            <Route path="/portsmouth/old-portsmouth" element={<OldPortsmouthBroadband />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
