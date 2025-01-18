@@ -143,7 +143,7 @@ const App = () => {
             <Route path="/local/digbeth" element={<DigbethBroadband />} />
             <Route path="/local/aston" element={<AstonBroadband />} />
             <Route path="/local/small-heath" element={<SmallHeathBroadband />} />
-            <Route path="/local/manchester" element={<ManchesterBroadband />} />
+            <Route path="/manchester" element={<ManchesterBroadband />} />
             <Route path="/local/fibre-manchester" element={<FibreBroadbandManchester />} />
             <Route path="/local/manchester-tv" element={<ManchesterTVBroadband />} />
             <Route path="*" element={<Navigate to="/" replace />} />
