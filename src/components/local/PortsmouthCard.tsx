@@ -6,30 +6,30 @@ const PortsmouthCard = () => {
     {
       title: "City-Wide Coverage",
       items: [
-        <Link to="/local/portsmouth">Portsmouth Broadband Deals | Compare Local Internet Providers</Link>,
-        <Link to="/local/fibre-portsmouth">Fibre Broadband Portsmouth | Fast Internet Packages</Link>,
-        <Link to="/local/portsmouth-home">Portsmouth Home Broadband | TV & Phone Bundles</Link>
+        <Link to="/portsmouth">Portsmouth Broadband Deals | Compare Local Internet Providers</Link>,
+        <Link to="/portsmouth/fibre-broadband">Fibre Broadband Portsmouth | Fast Internet Packages</Link>,
+        <Link to="/portsmouth/home-broadband">Portsmouth Home Broadband | TV & Phone Bundles</Link>
       ],
       icon: <Building2 className="w-5 h-5 text-primary" />
     },
     {
       title: "Local Areas",
       items: [
-        <Link to="/local/southsea">Southsea Broadband Deals | Local Internet Packages</Link>,
-        <Link to="/local/old-portsmouth">Old Portsmouth Internet Offers | Compare Broadband Deals</Link>,
-        <Link to="/local/north-end">North End Portsmouth Broadband | Home Internet Packages</Link>,
-        <Link to="/local/fratton">Fratton Broadband Deals | Compare Local Providers</Link>,
-        <Link to="/local/milton">Milton Internet Packages | Portsmouth Broadband Offers</Link>
+        <Link to="/portsmouth/southsea">Southsea Broadband Deals | Local Internet Packages</Link>,
+        <Link to="/portsmouth/old-portsmouth">Old Portsmouth Internet Offers | Compare Broadband Deals</Link>,
+        <Link to="/portsmouth/city-centre">Portsmouth City Centre | Urban Internet Packages</Link>,
+        <Link to="/portsmouth/gunwharf-quays">Gunwharf Quays Broadband | Shopping District Internet</Link>,
+        <Link to="/portsmouth/historic-dockyard">Historic Dockyard Broadband | Maritime Area Internet</Link>
       ],
       icon: <MapPin className="w-5 h-5 text-primary" />
     },
     {
       title: "Specialized Services",
       items: [
-        <Link to="/local/student-portsmouth">Student Broadband Portsmouth | University Area Deals</Link>,
-        <Link to="/local/naval-base">Naval Base Portsmouth | Broadband For Service Personnel</Link>,
-        <Link to="/local/business-portsmouth">Portsmouth Business Broadband | Commercial Internet</Link>,
-        <Link to="/local/coastal-portsmouth">Coastal Area Portsmouth | Best Internet Providers</Link>
+        <Link to="/portsmouth/student">Student Broadband Portsmouth | University Area Deals</Link>,
+        <Link to="/portsmouth/naval-base">Naval Base Portsmouth | Service Personnel Internet</Link>,
+        <Link to="/portsmouth/business">Portsmouth Business Broadband | Commercial Internet</Link>,
+        <Link to="/portsmouth/coastal">Coastal Area Portsmouth | Seaside Internet Packages</Link>
       ],
       icon: <Landmark className="w-5 h-5 text-primary" />
     },
@@ -46,10 +46,10 @@ const PortsmouthCard = () => {
     {
       title: "Featured Locations",
       items: [
-        "University of Portsmouth Broadband | Student Accommodation Deals",
-        "Portsmouth Historic Dockyard Area | Internet Services",
-        "Gunwharf Quays Broadband | Shopping District Internet",
-        "Portsmouth City Centre Broadband | Urban Internet Packages"
+        <Link to="/portsmouth/university">University of Portsmouth | Student Accommodation Internet</Link>,
+        <Link to="/portsmouth/historic-dockyard">Portsmouth Historic Dockyard | Maritime Area Broadband</Link>,
+        <Link to="/portsmouth/gunwharf-quays">Gunwharf Quays | Shopping District Internet</Link>,
+        <Link to="/portsmouth/city-centre">City Centre Broadband | Urban Internet Solutions</Link>
       ],
       icon: <PoundSterling className="w-5 h-5 text-primary" />
     }
@@ -83,7 +83,7 @@ const PortsmouthCard = () => {
                         : 'pl-4 border-l-2 border-primary hover:border-secondary'
                     }`}
                   >
-                    {typeof item === 'string' ? item : item}
+                    {item}
                   </li>
                 ))}
               </ul>
