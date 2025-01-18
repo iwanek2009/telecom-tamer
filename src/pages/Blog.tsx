@@ -7,10 +7,10 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Blog | Smartfony - Mobile & Broadband News</title>
+        <title>Smart Meter Internet Requirements UK Guide 2025 | Compare Broadband Deals</title>
         <meta 
           name="description" 
-          content="Stay updated with the latest news and insights about mobile phones, broadband, and technology trends."
+          content="Discover how smart meters affect your home internet needs in 2025. Compare broadband packages suitable for smart home technology. Expert advice on connectivity requirements and deals."
         />
       </Helmet>
       
