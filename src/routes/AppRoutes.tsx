@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Route, Navigate } from "react-router-dom";
 import Index from "@/pages/Index";
 import Mobile from "@/pages/Mobile";
 import Broadband from "@/pages/Broadband";
@@ -48,9 +48,9 @@ import JewelleryQuarterBroadband from "@/pages/JewelleryQuarterBroadband";
 import DigbethBroadband from "@/pages/DigbethBroadband";
 import AstonBroadband from "@/pages/AstonBroadband";
 
-const AppRoutes = () => {
+export const AppRoutes = () => {
   return (
-    <Routes>
+    <>
       <Route path="/" element={<Index />} />
       <Route path="/mobile" element={<Mobile />} />
       <Route path="/broadband" element={<Broadband />} />
@@ -69,6 +69,7 @@ const AppRoutes = () => {
       <Route path="/local/london" element={<LondonBroadband />} />
       <Route path="/local/fibre-broadband-london" element={<FibreBroadbandLondon />} />
       <Route path="/local/south-london" element={<SouthLondonBroadband />} />
+      <Route path="/local/north-london" element={<NorthLondonBroadband />} />
       <Route path="/local/brixton" element={<BrixtonBroadband />} />
       <Route path="/local/greenwich" element={<GreenwichBroadband />} />
       <Route path="/local/croydon" element={<CroydonBroadband />} />
@@ -79,7 +80,6 @@ const AppRoutes = () => {
       <Route path="/local/business-london" element={<BusinessBroadbandLondon />} />
       <Route path="/local/gaming-london" element={<GamingBroadbandLondon />} />
       <Route path="/local/wfh-london" element={<WorkFromHomeLondon />} />
-      <Route path="/local/north-london" element={<NorthLondonBroadband />} />
       <Route path="/local/islington" element={<IslingtonBroadband />} />
       <Route path="/local/camden" element={<CamdenBroadband />} />
       <Route path="/local/finsbury-park" element={<FinsburyParkBroadband />} />
@@ -88,6 +88,10 @@ const AppRoutes = () => {
       <Route path="/local/g-network" element={<GNetworkLondon />} />
       <Route path="/local/tv-broadband" element={<LondonTVBroadband />} />
       <Route path="/local/bt-london" element={<BTLondonBroadband />} />
+      <Route path="/local/birmingham" element={<BirminghamBroadband />} />
+      <Route path="/local/fibre-broadband-birmingham" element={<FibreBroadbandBirmingham />} />
+      <Route path="/local/birmingham-tv-broadband" element={<BirminghamTVBroadband />} />
+      <Route path="/local/birmingham-city-centre" element={<BirminghamCityCentreBroadband />} />
       <Route path="/about" element={<About />} />
       <Route path="/sim" element={<SimOnly />} />
       <Route path="/internet-uk" element={<InternetUK />} />
@@ -96,8 +100,6 @@ const AppRoutes = () => {
       <Route path="/local/digbeth" element={<DigbethBroadband />} />
       <Route path="/local/aston" element={<AstonBroadband />} />
       <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+    </>
   );
 };
-
-export default AppRoutes;
