@@ -61,6 +61,7 @@ import ManchesterCityCentreBroadband from "./pages/ManchesterCityCentreBroadband
 import FibreBroadbandManchester from "./pages/FibreBroadbandManchester";
 import ManchesterTVBroadband from "./pages/ManchesterTVBroadband";
 import DidsburyBroadband from "./pages/DidsburyBroadband";
+import ChorltonBroadband from "./pages/ChorltonBroadband";
 
 const queryClient = new QueryClient();
 
@@ -152,6 +153,7 @@ const App = () => {
             <Route path="/manchester/fibre-manchester" element={<FibreBroadbandManchester />} />
             <Route path="/manchester/manchester-tv" element={<ManchesterTVBroadband />} />
             <Route path="/manchester/didsbury" element={<DidsburyBroadband />} />
+            <Route path="/manchester/chorlton" element={<ChorltonBroadband />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>

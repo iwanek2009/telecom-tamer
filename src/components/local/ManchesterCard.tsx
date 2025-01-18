@@ -36,7 +36,7 @@ const ManchesterCard = () => {
       title: "Popular Residential Areas",
       items: [
         <Link to="/manchester/didsbury">Didsbury Broadband | Home Internet Packages</Link>,
-        <Link to="/local/chorlton">Chorlton Internet Deals | Family Broadband Offers</Link>,
+        <Link to="/manchester/chorlton">Chorlton Internet | Family Broadband Deals</Link>,
         <Link to="/local/withington">Withington Broadband | Residential Internet Solutions</Link>,
         <Link to="/local/prestwich">Prestwich Internet Packages | Home Broadband Deals</Link>
       ],
