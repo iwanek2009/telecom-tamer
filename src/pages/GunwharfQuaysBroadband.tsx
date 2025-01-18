@@ -34,8 +34,8 @@ const GunwharfQuaysBroadband = () => {
       </Helmet>
 
       <CitystyleHero
-        title="Gunwharf Quays Broadband Deals"
-        subtitle="Compare the best broadband packages for Portsmouth's premier shopping and residential district."
+        title="Premium Broadband for Gunwharf Quays Living"
+        subtitle="Find the perfect internet package for Portsmouth's waterfront destination"
         image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
         imageAlt="Gunwharf Quays broadband services"
         accordionItems={heroAccordionItems}
@@ -48,18 +48,18 @@ const GunwharfQuaysBroadband = () => {
         >
           <CitystyleFeatureCard
             icon={Wifi}
-            title="Fast Speeds"
-            description="Ultra-fast connectivity for all needs"
+            title="Waterfront Ready Speeds"
+            description="Ultra-fast broadband perfect for Gunwharf's modern apartments and retail spaces. Get reliable connections with stunning harbour views."
           />
           <CitystyleFeatureCard
             icon={Building}
-            title="Mixed Use"
-            description="Perfect for retail and residential"
+            title="Premium Location, Premium Service"
+            description="Designed for Gunwharf's unique mix of luxury living and retail - whether you're running a store or enjoying apartment life."
           />
           <CitystyleFeatureCard
             icon={ShoppingBag}
-            title="Retail Ready"
-            description="Ideal for shops and restaurants"
+            title="Retail & Residential Solutions"
+            description="From designer shops to waterfront homes, get packages that match Gunwharf's prestigious standards."
           />
           <CitystyleFeatureCard
             icon={Shield}
