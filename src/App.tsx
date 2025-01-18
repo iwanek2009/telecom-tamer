@@ -55,11 +55,12 @@ import DigbethBroadband from "./pages/DigbethBroadband";
 import AstonBroadband from "./pages/AstonBroadband";
 import HyperopticLondon from "./pages/HyperopticLondon";
 import SmallHeathBroadband from "./pages/SmallHeathBroadband";
+
 import ManchesterBroadband from "./pages/ManchesterBroadband";
+import ManchesterCityCentreBroadband from "./pages/ManchesterCityCentreBroadband";
 import FibreBroadbandManchester from "./pages/FibreBroadbandManchester";
 import ManchesterTVBroadband from "./pages/ManchesterTVBroadband";
-
-import ManchesterCityCentreBroadband from "./pages/ManchesterCityCentreBroadband";
+import DidsburyBroadband from "./pages/DidsburyBroadband";
 
 const queryClient = new QueryClient();
 
@@ -150,6 +151,7 @@ const App = () => {
             <Route path="/manchester/city-centre" element={<ManchesterCityCentreBroadband />} />
             <Route path="/manchester/fibre-manchester" element={<FibreBroadbandManchester />} />
             <Route path="/manchester/manchester-tv" element={<ManchesterTVBroadband />} />
+            <Route path="/manchester/didsbury" element={<DidsburyBroadband />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
