@@ -56,6 +56,7 @@ import HyperopticLondon from "./pages/HyperopticLondon";
 import SmallHeathBroadband from "./pages/SmallHeathBroadband";
 import ManchesterBroadband from "./pages/ManchesterBroadband";
 import FibreBroadbandManchester from "./pages/FibreBroadbandManchester";
+import ManchesterTVBroadband from "./pages/ManchesterTVBroadband";
 
 const queryClient = new QueryClient();
 
@@ -144,6 +145,7 @@ const App = () => {
             <Route path="/local/small-heath" element={<SmallHeathBroadband />} />
             <Route path="/local/manchester" element={<ManchesterBroadband />} />
             <Route path="/local/fibre-manchester" element={<FibreBroadbandManchester />} />
+            <Route path="/local/manchester-tv" element={<ManchesterTVBroadband />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
