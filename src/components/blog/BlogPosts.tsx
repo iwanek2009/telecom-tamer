@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BlogPost } from './BlogPost';
 import { AddPostForm } from './AddPostForm';
 import { Button } from '../ui/button';
@@ -13,11 +13,20 @@ export interface Post {
 }
 
 export const BlogPosts = () => {
-  const [posts, setPosts] = useState<Post[]>([
-    {
-      id: '1',
-      title: 'Smart Meters Set to Replace Traditional Energy Meters in UK - What You Need to Know',
-      content: `Around 600,000 UK households will have the opportunity to upgrade to smart meters when the Radio Teleswitch Service (RTS) transitions to newer technology in June 2025. This change presents an opportunity to explore how modern internet connectivity can enhance home energy management.
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [showAddForm, setShowAddForm] = useState(false);
+  const { toast } = useToast();
+
+  useEffect(() => {
+    const savedPosts = localStorage.getItem('blog-posts');
+    if (savedPosts) {
+      setPosts(JSON.parse(savedPosts));
+    } else {
+      // Initialize with the default post
+      const defaultPost = {
+        id: '1',
+        title: 'Smart Meters Set to Replace Traditional Energy Meters in UK - What You Need to Know',
+        content: `Around 600,000 UK households will have the opportunity to upgrade to smart meters when the Radio Teleswitch Service (RTS) transitions to newer technology in June 2025. This change presents an opportunity to explore how modern internet connectivity can enhance home energy management.
 
 Understanding the Changes
 The traditional RTS system, which has served many UK households, particularly those on Economy 7 or Economy 10 tariffs, is being updated to embrace newer technologies. This shift aligns with the broader movement toward digital solutions in home management.
@@ -48,12 +57,13 @@ As the UK continues to modernize its energy infrastructure, having reliable inte
 Visit our broadband comparison section to explore internet options in your area.
 
 Need help choosing the right broadband package for your smart home needs? Use our comparison tool to find the best options in your area.`,
-      date: '2024-01-15T12:00:00.000Z',
-      author: 'Smartfony Technology Team'
+        date: '2024-01-15T12:00:00.000Z',
+        author: 'Smartfony Technology Team'
+      };
+      setPosts([defaultPost]);
+      localStorage.setItem('blog-posts', JSON.stringify([defaultPost]));
     }
-  ]);
-  const [showAddForm, setShowAddForm] = useState(false);
-  const { toast } = useToast();
+  }, []);
 
   const handleAddPost = (newPost: Omit<Post, 'id' | 'date'>) => {
     const post: Post = {
@@ -62,7 +72,9 @@ Need help choosing the right broadband package for your smart home needs? Use ou
       ...newPost
     };
     
-    setPosts([post, ...posts]);
+    const updatedPosts = [post, ...posts];
+    setPosts(updatedPosts);
+    localStorage.setItem('blog-posts', JSON.stringify(updatedPosts));
     setShowAddForm(false);
     
     toast({

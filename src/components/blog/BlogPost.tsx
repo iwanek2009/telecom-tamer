@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Post } from './BlogPosts';
 
 interface BlogPostProps {
@@ -5,23 +6,30 @@ interface BlogPostProps {
 }
 
 export const BlogPost = ({ post }: BlogPostProps) => {
-  const formattedDate = new Date(post.date).toLocaleDateString('en-GB', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric'
-  });
-
   return (
     <article className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-      <h2 className="text-2xl font-bold mb-2">{post.title}</h2>
-      <div className="text-sm text-gray-500 mb-4">
-        By {post.author} • {formattedDate}
+      <Link to={`/blog/post/${post.id}`} className="block group">
+        <h2 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
+          {post.title}
+        </h2>
+      </Link>
+      
+      <div className="text-gray-600 mb-4">
+        <span>By {post.author}</span>
+        <span className="mx-2">•</span>
+        <span>{new Date(post.date).toLocaleDateString()}</span>
       </div>
-      <div className="prose max-w-none">
-        {post.content.split('\n').map((paragraph, index) => (
-          <p key={index} className="mb-4">{paragraph}</p>
-        ))}
-      </div>
+      
+      <p className="text-gray-700 mb-4">
+        {post.content.slice(0, 200)}...
+      </p>
+      
+      <Link 
+        to={`/blog/post/${post.id}`}
+        className="text-primary hover:text-primary/90 font-medium transition-colors"
+      >
+        Read more →
+      </Link>
     </article>
   );
 };
