@@ -21,7 +21,7 @@ export const Footer = () => {
             <h3 className="text-white font-bold text-lg mb-4">About Us</h3>
             <ul className="space-y-2">
               <li><Link to="/about" onClick={scrollToTop} className="hover:text-white transition-colors">About Smartfony</Link></li>
-              <li><a href="#" className="hover:text-white transition-colors">News</a></li>
+              <li><Link to="/blog" onClick={scrollToTop} className="hover:text-white transition-colors">Blog</Link></li>
               <li><a href="#" className="hover:text-white transition-colors">Partners</a></li>
             </ul>
           </div>

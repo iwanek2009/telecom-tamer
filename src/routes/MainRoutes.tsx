@@ -11,6 +11,7 @@ import Broadband100Mbps from "@/pages/Broadband100Mbps";
 import BroadbandHomePhone from "@/pages/BroadbandHomePhone";
 import UltrafastBroadband from "@/pages/UltrafastBroadband";
 import LocalBroadband from "@/pages/LocalBroadband";
+import Blog from "@/pages/Blog";
 
 export const MainRoutes = [
   <Route key="index" path="/" element={<Index />} />,
@@ -25,4 +26,5 @@ export const MainRoutes = [
   <Route key="home-phone" path="/broadband/home-phone" element={<BroadbandHomePhone />} />,
   <Route key="ultrafast" path="/broadband/ultrafast" element={<UltrafastBroadband />} />,
   <Route key="local" path="/broadband/local" element={<LocalBroadband />} />,
+  <Route key="blog" path="/blog" element={<Blog />} />,
 ];
