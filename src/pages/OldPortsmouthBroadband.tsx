@@ -35,7 +35,7 @@ const OldPortsmouthBroadband = () => {
       </Helmet>
 
       <CitystyleHero
-        title="Historic Quarter, Modern Internet"
+        title="Perfect broadband package in Old Portsmouth's"
         subtitle="Find the perfect broadband package in Old Portsmouth's unique setting"
         image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
         imageAlt="Old Portsmouth internet connectivity"
