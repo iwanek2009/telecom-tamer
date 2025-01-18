@@ -52,6 +52,7 @@ import BirminghamCityCentreBroadband from "./pages/BirminghamCityCentreBroadband
 import JewelleryQuarterBroadband from "./pages/JewelleryQuarterBroadband";
 import DigbethBroadband from "./pages/DigbethBroadband";
 import AstonBroadband from "./pages/AstonBroadband";
+import HyperopticLondon from "./pages/HyperopticLondon";
 
 const queryClient = new QueryClient();
 
@@ -123,6 +124,7 @@ const App = () => {
             <Route path="/local/community-fibre" element={<CommunityFibreLondon />} />
             <Route path="/local/virgin-media" element={<VirginMediaLondon />} />
             <Route path="/local/g-network" element={<GNetworkLondon />} />
+            <Route path="/local/hyperoptic" element={<HyperopticLondon />} />
             <Route path="/local/tv-broadband" element={<LondonTVBroadband />} />
             <Route path="/local/bt-london" element={<BTLondonBroadband />} />
             <Route path="/local/birmingham" element={<BirminghamBroadband />} />
