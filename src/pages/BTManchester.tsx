@@ -42,7 +42,7 @@ const BTManchester = () => {
       <CitystyleHero
         title="BT Broadband Manchester"
         subtitle="Compare BT's fibre broadband packages in Manchester. Get reliable speeds and comprehensive coverage from the UK's largest provider."
-        image="/lovable-uploads/f47024ea-50f0-4583-89a7-f5cbc9e3beb9.png"
+        image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
         imageAlt="BT broadband coverage in Manchester"
         accordionItems={heroAccordionItems}
       />

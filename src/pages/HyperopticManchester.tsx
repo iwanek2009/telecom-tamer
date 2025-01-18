@@ -42,7 +42,7 @@ const HyperopticManchester = () => {
       <CitystyleHero
         title="Hyperoptic Broadband Manchester"
         subtitle="Compare Hyperoptic's full-fibre broadband packages in Manchester. Get ultra-fast, reliable connectivity with dedicated fibre connection."
-        image="/lovable-uploads/f47024ea-50f0-4583-89a7-f5cbc9e3beb9.png"
+        image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
         imageAlt="Hyperoptic broadband coverage in Manchester"
         accordionItems={heroAccordionItems}
       />

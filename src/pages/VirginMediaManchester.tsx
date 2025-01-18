@@ -42,7 +42,7 @@ const VirginMediaManchester = () => {
       <CitystyleHero
         title="Virgin Media Broadband Manchester"
         subtitle="Compare Virgin Media's cable broadband packages in Manchester. Get ultra-fast speeds and reliable connectivity for your home."
-        image="/lovable-uploads/f47024ea-50f0-4583-89a7-f5cbc9e3beb9.png"
+        image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
         imageAlt="Virgin Media broadband coverage in Manchester"
         accordionItems={heroAccordionItems}
       />
