@@ -3,7 +3,7 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { Wifi, Building, Briefcase, Home } from 'lucide-react';
+import { Wifi, Building, Home, MapPin, Users, Laptop, Network } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 
@@ -65,6 +65,140 @@ const PortsmouthCityCentreBroadband = () => {
 
         <div className="mt-12" id="compare-deals">
           <StickeeWidget widgetId="smartfony-91" />
+        </div>
+
+        {/* Why Choose Section */}
+        <div className="mt-16 bg-white rounded-2xl shadow-sm p-8 space-y-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Why Choose Portsmouth City Centre Broadband?
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              Being in Portsmouth's heart means you need internet that keeps pace with city life. Whether you're running a shop in Commercial Road, studying near Park Building, or living in one of the modern city apartments, having the right connection is essential.
+            </p>
+          </div>
+        </div>
+
+        {/* Available Services Grid */}
+        <div className="mt-8 grid md:grid-cols-3 gap-6">
+          <div className="bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] rounded-2xl p-6 shadow-sm">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Commercial Areas</h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>Ultra-fast business connections</li>
+              <li>Reliable point-of-sale systems</li>
+              <li>Public Wi-Fi solutions</li>
+            </ul>
+          </div>
+          <div className="bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] rounded-2xl p-6 shadow-sm">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Residential Zones</h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>High-speed home broadband</li>
+              <li>Entertainment bundles</li>
+              <li>Smart apartment ready</li>
+            </ul>
+          </div>
+          <div className="bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] rounded-2xl p-6 shadow-sm">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Student Areas</h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>Flexible contracts</li>
+              <li>Fast download speeds</li>
+              <li>Shared accommodation deals</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Target Audience Section */}
+        <div className="mt-12 space-y-8">
+          <h2 className="text-3xl font-bold text-gray-900 text-center">Perfect For</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white rounded-2xl p-6 shadow-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">City Centre Businesses</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>Reliable shop connections</li>
+                <li>Customer Wi-Fi</li>
+                <li>CCTV support</li>
+                <li>Card payment stability</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-2xl p-6 shadow-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Urban Residents</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>Fast home working</li>
+                <li>4K streaming</li>
+                <li>Smart home ready</li>
+                <li>Multiple devices</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-2xl p-6 shadow-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Students</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>Quick downloads</li>
+                <li>Video streaming</li>
+                <li>Online gaming</li>
+                <li>Group projects</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Steps Section */}
+        <div className="mt-12 bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] rounded-2xl p-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Finding Your City Connection</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">1</div>
+              <h3 className="font-bold text-gray-900 mb-2">Street Check</h3>
+              <p className="text-gray-600">Every city centre location has different options - from Arundel Street to Winston Churchill Avenue</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">2</div>
+              <h3 className="font-bold text-gray-900 mb-2">Usage Profile</h3>
+              <p className="text-gray-600">Tell us if it's for business, home, or student use</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">3</div>
+              <h3 className="font-bold text-gray-900 mb-2">Pick Your Package</h3>
+              <p className="text-gray-600">Choose from our verified city centre deals</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Speed Guide Section */}
+        <div className="mt-12 bg-white rounded-2xl shadow-sm p-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Speed Guide</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-gray-900">Basic Urban Use</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>Social media</li>
+                <li>Email</li>
+                <li>Video calls</li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-gray-900">City Living</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>Multiple devices</li>
+                <li>HD streaming</li>
+                <li>Online gaming</li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-gray-900">Business Class</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>EPOS systems</li>
+                <li>Security cameras</li>
+                <li>Staff & customer Wi-Fi</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Final CTA Section */}
+        <div className="mt-12 bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] rounded-2xl p-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Get Urban Connected?</h2>
+          <p className="text-gray-600 mb-8">Pop your postcode in below and we'll show you all available city centre deals - from Commercial Road to Guildhall Walk.</p>
+          <p className="text-sm text-gray-500 mt-4">City Tip: Different parts of Portsmouth city centre have different broadband availability. Check your specific address for the best options.</p>
         </div>
       </CitystyleContent>
     </CitystyleTemplate>
