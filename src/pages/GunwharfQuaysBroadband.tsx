@@ -3,7 +3,7 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { Wifi, Building, ShoppingBag, Shield, Store, Home, Utensils, CreditCard, Laptop, Tv } from 'lucide-react';
+import { Wifi, Building, ShoppingBag, Store, Home, Utensils, CreditCard, Laptop, Tv } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 
