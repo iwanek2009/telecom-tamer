@@ -1,4 +1,4 @@
-import { Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Index from "@/pages/Index";
 import Mobile from "@/pages/Mobile";
 import Broadband from "@/pages/Broadband";
@@ -50,7 +50,7 @@ import AstonBroadband from "@/pages/AstonBroadband";
 
 const AppRoutes = () => {
   return (
-    <>
+    <Routes>
       <Route path="/" element={<Index />} />
       <Route path="/mobile" element={<Mobile />} />
       <Route path="/broadband" element={<Broadband />} />
@@ -96,7 +96,7 @@ const AppRoutes = () => {
       <Route path="/local/digbeth" element={<DigbethBroadband />} />
       <Route path="/local/aston" element={<AstonBroadband />} />
       <Route path="*" element={<Navigate to="/" replace />} />
-    </>
+    </Routes>
   );
 };
 
