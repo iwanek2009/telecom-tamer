@@ -4,7 +4,7 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { Wifi, MapPin, Building2, Zap, Users, Router, Activity } from 'lucide-react';
+import { Wifi, MapPin, Building2, Zap, Users, Router, Activity, globe, home } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 
@@ -132,12 +132,12 @@ const PortsmouthBroadband = () => {
             description="Access high-speed internet with up to 1Gbps in eligible areas"
           />
           <CitystyleFeatureCard
-            icon={Globe}
+            icon={globe}
             title="Local Coverage"
             description="Extensive network coverage across all Portsmouth neighborhoods"
           />
           <CitystyleFeatureCard
-            icon={Home}
+            icon={home}
             title="Home-Ready"
             description="Perfect for streaming, gaming, and working from home"
           />
