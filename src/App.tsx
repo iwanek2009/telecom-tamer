@@ -142,22 +142,8 @@ const App = () => {
             <Route path="/local/fibre-broadband-birmingham" element={<FibreBroadbandBirmingham />} />
             <Route path="/local/birmingham-tv-broadband" element={<BirminghamTVBroadband />} />
             <Route path="/local/birmingham-city-centre" element={<BirminghamCityCentreBroadband />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/sim" element={<SimOnly />} />
-            <Route path="/internet-uk" element={<InternetUK />} />
-            <Route path="/cstyle" element={<CstylePage />} />
-            <Route path="/local/jewellery-quarter" element={<JewelleryQuarterBroadband />} />
-            <Route path="/local/digbeth" element={<DigbethBroadband />} />
-            <Route path="/local/aston" element={<AstonBroadband />} />
-            <Route path="/local/small-heath" element={<SmallHeathBroadband />} />
             <Route path="/manchester" element={<ManchesterBroadband />} />
             <Route path="/manchester/city-centre" element={<ManchesterCityCentreBroadband />} />
-            <Route path="/manchester/fibre-manchester" element={<FibreBroadbandManchester />} />
-            <Route path="/manchester/manchester-tv" element={<ManchesterTVBroadband />} />
-            <Route path="/manchester/didsbury" element={<DidsburyBroadband />} />
-            <Route path="/manchester/chorlton" element={<ChorltonBroadband />} />
-            <Route path="/manchester/withington" element={<WithingtonBroadband />} />
-            <Route path="/manchester/prestwich" element={<PrestwichBroadband />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>

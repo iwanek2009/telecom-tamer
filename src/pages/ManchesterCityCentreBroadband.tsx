@@ -3,7 +3,7 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { MapPin, Wifi, Network } from 'lucide-react';
+import { Wifi, Building2, City } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 
@@ -58,13 +58,13 @@ const ManchesterCityCentreBroadband = () => {
             description="Access high-speed internet with up to 1Gbps in Manchester City Centre"
           />
           <CitystyleFeatureCard
-            icon={MapPin}
-            title="Central Coverage"
+            icon={Building2}
+            title="Urban Coverage"
             description="Extensive network coverage across all central Manchester districts"
           />
           <CitystyleFeatureCard
-            icon={Network}
-            title="Urban Ready"
+            icon={City}
+            title="City Ready"
             description="Perfect for city living, streaming, and business connectivity"
           />
         </CitystyleFeatureGrid>
