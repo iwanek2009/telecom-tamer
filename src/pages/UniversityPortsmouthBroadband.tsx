@@ -3,7 +3,7 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { Wifi, GraduationCap, Clock, Shield } from 'lucide-react';
+import { Wifi, GraduationCap, Clock } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 
@@ -43,28 +43,23 @@ const UniversityPortsmouthBroadband = () => {
 
       <CitystyleContent>
         <CitystyleFeatureGrid
-          title="Why Choose Our Student Broadband?"
-          subtitle="Get connected with the perfect package for university life"
+          title="Student Broadband Near University of Portsmouth"
+          subtitle="Fast, flexible internet perfect for student life"
         >
           <CitystyleFeatureCard
             icon={Wifi}
-            title="Fast Speeds"
-            description="Perfect for streaming and online learning"
+            title="Student-Friendly Packages"
+            description="No long contracts, flexible start dates, and speeds perfect for studying and streaming. Designed around the university year."
           />
           <CitystyleFeatureCard
             icon={GraduationCap}
-            title="Student Friendly"
-            description="Flexible contracts aligned with term times"
+            title="Built for Student Life"
+            description="Handle everything from online lectures and group projects to Netflix binges and gaming sessions. Perfect for shared student houses."
           />
           <CitystyleFeatureCard
             icon={Clock}
-            title="Quick Setup"
-            description="Fast installation to get you connected"
-          />
-          <CitystyleFeatureCard
-            icon={Shield}
-            title="Reliable Service"
-            description="Stable connection for your studies"
+            title="Budget-Smart Options"
+            description="Get the speed you need without breaking the bank. Special student deals and split-billing options available"
           />
         </CitystyleFeatureGrid>
 
