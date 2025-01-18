@@ -61,20 +61,13 @@ const GunwharfQuaysBroadband = () => {
             title="Retail & Residential Solutions"
             description="From designer shops to waterfront homes, get packages that match Gunwharf's prestigious standards."
           />
-          <CitystyleFeatureCard
-            icon={Shield}
-            title="Reliable Service"
-            description="Stable connection for business success"
-          />
         </CitystyleFeatureGrid>
 
         <div className="mt-12" id="compare-deals">
           <StickeeWidget widgetId="smartfony-91" />
         </div>
 
-        {/* New Content Section */}
         <section className="py-16 space-y-16">
-          {/* Why Choose Section */}
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-gray-900">Why Choose Gunwharf Quays Broadband?</h2>
             <p className="text-lg text-gray-600">
@@ -82,7 +75,6 @@ const GunwharfQuaysBroadband = () => {
             </p>
           </div>
 
-          {/* What's Available Section */}
           <div className="space-y-8">
             <h2 className="text-3xl font-bold text-gray-900">What's Available at Gunwharf?</h2>
             <div className="grid md:grid-cols-3 gap-8">
@@ -117,7 +109,6 @@ const GunwharfQuaysBroadband = () => {
             </div>
           </div>
 
-          {/* Perfect For Section */}
           <div className="space-y-8">
             <h2 className="text-3xl font-bold text-gray-900">Perfect For:</h2>
             <div className="grid md:grid-cols-3 gap-8">
@@ -154,7 +145,6 @@ const GunwharfQuaysBroadband = () => {
             </div>
           </div>
 
-          {/* Steps Section */}
           <div className="space-y-8">
             <h2 className="text-3xl font-bold text-gray-900">Finding Your Perfect Package:</h2>
             <div className="grid md:grid-cols-3 gap-8">
@@ -176,7 +166,6 @@ const GunwharfQuaysBroadband = () => {
             </div>
           </div>
 
-          {/* Call to Action */}
           <div className="bg-gradient-to-r from-primary to-secondary text-white p-8 rounded-xl text-center space-y-6">
             <h2 className="text-3xl font-bold">Ready to Get Connected?</h2>
             <p className="text-lg">Enter your Gunwharf Quays postcode below to see available premium packages for your location.</p>
