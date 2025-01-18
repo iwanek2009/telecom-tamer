@@ -43,23 +43,23 @@ const SouthseaBroadband = () => {
 
       <CitystyleContent>
         <CitystyleFeatureGrid
-          title="Why Choose Our Southsea Deals?"
-          subtitle="Get connected with the best local broadband packages"
+          title="Find Your Perfect Broadband Deal in Southsea"
+          subtitle="Compare local internet packages and get connected today"
         >
           <CitystyleFeatureCard
             icon={Wifi}
-            title="Local Service"
-            description="Packages tailored for Southsea residents"
+            title="Seaside-Ready Speeds"
+            description="Whether you're working from your seafront flat or streaming in your Palmerston Road home, get reliable speeds that keep you connected in Southsea."
           />
           <CitystyleFeatureCard
             icon={Signal}
-            title="Fast Speeds"
-            description="High-speed internet for streaming and gaming"
+            title="Perfect For Local Living"
+            description="From Albert Road creatives to families near Canoe Lake, choose packages that match your Southsea lifestyle and budget."
           />
           <CitystyleFeatureCard
             icon={House}
-            title="Home & Business"
-            description="Solutions for residential and commercial use"
+            title="Local Coverage You Can Trust"
+            description="Get broadband that understands Southsea's unique needs - from student houses near the University to Victorian homes in the avenues."
           />
         </CitystyleFeatureGrid>
 
