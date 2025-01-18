@@ -80,6 +80,10 @@ import BTManchester from "./pages/BTManchester";
 import HyperopticManchester from "./pages/HyperopticManchester";
 import CityFibreManchester from "./pages/CityFibreManchester";
 import PortsmouthBroadband from "./pages/PortsmouthBroadband";
+import FibrePortsmouthBroadband from "./pages/FibrePortsmouthBroadband";
+import PortsmouthHomeBroadband from "./pages/PortsmouthHomeBroadband";
+import SouthseaBroadband from "./pages/SouthseaBroadband";
+import OldPortsmouthBroadband from "./pages/OldPortsmouthBroadband";
 
 const queryClient = new QueryClient();
 
@@ -182,6 +186,10 @@ const App = () => {
             <Route path="/manchester/hyperoptic" element={<HyperopticManchester />} />
             <Route path="/manchester/cityfibre" element={<CityFibreManchester />} />
             <Route path="/portsmouth" element={<PortsmouthBroadband />} />
+            <Route path="/local/fibre-portsmouth" element={<FibrePortsmouthBroadband />} />
+            <Route path="/local/portsmouth-home" element={<PortsmouthHomeBroadband />} />
+            <Route path="/local/southsea" element={<SouthseaBroadband />} />
+            <Route path="/local/old-portsmouth" element={<OldPortsmouthBroadband />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
