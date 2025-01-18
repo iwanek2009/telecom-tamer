@@ -5,6 +5,7 @@ import { Button } from '../components/ui/button';
 import { Helmet } from 'react-helmet';
 import { Post } from '../components/blog/BlogPosts';
 import { useState, useEffect } from 'react';
+import { ArrowRight } from 'lucide-react';
 
 const BlogPostPage = () => {
   const { id } = useParams();
@@ -12,8 +13,6 @@ const BlogPostPage = () => {
   const [post, setPost] = useState<Post | null>(null);
 
   useEffect(() => {
-    // In a real application, this would be an API call
-    // For now, we'll use localStorage to persist posts
     const posts = JSON.parse(localStorage.getItem('blog-posts') || '[]');
     const foundPost = posts.find((p: Post) => p.id === id);
     if (foundPost) {
@@ -23,7 +22,7 @@ const BlogPostPage = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-gradient-to-b from-white to-[#F1F0FB]">
         <Header />
         <main className="container mx-auto px-6 py-12">
           <div className="text-center">
@@ -39,7 +38,7 @@ const BlogPostPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-white to-[#F1F0FB]">
       <Helmet>
         <title>{post.title} | Smartfony Blog</title>
         <meta name="description" content={post.content.slice(0, 155) + '...'} />
@@ -48,35 +47,37 @@ const BlogPostPage = () => {
       <Header />
       
       <main className="container mx-auto px-6 py-12">
-        <article className="max-w-4xl mx-auto" itemScope itemType="http://schema.org/Article">
+        <article className="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm p-8 md:p-12" itemScope itemType="http://schema.org/Article">
           <Button 
             onClick={() => navigate('/blog')} 
             variant="outline"
-            className="mb-8"
+            className="mb-8 hover:bg-[#9b87f5]/10"
           >
             ← Back to Blog
           </Button>
           
           <header>
-            <h1 className="text-4xl font-bold mb-6" itemProp="headline">{post.title}</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#1A1F2C] to-[#9b87f5] bg-clip-text text-transparent" itemProp="headline">
+              {post.title}
+            </h1>
             <meta itemProp="datePublished" content={new Date(post.date).toISOString().split('T')[0]} />
           </header>
           
-          <div className="text-gray-600 mb-8">
+          <div className="text-[#1A1F2C]/70 mb-8 text-lg">
             <span>By {post.author}</span>
             <span className="mx-2">•</span>
             <span>{new Date(post.date).toLocaleDateString()}</span>
           </div>
           
-          <div className="prose prose-lg max-w-none" itemProp="articleBody">
+          <div className="prose prose-lg max-w-none prose-headings:text-[#1A1F2C] prose-p:text-[#1A1F2C]/80 prose-li:text-[#1A1F2C]/80" itemProp="articleBody">
             {post.content.split('\n\n').map((paragraph, index) => {
               if (paragraph.startsWith('# ')) {
-                return <h2 key={index} className="text-2xl font-bold mt-8 mb-4">{paragraph.replace('# ', '')}</h2>;
+                return <h2 key={index} className="text-2xl font-bold mt-8 mb-4 bg-gradient-to-r from-[#1A1F2C] to-[#9b87f5] bg-clip-text text-transparent">{paragraph.replace('# ', '')}</h2>;
               }
               if (paragraph.startsWith('- ')) {
                 const items = paragraph.split('\n').map(item => item.replace('- ', ''));
                 return (
-                  <ul key={index} className="list-disc pl-6 mb-4">
+                  <ul key={index} className="list-disc pl-6 mb-4 space-y-2">
                     {items.map((item, i) => <li key={i}>{item}</li>)}
                   </ul>
                 );
@@ -84,17 +85,17 @@ const BlogPostPage = () => {
               if (paragraph.startsWith('1. ')) {
                 const items = paragraph.split('\n').map(item => item.replace(/^\d+\. /, ''));
                 return (
-                  <ol key={index} className="list-decimal pl-6 mb-4">
+                  <ol key={index} className="list-decimal pl-6 mb-4 space-y-2">
                     {items.map((item, i) => <li key={i}>{item}</li>)}
                   </ol>
                 );
               }
-              return <p key={index} className="mb-4">{paragraph}</p>;
+              return <p key={index} className="mb-4 leading-relaxed">{paragraph}</p>;
             })}
           </div>
 
-          <footer className="mt-8 pt-4 border-t border-gray-200">
-            <p className="text-sm text-gray-600">
+          <footer className="mt-12 pt-8 border-t border-gray-200">
+            <p className="text-sm text-[#1A1F2C]/60">
               <small>
                 Published by <span itemProp="publisher" itemScope itemType="http://schema.org/Organization">
                   <meta itemProp="name" content="smartfony.co.uk" />
@@ -102,10 +103,18 @@ const BlogPostPage = () => {
               </small>
             </p>
             
-            <p className="mt-4 text-gray-700">
-              Need help choosing the right broadband package for your smart home needs? 
-              Use our comparison tool to find the best options in your area.
-            </p>
+            <div className="mt-8 bg-gradient-to-br from-[#F1F0FB] to-[#E5DEFF] p-6 rounded-xl">
+              <p className="text-[#1A1F2C] font-medium mb-4">
+                Need help choosing the right broadband package for your smart home needs?
+              </p>
+              <Button 
+                onClick={() => navigate('/broadband')} 
+                className="bg-[#9b87f5] hover:bg-[#8B5CF6] text-white flex items-center gap-2"
+              >
+                Compare Broadband Deals
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+            </div>
           </footer>
         </article>
       </main>
