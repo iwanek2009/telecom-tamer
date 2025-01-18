@@ -41,28 +41,28 @@ const PortsmouthHomeBroadband = () => {
         accordionItems={heroAccordionItems}
       />
 
-      <CitystyleContent>
-        <CitystyleFeatureGrid
+      <CitystyleFeatureGrid
+        title="Best TV & Broadband Bundles in Portsmouth"
+        subtitle="Get everything you need - internet, TV, and phone packages all in one place"
+      >
+        <CitystyleFeatureCard
+          icon={Wifi}
           title="Complete Home Entertainment"
-          subtitle="Get everything you need for your Portsmouth home"
-        >
-          <CitystyleFeatureCard
-            icon={Wifi}
-            title="Fast Internet"
-            description="High-speed broadband for all your devices"
-          />
-          <CitystyleFeatureCard
-            icon={Signal}
-            title="Premium TV"
-            description="Access to hundreds of channels and on-demand content"
-          />
-          <CitystyleFeatureCard
-            icon={House}
-            title="Home Phone"
-            description="Optional landline services with great call packages"
-          />
-        </CitystyleFeatureGrid>
+          description="Stream, watch, and browse with packages that bring you the best TV channels, fast internet, and reliable phone service all together."
+        />
+        <CitystyleFeatureCard
+          icon={Signal}
+          title="Save with Bundles"
+          description="Why pay separately? Get better value when you combine your services in one package. Perfect for Portsmouth homes who want it all."
+        />
+        <CitystyleFeatureCard
+          icon={House}
+          title="Customise Your Package"
+          description="Build the perfect bundle for your home - choose your channels, pick your broadband speed, and add the extras you actually want."
+        />
+      </CitystyleFeatureGrid>
 
+      <CitystyleContent>
         <div className="mt-12" id="compare-deals">
           <StickeeWidget widgetId="smartfony-91" />
         </div>
