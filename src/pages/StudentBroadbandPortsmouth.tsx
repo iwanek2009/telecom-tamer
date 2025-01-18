@@ -3,7 +3,7 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { Wifi, Users, Clock, Banknote } from 'lucide-react';
+import { Wifi, Users, Banknote } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 
@@ -55,11 +55,6 @@ const StudentBroadbandPortsmouth = () => {
             icon={Users}
             title="Shared Living"
             description="Ideal for student house shares"
-          />
-          <CitystyleFeatureCard
-            icon={Clock}
-            title="Flexible Terms"
-            description="Contracts aligned with term times"
           />
           <CitystyleFeatureCard
             icon={Banknote}
