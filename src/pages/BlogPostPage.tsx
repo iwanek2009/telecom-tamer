@@ -13,25 +13,71 @@ const BlogPostPage = () => {
   const navigate = useNavigate();
   const [post, setPost] = useState<Post | null>(null);
   const [showToc, setShowToc] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const posts = JSON.parse(localStorage.getItem('blog-posts') || '[]');
-    // First try to find by ID
-    let foundPost = posts.find((p: Post) => p.id === id);
-    
-    // If not found by ID, try to find by slug
-    if (!foundPost) {
-      foundPost = posts.find((p: Post) => slugify(p.title) === id);
-    }
-    
-    if (foundPost) {
-      setPost(foundPost);
-      console.log('Found post:', foundPost);
-    } else {
-      console.log('Post not found for id:', id);
+    if (!id) {
+      console.log('No ID provided');
       navigate('/blog');
+      return;
+    }
+
+    try {
+      const savedPosts = localStorage.getItem('blog-posts');
+      console.log('Retrieved posts from localStorage:', savedPosts);
+      
+      if (!savedPosts) {
+        console.log('No posts found in localStorage');
+        navigate('/blog');
+        return;
+      }
+
+      const posts = JSON.parse(savedPosts);
+      console.log('Parsed posts:', posts);
+      console.log('Looking for post with id:', id);
+
+      // First try to find by ID
+      let foundPost = posts.find((p: Post) => p.id === id);
+      console.log('Search by ID result:', foundPost);
+      
+      // If not found by ID, try to find by slug
+      if (!foundPost) {
+        console.log('Post not found by ID, trying slug match');
+        foundPost = posts.find((p: Post) => slugify(p.title) === id);
+        console.log('Search by slug result:', foundPost);
+      }
+      
+      if (foundPost) {
+        console.log('Setting post:', foundPost);
+        setPost(foundPost);
+      } else {
+        console.log('Post not found, redirecting to blog');
+        navigate('/blog');
+      }
+    } catch (error) {
+      console.error('Error loading post:', error);
+      navigate('/blog');
+    } finally {
+      setIsLoading(true);
     }
   }, [id, navigate]);
+
+  if (isLoading && !post) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-white to-[#F1F0FB]">
+        <Header />
+        <main className="container mx-auto px-6 py-12">
+          <div className="text-center">
+            <div className="animate-pulse">
+              <div className="h-8 bg-gray-200 rounded w-3/4 mx-auto mb-4"></div>
+              <div className="h-4 bg-gray-200 rounded w-1/2 mx-auto"></div>
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   if (!post) {
     return (
