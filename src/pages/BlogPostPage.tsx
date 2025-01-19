@@ -9,18 +9,29 @@ import { ArrowRight, List } from 'lucide-react';
 import { slugify, extractHeadings } from '@/lib/utils';
 
 const BlogPostPage = () => {
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [post, setPost] = useState<Post | null>(null);
   const [showToc, setShowToc] = useState(false);
 
   useEffect(() => {
     const posts = JSON.parse(localStorage.getItem('blog-posts') || '[]');
-    const foundPost = posts.find((p: Post) => p.id === id);
+    // First try to find by ID
+    let foundPost = posts.find((p: Post) => p.id === id);
+    
+    // If not found by ID, try to find by slug
+    if (!foundPost) {
+      foundPost = posts.find((p: Post) => slugify(p.title) === id);
+    }
+    
     if (foundPost) {
       setPost(foundPost);
+      console.log('Found post:', foundPost);
+    } else {
+      console.log('Post not found for id:', id);
+      navigate('/blog');
     }
-  }, [id]);
+  }, [id, navigate]);
 
   if (!post) {
     return (
