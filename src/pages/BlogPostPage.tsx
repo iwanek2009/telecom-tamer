@@ -5,12 +5,14 @@ import { Button } from '../components/ui/button';
 import { Helmet } from 'react-helmet';
 import { Post } from '../components/blog/BlogPosts';
 import { useState, useEffect } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, List } from 'lucide-react';
+import { slugify, extractHeadings } from '@/lib/utils';
 
 const BlogPostPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [post, setPost] = useState<Post | null>(null);
+  const [showToc, setShowToc] = useState(false);
 
   useEffect(() => {
     const posts = JSON.parse(localStorage.getItem('blog-posts') || '[]');
@@ -37,6 +39,8 @@ const BlogPostPage = () => {
     );
   }
 
+  const headings = extractHeadings(post.content);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-[#F1F0FB]">
       <Helmet>
@@ -56,6 +60,43 @@ const BlogPostPage = () => {
             ← Back to Blog
           </Button>
           
+          {headings.length > 0 && (
+            <div className="mb-8">
+              <Button
+                variant="outline"
+                onClick={() => setShowToc(!showToc)}
+                className="flex items-center gap-2"
+              >
+                <List className="w-4 h-4" />
+                Table of Contents
+              </Button>
+              
+              {showToc && (
+                <div className="mt-4 p-4 bg-gray-50 rounded-lg">
+                  <nav>
+                    <ul className="space-y-2">
+                      {headings.map((heading) => (
+                        <li
+                          key={heading.id}
+                          className={`${
+                            heading.level === 3 ? 'ml-4' : ''
+                          }`}
+                        >
+                          <a
+                            href={`#${heading.id}`}
+                            className="text-gray-700 hover:text-primary transition-colors"
+                          >
+                            {heading.title}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
+                </div>
+              )}
+            </div>
+          )}
+          
           <header className="mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#1A1F2C] to-[#9b87f5] bg-clip-text text-transparent leading-tight" itemProp="headline">
               {post.title}
@@ -72,21 +113,32 @@ const BlogPostPage = () => {
             {post.content.split('\n\n').map((paragraph, index) => {
               // Handle h2 headings
               if (paragraph.startsWith('# ')) {
+                const title = paragraph.replace('# ', '');
+                const id = slugify(title);
                 return (
-                  <h2 key={index} className="text-3xl font-bold mt-12 mb-6 bg-gradient-to-r from-[#1A1F2C] to-[#9b87f5] bg-clip-text text-transparent">
-                    {paragraph.replace('# ', '')}
+                  <h2 
+                    id={id}
+                    key={index} 
+                    className="text-3xl font-bold mt-12 mb-6 bg-gradient-to-r from-[#1A1F2C] to-[#9b87f5] bg-clip-text text-transparent scroll-mt-20"
+                  >
+                    {title}
                   </h2>
                 );
               }
               // Handle h3 headings
               if (paragraph.startsWith('## ')) {
+                const title = paragraph.replace('## ', '');
+                const id = slugify(title);
                 return (
-                  <h3 key={index} className="text-2xl font-semibold mt-8 mb-4 text-[#1A1F2C]">
-                    {paragraph.replace('## ', '')}
+                  <h3 
+                    id={id}
+                    key={index} 
+                    className="text-2xl font-semibold mt-8 mb-4 text-[#1A1F2C] scroll-mt-20"
+                  >
+                    {title}
                   </h3>
                 );
               }
-              // Handle unordered lists
               if (paragraph.startsWith('- ')) {
                 const items = paragraph.split('\n').map(item => item.replace('- ', ''));
                 return (
@@ -104,6 +156,7 @@ const BlogPostPage = () => {
                   </ol>
                 );
               }
+              
               // Regular paragraphs
               return (
                 <p key={index} className="mb-6 leading-relaxed text-[#1A1F2C]/80">
@@ -113,15 +166,7 @@ const BlogPostPage = () => {
             })}
           </div>
 
-          <footer className="mt-16 pt-8 border-t border-gray-200">
-            <p className="text-sm text-[#1A1F2C]/60 mb-8">
-              <small>
-                Published by <span itemProp="publisher" itemScope itemType="http://schema.org/Organization">
-                  <meta itemProp="name" content="smartfony.co.uk" />
-                </span> technology team | January 2025
-              </small>
-            </p>
-            
+          <div className="mt-16 pt-8 border-t border-gray-200">
             <div className="bg-gradient-to-br from-[#F1F0FB] to-[#E5DEFF] p-8 rounded-xl">
               <h3 className="text-xl font-semibold text-[#1A1F2C] mb-4">
                 Ready to find the perfect broadband package for your smart home?
@@ -137,7 +182,15 @@ const BlogPostPage = () => {
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </div>
-          </footer>
+
+            <p className="text-sm text-[#1A1F2C]/60 mt-8">
+              <small>
+                Published by <span itemProp="publisher" itemScope itemType="http://schema.org/Organization">
+                  <meta itemProp="name" content="smartfony.co.uk" />
+                </span> technology team | January 2025
+              </small>
+            </p>
+          </div>
         </article>
       </main>
 
