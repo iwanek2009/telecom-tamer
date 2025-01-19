@@ -13,6 +13,7 @@ import UltrafastBroadband from "@/pages/UltrafastBroadband";
 import LocalBroadband from "@/pages/LocalBroadband";
 import Blog from "@/pages/Blog";
 import BlogPostPage from "@/pages/BlogPostPage";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
 
 export const MainRoutes = [
   <Route key="index" path="/" element={<Index />} />,
@@ -29,4 +30,5 @@ export const MainRoutes = [
   <Route key="local" path="/broadband/local" element={<LocalBroadband />} />,
   <Route key="blog" path="/blog" element={<Blog />} />,
   <Route key="blog-post" path="/blog/post/:id" element={<BlogPostPage />} />,
+  <Route key="privacy" path="/privacy" element={<PrivacyPolicy />} />,
 ];
