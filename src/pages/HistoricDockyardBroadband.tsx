@@ -43,28 +43,23 @@ const HistoricDockyardBroadband = () => {
 
       <CitystyleContent>
         <CitystyleFeatureGrid
-          title="Why Choose Our Historic Dockyard Packages?"
-          subtitle="Get connected with reliable broadband in this unique location"
+          title="Why Choose Broadband for the Historic Dockyard Area?"
+          subtitle="Living or working in Portsmouth's Historic Dockyard comes with a unique set of connectivity needs. Here's why our broadband is the perfect solution for this area:"
         >
           <CitystyleFeatureCard
             icon={Wifi}
-            title="Fast Speeds"
-            description="High-speed internet for all users"
+            title="Fast and Reliable Internet"
+            description="Enjoy consistent speeds, even during peak times. Perfect for businesses, tourism hotspots, and households that demand reliable connectivity."
           />
           <CitystyleFeatureCard
             icon={Building}
-            title="Heritage Compatible"
-            description="Solutions suitable for historic buildings"
+            title="Maritime-Friendly Coverage"
+            description="Our broadband solutions are optimized for the Historic Dockyard, ensuring strong signal strength and uninterrupted service throughout the area."
           />
           <CitystyleFeatureCard
             icon={Globe}
-            title="Business Ready"
-            description="Perfect for tourist attractions and shops"
-          />
-          <CitystyleFeatureCard
-            icon={Shield}
-            title="Reliable Service"
-            description="Stable connection you can count on"
+            title="Customizable Plans"
+            description="Whether you need high-speed fibre for heavy usage or basic broadband for lighter needs, our packages are designed to fit your requirements."
           />
         </CitystyleFeatureGrid>
 
