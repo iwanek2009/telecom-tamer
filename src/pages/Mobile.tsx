@@ -123,7 +123,7 @@ const Mobile = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="space-y-4">
           {mockDeals.map((deal, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-fade-in">
+            <div key={index} className="p-6 animate-fade-in">
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-xl font-semibold text-black">{deal.provider}</h3>
                 <span className="text-2xl font-bold text-black">£{deal.price}/mo</span>
