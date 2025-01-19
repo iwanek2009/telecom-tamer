@@ -64,7 +64,7 @@ const VirginMediaPortsmouth = () => {
         </CitystyleFeatureGrid>
 
         <div className="mt-12" id="compare-deals">
-          <StickeeWidget widgetId="smartfony-91" />
+          <StickeeWidget widgetId="smartfony-91" filters='{"suppliers": [152]}' />
         </div>
 
         <div className="max-w-4xl mx-auto mt-16 space-y-12">
