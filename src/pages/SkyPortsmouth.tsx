@@ -64,7 +64,7 @@ const SkyPortsmouth = () => {
         </CitystyleFeatureGrid>
 
         <div className="mt-12" id="compare-deals">
-          <StickeeWidget widgetId="smartfony-91" />
+          <StickeeWidget widgetId="smartfony-91" filters='{"suppliers": [136]}' />
         </div>
 
         <section className="py-16 bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD]">
