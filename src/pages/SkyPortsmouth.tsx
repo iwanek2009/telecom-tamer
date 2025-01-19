@@ -3,7 +3,7 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { Wifi, Tv, Film, Signal } from 'lucide-react';
+import { Tv, Wifi, Laptop } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 
@@ -43,28 +43,23 @@ const SkyPortsmouth = () => {
 
       <CitystyleContent>
         <CitystyleFeatureGrid
-          title="Why Choose Sky?"
-          subtitle="Get the ultimate entertainment package"
+          title="Why Choose Sky TV & Broadband?"
+          subtitle="Sky is synonymous with premium entertainment and cutting-edge technology. By combining Sky TV with superfast broadband, you get a seamless experience for streaming, gaming, and on-demand viewing. Here's why Sky stands out in Portsmouth:"
         >
           <CitystyleFeatureCard
-            icon={Wifi}
-            title="Fast Broadband"
-            description="Reliable superfast internet"
-          />
-          <CitystyleFeatureCard
             icon={Tv}
-            title="Premium TV"
-            description="Extensive channel selection"
+            title="Award-Winning Entertainment"
+            description="Sky offers access to the best shows, movies, and live sports. From exclusive Sky Originals to blockbuster films and Premier League coverage, there's something for everyone."
           />
           <CitystyleFeatureCard
-            icon={Film}
-            title="Entertainment"
-            description="Movies, sports and more"
+            icon={Wifi}
+            title="Lightning-Fast Broadband"
+            description="Sky Broadband delivers speeds of up to 500Mbps, ensuring your household stays connected. Stream, game, and browse without lag or buffering."
           />
           <CitystyleFeatureCard
-            icon={Signal}
-            title="Streaming"
-            description="Sky Go included"
+            icon={Laptop}
+            title="Seamless Integration"
+            description="With the Sky Q box, you can pause, rewind, and record live TV or download shows to watch offline. Plus, access Netflix, Disney+, and other apps all in one place."
           />
         </CitystyleFeatureGrid>
 
