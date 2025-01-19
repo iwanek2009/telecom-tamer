@@ -44,27 +44,22 @@ const BTPortsmouth = () => {
       <CitystyleContent>
         <CitystyleFeatureGrid
           title="Why Choose BT Broadband?"
-          subtitle="Get connected with the UK's largest provider"
+          subtitle="BT Broadband stands out as a top choice for families and professionals in Portsmouth. With industry-leading speeds, unlimited data, and advanced security tools, BT offers everything you need for a worry-free online experience."
         >
           <CitystyleFeatureCard
             icon={Wifi}
-            title="Fast Fibre"
-            description="Superfast fibre broadband options"
-          />
-          <CitystyleFeatureCard
-            icon={Phone}
-            title="Phone Lines"
-            description="Includes landline services"
-          />
-          <CitystyleFeatureCard
-            icon={Shield}
-            title="Security"
-            description="Complete online protection"
+            title="Superfast Fibre Speeds"
+            description="Enjoy fibre broadband with speeds up to 900Mbps. Perfect for streaming, gaming, and working from home without interruptions or buffering."
           />
           <CitystyleFeatureCard
             icon={Globe}
-            title="Coverage"
-            description="Extensive network coverage"
+            title="Unlimited Data on Every Plan"
+            description="Stream, browse, and download as much as you like. All BT packages include unlimited data with no hidden restrictions."
+          />
+          <CitystyleFeatureCard
+            icon={Shield}
+            title="Built-In Security Features"
+            description="Protect your devices and family with BT's advanced security tools, including Parental Controls and antivirus protection."
           />
         </CitystyleFeatureGrid>
 
