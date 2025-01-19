@@ -36,9 +36,9 @@ const PortsmouthCard = () => {
     {
       title: "Popular Providers",
       items: [
-        "Virgin Media Portsmouth | Latest Local Deals",
-        "BT Broadband Portsmouth | Home Internet Packages",
-        "Sky TV & Broadband Portsmouth | Entertainment Bundles",
+        <Link to="/portsmouth/virgin-media">Virgin Media Portsmouth | Latest Local Deals</Link>,
+        <Link to="/portsmouth/bt">BT Broadband Portsmouth | Home Internet Packages</Link>,
+        <Link to="/portsmouth/sky">Sky TV & Broadband Portsmouth | Entertainment Bundles</Link>,
         "Toob Portsmouth | Full Fibre Internet Deals"
       ],
       icon: <Wifi className="w-5 h-5 text-primary" />
