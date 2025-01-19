@@ -69,7 +69,7 @@ const PortsmouthBusinessBroadband = () => {
         </CitystyleFeatureGrid>
 
         <div className="mt-12" id="compare-deals">
-          <StickeeWidget widgetId="smartfony-91" />
+          <StickeeWidget filters='{"business": true}' />
         </div>
       </CitystyleContent>
     </CitystyleTemplate>
