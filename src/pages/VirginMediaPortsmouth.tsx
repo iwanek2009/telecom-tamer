@@ -44,27 +44,22 @@ const VirginMediaPortsmouth = () => {
       <CitystyleContent>
         <CitystyleFeatureGrid
           title="Why Choose Virgin Media?"
-          subtitle="Get connected with cable broadband in Portsmouth"
+          subtitle="Virgin Media offers in Portsmouth! Whether you need ultra-fast broadband, entertainment-packed TV bundles, or affordable mobile plans"
         >
           <CitystyleFeatureCard
             icon={Wifi}
-            title="Fast Speeds"
-            description="Ultra-fast cable broadband up to 1.1Gbps"
+            title="Superfast Fibre Broadband"
+            description="Experience speeds of up to 1Gbps, perfect for streaming, gaming, and working from home. Virgin Media offers unlimited data, ensuring reliable and fast internet without interruptions."
           />
           <CitystyleFeatureCard
             icon={Tv}
-            title="TV Bundles"
-            description="Combine with premium TV channels"
+            title="Customizable TV Bundles"
+            description="Choose from a wide range of TV packages, including premium sports, movies, and family-friendly entertainment. Add your favorite streaming apps like Netflix or Disney+ for an all-in-one solution."
           />
           <CitystyleFeatureCard
             icon={Gamepad}
-            title="Gaming Ready"
-            description="Low latency for online gaming"
-          />
-          <CitystyleFeatureCard
-            icon={Shield}
-            title="Reliable"
-            description="Stable cable network connection"
+            title="Feature-Packed Mobile Deals"
+            description="Stay connected with affordable mobile plans, unlimited data options, and the latest smartphones. Virgin Media ensures excellent 5G coverage for seamless browsing on the go."
           />
         </CitystyleFeatureGrid>
 
