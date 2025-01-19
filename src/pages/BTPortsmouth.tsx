@@ -65,7 +65,7 @@ const BTPortsmouth = () => {
         </CitystyleFeatureGrid>
 
         <div className="mt-12" id="compare-deals">
-          <StickeeWidget widgetId="smartfony-91" />
+          <StickeeWidget widgetId="smartfony-91" filters='{"suppliers": [135]}' />
         </div>
 
         <section className="py-12 bg-white">
