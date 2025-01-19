@@ -1,12 +1,20 @@
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { Helmet } from 'react-helmet';
 
 const About = () => {
   return (
     <div className="min-h-screen bg-white">
-      <Header />
+      <Helmet>
+        <title>Simple Phone & Broadband Comparison | UK's Trusted Site | Smartfony</title>
+        <meta 
+          name="description" 
+          content="Compare mobile & broadband deals the simple way. Clear pricing, expert reviews & helpful guides. Join thousands of UK customers saving on their bills."
+        />
+      </Helmet>
       
       {/* Hero Section */}
+      <Header />
       <section className="bg-[#1a1f2e] text-white py-20">
         <div className="container mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">Who We Are</h1>
