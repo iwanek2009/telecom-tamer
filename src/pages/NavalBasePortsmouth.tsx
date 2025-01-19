@@ -43,28 +43,23 @@ const NavalBasePortsmouth = () => {
 
       <CitystyleContent>
         <CitystyleFeatureGrid
-          title="Broadband for Service Personnel"
-          subtitle="Tailored packages for military life"
+          title="Why Choose Broadband for Naval Base Portsmouth"
+          subtitle="Reliable internet is essential for service personnel balancing work and personal life. Here's why our broadband solutions stand out for Naval Base Portsmouth:"
         >
           <CitystyleFeatureCard
             icon={Wifi}
-            title="Fast Connection"
-            description="Reliable speeds for all your needs"
-          />
-          <CitystyleFeatureCard
-            icon={Ship}
-            title="Military Friendly"
-            description="Special rates for service personnel"
+            title="Fast and Dependable Connectivity"
+            description="Enjoy high-speed internet designed for consistent performance, even during peak usage hours. Perfect for streaming, video calls, and gaming."
           />
           <CitystyleFeatureCard
             icon={Clock}
-            title="Flexible Terms"
-            description="Short-term contracts available"
+            title="Flexible Contracts"
+            description="We understand the needs of service personnel. That's why we offer short-term and flexible contracts that adapt to your schedule and assignments."
           />
           <CitystyleFeatureCard
             icon={Shield}
-            title="Secure Service"
-            description="Protected and reliable connection"
+            title="Secure and Reliable"
+            description="Our broadband packages come with built-in security features, ensuring safe online access for your personal and professional needs."
           />
         </CitystyleFeatureGrid>
 
