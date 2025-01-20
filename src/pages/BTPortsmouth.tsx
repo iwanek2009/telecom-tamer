@@ -8,8 +8,15 @@ import { Wifi, Tv, Gamepad } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 import { Link } from 'react-router-dom';
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableHead,
+  TableCell,
+} from "@/components/ui/table";
 
-const BTPortsmouth = () => {
   const heroAccordionItems = [
     {
       title: "BT Broadband Coverage",
@@ -68,6 +75,7 @@ const BTPortsmouth = () => {
     }
   ];
 
+const BTPortsmouth = () => {
   return (
     <CitystyleTemplate>
       <Helmet>
