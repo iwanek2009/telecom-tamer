@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Wifi, PoundSterling, Clock, Zap, Users, Gamepad, Monitor, Mail, Router, MapPin, Home, CheckCircle2, AlertCircle, Laptop, Tv, Phone, Signal } from 'lucide-react';
+import { Wifi, PoundSterling, Clock, Zap, Users, Gamepad, Monitor, Mail, Router, MapPin, Home, CheckCircle2, AlertCircle, Laptop, Tv, Phone, Signal, HelpCircle } from 'lucide-react';
 
 const LiverpoolBroadbandContent = () => {
   const scrollToWidget = () => {
@@ -162,6 +162,53 @@ const LiverpoolBroadbandContent = () => {
             <span>Check for bundled services</span>
           </li>
         </ul>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="space-y-8">
+        <h3 className="text-2xl font-bold text-gray-900">Frequently Asked Questions</h3>
+        <div className="grid gap-6">
+          {[
+            {
+              question: "What types of broadband connections are most common in Liverpool?",
+              answer: "Liverpool is well-served by a mix of broadband technologies, including part-fibre (FTTC), full-fibre (FTTP), and cable (e.g., Virgin Media). Mobile broadband (4G/5G) is also an option, especially where fiber access may be limited. Using a postcode checker is the best way to see which type is available at your specific address."
+            },
+            {
+              question: "How do I know if I need superfast or ultrafast speeds?",
+              answer: "This depends on your household's internet usage. If multiple people stream in HD or 4K, play games online, or work from home, you'll benefit from higher speeds (above 50–100Mbps). Smaller households with fewer devices might be fine with standard fiber speeds of around 30–50Mbps."
+            },
+            {
+              question: "Are there any providers offering social tariffs in Liverpool?",
+              answer: "Yes. Many major providers offer social tariffs—discounted broadband packages for customers receiving certain government benefits like Universal Credit. You typically need to provide proof of eligibility when signing up. It's worth checking each provider's dedicated social tariff page or contacting them directly for more details."
+            },
+            {
+              question: "Will I need a landline for my broadband plan?",
+              answer: "It depends on the type of broadband you choose. Part-fibre and copper ADSL services often require a phone line. Full-fibre and cable options like Virgin Media don't always need a traditional landline, though they may include phone services as part of a bundle."
+            },
+            {
+              question: "Can I switch broadband providers before my contract ends?",
+              answer: "While it's possible, most providers charge an early exit fee if you switch mid-contract. If you're near the end of your contract or already out of contract, you can typically switch without penalties. It's a good idea to check your current terms and any exit fees before making the move."
+            },
+            {
+              question: "What if I'm moving to a different part of Liverpool?",
+              answer: "If you're relocating within Liverpool, check your new postcode to see what speeds and providers are available there. Some providers allow you to transfer your existing plan if their coverage extends to your new location. Otherwise, you may need to cancel your current service and sign up for a new deal."
+            },
+            {
+              question: "Are broadband and TV bundles worth the cost?",
+              answer: "Bundles can be a good value if you regularly watch premium channels or want one monthly bill for multiple services. However, if you only stream from services like Netflix or Amazon Prime, you might be better off with a broadband-only plan. Always compare the total price of separate services vs. a bundled package to see which is more cost-effective."
+            }
+          ].map((faq, index) => (
+            <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+              <div className="flex gap-3">
+                <HelpCircle className="w-6 h-6 text-blue-600 flex-shrink-0" />
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">{faq.question}</h4>
+                  <p className="text-gray-600">{faq.answer}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* CTA */}
