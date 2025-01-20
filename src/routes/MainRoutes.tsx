@@ -44,9 +44,9 @@ export const MainRoutes = [
   <Route key="southampton-fibre" path="/southampton/fibre" element={<FibreBroadbandSouthampton />} />,
   <Route key="southampton-tv" path="/southampton/tv" element={<BroadbandTVSouthampton />} />,
   <Route key="southampton-ocean-village" path="/southampton/ocean-village" element={<OceanVillageBroadband />} />,
-  <Route key="southampton-shirley" path="/local/shirley" element={<ShirleyBroadband />} />,
-  <Route key="southampton-bitterne" path="/local/bitterne" element={<BitterneBroadband />} />,
-  <Route key="southampton-portswood" path="/local/portswood" element={<PortswoodBroadband />} />,
+  <Route key="southampton-shirley" path="/southampton/shirley" element={<ShirleyBroadband />} />,
+  <Route key="southampton-bitterne" path="/southampton/bitterne" element={<BitterneBroadband />} />,
+  <Route key="southampton-portswood" path="/southampton/portswood" element={<PortswoodBroadband />} />,
   <Route key="southampton-virgin" path="/southampton/virgin-media" element={<VirginMediaSouthampton />} />,
   <Route key="southampton-bt" path="/southampton/bt" element={<BTBroadbandSouthampton />} />,
 ];
