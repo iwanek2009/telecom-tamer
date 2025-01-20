@@ -7,6 +7,7 @@ import { Wifi, Signal, House, MapPin, Building2, Shield, Laptop, Tv, CheckCircle
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 import { Card } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 
 const OldPortsmouthBroadband = () => {
   const heroAccordionItems = [
@@ -21,6 +22,49 @@ const OldPortsmouthBroadband = () => {
       content: "Compare the latest broadband offers in Old Portsmouth.",
       linkText: "View deals",
       linkHref: "#deals"
+    }
+  ];
+
+  const compareLinks = [
+    {
+      title: "Residential Areas",
+      links: [
+        { text: "Portsmouth City | Local Deals", href: "/portsmouth" },
+        { text: "Southsea | Home Internet", href: "/portsmouth/southsea" },
+        { text: "Old Portsmouth | Historic Area", href: "/portsmouth/old-portsmouth" }
+      ]
+    },
+    {
+      title: "Key Locations",
+      links: [
+        { text: "Student Zone | University Area", href: "/portsmouth/student" },
+        { text: "Naval Base | Service Personnel", href: "/portsmouth/naval-base" },
+        { text: "Gunwharf | Shopping District", href: "/portsmouth/gunwharf-quays" }
+      ]
+    },
+    {
+      title: "Major Providers",
+      links: [
+        { text: "Virgin Media Portsmouth", href: "/portsmouth/virgin-media" },
+        { text: "BT Local Packages", href: "/portsmouth/bt" },
+        { text: "Sky TV & Internet Bundles", href: "/portsmouth/sky" }
+      ]
+    },
+    {
+      title: "City Areas",
+      links: [
+        { text: "City Centre | Urban Zone", href: "/portsmouth/city-centre" },
+        { text: "Historic Dockyard | Maritime", href: "/portsmouth/historic-dockyard" },
+        { text: "Coastal Areas | Seaside", href: "/portsmouth/coastal" }
+      ]
+    },
+    {
+      title: "Service Types",
+      links: [
+        { text: "Fibre Broadband | Fast Internet", href: "/portsmouth/fibre-broadband" },
+        { text: "Home Bundles | TV & Phone", href: "/portsmouth/home-broadband" },
+        { text: "Business Solutions | Commercial", href: "/portsmouth/business" }
+      ]
     }
   ];
 
@@ -43,30 +87,41 @@ const OldPortsmouthBroadband = () => {
       />
 
       <CitystyleContent>
-        <CitystyleFeatureGrid
-          title="Why Choose Our Old Portsmouth Deals?"
-          subtitle="Get connected with the perfect local package"
-        >
-          <CitystyleFeatureCard
-            icon={House}
-            title="Heritage-Friendly Installation"
-            description="Get connected with providers who understand Old Portsmouth's historic buildings. Expert installation that respects listed properties and period features."
-          />
-          <CitystyleFeatureCard
-            icon={Signal}
-            title="Reliable Waterfront Connection"
-            description="Enjoy stable internet whether you're in a Spice Island apartment or a High Street residence. Perfect for coastal living and working."
-          />
-          <CitystyleFeatureCard
-            icon={Wifi}
-            title="Community-Focused Service"
-            description="Packages designed for Old Portsmouth's diverse community - from Camber Dock businesses to Point residents."
-          />
-        </CitystyleFeatureGrid>
-
         <div className="mt-12" id="compare-deals">
           <StickeeWidget widgetId="smartfony-91" />
         </div>
+
+        {/* New Compare Section */}
+        <section className="mt-16 mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Compare Broadband in Portsmouth</h2>
+            <p className="text-xl text-gray-600">Browse local broadband deals and packages across Portsmouth's key districts.</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {compareLinks.map((category, index) => (
+              <div 
+                key={index}
+                className="bg-gradient-to-br from-[#E5F9FA] to-[#F0FCFD] backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-[#3FC1C9]/20"
+              >
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">{category.title}</h3>
+                <ul className="space-y-4">
+                  {category.links.map((link, linkIndex) => (
+                    <li key={linkIndex}>
+                      <Link
+                        to={link.href}
+                        className="text-gray-600 hover:text-primary transition-colors duration-200 flex items-center gap-2 group"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors"></span>
+                        {link.text}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* Why Choose Old Portsmouth Broadband Section */}
         <section className="py-12">
