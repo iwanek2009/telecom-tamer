@@ -18,6 +18,11 @@ import SouthamptonBroadband from "@/pages/SouthamptonBroadband";
 import FibreBroadbandSouthampton from "@/pages/FibreBroadbandSouthampton";
 import BroadbandTVSouthampton from "@/pages/BroadbandTVSouthampton";
 import OceanVillageBroadband from "@/pages/OceanVillageBroadband";
+import ShirleyBroadband from "@/pages/ShirleyBroadband";
+import BitterneBroadband from "@/pages/BitterneBroadband";
+import PortswoodBroadband from "@/pages/PortswoodBroadband";
+import VirginMediaSouthampton from "@/pages/VirginMediaSouthampton";
+import BTBroadbandSouthampton from "@/pages/BTBroadbandSouthampton";
 
 export const MainRoutes = [
   <Route key="index" path="/" element={<Index />} />,
@@ -39,4 +44,9 @@ export const MainRoutes = [
   <Route key="southampton-fibre" path="/southampton/fibre" element={<FibreBroadbandSouthampton />} />,
   <Route key="southampton-tv" path="/southampton/tv" element={<BroadbandTVSouthampton />} />,
   <Route key="southampton-ocean-village" path="/southampton/ocean-village" element={<OceanVillageBroadband />} />,
+  <Route key="southampton-shirley" path="/local/shirley" element={<ShirleyBroadband />} />,
+  <Route key="southampton-bitterne" path="/local/bitterne" element={<BitterneBroadband />} />,
+  <Route key="southampton-portswood" path="/local/portswood" element={<PortswoodBroadband />} />,
+  <Route key="southampton-virgin" path="/southampton/virgin-media" element={<VirginMediaSouthampton />} />,
+  <Route key="southampton-bt" path="/southampton/bt" element={<BTBroadbandSouthampton />} />,
 ];
