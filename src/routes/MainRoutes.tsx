@@ -23,6 +23,11 @@ import BitterneBroadband from "@/pages/BitterneBroadband";
 import PortswoodBroadband from "@/pages/PortswoodBroadband";
 import VirginMediaSouthampton from "@/pages/VirginMediaSouthampton";
 import BTBroadbandSouthampton from "@/pages/BTBroadbandSouthampton";
+import SkyBroadbandSouthampton from "@/pages/SkyBroadbandSouthampton";
+import StudentBroadbandSouthampton from "@/pages/StudentBroadbandSouthampton";
+import NoContractBroadbandSouthampton from "@/pages/NoContractBroadbandSouthampton";
+import CheapBroadbandSouthampton from "@/pages/CheapBroadbandSouthampton";
+import BassettBroadband from "@/pages/BassettBroadband";
 
 export const MainRoutes = [
   <Route key="index" path="/" element={<Index />} />,
@@ -49,4 +54,9 @@ export const MainRoutes = [
   <Route key="southampton-portswood" path="/southampton/portswood" element={<PortswoodBroadband />} />,
   <Route key="southampton-virgin" path="/southampton/virgin-media" element={<VirginMediaSouthampton />} />,
   <Route key="southampton-bt" path="/southampton/bt" element={<BTBroadbandSouthampton />} />,
+  <Route key="southampton-sky" path="/southampton/sky" element={<SkyBroadbandSouthampton />} />,
+  <Route key="southampton-student" path="/southampton/student" element={<StudentBroadbandSouthampton />} />,
+  <Route key="southampton-no-contract" path="/southampton/no-contract" element={<NoContractBroadbandSouthampton />} />,
+  <Route key="southampton-cheap" path="/southampton/cheap" element={<CheapBroadbandSouthampton />} />,
+  <Route key="southampton-bassett" path="/southampton/bassett" element={<BassettBroadband />} />,
 ];
