@@ -3,7 +3,7 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { Wifi, Building2, Shield, Zap } from 'lucide-react';
+import { Wifi, Building2, Shield } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '../components/StickeeWidget';
 
@@ -60,11 +60,6 @@ const OceanVillageBroadband = () => {
             icon={Shield}
             title="Flexible Plans for Every Need"
             description="From budget-friendly options to premium fibre plans, compare packages tailored for individuals, families, or professionals"
-          />
-          <CitystyleFeatureCard
-            icon={Zap}
-            title="Quick Installation"
-            description="Fast setup times to get you connected quickly"
           />
         </CitystyleFeatureGrid>
 
