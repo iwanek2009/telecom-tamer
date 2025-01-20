@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Wifi, PoundSterling, Clock, Zap, Users, Gamepad, Monitor, Mail } from 'lucide-react';
+import { Wifi, PoundSterling, Clock, Zap, Users, Gamepad, Monitor, Mail, Router, MapPin, Home, CheckCircle2, AlertCircle, Laptop, Tv, Phone, Signal } from 'lucide-react';
 
 const LiverpoolBroadbandContent = () => {
   const scrollToWidget = () => {
@@ -186,6 +186,128 @@ const LiverpoolBroadbandContent = () => {
         <p className="text-gray-600">
           Don't wait for better internet - compare Liverpool's best broadband deals today and find your perfect package.
         </p>
+      </div>
+
+      {/* Comprehensive Guide Section */}
+      <div className="space-y-12 bg-gradient-to-br from-blue-50/50 to-blue-100/50 rounded-3xl p-8 md:p-12">
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-gray-900">How to Get Started with Your Broadband Search</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Use a Postcode Checker</h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-green-600" />
+                      Enter your postcode to check available providers
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-green-600" />
+                      Compare multiple offers and packages
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <Home className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Consider Your Needs</h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-center gap-2">
+                      <Mail className="w-4 h-4 text-blue-600" />
+                      Basic browsing and email
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Laptop className="w-4 h-4 text-blue-600" />
+                      Working from home
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Users className="w-4 h-4 text-blue-600" />
+                      Large households
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-gray-900">What Affects Your Broadband Speed?</h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm">
+              <Router className="w-8 h-8 text-blue-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-3">Type of Connection</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Part-Fiber (30-70Mbps)</li>
+                <li>• Full Fiber (100Mbps+)</li>
+                <li>• Cable (up to 1Gbps)</li>
+                <li>• Mobile Broadband (4G/5G)</li>
+              </ul>
+            </div>
+
+            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm">
+              <Signal className="w-8 h-8 text-blue-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-3">Distance Impact</h3>
+              <p className="text-gray-700">
+                Homes farther from street cabinets might experience slower speeds with part-fiber connections. Full fiber and cable tend to be more consistent.
+              </p>
+            </div>
+
+            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm">
+              <AlertCircle className="w-8 h-8 text-blue-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-3">Home Setup</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Router placement matters</li>
+                <li>• Peak time considerations</li>
+                <li>• Device interference</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-gray-900">Additional Services</h2>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm">
+              <Tv className="w-8 h-8 text-blue-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-3">TV Bundles</h3>
+              <p className="text-gray-700">Premium channels and exclusive content available with selected packages.</p>
+            </div>
+
+            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm">
+              <Phone className="w-8 h-8 text-blue-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-3">Phone Line</h3>
+              <p className="text-gray-700">Options for free weekend calls and international call bundles.</p>
+            </div>
+
+            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm">
+              <Signal className="w-8 h-8 text-blue-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-3">Mobile Deals</h3>
+              <p className="text-gray-700">Bundle your broadband with mobile plans for extra savings.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center space-y-6">
+          <h2 className="text-3xl font-bold text-gray-900">Ready to Find Your Perfect Package?</h2>
+          <p className="text-xl text-gray-600">Compare the latest broadband deals in Liverpool and find the perfect package for your needs.</p>
+          <Button 
+            size="lg"
+            className="bg-blue-600 hover:bg-blue-700"
+            onClick={scrollToWidget}
+          >
+            Compare Deals Now
+          </Button>
+        </div>
       </div>
     </div>
   );
