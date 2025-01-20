@@ -3,7 +3,7 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { Wifi, Briefcase, Shield, Building } from 'lucide-react';
+import { Wifi, Briefcase, Shield } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import StickeeWidget from '@/components/StickeeWidget';
@@ -105,15 +105,10 @@ const PortsmouthBusinessBroadband = () => {
             title="Security"
             description="Enhanced security features"
           />
-          <CitystyleFeatureCard
-            icon={Building}
-            title="Scalable"
-            description="Grow with your business"
-          />
         </CitystyleFeatureGrid>
 
         <div className="mt-12" id="compare-deals">
-          <StickeeWidget />
+          <StickeeWidget widgetId="smartfony-91" />
         </div>
 
         {/* New Compare Section */}
