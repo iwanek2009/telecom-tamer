@@ -44,22 +44,22 @@ const OceanVillageBroadband = () => {
       <CitystyleContent>
         <CitystyleFeatureGrid
           title="Why Choose Ocean Village Broadband?"
-          subtitle="Discover internet solutions designed for waterfront living"
+          subtitle="Living in Ocean Village means enjoying a vibrant waterside lifestyle, and reliable internet is essential to stay connected. Here's why our broadband solutions stand out:"
         >
           <CitystyleFeatureCard
             icon={Wifi}
-            title="Ultra-Fast Speeds"
-            description="Access gigabit-capable broadband perfect for streaming, gaming, and working from home"
+            title="High-Speed Fibre Connectivity"
+            description="Access superfast broadband with speeds up to 1Gbps, perfect for streaming, gaming, and remote work"
           />
           <CitystyleFeatureCard
             icon={Building2}
-            title="Apartment-Ready"
-            description="Packages optimized for modern apartment living in Ocean Village"
+            title="Reliable and Stable Connection"
+            description="Whether you live in an apartment or houseboat, our providers offer stable internet with minimal disruptions"
           />
           <CitystyleFeatureCard
             icon={Shield}
-            title="Reliable Connection"
-            description="Stable internet essential for marine businesses and residents"
+            title="Flexible Plans for Every Need"
+            description="From budget-friendly options to premium fibre plans, compare packages tailored for individuals, families, or professionals"
           />
           <CitystyleFeatureCard
             icon={Zap}
