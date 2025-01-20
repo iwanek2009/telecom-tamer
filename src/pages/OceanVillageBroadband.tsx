@@ -69,6 +69,84 @@ const OceanVillageBroadband = () => {
             filters='{"connection_types": ["FTTP"]}'
           />
         </div>
+
+        <div className="mt-16 space-y-8">
+          <h2 className="text-3xl font-bold text-gray-900">Understanding Your Ocean Village Connection Options</h2>
+          <p className="text-gray-600 leading-relaxed">
+            The unique coastal environment of Ocean Village presents specific considerations for internet connectivity. The development's modern infrastructure supports various connection types, but factors such as building materials, height, and proximity to the waterfront can influence service quality.
+          </p>
+
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-3">Infrastructure and Coverage</h3>
+              <p className="text-gray-600">Ocean Village benefits from extensive fibre coverage, with both partial and full fibre options available throughout most of the development. The area's purpose-built network infrastructure ensures stable connections even in challenging maritime conditions.</p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-3">Provider Selection</h3>
+              <p className="text-gray-600">Major providers like BT, Virgin Media, and Sky operate throughout Ocean Village, each offering specialized packages designed for the area's unique requirements. Local providers also deliver tailored solutions specifically optimized for marine environments and waterfront properties.</p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-3">Marine Business Considerations</h3>
+              <p className="text-gray-600 mb-2">For marine businesses, specialized internet solutions include:</p>
+              <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                <li>Weatherproof equipment designed for maritime conditions</li>
+                <li>Flexible contracts accommodating seasonal usage patterns</li>
+                <li>Enhanced coverage extending to moorings and marina facilities</li>
+                <li>Business-grade service level agreements</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-3">Residential Solutions</h3>
+              <p className="text-gray-600 mb-2">Residential users can choose from various packages based on their location within Ocean Village:</p>
+              <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                <li>High-rise apartments benefit from optimized mobile broadband reception</li>
+                <li>Ground-level properties typically access superior cable connectivity</li>
+                <li>Mixed-use buildings feature business-grade infrastructure availability</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-3">Installation and Support</h3>
+              <p className="text-gray-600 mb-2">Given Ocean Village's unique environment, providers offer specialized installation services considering:</p>
+              <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                <li>Marine-grade cable protection</li>
+                <li>Weather-resistant equipment</li>
+                <li>Building-specific signal optimization</li>
+                <li>Regular maintenance accounting for coastal conditions</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-3">Future-Proofing Your Connection</h3>
+              <p className="text-gray-600 mb-2">Ocean Village's continuous development means internet infrastructure regularly evolves. When selecting a provider, consider:</p>
+              <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                <li>Upcoming infrastructure improvements</li>
+                <li>Expandability options</li>
+                <li>Technology compatibility</li>
+                <li>Long-term service agreements</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-3">Making Your Choice</h3>
+              <p className="text-gray-600 mb-2">To select the optimal service:</p>
+              <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                <li>Evaluate your property's specific location</li>
+                <li>Consider your usage requirements</li>
+                <li>Account for environmental factors</li>
+                <li>Review provider expertise in marine environments</li>
+                <li>Assess long-term value and support options</li>
+              </ul>
+            </div>
+
+            <p className="text-gray-600 italic mt-4">
+              Remember that each building within Ocean Village presents unique connectivity characteristics, making individual assessment crucial for optimal service selection.
+            </p>
+          </div>
+        </div>
       </CitystyleContent>
     </CitystyleTemplate>
   );
