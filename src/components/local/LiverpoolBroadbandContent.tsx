@@ -1,6 +1,12 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Wifi, PoundSterling, Clock, Zap, Users, Gamepad, Monitor, Mail, Router, MapPin, Home, CheckCircle2, AlertCircle, Laptop, Tv, Phone, Signal, HelpCircle } from 'lucide-react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const LiverpoolBroadbandContent = () => {
   const scrollToWidget = () => {
@@ -167,7 +173,7 @@ const LiverpoolBroadbandContent = () => {
       {/* FAQ Section */}
       <div className="space-y-8">
         <h3 className="text-2xl font-bold text-gray-900">Frequently Asked Questions</h3>
-        <div className="grid gap-6">
+        <Accordion type="single" collapsible className="w-full space-y-4">
           {[
             {
               question: "What types of broadband connections are most common in Liverpool?",
@@ -198,17 +204,19 @@ const LiverpoolBroadbandContent = () => {
               answer: "Bundles can be a good value if you regularly watch premium channels or want one monthly bill for multiple services. However, if you only stream from services like Netflix or Amazon Prime, you might be better off with a broadband-only plan. Always compare the total price of separate services vs. a bundled package to see which is more cost-effective."
             }
           ].map((faq, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-              <div className="flex gap-3">
-                <HelpCircle className="w-6 h-6 text-blue-600 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">{faq.question}</h4>
-                  <p className="text-gray-600">{faq.answer}</p>
+            <AccordionItem key={index} value={`item-${index}`} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+              <AccordionTrigger className="hover:no-underline">
+                <div className="flex items-center gap-3 text-left">
+                  <HelpCircle className="w-6 h-6 text-blue-600 flex-shrink-0" />
+                  <h4 className="font-semibold text-gray-900">{faq.question}</h4>
                 </div>
-              </div>
-            </div>
+              </AccordionTrigger>
+              <AccordionContent>
+                <p className="text-gray-600 mt-2 ml-9">{faq.answer}</p>
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </div>
+        </Accordion>
       </div>
 
       {/* CTA */}
