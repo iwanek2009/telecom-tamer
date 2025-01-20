@@ -49,8 +49,8 @@ const BroadbandTVSouthampton = () => {
       <CitystyleHero
         title="Broadband & TV Deals in Southampton"
         subtitle="Get the perfect entertainment package with fast broadband and your favorite TV channels. Compare the best bundle deals from leading providers."
-        image="/lovable-uploads/1721322800607-8c38375eef04.jpg"
-        imageAlt="Living room setup with TV and internet connection"
+        image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
+        imageAlt="Southampton cityscape with fiber optic network visualization"
         accordionItems={heroAccordionItems}
       />
 
