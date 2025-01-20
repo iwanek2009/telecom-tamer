@@ -17,6 +17,7 @@ import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import SouthamptonBroadband from "@/pages/SouthamptonBroadband";
 import FibreBroadbandSouthampton from "@/pages/FibreBroadbandSouthampton";
 import BroadbandTVSouthampton from "@/pages/BroadbandTVSouthampton";
+import OceanVillageBroadband from "@/pages/OceanVillageBroadband";
 
 export const MainRoutes = [
   <Route key="index" path="/" element={<Index />} />,
@@ -37,4 +38,5 @@ export const MainRoutes = [
   <Route key="southampton" path="/southampton" element={<SouthamptonBroadband />} />,
   <Route key="southampton-fibre" path="/southampton/fibre" element={<FibreBroadbandSouthampton />} />,
   <Route key="southampton-tv" path="/southampton/tv" element={<BroadbandTVSouthampton />} />,
+  <Route key="southampton-ocean-village" path="/southampton/ocean-village" element={<OceanVillageBroadband />} />,
 ];
