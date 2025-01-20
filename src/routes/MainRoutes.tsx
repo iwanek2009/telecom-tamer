@@ -14,6 +14,7 @@ import LocalBroadband from "@/pages/LocalBroadband";
 import Blog from "@/pages/Blog";
 import BlogPostPage from "@/pages/BlogPostPage";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import SouthamptonBroadband from "@/pages/SouthamptonBroadband";
 
 export const MainRoutes = [
   <Route key="index" path="/" element={<Index />} />,
@@ -31,4 +32,5 @@ export const MainRoutes = [
   <Route key="blog" path="/blog" element={<Blog />} />,
   <Route key="blog-post" path="/blog/post/:id" element={<BlogPostPage />} />,
   <Route key="privacy" path="/privacy" element={<PrivacyPolicy />} />,
+  <Route key="southampton" path="/southampton" element={<SouthamptonBroadband />} />,
 ];
