@@ -7,8 +7,8 @@ const SouthamptonCard = () => {
       title: "City-Wide Deals",
       items: [
         <Link to="/southampton">Southampton Broadband Deals | Compare Internet Providers</Link>,
-        <Link to="/local/fibre-broadband-southampton">Fibre Broadband Southampton | Fast Internet Packages</Link>,
-        <Link to="/local/southampton-broadband-tv">Broadband & TV Deals Southampton | Best Home Bundles</Link>,
+        <Link to="/southampton/fibre">Fibre Broadband Southampton | Fast Internet Packages</Link>,
+        <Link to="/southampton/tv">Broadband & TV Deals Southampton | Best Home Bundles</Link>,
         <Link to="/local/ocean-village">Ocean Village Broadband | Compare Internet Providers</Link>,
         <Link to="/local/bassett">Bassett Broadband Deals | Local Internet Packages</Link>,
         <Link to="/local/shirley">Shirley Internet Deals | Southampton Broadband Offers</Link>,
