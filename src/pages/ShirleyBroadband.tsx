@@ -6,6 +6,7 @@ import { CitystyleFeatureCard } from '@/components/templates/citystyle/Citystyle
 import { Wifi, Home, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
+import SouthamptonDealsGrid from '@/components/local/SouthamptonDealsGrid';
 import {
   Accordion,
   AccordionContent,
@@ -74,6 +75,8 @@ const ShirleyBroadband = () => {
             widgetId="smartfony-91"
           />
         </div>
+
+        <SouthamptonDealsGrid />
 
         <div className="mt-16 max-w-4xl mx-auto space-y-12">
           <section className="space-y-6">
