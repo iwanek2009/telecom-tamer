@@ -34,14 +34,22 @@ const ShirleyBroadband = () => {
       </Helmet>
 
       <CitystyleHero
-        title="Broadband Deals in Shirley"
-        subtitle="Find the perfect internet package for your Shirley home. Compare broadband deals from leading providers for reliable connectivity."
+        title="Find the Best Broadband Deals in Shirley and Southampton"
+        subtitle="Whether you're in Shirley, Southampton, or the surrounding areas, finding the right broadband deal has never been easier."
         image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
         imageAlt="Shirley area with modern internet connectivity"
         accordionItems={heroAccordionItems}
       />
 
       <CitystyleContent>
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto space-y-6 text-gray-700">
+            <p className="text-lg">Lightning-Fast Downloads: Enjoy ultra-quick downloads, like streaming HD movies in just minutes, with speeds reaching up to 1Gbps.</p>
+            <p className="text-lg">Reliable Connection: Stay connected during peak times with consistent service—perfect for remote work and online classes.</p>
+            <p className="text-lg">Low Latency: Experience seamless online gaming and crystal-clear video calls with minimal lag.</p>
+          </div>
+        </div>
+
         <CitystyleFeatureGrid
           title="Why Choose Our Shirley Internet Deals?"
           subtitle="Get the perfect broadband package for your home"
