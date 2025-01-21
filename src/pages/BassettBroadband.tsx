@@ -6,14 +6,13 @@ import { CitystyleFeatureCard } from '@/components/templates/citystyle/Citystyle
 import { Wifi, Shield, Users } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
+import SouthamptonDealsGrid from '@/components/local/SouthamptonDealsGrid';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
-// ... keep existing code (imports and component setup)
 
 const BassettBroadband = () => {
   const heroAccordionItems = [
@@ -75,7 +74,8 @@ const BassettBroadband = () => {
           <StickeeWidget widgetId="smartfony-91" />
         </div>
 
-        {/* Existing content section */}
+        <SouthamptonDealsGrid />
+
         <div className="mt-16 space-y-12">
           <div className="prose max-w-none">
             <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">How to Compare Broadband Deals in Bassett</h2>
@@ -168,7 +168,6 @@ const BassettBroadband = () => {
           </div>
         </div>
 
-        {/* New Switch Broadband Providers Section */}
         <div className="mt-16 bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
           <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             How to Switch Broadband Providers
@@ -192,7 +191,6 @@ const BassettBroadband = () => {
           </ul>
         </div>
 
-        {/* FAQ Section with Accordion */}
         <div className="mt-16 bg-white rounded-xl shadow-lg p-8">
           <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             FAQs About Broadband Deals in Bassett
@@ -263,7 +261,6 @@ const BassettBroadband = () => {
           </Accordion>
         </div>
 
-        {/* Call to Action Section */}
         <div className="mt-16 bg-gradient-to-r from-primary to-secondary rounded-xl p-8 text-white">
           <h2 className="text-3xl font-bold mb-4">Ready to Find Your Perfect Broadband Deal?</h2>
           <p className="text-lg mb-6">
