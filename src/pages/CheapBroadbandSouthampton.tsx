@@ -3,22 +3,23 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { Wifi, Shield, Users, Bolt } from 'lucide-react';
+import { Wifi, Shield, Bolt } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
+import SouthamptonDealsGrid from '@/components/local/SouthamptonDealsGrid';
 
 const CheapBroadbandSouthampton = () => {
   const heroAccordionItems = [
     {
-      title: "Budget-Friendly Options",
-      content: "Find affordable broadband packages without compromising on quality.",
+      title: "Save on Monthly Bills",
+      content: "Find the most affordable broadband deals in Southampton without compromising on speed.",
       linkText: "View deals",
       linkHref: "#deals"
     },
     {
-      title: "Value Packages",
-      content: "Compare the best value broadband deals in Southampton.",
-      linkText: "Compare now",
+      title: "Compare Providers",
+      content: "Compare prices and packages from major providers to find the best value.",
+      linkText: "Start comparing",
       linkHref: "#compare"
     }
   ];
@@ -26,18 +27,18 @@ const CheapBroadbandSouthampton = () => {
   return (
     <CitystyleTemplate>
       <Helmet>
-        <title>Cheap Broadband Southampton | Budget Internet Deals</title>
+        <title>Cheap Broadband Southampton | Compare Affordable Internet Deals</title>
         <meta 
           name="description" 
-          content="Find affordable broadband deals in Southampton. Compare budget-friendly internet packages without compromising on speed or reliability."
+          content="Find the best cheap broadband deals in Southampton. Compare affordable internet packages and save on your monthly bills without compromising on speed."
         />
       </Helmet>
 
       <CitystyleHero
-        title="Cheap Broadband Southampton"
-        subtitle="Affordable internet packages that don't compromise on quality"
+        title="Cheap Broadband Deals Southampton"
+        subtitle="Find affordable internet packages without compromising on speed"
         image="/lovable-uploads/a3e27fb1-bf74-4467-abae-439ef1db7051.png"
-        imageAlt="Affordable broadband options in Southampton"
+        imageAlt="Affordable broadband deals in Southampton"
         accordionItems={heroAccordionItems}
       />
 
@@ -66,6 +67,8 @@ const CheapBroadbandSouthampton = () => {
         <div className="mt-12">
           <StickeeWidget widgetId="smartfony-91" />
         </div>
+
+        <SouthamptonDealsGrid />
       </CitystyleContent>
     </CitystyleTemplate>
   );
