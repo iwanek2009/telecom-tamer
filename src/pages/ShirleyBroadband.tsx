@@ -42,14 +42,6 @@ const ShirleyBroadband = () => {
       />
 
       <CitystyleContent>
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto space-y-6 text-gray-700">
-            <p className="text-lg">Lightning-Fast Downloads: Enjoy ultra-quick downloads, like streaming HD movies in just minutes, with speeds reaching up to 1Gbps.</p>
-            <p className="text-lg">Reliable Connection: Stay connected during peak times with consistent service—perfect for remote work and online classes.</p>
-            <p className="text-lg">Low Latency: Experience seamless online gaming and crystal-clear video calls with minimal lag.</p>
-          </div>
-        </div>
-
         <CitystyleFeatureGrid
           title="Why Choose Our Shirley Internet Deals?"
           subtitle="Get the perfect broadband package for your home"
