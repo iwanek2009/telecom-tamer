@@ -37,7 +37,7 @@ const StudentBroadbandSouthampton = () => {
         title="Student Broadband Southampton"
         subtitle="Fast, flexible internet perfect for student life"
         image="/lovable-uploads/1519389950473-47ba0277781c.jpg"
-        imageAlt="Students using internet in Southampton"
+        imageAlt="Students working together with laptops in a study group"
         accordionItems={heroAccordionItems}
       />
 
