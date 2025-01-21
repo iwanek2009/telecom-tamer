@@ -76,7 +76,7 @@ const CheapBroadbandDeals = () => {
         <div className="mt-12">
           <StickeeWidgetContent 
             widgetId="smartfony-91"
-            filters='{"monthly_price": {"min":0, "max":30}}'
+            filters='{"monthly_price": {"min":0, "max":25}}'
           />
         </div>
       </BStyleContent>
