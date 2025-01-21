@@ -3,7 +3,7 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { Wifi, Users, Shield, Bolt } from 'lucide-react';
+import { Wifi, Users, Shield } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 
@@ -60,11 +60,6 @@ const StudentBroadbandSouthampton = () => {
             icon={Shield}
             title="No Long-Term Hassles"
             description="Short 9–12-month contracts or rolling monthly deals"
-          />
-          <CitystyleFeatureCard
-            icon={Bolt}
-            title="Quick Setup"
-            description="Get connected within days of moving in"
           />
         </CitystyleFeatureGrid>
 
