@@ -7,6 +7,7 @@ import { CitystyleCard } from '@/components/templates/citystyle/CitystyleCard';
 import { Wifi, GraduationCap, Clock } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
+import SouthamptonDealsGrid from '@/components/local/SouthamptonDealsGrid';
 import {
   Accordion,
   AccordionContent,
@@ -14,22 +15,22 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const PortswoodBroadband = () => {
-  const heroAccordionItems = [
-    {
-      title: "Student Deals",
-      content: "Portswood offers student-friendly broadband packages with flexible contracts.",
-      linkText: "View student deals",
-      linkHref: "#student-deals"
-    },
-    {
-      title: "Quick Setup",
-      content: "Get connected quickly with student priority installation.",
-      linkText: "Installation info",
-      linkHref: "#installation"
-    }
-  ];
+const heroAccordionItems = [
+  {
+    title: "Student Deals",
+    content: "Portswood offers student-friendly broadband packages with flexible contracts.",
+    linkText: "View student deals",
+    linkHref: "#student-deals"
+  },
+  {
+    title: "Quick Setup",
+    content: "Get connected quickly with student priority installation.",
+    linkText: "Installation info",
+    linkHref: "#installation"
+  }
+];
 
+const PortswoodBroadband = () => {
   return (
     <CitystyleTemplate>
       <Helmet>
@@ -75,6 +76,8 @@ const PortswoodBroadband = () => {
             widgetId="smartfony-91"
           />
         </div>
+
+        <SouthamptonDealsGrid />
 
         <section className="mt-16 space-y-12">
           <CitystyleCard className="space-y-8">
