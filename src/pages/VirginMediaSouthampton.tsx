@@ -43,23 +43,23 @@ const VirginMediaSouthampton = () => {
 
       <CitystyleContent>
         <CitystyleFeatureGrid
-          title="Why Choose Virgin Media?"
-          subtitle="Experience next-generation broadband"
+          title="Key Benefits of Virgin Media in Southampton"
+          subtitle="Best Virgin Media broadband packages available in Southampton, featuring ultrafast speeds and exclusive bundle options for residents."
         >
           <CitystyleFeatureCard
             icon={Wifi}
-            title="Ultrafast"
-            description="Speeds up to 1Gbps"
+            title="Gigabit Speeds"
+            description="Experience lightning-fast downloads up to 1.1Gbps - perfect for 4K streaming and gaming"
           />
           <CitystyleFeatureCard
             icon={Tv}
-            title="TV Packages"
-            description="Premium channels available"
+            title="Dedicated Network"
+            description="Enjoy reliable connectivity through Virgin's independent cable infrastructure"
           />
           <CitystyleFeatureCard
             icon={Phone}
-            title="Phone Options"
-            description="Flexible calling plans"
+            title="Flexible Bundles"
+            description="Customize your package with TV, phone, and mobile services"
           />
         </CitystyleFeatureGrid>
 
