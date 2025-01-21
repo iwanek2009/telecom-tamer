@@ -7,6 +7,7 @@ import { Wifi, Home, Globe2, Shield, ArrowUp, Check, PoundSterling, Tags, Calcul
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '../components/StickeeWidget';
 import { Link } from 'react-router-dom';
+import SouthamptonDealsGrid from '@/components/local/SouthamptonDealsGrid';
 
 const FibreBroadbandSouthampton = () => {
   const heroAccordionItems = [
@@ -76,6 +77,8 @@ const FibreBroadbandSouthampton = () => {
             filters='{"connection_types": ["FTTP"]}'
           />
         </div>
+
+        <SouthamptonDealsGrid />
 
         <section className="mt-16 max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">How to Find the Best Fibre Broadband Deals in Southampton</h2>
