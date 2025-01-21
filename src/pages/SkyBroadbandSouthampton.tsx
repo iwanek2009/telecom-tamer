@@ -43,28 +43,23 @@ const SkyBroadbandSouthampton = () => {
 
       <CitystyleContent>
         <CitystyleFeatureGrid
-          title="Why Choose Sky in Southampton?"
-          subtitle="Experience premium entertainment and reliable connectivity"
+          title="Top Benefits of Choosing Sky Broadband"
+          subtitle="Are you looking for reliable internet options in Southampton? Sky Broadband offers excellent packages tailored to meet various needs, whether you're streaming, gaming, or working from home."
         >
           <CitystyleFeatureCard
             icon={Wifi}
-            title="Superfast Broadband"
-            description="Enjoy speeds up to 900Mbps with Sky's ultrafast fibre network"
+            title="Fast and Reliable Speeds"
+            description="Enjoy consistent speeds, perfect for HD streaming, gaming, and video calls without interruptions."
           />
           <CitystyleFeatureCard
             icon={Tv}
-            title="Premium TV"
-            description="Access exclusive Sky channels and on-demand content"
-          />
-          <CitystyleFeatureCard
-            icon={PlayCircle}
-            title="Flexible Packages"
-            description="Choose the perfect combination of TV and broadband"
+            title="Exclusive Sky Features"
+            description="Sky offers flexible bundles combining broadband, TV, and mobile for maximum value."
           />
           <CitystyleFeatureCard
             icon={Shield}
-            title="Reliable Service"
-            description="24/7 customer support and network monitoring"
+            title="Exceptional Customer Support"
+            description="Benefit from award-winning customer service and easy setup options."
           />
         </CitystyleFeatureGrid>
 
