@@ -205,7 +205,6 @@ const ShirleyBroadband = () => {
           </section>
 
           <section className="space-y-6">
-            <h2 className="text-3xl font-bold text-gray-900">Call to Action</h2>
             <div className="bg-primary/5 rounded-lg p-6 border border-primary/10">
               <p className="text-gray-800 leading-relaxed">
                 Ready to upgrade your internet? Use our broadband postcode checker to find the best broadband deals in Shirley and Southampton today. Don't miss out on exclusive offers and faster speeds tailored to your home.
