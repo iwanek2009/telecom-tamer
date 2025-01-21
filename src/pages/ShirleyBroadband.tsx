@@ -43,23 +43,23 @@ const ShirleyBroadband = () => {
 
       <CitystyleContent>
         <CitystyleFeatureGrid
-          title="Why Choose Our Shirley Internet Deals?"
-          subtitle="Get the perfect broadband package for your home"
+          title="Lightning-Fast Internet Solutions"
+          subtitle="Experience the difference with our high-speed broadband options"
         >
           <CitystyleFeatureCard
             icon={Wifi}
-            title="Fast Speeds"
-            description="Access high-speed internet with various packages"
+            title="Lightning-Fast Downloads"
+            description="Enjoy ultra-quick downloads, like streaming HD movies in just minutes, with speeds reaching up to 1Gbps"
           />
           <CitystyleFeatureCard
             icon={Home}
-            title="Local Support"
-            description="Get assistance from local installation teams"
+            title="Reliable Connection"
+            description="Stay connected during peak times with consistent service—perfect for remote work and online classes"
           />
           <CitystyleFeatureCard
             icon={Globe}
-            title="Wide Coverage"
-            description="Extensive network across Shirley"
+            title="Low Latency"
+            description="Experience seamless online gaming and crystal-clear video calls with minimal lag"
           />
         </CitystyleFeatureGrid>
 
