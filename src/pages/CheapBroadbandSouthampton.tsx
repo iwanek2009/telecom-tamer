@@ -43,28 +43,23 @@ const CheapBroadbandSouthampton = () => {
 
       <CitystyleContent>
         <CitystyleFeatureGrid
-          title="Why Choose Our Budget Deals?"
-          subtitle="Great value internet packages for every need"
+          title="Cheap Broadband Deals in Southampton: Save Money Without Sacrificing Speed"
+          subtitle="Find affordable, high-speed broadband in Southampton! Compare deals, check postcode availability, and switch to save."
         >
           <CitystyleFeatureCard
             icon={Wifi}
-            title="Reliable Speed"
-            description="Consistent performance at affordable prices"
+            title="Budget-Friendly Plans"
+            description="Deals from £16/month with no hidden fees"
           />
           <CitystyleFeatureCard
             icon={Shield}
-            title="Quality Service"
-            description="Same great support on budget packages"
-          />
-          <CitystyleFeatureCard
-            icon={Users}
-            title="Family Friendly"
-            description="Perfect for households on a budget"
+            title="Full Fibre Speeds"
+            description="Stream, work, and game smoothly with 50–500Mbps"
           />
           <CitystyleFeatureCard
             icon={Bolt}
-            title="Quick Setup"
-            description="Easy installation process"
+            title="Flexible Contracts"
+            description="Choose 12-month deals or rolling monthly plans"
           />
         </CitystyleFeatureGrid>
 
