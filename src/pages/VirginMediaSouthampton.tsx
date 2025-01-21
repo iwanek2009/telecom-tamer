@@ -84,11 +84,11 @@ export default function VirginMediaSouthampton() {
         </div>
 
         {/* Package Section */}
-        <section className="mt-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 bg-gradient-to-r from-[#3FC1C9] to-[#00A8E8] bg-clip-text text-transparent">
+        <section className="mt-16 space-y-12">
+          <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Available Virgin Media Packages in Southampton
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 title: "M125 Fibre Broadband",
@@ -123,13 +123,13 @@ export default function VirginMediaSouthampton() {
                 ]
               }
             ].map((pkg, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{pkg.title}</h3>
-                <p className="text-2xl font-bold text-[#3FC1C9] mb-4">Average speeds of {pkg.speed}</p>
+              <Card key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+                <h3 className="text-2xl font-semibold text-primary mb-6">{pkg.title}</h3>
+                <p className="text-2xl font-bold text-secondary mb-4">Average speeds of {pkg.speed}</p>
                 <ul className="space-y-2">
                   {pkg.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-[#3FC1C9] rounded-full" />
+                      <div className="w-2 h-2 bg-secondary rounded-full" />
                       <span className="text-gray-600">{feature}</span>
                     </li>
                   ))}
@@ -140,43 +140,43 @@ export default function VirginMediaSouthampton() {
         </section>
 
         {/* Bundle Options */}
-        <section className="mt-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 bg-gradient-to-r from-[#3FC1C9] to-[#00A8E8] bg-clip-text text-transparent">
+        <section className="mt-16 space-y-6">
+          <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Bundle Options
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="p-8">
-              <Package className="w-12 h-12 text-[#3FC1C9] mb-4" />
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">TV Add-ons</h3>
-              <ul className="space-y-3">
+            <Card className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+              <Package className="w-12 h-12 text-primary mb-4" />
+              <h3 className="text-2xl font-semibold text-primary mb-6">TV Add-ons</h3>
+              <ul className="space-y-2">
                 <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-[#3FC1C9] rounded-full" />
+                  <div className="w-2 h-2 bg-secondary rounded-full" />
                   <span className="text-gray-600">Choose from 100+ channels</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-[#3FC1C9] rounded-full" />
+                  <div className="w-2 h-2 bg-secondary rounded-full" />
                   <span className="text-gray-600">Include Sky Sports and BT Sport</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-[#3FC1C9] rounded-full" />
+                  <div className="w-2 h-2 bg-secondary rounded-full" />
                   <span className="text-gray-600">Stream Netflix directly through Virgin TV</span>
                 </li>
               </ul>
             </Card>
-            <Card className="p-8">
-              <Phone className="w-12 h-12 text-[#3FC1C9] mb-4" />
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Mobile Services</h3>
-              <ul className="space-y-3">
+            <Card className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+              <Phone className="w-12 h-12 text-primary mb-4" />
+              <h3 className="text-2xl font-semibold text-primary mb-6">Mobile Services</h3>
+              <ul className="space-y-2">
                 <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-[#3FC1C9] rounded-full" />
+                  <div className="w-2 h-2 bg-secondary rounded-full" />
                   <span className="text-gray-600">Add Virgin Mobile SIM plans</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-[#3FC1C9] rounded-full" />
+                  <div className="w-2 h-2 bg-secondary rounded-full" />
                   <span className="text-gray-600">Save with bundle discounts</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-[#3FC1C9] rounded-full" />
+                  <div className="w-2 h-2 bg-secondary rounded-full" />
                   <span className="text-gray-600">Share data across devices</span>
                 </li>
               </ul>
@@ -186,16 +186,16 @@ export default function VirginMediaSouthampton() {
 
         {/* Coverage Section */}
         <section className="mt-16">
-          <Card className="p-8">
+          <Card className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
             <div className="flex items-start space-x-4">
-              <MapPin className="w-12 h-12 text-[#3FC1C9] flex-shrink-0" />
+              <MapPin className="w-12 h-12 text-primary flex-shrink-0" />
               <div>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Installation and Coverage</h2>
+                <h2 className="text-2xl font-semibold text-primary mb-6">Installation and Coverage</h2>
                 <p className="text-gray-600 mb-4">Virgin Media's network covers most of Southampton, including:</p>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {["City Centre", "Shirley", "Bitterne", "Woolston", "Bassett"].map((area, index) => (
                     <div key={index} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-[#3FC1C9] rounded-full" />
+                      <div className="w-2 h-2 bg-secondary rounded-full" />
                       <span className="text-gray-600">{area}</span>
                     </div>
                   ))}
@@ -207,9 +207,9 @@ export default function VirginMediaSouthampton() {
 
         {/* Special Offers */}
         <section className="mt-16">
-          <Card className="p-8 bg-gradient-to-r from-[#3FC1C9] to-[#00A8E8] text-white">
-            <h2 className="text-2xl font-bold mb-6">Current Special Offers</h2>
-            <ul className="space-y-4">
+          <Card className="bg-gradient-to-r from-primary to-secondary text-white rounded-xl p-8">
+            <h2 className="text-3xl font-bold mb-4">Current Special Offers</h2>
+            <ul className="space-y-2">
               <li className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-white rounded-full" />
                 <span>No setup fee on selected packages</span>
@@ -232,7 +232,7 @@ export default function VirginMediaSouthampton() {
 
         {/* FAQs */}
         <section className="mt-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 bg-gradient-to-r from-[#3FC1C9] to-[#00A8E8] bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Frequently Asked Questions
           </h2>
           <Accordion type="single" collapsible className="space-y-4">
@@ -259,10 +259,10 @@ export default function VirginMediaSouthampton() {
               }
             ].map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="bg-white rounded-lg border p-4">
-                <AccordionTrigger className="text-lg font-semibold text-gray-900">
+                <AccordionTrigger className="text-lg font-semibold">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-600 pt-2">
+                <AccordionContent className="text-gray-600">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>
@@ -272,7 +272,7 @@ export default function VirginMediaSouthampton() {
 
         {/* Call to Action */}
         <section className="mt-16 mb-8">
-          <Card className="p-8 bg-gradient-to-r from-[#3FC1C9] to-[#00A8E8] text-white">
+          <Card className="bg-gradient-to-r from-primary to-secondary text-white rounded-xl p-8">
             <h2 className="text-3xl font-bold mb-4">Ready to Get Connected?</h2>
             <p className="text-lg mb-6">
               Check your address for Virgin Media availability and view the latest deals in Southampton. 
