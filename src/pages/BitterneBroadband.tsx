@@ -6,6 +6,12 @@ import { CitystyleFeatureCard } from '@/components/templates/citystyle/Citystyle
 import { Wifi, Home, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const BitterneBroadband = () => {
   const heroAccordionItems = [
@@ -153,6 +159,74 @@ const BitterneBroadband = () => {
               Ready to find the perfect broadband package? Use our broadband postcode checker to compare deals in Bitterne and Southampton. Start saving today and enjoy better internet!
             </p>
           </div>
+        </section>
+
+        <section className="mt-16 space-y-8">
+          <h2 className="text-3xl font-bold text-gray-900">Frequently Asked Questions (FAQs)</h2>
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            <AccordionItem value="item-1" className="border rounded-lg px-4">
+              <AccordionTrigger className="text-left">
+                What is the best broadband speed for a family home?
+              </AccordionTrigger>
+              <AccordionContent>
+                For households with 3–4 people streaming, gaming, or working, speeds above 100Mbps are recommended.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2" className="border rounded-lg px-4">
+              <AccordionTrigger className="text-left">
+                How do I know if I'm overpaying for broadband?
+              </AccordionTrigger>
+              <AccordionContent>
+                Check if your contract has expired—out-of-contract customers often pay higher rates.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-3" className="border rounded-lg px-4">
+              <AccordionTrigger className="text-left">
+                Are there discounts for low-income households?
+              </AccordionTrigger>
+              <AccordionContent>
+                Yes, some providers offer social tariffs for customers receiving Universal Credit or similar benefits.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-4" className="border rounded-lg px-4">
+              <AccordionTrigger className="text-left">
+                Can I bundle broadband with TV and phone services?
+              </AccordionTrigger>
+              <AccordionContent>
+                Absolutely! Bundling can often save money and simplify billing.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-5" className="border rounded-lg px-4">
+              <AccordionTrigger className="text-left">
+                How do I test my current broadband speed?
+              </AccordionTrigger>
+              <AccordionContent>
+                Run a speed test while connected to your Wi-Fi to measure your download and upload speeds.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-6" className="border rounded-lg px-4">
+              <AccordionTrigger className="text-left">
+                Is fibre broadband available in Bitterne?
+              </AccordionTrigger>
+              <AccordionContent>
+                Yes, many areas in Bitterne and Southampton now have access to full-fibre and Virgin Media networks.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-7" className="border rounded-lg px-4">
+              <AccordionTrigger className="text-left">
+                Can I switch providers without downtime?
+              </AccordionTrigger>
+              <AccordionContent>
+                Yes, the One Touch Switch system ensures a smooth transition with minimal service interruptions.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </section>
       </CitystyleContent>
     </CitystyleTemplate>
