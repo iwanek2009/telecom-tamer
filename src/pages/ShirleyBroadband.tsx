@@ -6,6 +6,12 @@ import { CitystyleFeatureCard } from '@/components/templates/citystyle/Citystyle
 import { Wifi, Home, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const ShirleyBroadband = () => {
   const heroAccordionItems = [
@@ -128,6 +134,74 @@ const ShirleyBroadband = () => {
                 <li>The One Touch Switch system ensures a seamless transition without requiring you to cancel your old contract manually.</li>
               </ul>
             </div>
+          </section>
+
+          <section className="mt-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Frequently Asked Questions (FAQs)</h2>
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              <AccordionItem value="item-1" className="border rounded-lg bg-white shadow-sm">
+                <AccordionTrigger className="px-6 hover:no-underline">
+                  <span className="text-left font-medium">What broadband speed do I need for a family home?</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 text-gray-600">
+                  For homes with 4+ people streaming, gaming, or working, a speed of 100Mbps or higher is recommended.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2" className="border rounded-lg bg-white shadow-sm">
+                <AccordionTrigger className="px-6 hover:no-underline">
+                  <span className="text-left font-medium">Can I switch broadband providers mid-contract?</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 text-gray-600">
+                  Yes, but early exit fees may apply. It's best to switch when your current contract ends.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="border rounded-lg bg-white shadow-sm">
+                <AccordionTrigger className="px-6 hover:no-underline">
+                  <span className="text-left font-medium">What's the difference between part-fibre and full-fibre broadband?</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 text-gray-600">
+                  Part-fibre uses copper cables, offering slower speeds, while full-fibre connects directly to your home, ensuring faster, more reliable internet.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="border rounded-lg bg-white shadow-sm">
+                <AccordionTrigger className="px-6 hover:no-underline">
+                  <span className="text-left font-medium">Are there broadband deals for low-income households?</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 text-gray-600">
+                  Yes, many providers offer social tariffs for those on benefits like Universal Credit, saving you up to £200 annually.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="border rounded-lg bg-white shadow-sm">
+                <AccordionTrigger className="px-6 hover:no-underline">
+                  <span className="text-left font-medium">Can I bundle TV and broadband for a lower price?</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 text-gray-600">
+                  Absolutely! Bundles often provide discounts and convenience by combining services into a single bill.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6" className="border rounded-lg bg-white shadow-sm">
+                <AccordionTrigger className="px-6 hover:no-underline">
+                  <span className="text-left font-medium">How do I check my current broadband speed?</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 text-gray-600">
+                  Run a speed test while connected to your home Wi-Fi to see your download and upload speeds.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-7" className="border rounded-lg bg-white shadow-sm">
+                <AccordionTrigger className="px-6 hover:no-underline">
+                  <span className="text-left font-medium">What's the fastest broadband available in Southampton?</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 text-gray-600">
+                  Full fibre or Virgin Media's network provides the fastest speeds, reaching up to 1Gbps in many areas.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </section>
 
           <section className="space-y-6">
