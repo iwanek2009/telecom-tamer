@@ -43,23 +43,23 @@ const BassettBroadband = () => {
 
       <CitystyleContent>
         <CitystyleFeatureGrid
-          title="Why Choose Bassett Broadband?"
-          subtitle="Local internet solutions for the Bassett community"
+          title="Key Benefits of Broadband in Bassett"
+          subtitle="This guide simplifies the process, helping you secure a reliable and budget-friendly internet package"
         >
           <CitystyleFeatureCard
             icon={Wifi}
-            title="Fast Speeds"
-            description="Reliable connections for streaming and gaming"
+            title="Lightning-Fast Speeds"
+            description="Enjoy seamless downloads with speeds up to 1Gbps, perfect for streaming HD content and gaming without interruptions"
           />
           <CitystyleFeatureCard
             icon={Shield}
-            title="Local Support"
-            description="Quick response times from local engineers"
+            title="Reliable Connections"
+            description="Stay connected with consistent service, even during peak times, ensuring your work or entertainment isn't disrupted"
           />
           <CitystyleFeatureCard
             icon={Users}
-            title="Family Packages"
-            description="Perfect for households of all sizes"
+            title="Affordable Packages"
+            description="Choose from a variety of plans designed to fit any budget, from simple broadband-only deals to comprehensive bundles"
           />
           <CitystyleFeatureCard
             icon={Bolt}
