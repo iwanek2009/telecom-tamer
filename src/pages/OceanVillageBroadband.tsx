@@ -6,6 +6,7 @@ import { CitystyleFeatureCard } from '@/components/templates/citystyle/Citystyle
 import { Wifi, Building2, Shield } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '../components/StickeeWidget';
+import SouthamptonDealsGrid from '@/components/local/SouthamptonDealsGrid';
 
 const OceanVillageBroadband = () => {
   const heroAccordionItems = [
@@ -69,6 +70,8 @@ const OceanVillageBroadband = () => {
             filters='{"connection_types": ["FTTP"]}'
           />
         </div>
+
+        <SouthamptonDealsGrid />
 
         <div className="mt-16 max-w-4xl mx-auto">
           <div className="space-y-12">
