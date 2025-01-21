@@ -7,6 +7,7 @@ import { Tv, Wifi, Package, PoundSterling, ArrowRight, ExternalLink } from 'luci
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 import { Link } from 'react-router-dom';
+import SouthamptonDealsGrid from '@/components/local/SouthamptonDealsGrid';
 
 const BroadbandTVSouthampton = () => {
   const heroAccordionItems = [
@@ -82,6 +83,8 @@ const BroadbandTVSouthampton = () => {
             filters='{"package_types":["BROADBAND_TV"]}'
           />
         </div>
+
+        <SouthamptonDealsGrid />
 
         <div className="mt-16 bg-gradient-to-b from-white to-gray-50 py-12 rounded-2xl shadow-sm">
           <div className="max-w-3xl mx-auto px-6">
