@@ -43,23 +43,23 @@ const BitterneBroadband = () => {
 
       <CitystyleContent>
         <CitystyleFeatureGrid
-          title="Why Choose Our Bitterne Internet Deals?"
-          subtitle="Get the perfect broadband package for your home"
+          title="Why Choose Bitterne Broadband Deals?"
+          subtitle="If you live in Bitterne or nearby Southampton, you can find broadband deals tailored to your needs"
         >
           <CitystyleFeatureCard
             icon={Wifi}
-            title="Fast Speeds"
-            description="Access high-speed internet packages"
+            title="Lightning-Fast Downloads"
+            description="Download HD movies or large files in just minutes with speeds up to 1Gbps"
           />
           <CitystyleFeatureCard
             icon={Home}
-            title="Local Support"
-            description="Get assistance from local teams"
+            title="Reliable Connection"
+            description="Stay connected without interruptions, even during peak hours—ideal for working or studying from home"
           />
           <CitystyleFeatureCard
             icon={Globe}
-            title="Wide Coverage"
-            description="Extensive network across Bitterne"
+            title="Low Latency"
+            description="Perfect for smooth online gaming, video calls, and streaming without buffering"
           />
         </CitystyleFeatureGrid>
 
