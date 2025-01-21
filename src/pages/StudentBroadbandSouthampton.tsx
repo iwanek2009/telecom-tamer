@@ -43,23 +43,23 @@ const StudentBroadbandSouthampton = () => {
 
       <CitystyleContent>
         <CitystyleFeatureGrid
-          title="Perfect for Students"
-          subtitle="Tailored broadband solutions for university life"
+          title="Best Student Broadband Deals in Southampton"
+          subtitle="Compare budget-friendly student broadband deals in Southampton! Compare speeds, prices, and flexible contracts tailored for university life."
         >
           <CitystyleFeatureCard
             icon={Wifi}
-            title="Fast Speeds"
-            description="Perfect for streaming, gaming and studying"
+            title="Blazing-Fast Speeds"
+            description="Stream lectures, game, and binge-watch with 100Mbps+ fibre"
           />
           <CitystyleFeatureCard
             icon={Users}
-            title="Shared Living"
-            description="Ideal for multiple users and shared houses"
+            title="Unbeatable Prices"
+            description="Plans from £15/month, perfect for tight budgets"
           />
           <CitystyleFeatureCard
             icon={Shield}
-            title="Flexible Terms"
-            description="9-month contracts available for term time"
+            title="No Long-Term Hassles"
+            description="Short 9–12-month contracts or rolling monthly deals"
           />
           <CitystyleFeatureCard
             icon={Bolt}
