@@ -3,7 +3,7 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { Wifi, Shield, Users, Bolt } from 'lucide-react';
+import { Wifi, Shield, Users } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 
@@ -60,11 +60,6 @@ const BassettBroadband = () => {
             icon={Users}
             title="Affordable Packages"
             description="Choose from a variety of plans designed to fit any budget, from simple broadband-only deals to comprehensive bundles"
-          />
-          <CitystyleFeatureCard
-            icon={Bolt}
-            title="Quick Install"
-            description="Get connected within days"
           />
         </CitystyleFeatureGrid>
 
