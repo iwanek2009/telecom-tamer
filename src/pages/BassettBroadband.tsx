@@ -6,6 +6,14 @@ import { CitystyleFeatureCard } from '@/components/templates/citystyle/Citystyle
 import { Wifi, Shield, Users } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+// ... keep existing code (imports and component setup)
 
 const BassettBroadband = () => {
   const heroAccordionItems = [
@@ -67,6 +75,7 @@ const BassettBroadband = () => {
           <StickeeWidget widgetId="smartfony-91" />
         </div>
 
+        {/* Existing content section */}
         <div className="mt-16 space-y-12">
           <div className="prose max-w-none">
             <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">How to Compare Broadband Deals in Bassett</h2>
@@ -157,6 +166,109 @@ const BassettBroadband = () => {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* New Switch Broadband Providers Section */}
+        <div className="mt-16 bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            How to Switch Broadband Providers
+          </h2>
+          <p className="text-gray-600 mb-6">
+            Switching broadband providers in Bassett is now easier than ever with the "One Touch Switch" system. Here's what to expect:
+          </p>
+          <ul className="space-y-4 mb-8">
+            <li className="flex items-start space-x-3">
+              <span className="text-secondary">1.</span>
+              <span className="text-gray-700">Choose a deal and sign up with your new provider.</span>
+            </li>
+            <li className="flex items-start space-x-3">
+              <span className="text-secondary">2.</span>
+              <span className="text-gray-700">Your new provider will handle the switch, including notifying your current supplier.</span>
+            </li>
+            <li className="flex items-start space-x-3">
+              <span className="text-secondary">3.</span>
+              <span className="text-gray-700">Set up your equipment and enjoy your new service.</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* FAQ Section with Accordion */}
+        <div className="mt-16 bg-white rounded-xl shadow-lg p-8">
+          <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            FAQs About Broadband Deals in Bassett
+          </h2>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1">
+              <AccordionTrigger className="text-lg font-semibold">
+                What's the average broadband speed in Bassett?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600">
+                The average speed is around 69Mbps, but full fibre connections can offer much faster speeds, up to 1Gbps.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2">
+              <AccordionTrigger className="text-lg font-semibold">
+                How do I check broadband availability in Bassett?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600">
+                Use a postcode checker to view providers and speeds available at your address.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-3">
+              <AccordionTrigger className="text-lg font-semibold">
+                Can I get broadband without a landline?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600">
+                Yes, broadband-only deals are available, especially from providers like Virgin Media and some fibre-optic services.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-4">
+              <AccordionTrigger className="text-lg font-semibold">
+                Are there social tariffs for low-income households?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600">
+                Yes, several providers offer discounted plans for those receiving benefits such as Universal Credit.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-5">
+              <AccordionTrigger className="text-lg font-semibold">
+                What happens if I want to switch providers mid-contract?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600">
+                You may face early exit fees. However, these can sometimes be offset by savings with a new provider.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-6">
+              <AccordionTrigger className="text-lg font-semibold">
+                What's the difference between fibre and part-fibre broadband?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600">
+                Fibre broadband uses fibre-optic cables for faster speeds, while part-fibre combines fibre and copper lines, which may result in slower speeds.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-7">
+              <AccordionTrigger className="text-lg font-semibold">
+                How long does it take to switch broadband?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600">
+                Switching usually takes around two weeks, but you'll experience minimal downtime if your new provider handles the process seamlessly.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+
+        {/* Call to Action Section */}
+        <div className="mt-16 bg-gradient-to-r from-primary to-secondary rounded-xl p-8 text-white">
+          <h2 className="text-3xl font-bold mb-4">Ready to Find Your Perfect Broadband Deal?</h2>
+          <p className="text-lg mb-6">
+            Don't settle for subpar internet. Use a postcode checker today to compare broadband packages in Bassett, Southampton, and discover the best offers tailored to your needs. Whether it's speed, affordability, or reliability, there's a deal for you!
+          </p>
         </div>
       </CitystyleContent>
     </CitystyleTemplate>
