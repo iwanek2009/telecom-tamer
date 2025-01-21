@@ -75,6 +75,8 @@ const BitterneBroadband = () => {
           />
         </div>
 
+        <SouthamptonDealsGrid />
+
         <section className="mt-16 space-y-12">
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-gray-900">Find the Best Broadband Packages in Bitterne, Southampton</h2>
