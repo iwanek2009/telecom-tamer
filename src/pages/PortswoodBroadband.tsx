@@ -43,23 +43,23 @@ const PortswoodBroadband = () => {
 
       <CitystyleContent>
         <CitystyleFeatureGrid
-          title="Why Choose Our Student Broadband?"
-          subtitle="Get the perfect internet package for university life"
+          title="Key Benefits of Student Broadband in Portswood"
+          subtitle="Looking for the perfect student broadband deal in Portswood? Our comprehensive guide breaks down everything you need to know about getting connected, from comparing providers to securing the best student discounts."
         >
           <CitystyleFeatureCard
-            icon={Wifi}
-            title="Fast Speeds"
-            description="Perfect for streaming and studying"
+            icon={GraduationCap}
+            title="Student-Specific Packages"
+            description="Get access to exclusive 9-month contracts perfectly aligned with the academic year"
           />
           <CitystyleFeatureCard
-            icon={GraduationCap}
-            title="Student Ready"
-            description="Ideal for shared houses"
+            icon={Wifi}
+            title="Lightning-Fast Speeds"
+            description="Enjoy reliable connections up to 1Gbps - perfect for simultaneous streaming, gaming, and study sessions"
           />
           <CitystyleFeatureCard
             icon={Clock}
-            title="Flexible Terms"
-            description="9-month contracts available"
+            title="Flexible Payment Options"
+            description="Choose from various payment plans, including monthly and upfront options with student discounts"
           />
         </CitystyleFeatureGrid>
 
