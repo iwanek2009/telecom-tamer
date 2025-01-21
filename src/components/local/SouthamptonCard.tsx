@@ -10,28 +10,28 @@ const SouthamptonCard = () => {
         <Link to="/southampton/fibre">Fibre Broadband Southampton | Fast Internet Packages</Link>,
         <Link to="/southampton/tv">Broadband & TV Deals Southampton | Best Home Bundles</Link>,
         <Link to="/southampton/ocean-village">Ocean Village Broadband | Compare Internet Providers</Link>,
-        <Link to="/local/bassett">Bassett Broadband Deals | Local Internet Packages</Link>,
-        <Link to="/local/shirley">Shirley Internet Deals | Southampton Broadband Offers</Link>,
-        <Link to="/local/bitterne">Bitterne Broadband Packages | Compare Local Providers</Link>,
-        <Link to="/local/portswood">Portswood Internet Deals | Student Broadband Offers</Link>
+        <Link to="/southampton/shirley">Shirley Internet Deals | Southampton Broadband Offers</Link>,
+        <Link to="/southampton/bitterne">Bitterne Broadband Packages | Compare Local Providers</Link>,
+        <Link to="/southampton/portswood">Portswood Internet Deals | Student Broadband Offers</Link>,
+        <Link to="/southampton/bassett">Bassett Broadband Deals | Local Internet Packages</Link>
       ],
       icon: <Building2 className="w-5 h-5 text-primary" />
     },
     {
       title: "Popular Services",
       items: [
-        "Virgin Media Broadband Southampton",
-        "BT Fibre Southampton",
-        "Sky Broadband Southampton"
+        <Link to="/southampton/virgin-media">Virgin Media Broadband Southampton</Link>,
+        <Link to="/southampton/bt">BT Broadband Southampton</Link>,
+        <Link to="/southampton/sky">Sky Broadband Southampton</Link>
       ],
       icon: <Wifi className="w-5 h-5 text-primary" />
     },
     {
       title: "Special Offers",
       items: [
-        "Student Broadband Deals Southampton",
-        "No Contract Broadband Southampton",
-        "Cheap Broadband Southampton"
+        <Link to="/southampton/student">Student Broadband Deals Southampton</Link>,
+        <Link to="/southampton/no-contract">No Contract Broadband Southampton</Link>,
+        <Link to="/southampton/cheap">Cheap Broadband Southampton</Link>
       ],
       icon: <PoundSterling className="w-5 h-5 text-primary" />
     }
@@ -65,7 +65,7 @@ const SouthamptonCard = () => {
                         : 'pl-4 border-l-2 border-primary hover:border-secondary'
                     }`}
                   >
-                    {typeof item === 'string' ? item : item}
+                    {item}
                   </li>
                 ))}
               </ul>
