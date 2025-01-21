@@ -97,28 +97,45 @@ const ShirleyBroadband = () => {
           </section>
 
           <section className="space-y-6">
-            <h2 className="text-3xl font-bold text-gray-900">Broadband Types Available in Shirley and Southampton</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-2 p-6 bg-white rounded-lg shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold text-gray-800">Part-Fibre Broadband</h3>
-                <p className="text-gray-600">Widely available in the UK, this option delivers speeds of 30-70Mbps, sufficient for smaller households.</p>
+            <h2 className="text-3xl font-bold text-gray-900">Steps to Compare Broadband Deals in Shirley</h2>
+            <div className="space-y-4">
+              <div className="flex gap-3">
+                <span className="text-primary font-semibold">1.</span>
+                <p className="text-gray-600 leading-relaxed"><span className="font-semibold">Use a Postcode Checker:</span> Enter your address to view available providers and packages tailored to your location.</p>
               </div>
-              <div className="space-y-2 p-6 bg-white rounded-lg shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold text-gray-800">Full Fibre Broadband</h3>
-                <p className="text-gray-600">Ideal for heavy internet users, this provides speeds exceeding 100Mbps by connecting directly to your property.</p>
+              <div className="flex gap-3">
+                <span className="text-primary font-semibold">2.</span>
+                <p className="text-gray-600 leading-relaxed"><span className="font-semibold">Compare Features:</span> Assess speed, reliability, price, and customer reviews for each provider.</p>
               </div>
-              <div className="space-y-2 p-6 bg-white rounded-lg shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold text-gray-800">Virgin Media Cable Broadband</h3>
-                <p className="text-gray-600">Available in many urban areas, this ultrafast option reaches speeds up to 1Gbps.</p>
+              <div className="flex gap-3">
+                <span className="text-primary font-semibold">3.</span>
+                <p className="text-gray-600 leading-relaxed"><span className="font-semibold">Check Special Offers:</span> Look for new customer deals, gift cards, or discounts.</p>
               </div>
-              <div className="space-y-2 p-6 bg-white rounded-lg shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold text-gray-800">4G/5G Home Internet</h3>
-                <p className="text-gray-600">A flexible alternative for areas without fibre connections. Perfect as a backup or for households with moderate internet needs.</p>
+              <div className="flex gap-3">
+                <span className="text-primary font-semibold">4.</span>
+                <p className="text-gray-600 leading-relaxed"><span className="font-semibold">Choose the Best Option:</span> Select a deal that meets your needs and sign up online.</p>
               </div>
-              <div className="space-y-2 p-6 bg-white rounded-lg shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold text-gray-800">Satellite Broadband</h3>
-                <p className="text-gray-600">Designed for rural areas, satellite broadband ensures reliable internet where traditional connections fall short.</p>
-              </div>
+            </div>
+          </section>
+
+          <section className="space-y-6">
+            <h2 className="text-3xl font-bold text-gray-900">How to Switch Broadband Providers</h2>
+            <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6 space-y-4">
+              <p className="text-gray-600 leading-relaxed">Switching providers is straightforward:</p>
+              <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                <li>Choose a new deal and sign up on the provider's website.</li>
+                <li>Provide your details and select an activation date.</li>
+                <li>The One Touch Switch system ensures a seamless transition without requiring you to cancel your old contract manually.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section className="space-y-6">
+            <h2 className="text-3xl font-bold text-gray-900">Call to Action</h2>
+            <div className="bg-primary/5 rounded-lg p-6 border border-primary/10">
+              <p className="text-gray-800 leading-relaxed">
+                Ready to upgrade your internet? Use our broadband postcode checker to find the best broadband deals in Shirley and Southampton today. Don't miss out on exclusive offers and faster speeds tailored to your home.
+              </p>
             </div>
           </section>
         </div>
