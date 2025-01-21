@@ -7,6 +7,7 @@ import { Wifi, Home, Globe2, Shield } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '../components/StickeeWidget';
 import { Button } from '@/components/ui/button';
+import SouthamptonDealsGrid from '@/components/local/SouthamptonDealsGrid';
 
 const SouthamptonBroadband = () => {
   const heroAccordionItems = [
@@ -76,6 +77,8 @@ const SouthamptonBroadband = () => {
             filters='{"connection_types": ["FTTP"]}'
           />
         </div>
+
+        <SouthamptonDealsGrid />
 
         <div className="mt-16 max-w-4xl mx-auto space-y-12">
           <section className="space-y-6">
