@@ -6,6 +6,12 @@ import { CitystyleFeatureCard } from '@/components/templates/citystyle/Citystyle
 import { Wifi, Globe, House, Download, Zap, Signal } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const ManchesterBroadband = () => {
   const heroAccordionItems = [
@@ -75,126 +81,119 @@ const ManchesterBroadband = () => {
           />
         </div>
 
-        {/* Guide Section */}
-        <div className="mt-16 max-w-4xl mx-auto">
-          <div className="space-y-8">
-            <div className="prose prose-gray max-w-none">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Why Compare Broadband Deals in Manchester?
-              </h2>
+        {/* Guide Section with New Styling */}
+        <div className="mt-16 space-y-12">
+          <div className="prose prose-gray max-w-none">
+            <h2 className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-4xl font-bold mb-8">
+              Why Compare Broadband Deals in Manchester?
+            </h2>
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
               <p className="text-gray-600 mb-6">
-                Manchester is a bustling city with diverse internet needs—students, professionals, families, and everyone in between. With so many providers competing in the area, you'll find a wide range of broadband packages featuring different speeds, prices, and contract lengths. Comparing offers not only helps you find the right match for your household or business needs but can also lead to substantial savings and improved online performance.
+                Manchester is a bustling city with diverse internet needs—students, professionals, families, and everyone in between. With so many providers competing in the area, you'll find a wide range of broadband packages featuring different speeds, prices, and contract lengths.
               </p>
+            </div>
 
-              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                How to Begin Your Search
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Your first step should be to figure out which broadband services are available at your specific address. This can be done through a broadband postcode checker, which filters results based on your location. Once you know your options, you can narrow things down by considering factors like budget, desired speed, contract length, and any extras (like TV or mobile bundles).
-              </p>
-
-              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                Step-by-Step Approach
-              </h3>
-              <ol className="list-decimal pl-6 space-y-3 text-gray-600">
-                <li><strong>Enter Your Postcode</strong> - Start with a reputable broadband comparison site and input your Manchester postcode.</li>
-                <li><strong>Select Current Provider</strong> - Often, these tools will ask who your current provider is to avoid showing deals you already have.</li>
-                <li><strong>Browse Tailored Results</strong> - You'll see the latest offers tailored to your address, including discounted new-customer promotions.</li>
-                <li><strong>Pick Your Plan</strong> - Filter deals by speed, price, or package type (broadband only, TV + broadband, etc.) until you find the perfect match.</li>
-                <li><strong>Sign Up</strong> - Complete the sign-up process through the provider's website, then arrange installation or activation details.</li>
-              </ol>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                Types of Broadband Connections in Manchester
-              </h2>
-              <p className="text-gray-600 mb-6">
-                Manchester benefits from excellent coverage across multiple broadband technologies. Depending on your postcode, you may be able to access:
-              </p>
-
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">Full Fibre (FTTP)</h4>
+            <h3 className="text-2xl font-semibold text-primary mb-6 mt-12">
+              How to Begin Your Search
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {['Enter Your Postcode', 'Select Current Provider', 'Browse Tailored Results', 'Pick Your Plan', 'Sign Up'].map((step, index) => (
+                <div key={step} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                    <h4 className="text-lg font-semibold text-gray-900">{step}</h4>
+                  </div>
                   <p className="text-gray-600">
-                    This direct fibre-optic connection delivers speeds from 100Mbps up to 1Gbps. Availability is expanding rapidly across Manchester.
+                    {index === 0 && "Start with a reputable broadband comparison site and input your Manchester postcode."}
+                    {index === 1 && "Often, these tools will ask who your current provider is to avoid showing deals you already have."}
+                    {index === 2 && "You'll see the latest offers tailored to your address, including discounted new-customer promotions."}
+                    {index === 3 && "Filter deals by speed, price, or package type (broadband only, TV + broadband, etc.) until you find the perfect match."}
+                    {index === 4 && "Complete the sign-up process through the provider's website, then arrange installation or activation details."}
                   </p>
                 </div>
+              ))}
+            </div>
 
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">Part-Fibre (FTTC)</h4>
-                  <p className="text-gray-600">
-                    A mixture of fibre and copper wiring often delivers speeds up to 70Mbps. Coverage is widespread, making it a common choice for most households.
-                  </p>
-                </div>
-
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">Cable (Virgin Media)</h4>
-                  <p className="text-gray-600">
-                    Virgin Media's network uses coaxial cables to achieve ultrafast speeds, often comparable to full fibre. It's accessible in much of central Manchester and surrounding areas.
-                  </p>
-                </div>
-
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">Mobile Broadband (4G/5G)</h4>
-                  <p className="text-gray-600">
-                    An option if wired connections are limited or if you need a portable solution. Speeds vary depending on your location and network coverage.
-                  </p>
-                </div>
-
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">ADSL (Copper)</h4>
-                  <p className="text-gray-600">
-                    The oldest method, typically offering speeds around 10–20Mbps. Still widely available but not ideal if you demand high-speed streaming or frequent large downloads.
-                  </p>
-                </div>
+            <h2 className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-4xl font-bold mb-8 mt-16">
+              Types of Broadband Connections in Manchester
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+                <h4 className="text-xl font-semibold text-primary mb-4">Full Fibre (FTTP)</h4>
+                <p className="text-gray-600">
+                  This direct fibre-optic connection delivers speeds from 100Mbps up to 1Gbps. Availability is expanding rapidly across Manchester.
+                </p>
               </div>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                Determining the Right Speed
-              </h2>
-              <p className="text-gray-600 mb-6">
-                Your perfect speed depends on two factors: the number of devices in your home and what each person uses them for. Here's a quick guide:
-              </p>
-
-              <div className="space-y-4 mb-8">
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <p className="text-gray-600"><strong>0–20Mbps:</strong> Suitable for up to two users with basic browsing and occasional streaming.</p>
-                </div>
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <p className="text-gray-600"><strong>21–50Mbps:</strong> Works well for small families of 2–3 people streaming in HD or working from home occasionally.</p>
-                </div>
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <p className="text-gray-600"><strong>51–99Mbps:</strong> Great for families or shared flats of 3+ individuals, allowing multiple HD or 4K streams at once.</p>
-                </div>
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <p className="text-gray-600"><strong>100+ Mbps:</strong> Ideal for tech-savvy households, remote workers, or gamers who need ultra-reliable, high-capacity connections.</p>
-                </div>
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+                <h4 className="text-xl font-semibold text-primary mb-4">Part-Fibre (FTTC)</h4>
+                <p className="text-gray-600">
+                  A mixture of fibre and copper wiring often delivers speeds up to 70Mbps. Coverage is widespread, making it a common choice for most households.
+                </p>
               </div>
-
-              <p className="text-gray-600 mb-8">
-                If you're unsure what speed you currently receive, run an internet speed test. This will give you a snapshot of your download and upload capabilities under normal conditions. If the results are significantly lower than advertised, consider troubleshooting your setup or looking for a faster plan.
-              </p>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                Frequently Asked Questions
-              </h2>
-              <div className="space-y-6">
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Can I get full-fibre broadband in all parts of Manchester?</h3>
-                  <p className="text-gray-600">Full-fibre coverage is growing, but availability varies by postcode. Enter your address into a postcode checker to see if you can access FTTP services.</p>
-                </div>
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">How do I switch if I'm still in a contract?</h3>
-                  <p className="text-gray-600">Switching mid-contract usually incurs exit fees. However, check your terms or contact your provider—some offer grace periods or promotional waivers.</p>
-                </div>
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Will I lose internet access during the switch?</h3>
-                  <p className="text-gray-600">Not typically. Most providers coordinate the switch to minimize downtime, though you might experience a brief transition period (usually a few hours).</p>
-                </div>
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Do I really need unlimited data?</h3>
-                  <p className="text-gray-600">Most households benefit from unlimited data, especially if you regularly stream, game, or work from home. Limited packages can be cheaper but risk overage fees.</p>
-                </div>
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+                <h4 className="text-xl font-semibold text-primary mb-4">Cable (Virgin Media)</h4>
+                <p className="text-gray-600">
+                  Virgin Media's network uses coaxial cables to achieve ultrafast speeds, often comparable to full fibre. It's accessible in much of central Manchester and surrounding areas.
+                </p>
               </div>
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+                <h4 className="text-xl font-semibold text-primary mb-4">Mobile Broadband (4G/5G)</h4>
+                <p className="text-gray-600">
+                  An option if wired connections are limited or if you need a portable solution. Speeds vary depending on your location and network coverage.
+                </p>
+              </div>
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+                <h4 className="text-xl font-semibold text-primary mb-4">ADSL (Copper)</h4>
+                <p className="text-gray-600">
+                  The oldest method, typically offering speeds around 10–20Mbps. Still widely available but not ideal if you demand high-speed streaming or frequent large downloads.
+                </p>
+              </div>
+            </div>
+
+            <h2 className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-4xl font-bold mb-8 mt-16">
+              Frequently Asked Questions
+            </h2>
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="item-1" className="bg-white rounded-xl shadow-sm">
+                <AccordionTrigger className="text-lg font-semibold px-6">
+                  Can I get full-fibre broadband in all parts of Manchester?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-600 px-6 pb-4">
+                  Full-fibre coverage is growing, but availability varies by postcode. Enter your address into a postcode checker to see if you can access FTTP services.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2" className="bg-white rounded-xl shadow-sm">
+                <AccordionTrigger className="text-lg font-semibold px-6">
+                  How do I switch if I'm still in a contract?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-600 px-6 pb-4">
+                  Switching mid-contract usually incurs exit fees. However, check your terms or contact your provider—some offer grace periods or promotional waivers.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3" className="bg-white rounded-xl shadow-sm">
+                <AccordionTrigger className="text-lg font-semibold px-6">
+                  Will I lose internet access during the switch?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-600 px-6 pb-4">
+                  Not typically. Most providers coordinate the switch to minimize downtime, though you might experience a brief transition period (usually a few hours).
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4" className="bg-white rounded-xl shadow-sm">
+                <AccordionTrigger className="text-lg font-semibold px-6">
+                  Do I really need unlimited data?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-600 px-6 pb-4">
+                  Most households benefit from unlimited data, especially if you regularly stream, game, or work from home. Limited packages can be cheaper but risk overage fees.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            {/* Call to Action Section */}
+            <div className="bg-gradient-to-r from-primary to-secondary rounded-xl p-8 text-white mt-16">
+              <h3 className="text-3xl font-bold mb-4">Ready to Find Your Perfect Broadband Deal?</h3>
+              <p className="text-lg mb-6">
+                Use our comparison tool above to discover the best broadband packages available in your area of Manchester.
+              </p>
             </div>
           </div>
         </div>
