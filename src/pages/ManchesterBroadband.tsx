@@ -75,7 +75,7 @@ const ManchesterBroadband = () => {
           />
         </div>
 
-        {/* New Content Section */}
+        {/* Guide Section */}
         <div className="mt-16 max-w-4xl mx-auto">
           <div className="space-y-8">
             <div className="prose prose-gray max-w-none">
@@ -102,42 +102,113 @@ const ManchesterBroadband = () => {
               </h3>
 
               <div className="space-y-6">
-                <div>
+                <div className="bg-white rounded-lg p-6 shadow-sm">
                   <h4 className="text-xl font-semibold text-gray-900 mb-2">1. Contract Status</h4>
                   <p className="text-gray-600"><strong>Are You Out of Contract?</strong><br />
                   If you're no longer tied to a plan, you may be paying more than necessary. Also, you're free to switch without exit fees, which means you can upgrade quickly and start saving.</p>
                 </div>
 
-                <div>
+                <div className="bg-white rounded-lg p-6 shadow-sm">
                   <h4 className="text-xl font-semibold text-gray-900 mb-2">2. Monthly Budget</h4>
                   <p className="text-gray-600"><strong>How Much Can You Afford?</strong><br />
                   Aim for a deal that strikes a balance between speed and cost. Even if your current provider offers a retainer discount, compare other providers for a potentially better bargain.</p>
                 </div>
 
-                <div>
+                <div className="bg-white rounded-lg p-6 shadow-sm">
                   <h4 className="text-xl font-semibold text-gray-900 mb-2">3. Required Internet Speed</h4>
                   <p className="text-gray-600"><strong>Usage and Number of Users</strong><br />
                   A single occupant with basic web browsing needs can often manage with speeds around 20–35Mbps. Larger households or professionals working from home may require 50–100Mbps or more. Avid gamers and 4K streamers might benefit from ultra-fast plans above 100Mbps.</p>
                 </div>
 
-                <div>
+                <div className="bg-white rounded-lg p-6 shadow-sm">
                   <h4 className="text-xl font-semibold text-gray-900 mb-2">4. Extra Services (TV, Phone, Mobile)</h4>
                   <p className="text-gray-600"><strong>Bundling Options</strong><br />
                   If you're a fan of premium sports or entertainment channels, combining broadband with TV services might be more cost-effective. Similarly, if you make lots of landline or mobile calls, look for deals that offer inclusive phone minutes or mobile SIM perks.</p>
                 </div>
 
-                <div>
+                <div className="bg-white rounded-lg p-6 shadow-sm">
                   <h4 className="text-xl font-semibold text-gray-900 mb-2">5. Customer Service and Support</h4>
                   <p className="text-gray-600"><strong>After-Sales Care</strong><br />
                   Some providers excel at quick response times and helpful troubleshooting. If support quality matters to you, check customer reviews and any service guarantees (like Wi-Fi boosters or whole-home coverage).</p>
                 </div>
 
-                <div>
+                <div className="bg-white rounded-lg p-6 shadow-sm">
                   <h4 className="text-xl font-semibold text-gray-900 mb-2">6. Potential Relocation</h4>
                   <p className="text-gray-600"><strong>Moving Home Soon?</strong><br />
                   If you anticipate moving, check whether your chosen provider operates in the new area. Switching partway through a contract may incur early termination fees, unless you're out of contract or you can transfer your service.</p>
                 </div>
               </div>
+
+              {/* New Content: Types of Broadband */}
+              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
+                Types of Broadband Connections in Manchester
+              </h2>
+              <p className="text-gray-600 mb-6">
+                Manchester benefits from excellent coverage across multiple broadband technologies. Depending on your postcode, you may be able to access:
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-2">Full Fibre (FTTP)</h4>
+                  <p className="text-gray-600">
+                    This direct fibre-optic connection delivers speeds from 100Mbps up to 1Gbps. Availability is expanding rapidly across Manchester.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-2">Part-Fibre (FTTC)</h4>
+                  <p className="text-gray-600">
+                    A mixture of fibre and copper wiring often delivers speeds up to 70Mbps. Coverage is widespread, making it a common choice for most households.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-2">Cable (Virgin Media)</h4>
+                  <p className="text-gray-600">
+                    Virgin Media's network uses coaxial cables to achieve ultrafast speeds, often comparable to full fibre. It's accessible in much of central Manchester and surrounding areas.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-2">Mobile Broadband (4G/5G)</h4>
+                  <p className="text-gray-600">
+                    An option if wired connections are limited or if you need a portable solution. Speeds vary depending on your location and network coverage.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-2">ADSL (Copper)</h4>
+                  <p className="text-gray-600">
+                    The oldest method, typically offering speeds around 10–20Mbps. Still widely available but not ideal if you demand high-speed streaming or frequent large downloads.
+                  </p>
+                </div>
+              </div>
+
+              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
+                Determining the Right Speed
+              </h2>
+              <p className="text-gray-600 mb-6">
+                Your perfect speed depends on two factors: the number of devices in your home and what each person uses them for. Here's a quick guide:
+              </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <p className="text-gray-600"><strong>0–20Mbps:</strong> Suitable for up to two users with basic browsing and occasional streaming.</p>
+                </div>
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <p className="text-gray-600"><strong>21–50Mbps:</strong> Works well for small families of 2–3 people streaming in HD or working from home occasionally.</p>
+                </div>
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <p className="text-gray-600"><strong>51–99Mbps:</strong> Great for families or shared flats of 3+ individuals, allowing multiple HD or 4K streams at once.</p>
+                </div>
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <p className="text-gray-600"><strong>100+ Mbps:</strong> Ideal for tech-savvy households, remote workers, or gamers who need ultra-reliable, high-capacity connections.</p>
+                </div>
+              </div>
+
+              <p className="text-gray-600 mb-8">
+                If you're unsure what speed you currently receive, run an internet speed test. This will give you a snapshot of your download and upload capabilities under normal conditions. If the results are significantly lower than advertised, consider troubleshooting your setup or looking for a faster plan.
+              </p>
             </div>
           </div>
         </div>
