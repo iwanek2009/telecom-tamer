@@ -3,7 +3,7 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { Wifi, Globe, House } from 'lucide-react';
+import { Wifi, Globe, House, Download, Zap, Signal } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 
@@ -35,7 +35,7 @@ const ManchesterBroadband = () => {
         <title>Manchester Broadband Deals | Compare Internet Packages</title>
         <meta 
           name="description" 
-          content="Find the best broadband deals in Manchester. Compare local packages from leading providers. Get fast, reliable internet for streaming, gaming & working from home."
+          content="Looking for speedy, reliable internet in Manchester? Discover how to compare broadband deals, find the right speeds, and enjoy the best value for your home or office."
         />
       </Helmet>
 
@@ -49,23 +49,23 @@ const ManchesterBroadband = () => {
 
       <CitystyleContent>
         <CitystyleFeatureGrid
-          title="Why Choose Our Manchester Broadband Deals?"
-          subtitle="Get the perfect internet package for your Manchester home"
+          title="3 Key Benefits at a Glance"
+          subtitle="Why choose our Manchester broadband comparison service?"
         >
           <CitystyleFeatureCard
-            icon={Wifi}
-            title="Ultra-Fast Speeds"
-            description="Access high-speed internet with up to 1Gbps in Manchester areas"
+            icon={Zap}
+            title="Lightning-Fast Downloads"
+            description="Get HD content in a flash with broadband speeds reaching up to 1Gbps in select Manchester postcodes"
           />
           <CitystyleFeatureCard
-            icon={Globe}
-            title="Local Coverage"
-            description="Extensive network coverage across all Manchester neighborhoods"
+            icon={Signal}
+            title="Reliable Connection"
+            description="Enjoy a consistently strong signal, even at peak times—perfect for remote work and seamless streaming"
           />
           <CitystyleFeatureCard
-            icon={House}
-            title="Home-Ready"
-            description="Perfect for streaming, gaming, and working from home"
+            icon={Download}
+            title="Low Latency"
+            description="Experience near-instant response times for online gaming, video conferencing, and cloud-based applications"
           />
         </CitystyleFeatureGrid>
 
@@ -80,8 +80,15 @@ const ManchesterBroadband = () => {
           <div className="space-y-8">
             <div className="prose prose-gray max-w-none">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Manchester Broadband Deals: Your Guide to Finding the Best Internet Packages
+                Why Compare Broadband Deals in Manchester?
               </h2>
+              <p className="text-gray-600 mb-6">
+                Manchester is a bustling city with diverse internet needs—students, professionals, families, and everyone in between. With so many providers competing in the area, you'll find a wide range of broadband packages featuring different speeds, prices, and contract lengths. Comparing offers not only helps you find the right match for your household or business needs but can also lead to substantial savings and improved online performance.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+                How to Begin Your Search
+              </h3>
               <p className="text-gray-600 mb-6">
                 Your first step should be to figure out which broadband services are available at your specific address. This can be done through a broadband postcode checker, which filters results based on your location. Once you know your options, you can narrow things down by considering factors like budget, desired speed, contract length, and any extras (like TV or mobile bundles).
               </p>
@@ -97,49 +104,6 @@ const ManchesterBroadband = () => {
                 <li><strong>Sign Up</strong> - Complete the sign-up process through the provider's website, then arrange installation or activation details.</li>
               </ol>
 
-              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                What to Consider When Choosing a Broadband Deal
-              </h3>
-
-              <div className="space-y-6">
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">1. Contract Status</h4>
-                  <p className="text-gray-600"><strong>Are You Out of Contract?</strong><br />
-                  If you're no longer tied to a plan, you may be paying more than necessary. Also, you're free to switch without exit fees, which means you can upgrade quickly and start saving.</p>
-                </div>
-
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">2. Monthly Budget</h4>
-                  <p className="text-gray-600"><strong>How Much Can You Afford?</strong><br />
-                  Aim for a deal that strikes a balance between speed and cost. Even if your current provider offers a retainer discount, compare other providers for a potentially better bargain.</p>
-                </div>
-
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">3. Required Internet Speed</h4>
-                  <p className="text-gray-600"><strong>Usage and Number of Users</strong><br />
-                  A single occupant with basic web browsing needs can often manage with speeds around 20–35Mbps. Larger households or professionals working from home may require 50–100Mbps or more. Avid gamers and 4K streamers might benefit from ultra-fast plans above 100Mbps.</p>
-                </div>
-
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">4. Extra Services (TV, Phone, Mobile)</h4>
-                  <p className="text-gray-600"><strong>Bundling Options</strong><br />
-                  If you're a fan of premium sports or entertainment channels, combining broadband with TV services might be more cost-effective. Similarly, if you make lots of landline or mobile calls, look for deals that offer inclusive phone minutes or mobile SIM perks.</p>
-                </div>
-
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">5. Customer Service and Support</h4>
-                  <p className="text-gray-600"><strong>After-Sales Care</strong><br />
-                  Some providers excel at quick response times and helpful troubleshooting. If support quality matters to you, check customer reviews and any service guarantees (like Wi-Fi boosters or whole-home coverage).</p>
-                </div>
-
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">6. Potential Relocation</h4>
-                  <p className="text-gray-600"><strong>Moving Home Soon?</strong><br />
-                  If you anticipate moving, check whether your chosen provider operates in the new area. Switching partway through a contract may incur early termination fees, unless you're out of contract or you can transfer your service.</p>
-                </div>
-              </div>
-
-              {/* New Content: Types of Broadband */}
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 Types of Broadband Connections in Manchester
               </h2>
@@ -209,6 +173,28 @@ const ManchesterBroadband = () => {
               <p className="text-gray-600 mb-8">
                 If you're unsure what speed you currently receive, run an internet speed test. This will give you a snapshot of your download and upload capabilities under normal conditions. If the results are significantly lower than advertised, consider troubleshooting your setup or looking for a faster plan.
               </p>
+
+              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-6">
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Can I get full-fibre broadband in all parts of Manchester?</h3>
+                  <p className="text-gray-600">Full-fibre coverage is growing, but availability varies by postcode. Enter your address into a postcode checker to see if you can access FTTP services.</p>
+                </div>
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">How do I switch if I'm still in a contract?</h3>
+                  <p className="text-gray-600">Switching mid-contract usually incurs exit fees. However, check your terms or contact your provider—some offer grace periods or promotional waivers.</p>
+                </div>
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Will I lose internet access during the switch?</h3>
+                  <p className="text-gray-600">Not typically. Most providers coordinate the switch to minimize downtime, though you might experience a brief transition period (usually a few hours).</p>
+                </div>
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Do I really need unlimited data?</h3>
+                  <p className="text-gray-600">Most households benefit from unlimited data, especially if you regularly stream, game, or work from home. Limited packages can be cheaper but risk overage fees.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
