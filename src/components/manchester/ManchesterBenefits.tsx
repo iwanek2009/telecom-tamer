@@ -5,23 +5,23 @@ import { Zap, Signal, Download } from 'lucide-react';
 export const ManchesterBenefits = () => {
   return (
     <CitystyleFeatureGrid
-      title="3 Key Benefits at a Glance"
-      subtitle="Why choose our Manchester broadband comparison service?"
+      title="Fibre Broadband Manchester | Fast Internet Providers"
+      subtitle="Experience lightning-fast internet speeds with local fibre broadband deals"
     >
       <CitystyleFeatureCard
         icon={Zap}
         title="Lightning-Fast Downloads"
-        description="Get HD content in a flash with broadband speeds reaching up to 1Gbps in select Manchester postcodes"
+        description="Grab HD movies, TV shows, and large files in mere minutes with speeds up to 1Gbps"
       />
       <CitystyleFeatureCard
         icon={Signal}
         title="Reliable Connection"
-        description="Enjoy a consistently strong signal, even at peak times—perfect for remote work and seamless streaming"
+        description="Stay connected around the clock—ideal for remote work, streaming, and homeschooling"
       />
       <CitystyleFeatureCard
         icon={Download}
         title="Low Latency"
-        description="Experience near-instant response times for online gaming, video conferencing, and cloud-based applications"
+        description="Enjoy quick response times for online gaming, video conferences, and cloud applications"
       />
     </CitystyleFeatureGrid>
   );
