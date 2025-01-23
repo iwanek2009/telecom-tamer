@@ -6,6 +6,7 @@ import { CitystyleFeatureCard } from '@/components/templates/citystyle/Citystyle
 import { Wifi, Globe, House } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
+import { ManchesterGuide } from '@/components/manchester/ManchesterGuide';
 
 const FibreBroadbandManchester = () => {
   const heroAccordionItems = [
@@ -75,6 +76,8 @@ const FibreBroadbandManchester = () => {
             filters='{"connection_types": ["FTTP"]}'
           />
         </div>
+
+        <ManchesterGuide />
       </CitystyleContent>
     </CitystyleTemplate>
   );
