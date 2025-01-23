@@ -7,6 +7,7 @@ import { Wifi, Globe, House } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 import { ManchesterGuide } from '@/components/manchester/ManchesterGuide';
+import { ManchesterConsiderations } from '@/components/manchester/ManchesterConsiderations';
 
 const FibreBroadbandManchester = () => {
   const heroAccordionItems = [
@@ -78,6 +79,7 @@ const FibreBroadbandManchester = () => {
         </div>
 
         <ManchesterGuide />
+        <ManchesterConsiderations />
       </CitystyleContent>
     </CitystyleTemplate>
   );
