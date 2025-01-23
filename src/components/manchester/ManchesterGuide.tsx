@@ -67,6 +67,55 @@ export const ManchesterGuide = () => {
           </div>
         </div>
 
+        <h2 className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-4xl font-bold mb-8 mt-12">
+          Bundles and Special Packages
+        </h2>
+        <p className="text-lg text-gray-600 mb-8">
+          For those who want more than just broadband:
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+            <h3 className="text-2xl font-semibold text-primary mb-4 flex items-center gap-2">
+              <Wifi className="w-6 h-6" />
+              Broadband + TV
+            </h3>
+            <p className="text-gray-600">
+              Ideal if you watch a range of channels or want to save on a combined package. Look out for exclusive sports or movie bundles in Manchester.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+            <h3 className="text-2xl font-semibold text-primary mb-4 flex items-center gap-2">
+              <Globe className="w-6 h-6" />
+              Broadband + Landline
+            </h3>
+            <p className="text-gray-600">
+              Perfect if you frequently call family or friends nationwide or abroad.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+            <h3 className="text-2xl font-semibold text-primary mb-4 flex items-center gap-2">
+              <Users className="w-6 h-6" />
+              Broadband + Mobile
+            </h3>
+            <p className="text-gray-600">
+              Some providers give mobile SIM deals alongside your internet plan, allowing you to save on both services in a single contract.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+            <h3 className="text-2xl font-semibold text-primary mb-4 flex items-center gap-2">
+              <CreditCard className="w-6 h-6" />
+              Social Tariffs
+            </h3>
+            <p className="text-gray-600">
+              If you're on a government support program (like Universal Credit), some providers offer discounted packages. Check eligibility to potentially save hundreds a year.
+            </p>
+          </div>
+        </div>
+
         <h3 className="text-2xl font-semibold text-primary mb-6 mt-12">
           How to Begin Your Search
         </h3>
