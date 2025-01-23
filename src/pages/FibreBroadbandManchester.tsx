@@ -10,6 +10,7 @@ import { ManchesterGuide } from '@/components/manchester/ManchesterGuide';
 import { ManchesterConsiderations } from '@/components/manchester/ManchesterConsiderations';
 import { ManchesterConnectionTypes } from '@/components/manchester/ManchesterConnectionTypes';
 import { ManchesterSteps } from '@/components/manchester/ManchesterSteps';
+import { ManchesterFAQ } from '@/components/manchester/ManchesterFAQ';
 
 const FibreBroadbandManchester = () => {
   const heroAccordionItems = [
@@ -84,6 +85,7 @@ const FibreBroadbandManchester = () => {
         <ManchesterGuide />
         <ManchesterConsiderations />
         <ManchesterSteps />
+        <ManchesterFAQ />
       </CitystyleContent>
     </CitystyleTemplate>
   );
