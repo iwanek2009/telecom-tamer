@@ -35,10 +35,10 @@ const ManchesterCard = () => {
     {
       title: "Greater Manchester",
       items: [
-        <Link to="/local/salford">Salford Broadband | Media City Internet Deals</Link>,
-        <Link to="/local/trafford">Trafford Internet | Local Broadband Deals</Link>,
-        <Link to="/local/stockport">Stockport Broadband | Home Internet Solutions</Link>,
-        <Link to="/local/bolton">Bolton Internet | Greater Manchester Broadband</Link>
+        <Link to="/manchester/salford">Salford Broadband | Media City Internet Deals</Link>,
+        <Link to="/manchester/trafford">Trafford Internet | Local Broadband Deals</Link>,
+        <Link to="/manchester/stockport">Stockport Broadband | Home Internet Solutions</Link>,
+        <Link to="/manchester/bolton">Bolton Internet | Greater Manchester Broadband</Link>
       ],
       icon: <Network className="w-5 h-5 text-primary" />
     },
