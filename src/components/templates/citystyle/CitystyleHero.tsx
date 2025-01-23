@@ -25,6 +25,13 @@ export const CitystyleHero = ({
   // Take only the first two items from accordionItems
   const displayedItems = accordionItems.slice(0, 2);
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="bg-[#3FC1C9]">
       <div className="container mx-auto px-4 pt-12 pb-8 md:pt-16 md:pb-0">
@@ -54,12 +61,12 @@ export const CitystyleHero = ({
                       {item.content}
                     </p>
                     {item.linkText && item.linkHref && (
-                      <a 
-                        href={item.linkHref} 
-                        className="text-pink-600 hover:text-pink-700 text-sm font-medium inline-flex items-center gap-1"
+                      <button 
+                        onClick={() => scrollToSection('compare-deals')}
+                        className="text-pink-600 hover:text-pink-700 text-sm font-medium inline-flex items-center gap-1 cursor-pointer"
                       >
                         {item.linkText}
-                      </a>
+                      </button>
                     )}
                   </CollapsibleContent>
                 </Collapsible>
