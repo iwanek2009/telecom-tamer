@@ -13,6 +13,60 @@ export const ManchesterGuide = () => {
           </p>
         </div>
 
+        <h2 className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-4xl font-bold mb-8 mt-12">
+          What to Consider When Choosing a Broadband Deal
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+            <h3 className="text-2xl font-semibold text-primary mb-4">1. Contract Status</h3>
+            <h4 className="text-lg font-medium text-gray-900 mb-2">Are You Out of Contract?</h4>
+            <p className="text-gray-600 mb-6">
+              If you're no longer tied to a plan, you may be paying more than necessary. Also, you're free to switch without exit fees, which means you can upgrade quickly and start saving.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+            <h3 className="text-2xl font-semibold text-primary mb-4">2. Monthly Budget</h3>
+            <h4 className="text-lg font-medium text-gray-900 mb-2">How Much Can You Afford?</h4>
+            <p className="text-gray-600 mb-6">
+              Aim for a deal that strikes a balance between speed and cost. Even if your current provider offers a retainer discount, compare other providers for a potentially better bargain.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+            <h3 className="text-2xl font-semibold text-primary mb-4">3. Required Internet Speed</h3>
+            <h4 className="text-lg font-medium text-gray-900 mb-2">Usage and Number of Users</h4>
+            <p className="text-gray-600 mb-6">
+              A single occupant with basic web browsing needs can often manage with speeds around 20–35Mbps. Larger households or professionals working from home may require 50–100Mbps or more. Avid gamers and 4K streamers might benefit from ultra-fast plans above 100Mbps.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+            <h3 className="text-2xl font-semibold text-primary mb-4">4. Extra Services (TV, Phone, Mobile)</h3>
+            <h4 className="text-lg font-medium text-gray-900 mb-2">Bundling Options</h4>
+            <p className="text-gray-600 mb-6">
+              If you're a fan of premium sports or entertainment channels, combining broadband with TV services might be more cost-effective. Similarly, if you make lots of landline or mobile calls, look for deals that offer inclusive phone minutes or mobile SIM perks.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+            <h3 className="text-2xl font-semibold text-primary mb-4">5. Customer Service and Support</h3>
+            <h4 className="text-lg font-medium text-gray-900 mb-2">After-Sales Care</h4>
+            <p className="text-gray-600 mb-6">
+              Some providers excel at quick response times and helpful troubleshooting. If support quality matters to you, check customer reviews and any service guarantees (like Wi-Fi boosters or whole-home coverage).
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
+            <h3 className="text-2xl font-semibold text-primary mb-4">6. Potential Relocation</h3>
+            <h4 className="text-lg font-medium text-gray-900 mb-2">Moving Home Soon?</h4>
+            <p className="text-gray-600 mb-6">
+              If you anticipate moving, check whether your chosen provider operates in the new area. Switching partway through a contract may incur early termination fees, unless you're out of contract or you can transfer your service.
+            </p>
+          </div>
+        </div>
+
         <h3 className="text-2xl font-semibold text-primary mb-6 mt-12">
           How to Begin Your Search
         </h3>
