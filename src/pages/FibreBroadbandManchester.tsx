@@ -9,6 +9,7 @@ import StickeeWidget from '@/components/StickeeWidget';
 import { ManchesterGuide } from '@/components/manchester/ManchesterGuide';
 import { ManchesterConsiderations } from '@/components/manchester/ManchesterConsiderations';
 import { ManchesterConnectionTypes } from '@/components/manchester/ManchesterConnectionTypes';
+import { ManchesterSteps } from '@/components/manchester/ManchesterSteps';
 
 const FibreBroadbandManchester = () => {
   const heroAccordionItems = [
@@ -82,6 +83,7 @@ const FibreBroadbandManchester = () => {
         <ManchesterConnectionTypes />
         <ManchesterGuide />
         <ManchesterConsiderations />
+        <ManchesterSteps />
       </CitystyleContent>
     </CitystyleTemplate>
   );
