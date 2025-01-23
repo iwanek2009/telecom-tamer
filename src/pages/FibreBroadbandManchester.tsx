@@ -8,6 +8,7 @@ import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 import { ManchesterGuide } from '@/components/manchester/ManchesterGuide';
 import { ManchesterConsiderations } from '@/components/manchester/ManchesterConsiderations';
+import { ManchesterConnectionTypes } from '@/components/manchester/ManchesterConnectionTypes';
 
 const FibreBroadbandManchester = () => {
   const heroAccordionItems = [
@@ -78,6 +79,7 @@ const FibreBroadbandManchester = () => {
           />
         </div>
 
+        <ManchesterConnectionTypes />
         <ManchesterGuide />
         <ManchesterConsiderations />
       </CitystyleContent>
