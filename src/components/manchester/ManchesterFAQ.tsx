@@ -14,70 +14,70 @@ export const ManchesterFAQ = () => {
       <Accordion type="single" collapsible className="space-y-4">
         <AccordionItem value="item-1" className="bg-white rounded-xl shadow-sm">
           <AccordionTrigger className="text-lg font-semibold px-6">
-            Is full-fibre available throughout Manchester?
+            Can I get premium channels like Sky Sports or BT Sport with an internet bundle?
           </AccordionTrigger>
           <AccordionContent className="text-gray-600 px-6 pb-4">
-            Availability varies by neighborhood, but coverage is expanding. Use a postcode checker to see if full-fibre has reached your street.
+            Yes, many providers offer sports add-ons or specialized packages that include premium sports channels alongside broadband.
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-2" className="bg-white rounded-xl shadow-sm">
           <AccordionTrigger className="text-lg font-semibold px-6">
-            Will switching providers disrupt my internet for a long time?
+            Is it cheaper to combine TV and internet than to buy them separately?
           </AccordionTrigger>
           <AccordionContent className="text-gray-600 px-6 pb-4">
-            Most switches are quick, with minimal downtime. Under new switching regulations, your new provider often handles the transfer seamlessly.
+            Often, yes. Bundling can lower overall monthly costs, especially if you need both services anyway. However, it's wise to compare standalone plans versus bundles to be sure.
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-3" className="bg-white rounded-xl shadow-sm">
           <AccordionTrigger className="text-lg font-semibold px-6">
-            Which broadband speed is suitable for remote working?
+            How long does installation usually take?
           </AccordionTrigger>
           <AccordionContent className="text-gray-600 px-6 pb-4">
-            Speeds above 50Mbps generally suffice for video calls, cloud tasks, and large file sharing. If multiple users are online simultaneously, you may want 100Mbps or more.
+            Depending on the provider and the type of connection, installation can range from a self-install kit (a few minutes) to an engineer visit (several hours).
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-4" className="bg-white rounded-xl shadow-sm">
           <AccordionTrigger className="text-lg font-semibold px-6">
-            Do I need a landline for fibre broadband?
+            Do I have to get a landline with my TV & internet package?
           </AccordionTrigger>
           <AccordionContent className="text-gray-600 px-6 pb-4">
-            Many fibre packages still include a phone line, but some providers offer broadband-only deals if you don't need traditional phone service.
+            Many bundles do include a landline by default, but broadband-only or internet-plus-TV packages without a phone line are increasingly common.
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-5" className="bg-white rounded-xl shadow-sm">
           <AccordionTrigger className="text-lg font-semibold px-6">
-            What should I do if my speed is lower than advertised?
+            What happens if my internet speeds are lower than advertised?
           </AccordionTrigger>
           <AccordionContent className="text-gray-600 px-6 pb-4">
-            First, troubleshoot by repositioning your router or updating your device software. If issues persist, contact your provider to investigate or consider switching.
+            First, troubleshoot by repositioning your router or checking for device conflicts. If speeds remain poor, contact your provider for assistance. Some offer speed guarantees or refunds for persistent issues.
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-6" className="bg-white rounded-xl shadow-sm">
           <AccordionTrigger className="text-lg font-semibold px-6">
-            Can students access special broadband offers?
+            Can I switch providers mid-contract if I find a better deal?
           </AccordionTrigger>
           <AccordionContent className="text-gray-600 px-6 pb-4">
-            Yes. Some providers run student-focused promotions, especially in university towns like Manchester, often featuring shorter contracts.
+            You can, but you'll likely face early termination fees. Weigh those costs against the potential savings from switching to a cheaper or more suitable package.
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-7" className="bg-white rounded-xl shadow-sm">
           <AccordionTrigger className="text-lg font-semibold px-6">
-            Are fibre broadband deals usually more expensive than standard broadband?
+            Are there social tariffs available for TV & internet bundles?
           </AccordionTrigger>
           <AccordionContent className="text-gray-600 px-6 pb-4">
-            They can be slightly pricier, but the difference is shrinking. In many cases, the performance boost is well worth the added cost.
+            A few providers have special discounts for customers on specific benefits or low incomes. Check eligibility criteria on provider websites or via comparison tools.
           </AccordionContent>
         </AccordionItem>
       </Accordion>
       
       <p className="mt-8 text-lg text-gray-700 text-center">
-        Compare fibre broadband deals in Manchester today and enjoy speeds that keep you connected—no matter what your household or business demands!
+        Compare Manchester TV & Internet bundles today and discover how a single package can elevate your home entertainment—without breaking the bank!
       </p>
     </div>
   );

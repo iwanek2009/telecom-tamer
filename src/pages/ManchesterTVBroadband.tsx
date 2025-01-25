@@ -7,6 +7,10 @@ import { Tv, Wifi, Globe, CheckCircle2 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 import { ManchesterConnectionTypes } from '@/components/manchester/ManchesterConnectionTypes';
+import { ManchesterConsiderations } from '@/components/manchester/ManchesterConsiderations';
+import { ManchesterSteps } from '@/components/manchester/ManchesterSteps';
+import { ManchesterBundleUp } from '@/components/manchester/ManchesterBundleUp';
+import { ManchesterFAQ } from '@/components/manchester/ManchesterFAQ';
 
   const heroAccordionItems = [
     {
@@ -77,68 +81,12 @@ const ManchesterTVBroadband = () => {
           />
         </div>
 
-        {/* Why Consider Section */}
         <div className="mt-16 space-y-12">
-          <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Consider TV & Internet Bundles in Manchester?</h2>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              With Manchester's vibrant culture and tech-savvy population, having a robust internet connection plus top-tier entertainment options is a must. TV & internet bundles combine broadband service with popular TV channels, on-demand content, and often even phone or mobile plans. By merging these services, you can potentially save on monthly bills, streamline management of your home utilities, and enjoy a richer entertainment experience.
-            </p>
-            <p className="text-gray-600 leading-relaxed">
-              Whether you're a sports fan, a movie buff, or a remote worker who needs a dependable connection, a complete home bundle can offer you both convenience and cost-effectiveness.
-            </p>
-          </div>
-
-          {/* How to Start Section */}
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">How to Start Your Search</h2>
-            <p className="text-gray-600 mb-8">
-              Selecting the right TV and internet package involves balancing budget, desired features, and availability. Here's a quick roadmap:
-            </p>
-            <div className="grid gap-6">
-              <div className="flex items-start gap-4">
-                <div className="mt-1">
-                  <CheckCircle2 className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Check What's Available</h3>
-                  <p className="text-gray-600">Use a postcode checker to see which providers operate in your part of Manchester.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="mt-1">
-                  <CheckCircle2 className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Compare Plans & Prices</h3>
-                  <p className="text-gray-600">Filter by broadband speed, TV channel lineup, and any extras like inclusive calls.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="mt-1">
-                  <CheckCircle2 className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Review Contract Terms</h3>
-                  <p className="text-gray-600">Note contract lengths, installation fees, and mid-contract price changes.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="mt-1">
-                  <CheckCircle2 className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Finalize Your Bundle</h3>
-                  <p className="text-gray-600">Sign up through the provider's website and set an installation or activation date.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Factors to Consider Section */}
           <ManchesterConsiderations />
           <ManchesterSteps />
           <ManchesterConnectionTypes />
+          <ManchesterBundleUp />
+          <ManchesterFAQ />
         </div>
       </CitystyleContent>
     </CitystyleTemplate>
