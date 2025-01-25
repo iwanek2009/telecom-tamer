@@ -136,68 +136,8 @@ const ManchesterTVBroadband = () => {
           </div>
 
           {/* Factors to Consider Section */}
-          <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Factors to Consider When Choosing a Bundle</h2>
-            
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">1. Broadband Speed & Stability</h3>
-                <p className="text-gray-600">
-                  Manchester is home to diverse options, ranging from standard broadband all the way to full fibre connections that can surpass 900Mbps. If you're mainly streaming shows or browsing social media, a modest speed may suffice. But gamers, large families, and remote workers should look for higher, more consistent speeds.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">2. TV Channel Selection</h3>
-                <p className="text-gray-600 mb-4">Bundles often come in tiers:</p>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="pl-4 border-l-2 border-primary">
-                    <span className="font-medium">Basic Entertainment</span> – Ideal for casual viewers, focusing on standard channels and a few extras.
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary">
-                    <span className="font-medium">Sports & Movies</span> – Great for sports enthusiasts or cinephiles who crave premium networks.
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary">
-                    <span className="font-medium">Premium & On-Demand</span> – Perfect for households wanting exclusive channels, box sets, and streaming platforms included.
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">3. Contract Duration & Flexibility</h3>
-                <p className="text-gray-600 mb-4">Typical bundle contracts can stretch from 12 to 24 months. Check for:</p>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="pl-4 border-l-2 border-primary">
-                    <span className="font-medium">Introductory Prices</span> – Special rates might jump later, so keep an eye on renewal costs.
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary">
-                    <span className="font-medium">Exit Fees</span> – Switching mid-contract often incurs charges unless you're at the end of your term.
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary">
-                    <span className="font-medium">Price Increase Clauses</span> – Some contracts have fixed prices, others allow annual increases.
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">4. Customer Service & Extras</h3>
-                <p className="text-gray-600 mb-4">Beyond the core services, consider:</p>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="pl-4 border-l-2 border-primary">
-                    <span className="font-medium">Dedicated Tech Support</span> – Quick solutions if your internet or set-top box acts up.
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary">
-                    <span className="font-medium">Equipment Upgrades</span> – Some providers offer upgraded routers, Wi-Fi boosters, or 4K TV boxes.
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary">
-                    <span className="font-medium">Multi-Room Viewing</span> – Handy if different members of the household have different channel preferences.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Types of Broadband Section */}
+          <ManchesterConsiderations />
+          <ManchesterSteps />
           <ManchesterConnectionTypes />
         </div>
       </CitystyleContent>
