@@ -3,7 +3,7 @@ import { CitystyleContent } from '@/components/templates/citystyle/CitystyleCont
 import { CitystyleHero } from '@/components/templates/citystyle/CitystyleHero';
 import { CitystyleFeatureGrid } from '@/components/templates/citystyle/CitystyleFeatureGrid';
 import { CitystyleFeatureCard } from '@/components/templates/citystyle/CitystyleFeatureCard';
-import { Tv, Wifi, Globe, CheckCircle2 } from 'lucide-react';
+import { Tv, Wifi, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 import { ManchesterConnectionTypes } from '@/components/manchester/ManchesterConnectionTypes';
@@ -12,26 +12,26 @@ import { ManchesterSteps } from '@/components/manchester/ManchesterSteps';
 import { ManchesterBundleUp } from '@/components/manchester/ManchesterBundleUp';
 import { ManchesterFAQ } from '@/components/manchester/ManchesterFAQ';
 
-  const heroAccordionItems = [
-    {
-      title: "TV & Internet Bundles",
-      content: "Compare comprehensive entertainment packages with fast internet and premium TV channels from leading providers in Manchester.",
-      linkText: "View bundles",
-      linkHref: "#bundles"
-    },
-    {
-      title: "Entertainment Options",
-      content: "Choose from various TV packages including sports, movies, and international channels, bundled with reliable broadband.",
-      linkText: "Compare packages",
-      linkHref: "#packages"
-    },
-    {
-      title: "Installation & Setup",
-      content: "Quick and professional installation available across Manchester, with setup of both TV and internet services.",
-      linkText: "Learn more",
-      linkHref: "#installation"
-    }
-  ];
+const heroAccordionItems = [
+  {
+    title: "TV & Internet Bundles",
+    content: "Compare comprehensive entertainment packages with fast internet and premium TV channels from leading providers in Manchester.",
+    linkText: "View bundles",
+    linkHref: "#bundles"
+  },
+  {
+    title: "Entertainment Options",
+    content: "Choose from various TV packages including sports, movies, and international channels, bundled with reliable broadband.",
+    linkText: "Compare packages",
+    linkHref: "#packages"
+  },
+  {
+    title: "Installation & Setup",
+    content: "Quick and professional installation available across Manchester, with setup of both TV and internet services.",
+    linkText: "Learn more",
+    linkHref: "#installation"
+  }
+];
 
 const ManchesterTVBroadband = () => {
   return (
