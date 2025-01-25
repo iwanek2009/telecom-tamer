@@ -7,8 +7,6 @@ import { Tv, Wifi, Globe, CheckCircle2 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import StickeeWidget from '@/components/StickeeWidget';
 import { ManchesterConnectionTypes } from '@/components/manchester/ManchesterConnectionTypes';
-import { ManchesterConsiderations } from '@/components/manchester/ManchesterConsiderations';
-import { ManchesterSteps } from '@/components/manchester/ManchesterSteps';
 
   const heroAccordionItems = [
     {
