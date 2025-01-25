@@ -26,7 +26,7 @@ const BestSellingPhones = () => {
   ];
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-[#f9fafb] py-20">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-16">Best selling mobile phones</h2>
         
